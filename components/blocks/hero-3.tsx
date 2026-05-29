@@ -361,57 +361,46 @@ export function Hero3() {
           </h1>
 
           {/* Links Section */}
-          <div className="bg-white dark:bg-neutral-950 flex-1 h-full rounded-tl-[3vmax] relative font-light text-[max(1rem,1.4vmax)] flex items-end justify-end pt-[4vmax] self-end pl-[4vmax]">
-            <ul className="flex flex-col gap-[max(0.7rem,0.8vmax)] opacity-50 hover:opacity-100 transition-opacity duration-300 items-end">
-              <motion.li
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 1.4 }}
-              >
-                <a
-                  href="#mission"
-                  className="group flex items-center gap-[max(0.6rem,0.8vmax)] pb-[max(0.1rem,0.2vmax)] relative text-neutral-900 dark:text-white"
-                >
-                  <span className="relative">
-                    The Mission
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-neutral-900 dark:bg-white group-hover:w-full transition-all duration-300 origin-left" />
-                  </span>
-                  <ArrowUpRight className="w-[max(1rem,1.4vmax)] h-[max(1rem,1.4vmax)]" />
-                </a>
-              </motion.li>
-              <motion.li
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 1.5 }}
-              >
-                <a
-                  href="#research"
-                  className="group flex items-center gap-[max(0.6rem,0.8vmax)] pb-[max(0.1rem,0.2vmax)] relative text-neutral-900 dark:text-white"
-                >
-                  <span className="relative">
-                    Research
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-neutral-900 dark:bg-white group-hover:w-full transition-all duration-300 origin-left" />
-                  </span>
-                  <ArrowUpRight className="w-[max(1rem,1.4vmax)] h-[max(1rem,1.4vmax)]" />
-                </a>
-              </motion.li>
-              <motion.li
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 1.6 }}
-              >
-                <a
-                  href="#join"
-                  className="group flex items-center gap-[max(0.6rem,0.8vmax)] pb-[max(0.1rem,0.2vmax)] relative text-neutral-900 dark:text-white"
-                >
-                  <span className="relative">
-                    Get Involved
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-neutral-900 dark:bg-white group-hover:w-full transition-all duration-300 origin-left" />
-                  </span>
-                  <ArrowUpRight className="w-[max(1rem,1.4vmax)] h-[max(1rem,1.4vmax)]" />
-                </a>
-              </motion.li>
-            </ul>
+          <div className="bg-white dark:bg-neutral-950 flex-1 h-full rounded-tl-[3vmax] relative font-medium text-[max(1rem,1.4vmax)] flex items-end justify-end pt-[4vmax] self-end pl-[4vmax]">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.2 }}
+              className="flex flex-col items-end gap-[max(0.6rem,0.8vmax)]"
+            >
+              <p className="text-[max(0.65rem,0.75vmax)] font-semibold uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-1">
+                Explore
+              </p>
+              <ul className="flex flex-row flex-wrap justify-end gap-[max(0.5rem,0.6vmax)] sm:flex-col sm:items-end sm:gap-[max(0.6rem,0.8vmax)]">
+                <li>
+                  <a
+                    href="/about"
+                    className="group flex items-center gap-[max(0.5rem,0.6vmax)] px-[max(0.8rem,1vmax)] py-[max(0.5rem,0.6vmax)] rounded-xl border border-neutral-200 dark:border-neutral-700 hover:border-neutral-400 dark:hover:border-neutral-400 hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-all duration-200 text-neutral-900 dark:text-white"
+                  >
+                    <span>The Mission</span>
+                    <ArrowUpRight className="w-[max(0.9rem,1.1vmax)] h-[max(0.9rem,1.1vmax)] opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/work"
+                    className="group flex items-center gap-[max(0.5rem,0.6vmax)] px-[max(0.8rem,1vmax)] py-[max(0.5rem,0.6vmax)] rounded-xl border border-neutral-200 dark:border-neutral-700 hover:border-neutral-400 dark:hover:border-neutral-400 hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-all duration-200 text-neutral-900 dark:text-white"
+                  >
+                    <span>Research</span>
+                    <ArrowUpRight className="w-[max(0.9rem,1.1vmax)] h-[max(0.9rem,1.1vmax)] opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/contact"
+                    className="group flex items-center gap-[max(0.5rem,0.6vmax)] px-[max(0.8rem,1vmax)] py-[max(0.5rem,0.6vmax)] rounded-xl border border-neutral-900 dark:border-white bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 hover:bg-neutral-700 dark:hover:bg-neutral-100 hover:border-neutral-700 dark:hover:border-neutral-100 transition-all duration-200"
+                  >
+                    <span>Get Involved</span>
+                    <ArrowUpRight className="w-[max(0.9rem,1.1vmax)] h-[max(0.9rem,1.1vmax)] opacity-80 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200" />
+                  </a>
+                </li>
+              </ul>
+            </motion.div>
 
             {/* Links Section Decorative Corners */}
             <div

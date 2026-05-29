@@ -6,6 +6,7 @@ import About2 from "@/components/blocks/about-2";
 import About4 from "@/components/blocks/about-4";
 import CTA1 from "@/components/blocks/cta-1";
 import { FooterDtc } from "@/components/blocks/footer-dtc";
+import { Breadcrumb } from "@/components/ui/breadcrumb";
 
 export const metadata: Metadata = {
   title: "About Us — DTC Policy Lab",
@@ -17,10 +18,11 @@ export default function AboutPage() {
   return (
     <>
       <Navigation9 />
+      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "About Us" }]} />
 
       <main className="lg:relative lg:z-10 flex-1 bg-white dark:bg-neutral-950">
         {/* Page intro — sits below the fixed nav */}
-        <section className="pt-32 pb-4 px-6 sm:px-8 lg:px-12">
+        <section className="pt-8 pb-4 px-6 sm:px-8 lg:px-12">
           <div className="max-w-[1400px] mx-auto">
             <p className="text-xs font-semibold uppercase tracking-widest text-neutral-400 mb-4">
               About DTC Policy Lab

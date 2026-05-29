@@ -28,13 +28,13 @@ function SplitText({ children }: { children: string }) {
 }
 
 const services = [
-  { id: 1, title: "Digital Rights Research" },
-  { id: 2, title: "Platform Governance" },
-  { id: 3, title: "Youth Privacy Advocacy" },
-  { id: 4, title: "AI Governance & Youth" },
+  { id: 1, title: "Digital Rights Research", href: "/work" },
+  { id: 2, title: "Platform Governance", href: "/work" },
+  { id: 3, title: "Youth Privacy Advocacy", href: "/about" },
+  { id: 4, title: "AI Governance & Youth", href: "/work" },
 ];
 
-function ServiceItem({ title, index }: { title: string; index: number }) {
+function ServiceItem({ title, href, index }: { title: string; href: string; index: number }) {
   const itemRef = useRef<HTMLDivElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
   const overlayInnerRef = useRef<HTMLDivElement>(null);
@@ -157,7 +157,7 @@ function ServiceItem({ title, index }: { title: string; index: number }) {
       className="relative overflow-hidden border-t border-foreground/10"
     >
       <a
-        href="#"
+        href={href}
         className="flex items-center justify-between cursor-pointer px-6 py-8 sm:px-12 md:py-10 lg:px-24"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -261,7 +261,7 @@ export function ServicesDtc() {
       <div id="services-menu" className="w-full pb-24">
         <div className="w-full">
           {services.map((service, index) => (
-            <ServiceItem key={service.id} title={service.title} index={index} />
+            <ServiceItem key={service.id} title={service.title} href={service.href} index={index} />
           ))}
           <div className="border-t border-foreground/10" />
         </div>

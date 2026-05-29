@@ -16,11 +16,17 @@ export default function LandingPage() {
       <Navigation9 />
       <main id="main-content" className="lg:relative lg:z-10 flex-1 bg-background">
         <TerminalHero />
+        <div className="px-6 sm:px-12 lg:px-24"><div className="border-t border-border max-w-[1400px] mx-auto" /></div>
         <Hero3 />
+        <div className="px-6 sm:px-12 lg:px-24"><div className="border-t border-border max-w-[1400px] mx-auto" /></div>
         <ResearchDtc />
+        <div className="px-6 sm:px-12 lg:px-24"><div className="border-t border-border max-w-[1400px] mx-auto" /></div>
         <ServicesDtc />
+        <div className="px-6 sm:px-12 lg:px-24"><div className="border-t border-border max-w-[1400px] mx-auto" /></div>
         <AboutDtc />
+        <div className="px-6 sm:px-12 lg:px-24"><div className="border-t border-border max-w-[1400px] mx-auto" /></div>
         <ImpactDtc />
+        <div className="px-6 sm:px-12 lg:px-24"><div className="border-t border-border max-w-[1400px] mx-auto" /></div>
         <FaqDtc />
       </main>
       <FooterDtc />

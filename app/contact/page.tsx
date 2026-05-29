@@ -3,6 +3,7 @@ import Navigation9 from "@/components/blocks/navigation-9";
 import { FooterDtc } from "@/components/blocks/footer-dtc";
 import { ContactUsDtc } from "@/components/blocks/contact-us-dtc";
 import CTA1 from "@/components/blocks/cta-1";
+import { Breadcrumb } from "@/components/ui/breadcrumb";
 
 export const metadata: Metadata = {
   title: "Contact — DTC Policy Lab",
@@ -14,9 +15,10 @@ export default function ContactPage() {
   return (
     <>
       <Navigation9 />
+      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Contact" }]} />
       <main className="lg:relative lg:z-10 flex-1 bg-background">
         {/* Page header */}
-        <section className="pt-32 pb-12 px-6 sm:px-8 lg:px-12 bg-background">
+        <section className="pt-8 pb-12 px-6 sm:px-8 lg:px-12 bg-background">
           <div className="max-w-[1400px] mx-auto">
             <p className="text-xs font-semibold uppercase tracking-widest text-neutral-400 mb-4">
               Get in Touch

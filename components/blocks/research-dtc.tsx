@@ -160,6 +160,8 @@ function ProjectOverlay({ project, onClose }: { project: Project | null; onClose
     return () => window.removeEventListener("keydown", handleEscape);
   }, [onClose]);
 
+  const isComingSoon = project?.id === "2";
+
   return (
     <AnimatePresence>
       {project && (
@@ -174,6 +176,18 @@ function ProjectOverlay({ project, onClose }: { project: Project | null; onClose
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={project.image} alt={`${project.titleUp} ${project.titleDown}`} className="h-full w-full object-cover" />
             <div className="absolute inset-0 bg-black/40" />
+            {isComingSoon && (
+              <div className="absolute inset-0 flex items-center justify-center">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.2 }}
+                  className="text-center"
+                >
+                  <p className="text-white text-xl sm:text-2xl md:text-3xl font-light">Coming Soon</p>
+                </motion.div>
+              </div>
+            )}
           </motion.div>
           <motion.div
             className="absolute left-4 top-4 z-10 sm:left-6 sm:top-6 md:left-12 md:top-12 lg:left-16 lg:top-16"

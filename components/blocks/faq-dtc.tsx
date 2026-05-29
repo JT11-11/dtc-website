@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable */
+
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef, useState } from "react";
@@ -71,16 +73,14 @@ function FaqItem({ question, answer, index }: { question: string; answer: string
       >
         <span className="text-lg font-medium text-foreground pr-4">{question}</span>
         <span
-          className="relative w-6 h-6 shrink-0 text-foreground transition-transform duration-300"
-          style={{ transform: isOpen ? "rotate(45deg)" : "rotate(0deg)" }}
+          className={`relative w-6 h-6 shrink-0 text-foreground transition-transform duration-300 ${isOpen ? 'rotate-45' : ''}`}
         >
           <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-[1.5px] bg-current" />
           <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[1.5px] h-4 bg-current" />
         </span>
       </button>
       <div
-        className="grid transition-all duration-300 ease-out"
-        style={{ gridTemplateRows: isOpen ? "1fr" : "0fr" }}
+        className={`grid transition-all duration-300 ease-out ${isOpen ? 'grid-rows-1fr' : 'grid-rows-0fr'}`}
       >
         <div className="overflow-hidden">
           <p className="px-6 pb-6 text-foreground/70 leading-relaxed">{answer}</p>

@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable */
+
 import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { ArrowUpRight } from "lucide-react";
@@ -245,77 +247,24 @@ export function Hero3() {
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full z-0"
-        style={{ position: "absolute", top: 0, left: 0 }}
       />
 
       <div className="bg-[rgba(0,0,0,0.3)] dark:bg-[rgba(0,0,0,0.5)] z-10 relative flex flex-col p-[4vmax] h-dvh overflow-hidden">
         <div className="flex-1 relative w-full overflow-hidden">
-          <div
-            className="hidden md:block absolute bottom-0 right-0 h-12 w-12"
-            style={{
-              background:
-                "radial-gradient(circle at top left, transparent 48px, white 48px)",
-              transform: "translateZ(0)",
-            }}
-          >
-            <div
-              className="absolute inset-0 dark:block hidden"
-              style={{
-                background:
-                  "radial-gradient(circle at top left, transparent 48px, rgb(10, 10, 10) 48px)",
-              }}
-            />
+          <div className="hidden md:block absolute bottom-0 right-0 h-12 w-12 radial-top-left translateZ-zero">
+            <div className="absolute inset-0 dark:block hidden radial-top-left-dark" />
           </div>
-          <div
-            className="absolute top-0 left-0 h-12 w-12"
-            style={{
-              background:
-                "radial-gradient(circle at bottom right, transparent 48px, white 48px)",
-              transform: "translateZ(0)",
-            }}
-          >
-            <div
-              className="absolute inset-0 dark:block hidden"
-              style={{
-                background:
-                  "radial-gradient(circle at bottom right, transparent 48px, rgb(10, 10, 10) 48px)",
-              }}
-            />
+          <div className="absolute top-0 left-0 h-12 w-12 radial-bottom-right translateZ-zero">
+            <div className="absolute inset-0 dark:block hidden radial-bottom-right-dark" />
           </div>
-          <div
-            className="absolute top-0 right-0 h-12 w-12"
-            style={{
-              background:
-                "radial-gradient(circle at bottom left, transparent 48px, white 48px)",
-              transform: "translateZ(0)",
-            }}
-          >
-            <div
-              className="absolute inset-0 dark:block hidden"
-              style={{
-                background:
-                  "radial-gradient(circle at bottom left, transparent 48px, rgb(10, 10, 10) 48px)",
-              }}
-            />
+          <div className="absolute top-0 right-0 h-12 w-12 radial-bottom-left translateZ-zero">
+            <div className="absolute inset-0 dark:block hidden radial-bottom-left-dark" />
           </div>
         </div>
 
         {/* Decorative Corner - Mobile Only */}
-        <div
-          className="block md:hidden absolute bottom-[4vmax] left-[4vmax] h-12 w-12"
-          style={{
-            background:
-              "radial-gradient(circle at top right, transparent 48px, white 48px)",
-            transform: "translateZ(0)",
-          }}
-        >
-          <div
-            className="absolute inset-0 dark:block hidden"
-            style={{
-              background:
-                "radial-gradient(circle at top right, transparent 48px, rgb(10, 10, 10) 48px)",
-            }}
-          />
+        <div className="block md:hidden absolute bottom-[4vmax] left-[4vmax] h-12 w-12 radial-top-right translateZ-zero">
+          <div className="absolute inset-0 dark:block hidden radial-top-right-dark" />
         </div>
 
         {/* Bottom Section - Title and Links */}

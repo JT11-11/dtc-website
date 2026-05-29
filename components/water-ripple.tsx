@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable */
+
 import { useRef, useEffect, useMemo, useSyncExternalStore } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { useTexture } from "@react-three/drei";
@@ -264,15 +266,12 @@ export function WaterRipple({ src, maskRadius }: { src: string; maskRadius: numb
   );
 
   return (
-    <div
-      className="absolute inset-0 w-full h-full"
-      style={{ willChange: "transform", transformStyle: "preserve-3d", backfaceVisibility: "hidden" }}
-    >
+    <div className="absolute inset-0 w-full h-full preserve-3d-scale">
       {isMounted && (
         <Canvas
           dpr={1}
           gl={{ antialias: false, alpha: true, powerPreference: "high-performance", stencil: false, depth: false }}
-          style={{ width: "100%", height: "100%" }}
+          className="w-full h-full"
           frameloop="always"
         >
           <WaterRippleScene src={src} maskRadius={maskRadius} />

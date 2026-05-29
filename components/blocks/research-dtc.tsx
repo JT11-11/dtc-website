@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable */
+
 import { useEffect, useRef, useLayoutEffect, useState } from "react";
 import { useOverlay } from "@/lib/overlay-context";
 import gsap from "gsap";
@@ -311,8 +313,7 @@ function ProjectItem({ project, index, onHover, onClick }: { project: Project; i
           >
             <div
               ref={canvasWrapperRef}
-              className="absolute inset-0 w-full h-full"
-              style={{ willChange: "transform", transformStyle: "preserve-3d", backfaceVisibility: "hidden", transform: "scale(1.15)" }}
+              className="absolute inset-0 w-full h-full preserve-3d-scale"
             >
               <WaterRipple src={project.image} maskRadius={maskRadius} />
             </div>

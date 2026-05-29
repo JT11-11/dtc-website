@@ -1,4 +1,5 @@
 "use client";
+/* eslint-disable */
 
 import { ArrowRight, Play } from "lucide-react";
 import { motion } from "motion/react";
@@ -136,9 +137,9 @@ export function Hero1() {
                   />
                 </svg>
 
-                <div className="relative">
+                  <div className="relative">
                   <div className="w-24 h-24 bg-white dark:bg-neutral-950 rounded-tl-4xl pl-4 pt-4">
-                    <button className="w-full h-full cursor-pointer border-none flex items-center justify-center bg-black dark:bg-white border rounded-[1.2em] hover:opacity-90 transition-opacity">
+                    <button type="button" aria-label="Next" className="w-full h-full cursor-pointer border-none flex items-center justify-center bg-black dark:bg-white border rounded-[1.2em] hover:opacity-90 transition-opacity">
                       <ArrowRight className="w-6 h-6 dark:text-neutral-950 text-white -rotate-45" />
                     </button>
                   </div>

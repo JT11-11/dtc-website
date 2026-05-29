@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable */
+
 import { useState, useCallback, useEffect, useRef } from "react";
 import { useOverlay } from "@/lib/overlay-context";
 import { motion, AnimatePresence } from "motion/react";

@@ -132,12 +132,51 @@
 @layer utilities {
   .glass-nav {
     background: rgba(255, 255, 255, 0.18);
-    backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow:
       inset 0 1px 0 rgba(255, 255, 255, 0.2),
       inset 0 0 24px rgba(255, 255, 255, 0.06),
       0 0 20px rgba(0, 0, 0, 0.1);
   }
+  .preserve-3d-scale {
+    will-change: transform;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transform: scale(1.15);
+  }
+  .translateZ-zero {
+    transform: translateZ(0);
+  }
+  .radial-top-left { background: radial-gradient(circle at top left, transparent 48px, white 48px); }
+  .radial-top-left-dark { background: radial-gradient(circle at top left, transparent 48px, rgb(10,10,10) 48px); }
+  .radial-bottom-right { background: radial-gradient(circle at bottom right, transparent 48px, white 48px); }
+  .radial-bottom-right-dark { background: radial-gradient(circle at bottom right, transparent 48px, rgb(10,10,10) 48px); }
+  .radial-bottom-left { background: radial-gradient(circle at bottom left, transparent 48px, white 48px); }
+  .radial-bottom-left-dark { background: radial-gradient(circle at bottom left, transparent 48px, rgb(10,10,10) 48px); }
+  .radial-top-right { background: radial-gradient(circle at top right, transparent 48px, white 48px); }
+  .radial-top-right-dark { background: radial-gradient(circle at top right, transparent 48px, rgb(10,10,10) 48px); }
+  .large-mask {
+    font-size: min(14.2vw, 210px);
+    height: 0.74em;
+    mask-image: linear-gradient(to bottom, #000 50%, transparent 95%);
+    -webkit-mask-image: linear-gradient(to bottom, #000 50%, transparent 95%);
+  }
+  .large-mask-light-text {
+    font-size: inherit;
+    letter-spacing: 0.15em;
+    padding-left: 0.15em;
+    text-shadow: 0 -1.5px 0 rgba(115,115,115,0.7), 1.5px 0 0 rgba(115,115,115,0.7), 0 1.5px 0 rgba(115,115,115,0.7), -1.5px 0 0 rgba(115,115,115,0.7), 1px 1px 0 rgba(115,115,115,0.7), -1px -1px 0 rgba(115,115,115,0.7), 1px -1px 0 rgba(115,115,115,0.7), -1px 1px 0 rgba(115,115,115,0.7);
+  }
+  .large-mask-dark-text {
+    font-size: inherit;
+    letter-spacing: 0.15em;
+    padding-left: 0.15em;
+    text-shadow: 0 -1.5px 0 rgba(163,163,163,0.55), 1.5px 0 0 rgba(163,163,163,0.55), 0 1.5px 0 rgba(163,163,163,0.55), -1.5px 0 0 rgba(163,163,163,0.55), 1px 1px 0 rgba(163,163,163,0.55), -1px -1px 0 rgba(163,163,163,0.55), 1px -1px 0 rgba(163,163,163,0.55), -1px 1px 0 rgba(163,163,163,0.55);
+  }
+  .translate-y-101 { transform: translateY(101%); }
+  .translate-y--101 { transform: translateY(-101%); }
+  .grid-rows-0fr { grid-template-rows: 0fr; }
+  .grid-rows-1fr { grid-template-rows: 1fr; }
 }

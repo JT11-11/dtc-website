@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable */
+
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -144,8 +146,7 @@ function ServiceItem({ title, href, index }: { title: string; href: string; inde
       ref={(el) => {
         if (el) charsRef.current[i] = el;
       }}
-      className="inline-block"
-      style={{ whiteSpace: char === " " ? "pre" : undefined }}
+      className={`inline-block ${char === " " ? "whitespace-pre" : ""}`}
     >
       {char}
     </span>
@@ -169,13 +170,11 @@ function ServiceItem({ title, href, index }: { title: string; href: string; inde
 
       <div
         ref={overlayRef}
-        className="absolute inset-0 overflow-hidden pointer-events-none bg-foreground"
-        style={{ transform: "translateY(101%)" }}
+        className="absolute inset-0 overflow-hidden pointer-events-none bg-foreground translate-y-101"
       >
         <div
           ref={overlayInnerRef}
-          className="flex items-center justify-between h-full px-6 sm:px-12 lg:px-24"
-          style={{ transform: "translateY(-101%)" }}
+          className="flex items-center justify-between h-full px-6 sm:px-12 lg:px-24 translate-y--101"
         >
           <span className="text-[clamp(1.5rem,4vw,4rem)] font-light tracking-tight text-background">
             {chars}

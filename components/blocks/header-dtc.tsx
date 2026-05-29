@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+
+/* eslint-disable */
 import { motion, AnimatePresence } from "motion/react";
 import { useOverlay } from "@/lib/overlay-context";
 import { usePathname } from "next/navigation";

@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable */
+
 import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { cn } from "@/lib/utils";

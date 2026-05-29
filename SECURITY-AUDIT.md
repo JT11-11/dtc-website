@@ -1,4 +1,4 @@
-Security audit summary — dtc-website
+# Security audit summary — dtc-website
 
 Summary of automated changes:
 

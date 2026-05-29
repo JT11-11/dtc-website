@@ -1,4 +1,4 @@
-const fs=require('fs');
+import fs from 'fs';
 const lock=JSON.parse(fs.readFileSync('package-lock.json','utf8'));
 const pkgs=lock.packages||{};
 const seen=new Set();

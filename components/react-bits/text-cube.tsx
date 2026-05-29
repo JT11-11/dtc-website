@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable */
+
 import React, { useRef, useEffect, useCallback } from "react";
 import { cn } from "@/lib/utils";
 

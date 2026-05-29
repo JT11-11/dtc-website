@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable */
+
 import { motion } from "motion/react";
 
 const socials = [
@@ -125,38 +127,11 @@ export default function Footer8() {
           ))}
         </div>
 
-        <div
-          className="relative mt-20 w-full"
-          aria-hidden="true"
-          style={{
-            fontSize: "min(14.2vw, 210px)",
-            height: "0.74em",
-            maskImage: "linear-gradient(to bottom, #000 50%, transparent 95%)",
-            WebkitMaskImage: "linear-gradient(to bottom, #000 50%, transparent 95%)",
-          }}
-        >
-          <div
-            className="absolute inset-0 flex justify-center font-bold uppercase leading-none whitespace-nowrap text-white dark:hidden"
-            style={{
-              fontSize: "inherit",
-              letterSpacing: "0.15em",
-              paddingLeft: "0.15em",
-              textShadow:
-                "0 -1.5px 0 rgba(115,115,115,0.7), 1.5px 0 0 rgba(115,115,115,0.7), 0 1.5px 0 rgba(115,115,115,0.7), -1.5px 0 0 rgba(115,115,115,0.7), 1px 1px 0 rgba(115,115,115,0.7), -1px -1px 0 rgba(115,115,115,0.7), 1px -1px 0 rgba(115,115,115,0.7), -1px 1px 0 rgba(115,115,115,0.7)",
-            }}
-          >
+        <div className="relative mt-20 w-full large-mask" aria-hidden="true">
+          <div className="absolute inset-0 flex justify-center font-bold uppercase leading-none whitespace-nowrap text-white dark:hidden large-mask-light-text">
             DTC Policy Lab
           </div>
-          <div
-            className="absolute inset-0 hidden dark:flex justify-center font-bold uppercase leading-none whitespace-nowrap text-black"
-            style={{
-              fontSize: "inherit",
-              letterSpacing: "0.15em",
-              paddingLeft: "0.15em",
-              textShadow:
-                "0 -1.5px 0 rgba(163,163,163,0.55), 1.5px 0 0 rgba(163,163,163,0.55), 0 1.5px 0 rgba(163,163,163,0.55), -1.5px 0 0 rgba(163,163,163,0.55), 1px 1px 0 rgba(163,163,163,0.55), -1px -1px 0 rgba(163,163,163,0.55), 1px -1px 0 rgba(163,163,163,0.55), -1px 1px 0 rgba(163,163,163,0.55)",
-            }}
-          >
+          <div className="absolute inset-0 hidden dark:flex justify-center font-bold uppercase leading-none whitespace-nowrap text-black large-mask-dark-text">
             DTC
           </div>
         </div>

@@ -1,0 +1,152 @@
+[
+  {
+    "ecosystem": "npm",
+    "name": "has-tostringtag",
+    "version": "1.0.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "hasown",
+    "version": "2.0.3"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "headers-polyfill",
+    "version": "5.0.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "hermes-estree",
+    "version": "0.25.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "hermes-parser",
+    "version": "0.25.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "hls.js",
+    "version": "1.6.16"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "hono",
+    "version": "4.12.15"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "http-errors",
+    "version": "2.0.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "https-proxy-agent",
+    "version": "7.0.6"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "human-signals",
+    "version": "2.1.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "human-signals",
+    "version": "8.0.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "iconv-lite",
+    "version": "0.7.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "ieee754",
+    "version": "1.2.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "ignore",
+    "version": "5.3.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "ignore",
+    "version": "7.0.5"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "immediate",
+    "version": "3.0.6"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "import-fresh",
+    "version": "3.3.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "imurmurhash",
+    "version": "0.1.4"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "inherits",
+    "version": "2.0.4"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "internal-slot",
+    "version": "1.1.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "ip-address",
+    "version": "10.1.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "ipaddr.js",
+    "version": "1.9.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "is-array-buffer",
+    "version": "3.0.5"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "is-arrayish",
+    "version": "0.2.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "is-async-function",
+    "version": "2.1.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "is-bigint",
+    "version": "1.1.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "is-boolean-object",
+    "version": "1.2.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "is-bun-module",
+    "version": "2.0.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "is-callable",
+    "version": "1.2.7"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "is-core-module",
+    "version": "2.16.1"
+  }
+]

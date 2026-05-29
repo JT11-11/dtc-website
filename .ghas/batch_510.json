@@ -1,0 +1,152 @@
+[
+  {
+    "ecosystem": "npm",
+    "name": "meshoptimizer",
+    "version": "1.0.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "micromatch",
+    "version": "4.0.8"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "mime-db",
+    "version": "1.54.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "mime-types",
+    "version": "3.0.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "mimic-fn",
+    "version": "2.1.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "mimic-function",
+    "version": "5.0.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "minimatch",
+    "version": "10.2.5"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "minimatch",
+    "version": "3.1.5"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "minimist",
+    "version": "1.2.8"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "motion",
+    "version": "12.40.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "motion-dom",
+    "version": "12.40.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "motion-utils",
+    "version": "12.39.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "ms",
+    "version": "2.1.3"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "msw",
+    "version": "2.13.6"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "mute-stream",
+    "version": "3.0.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "n8ao",
+    "version": "1.10.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "nanoid",
+    "version": "3.3.11"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "napi-postinstall",
+    "version": "0.3.4"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "natural-compare",
+    "version": "1.4.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "negotiator",
+    "version": "1.0.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "next",
+    "version": "16.2.4"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "node-domexception",
+    "version": "1.0.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "node-exports-info",
+    "version": "1.6.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "node-fetch",
+    "version": "3.3.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "node-releases",
+    "version": "2.0.38"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "npm-run-path",
+    "version": "4.0.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "npm-run-path",
+    "version": "6.0.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "object-assign",
+    "version": "4.1.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "object-inspect",
+    "version": "1.13.4"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "object-keys",
+    "version": "1.1.1"
+  }
+]

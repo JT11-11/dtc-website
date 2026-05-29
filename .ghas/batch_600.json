@@ -1,0 +1,152 @@
+[
+  {
+    "ecosystem": "npm",
+    "name": "reselect",
+    "version": "5.1.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "resolve",
+    "version": "2.0.0-next.6"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "resolve-from",
+    "version": "4.0.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "resolve-pkg-maps",
+    "version": "1.0.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "restore-cursor",
+    "version": "5.1.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "rettime",
+    "version": "0.11.8"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "reusify",
+    "version": "1.1.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "router",
+    "version": "2.2.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "run-applescript",
+    "version": "7.1.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "run-parallel",
+    "version": "1.2.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "safe-array-concat",
+    "version": "1.1.4"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "safe-push-apply",
+    "version": "1.0.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "safe-regex-test",
+    "version": "1.1.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "safer-buffer",
+    "version": "2.1.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "scheduler",
+    "version": "0.27.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "semver",
+    "version": "6.3.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "semver",
+    "version": "7.7.4"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "send",
+    "version": "1.2.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "serve-static",
+    "version": "2.2.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "set-cookie-parser",
+    "version": "3.1.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "set-function-length",
+    "version": "1.2.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "set-function-name",
+    "version": "2.0.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "set-proto",
+    "version": "1.0.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "setprototypeof",
+    "version": "1.2.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "shadcn",
+    "version": "4.5.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "sharp",
+    "version": "0.34.5"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "shebang-command",
+    "version": "2.0.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "shebang-regex",
+    "version": "3.0.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "side-channel",
+    "version": "1.1.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "side-channel-list",
+    "version": "1.0.1"
+  }
+]

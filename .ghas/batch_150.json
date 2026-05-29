@@ -1,0 +1,152 @@
+[
+  {
+    "ecosystem": "npm",
+    "name": "@types/react",
+    "version": "19.2.14"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@types/react-dom",
+    "version": "19.2.3"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@types/react-reconciler",
+    "version": "0.28.9"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@types/set-cookie-parser",
+    "version": "2.4.10"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@types/stats.js",
+    "version": "0.17.4"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@types/statuses",
+    "version": "2.0.6"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@types/three",
+    "version": "0.183.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@types/validate-npm-package-name",
+    "version": "4.0.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@types/webxr",
+    "version": "0.5.24"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@typescript-eslint/eslint-plugin",
+    "version": "8.59.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@typescript-eslint/parser",
+    "version": "8.59.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@typescript-eslint/project-service",
+    "version": "8.59.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@typescript-eslint/scope-manager",
+    "version": "8.59.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@typescript-eslint/tsconfig-utils",
+    "version": "8.59.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@typescript-eslint/type-utils",
+    "version": "8.59.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@typescript-eslint/types",
+    "version": "8.59.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@typescript-eslint/typescript-estree",
+    "version": "8.59.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@typescript-eslint/utils",
+    "version": "8.59.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@typescript-eslint/visitor-keys",
+    "version": "8.59.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@unrs/resolver-binding-android-arm-eabi",
+    "version": "1.11.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@unrs/resolver-binding-android-arm64",
+    "version": "1.11.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@unrs/resolver-binding-darwin-arm64",
+    "version": "1.11.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@unrs/resolver-binding-darwin-x64",
+    "version": "1.11.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@unrs/resolver-binding-freebsd-x64",
+    "version": "1.11.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@unrs/resolver-binding-linux-arm-gnueabihf",
+    "version": "1.11.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@unrs/resolver-binding-linux-arm-musleabihf",
+    "version": "1.11.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@unrs/resolver-binding-linux-arm64-gnu",
+    "version": "1.11.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@unrs/resolver-binding-linux-arm64-musl",
+    "version": "1.11.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@unrs/resolver-binding-linux-ppc64-gnu",
+    "version": "1.11.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@unrs/resolver-binding-linux-riscv64-gnu",
+    "version": "1.11.1"
+  }
+]

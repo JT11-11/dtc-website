@@ -1,0 +1,152 @@
+[
+  {
+    "ecosystem": "npm",
+    "name": "cli-spinners",
+    "version": "2.9.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "cli-width",
+    "version": "4.1.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "client-only",
+    "version": "0.0.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "cliui",
+    "version": "8.0.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "clsx",
+    "version": "2.1.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "code-block-writer",
+    "version": "13.0.3"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "color-convert",
+    "version": "2.0.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "color-name",
+    "version": "1.1.4"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "commander",
+    "version": "11.1.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "commander",
+    "version": "14.0.3"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "concat-map",
+    "version": "0.0.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "content-disposition",
+    "version": "1.1.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "content-type",
+    "version": "1.0.5"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "convert-source-map",
+    "version": "2.0.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "cookie",
+    "version": "0.7.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "cookie",
+    "version": "1.1.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "cookie-signature",
+    "version": "1.2.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "cors",
+    "version": "2.8.6"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "cosmiconfig",
+    "version": "9.0.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "cross-env",
+    "version": "7.0.3"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "cross-spawn",
+    "version": "7.0.6"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "cssesc",
+    "version": "3.0.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "csstype",
+    "version": "3.2.3"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "damerau-levenshtein",
+    "version": "1.0.8"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "data-uri-to-buffer",
+    "version": "4.0.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "data-view-buffer",
+    "version": "1.0.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "data-view-byte-length",
+    "version": "1.0.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "data-view-byte-offset",
+    "version": "1.0.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "debug",
+    "version": "3.2.7"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "debug",
+    "version": "4.4.3"
+  }
+]

@@ -1,0 +1,152 @@
+[
+  {
+    "ecosystem": "npm",
+    "name": "es-object-atoms",
+    "version": "1.1.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "es-set-tostringtag",
+    "version": "2.1.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "es-shim-unscopables",
+    "version": "1.1.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "es-to-primitive",
+    "version": "1.3.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "escalade",
+    "version": "3.2.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "escape-html",
+    "version": "1.0.3"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "escape-string-regexp",
+    "version": "4.0.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "eslint",
+    "version": "9.39.4"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "eslint-config-next",
+    "version": "16.2.4"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "eslint-import-resolver-node",
+    "version": "0.3.10"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "eslint-import-resolver-typescript",
+    "version": "3.10.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "eslint-module-utils",
+    "version": "2.12.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "eslint-plugin-import",
+    "version": "2.32.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "eslint-plugin-jsx-a11y",
+    "version": "6.10.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "eslint-plugin-react",
+    "version": "7.37.5"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "eslint-plugin-react-hooks",
+    "version": "7.1.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "eslint-scope",
+    "version": "8.4.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "eslint-visitor-keys",
+    "version": "3.4.3"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "eslint-visitor-keys",
+    "version": "4.2.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "eslint-visitor-keys",
+    "version": "5.0.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "espree",
+    "version": "10.4.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "esprima",
+    "version": "4.0.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "esquery",
+    "version": "1.7.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "esrecurse",
+    "version": "4.3.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "estraverse",
+    "version": "5.3.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "esutils",
+    "version": "2.0.3"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "etag",
+    "version": "1.8.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "eventsource",
+    "version": "3.0.7"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "eventsource-parser",
+    "version": "3.0.8"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "execa",
+    "version": "5.1.1"
+  }
+]

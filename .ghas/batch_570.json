@@ -1,0 +1,152 @@
+[
+  {
+    "ecosystem": "npm",
+    "name": "picomatch",
+    "version": "2.3.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "picomatch",
+    "version": "4.0.4"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "pkce-challenge",
+    "version": "5.0.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "possible-typed-array-names",
+    "version": "1.1.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "postcss",
+    "version": "8.4.31"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "postcss",
+    "version": "8.5.10"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "postcss-selector-parser",
+    "version": "7.1.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "postprocessing",
+    "version": "6.39.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "potpack",
+    "version": "1.0.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "powershell-utils",
+    "version": "0.1.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "prelude-ls",
+    "version": "1.2.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "pretty-ms",
+    "version": "9.3.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "promise-worker-transferable",
+    "version": "1.0.4"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "prompts",
+    "version": "2.4.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "prop-types",
+    "version": "15.8.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "proxy-addr",
+    "version": "2.0.7"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "punycode",
+    "version": "2.3.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "qs",
+    "version": "6.15.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "queue-microtask",
+    "version": "1.2.3"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "range-parser",
+    "version": "1.2.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "raw-body",
+    "version": "3.0.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "react",
+    "version": "19.2.4"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "react-dom",
+    "version": "19.2.4"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "react-is",
+    "version": "16.13.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "react-use-measure",
+    "version": "2.1.7"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "recast",
+    "version": "0.23.11"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "reflect.getprototypeof",
+    "version": "1.0.10"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "regexp.prototype.flags",
+    "version": "1.5.4"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "require-directory",
+    "version": "2.1.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "require-from-string",
+    "version": "2.0.2"
+  }
+]

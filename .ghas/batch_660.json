@@ -1,0 +1,152 @@
+[
+  {
+    "ecosystem": "npm",
+    "name": "supports-color",
+    "version": "7.2.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "supports-preserve-symlinks-flag",
+    "version": "1.0.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "suspend-react",
+    "version": "0.1.3"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "tagged-tag",
+    "version": "1.0.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "tailwind-merge",
+    "version": "3.5.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "tailwindcss",
+    "version": "4.2.4"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "tapable",
+    "version": "2.3.3"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "three",
+    "version": "0.170.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "three",
+    "version": "0.183.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "three-mesh-bvh",
+    "version": "0.8.3"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "three-stdlib",
+    "version": "2.36.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "tiny-invariant",
+    "version": "1.3.3"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "tinyglobby",
+    "version": "0.2.16"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "tldts",
+    "version": "7.0.28"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "tldts-core",
+    "version": "7.0.28"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "to-regex-range",
+    "version": "5.0.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "toidentifier",
+    "version": "1.0.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "tough-cookie",
+    "version": "6.0.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "troika-three-text",
+    "version": "0.52.4"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "troika-three-utils",
+    "version": "0.52.4"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "troika-worker-utils",
+    "version": "0.52.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "ts-api-utils",
+    "version": "2.5.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "ts-morph",
+    "version": "26.0.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "tsconfig-paths",
+    "version": "3.15.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "tsconfig-paths",
+    "version": "4.2.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "tslib",
+    "version": "2.8.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "tunnel-rat",
+    "version": "0.1.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "tw-animate-css",
+    "version": "1.4.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "type-check",
+    "version": "0.4.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "type-fest",
+    "version": "5.6.0"
+  }
+]

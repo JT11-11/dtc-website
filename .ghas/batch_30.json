@@ -1,0 +1,152 @@
+[
+  {
+    "ecosystem": "npm",
+    "name": "@base-ui/react",
+    "version": "1.4.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@base-ui/utils",
+    "version": "0.2.8"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@dimforge/rapier3d-compat",
+    "version": "0.12.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@dotenvx/dotenvx",
+    "version": "1.63.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@ecies/ciphers",
+    "version": "0.2.6"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@emnapi/core",
+    "version": "1.10.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@emnapi/runtime",
+    "version": "1.10.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@emnapi/wasi-threads",
+    "version": "1.2.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@eslint-community/eslint-utils",
+    "version": "4.9.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@eslint-community/regexpp",
+    "version": "4.12.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@eslint/config-array",
+    "version": "0.21.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@eslint/config-helpers",
+    "version": "0.4.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@eslint/core",
+    "version": "0.17.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@eslint/eslintrc",
+    "version": "3.3.5"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@eslint/js",
+    "version": "9.39.4"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@eslint/object-schema",
+    "version": "2.1.7"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@eslint/plugin-kit",
+    "version": "0.4.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@floating-ui/core",
+    "version": "1.7.5"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@floating-ui/dom",
+    "version": "1.7.6"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@floating-ui/react-dom",
+    "version": "2.1.8"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@floating-ui/utils",
+    "version": "0.2.11"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@gsap/react",
+    "version": "2.1.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@hono/node-server",
+    "version": "1.19.14"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@humanfs/core",
+    "version": "0.19.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@humanfs/node",
+    "version": "0.16.8"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@humanfs/types",
+    "version": "0.15.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@humanwhocodes/module-importer",
+    "version": "1.0.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@humanwhocodes/retry",
+    "version": "0.4.3"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@img/colour",
+    "version": "1.1.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@img/sharp-darwin-arm64",
+    "version": "0.34.5"
+  }
+]

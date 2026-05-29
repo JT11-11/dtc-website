@@ -1,0 +1,152 @@
+[
+  {
+    "ecosystem": "npm",
+    "name": "type-is",
+    "version": "2.0.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "typed-array-buffer",
+    "version": "1.0.3"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "typed-array-byte-length",
+    "version": "1.0.3"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "typed-array-byte-offset",
+    "version": "1.0.4"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "typed-array-length",
+    "version": "1.0.7"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "typescript",
+    "version": "5.9.3"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "typescript-eslint",
+    "version": "8.59.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "unbox-primitive",
+    "version": "1.1.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "undici-types",
+    "version": "6.21.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "unicorn-magic",
+    "version": "0.3.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "universalify",
+    "version": "2.0.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "unpipe",
+    "version": "1.0.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "unrs-resolver",
+    "version": "1.11.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "until-async",
+    "version": "3.0.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "update-browserslist-db",
+    "version": "1.2.3"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "uri-js",
+    "version": "4.4.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "use-sync-external-store",
+    "version": "1.6.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "util-deprecate",
+    "version": "1.0.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "utility-types",
+    "version": "3.11.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "validate-npm-package-name",
+    "version": "7.0.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "vary",
+    "version": "1.1.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "web-streams-polyfill",
+    "version": "3.3.3"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "webgl-constants",
+    "version": "1.1.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "webgl-sdf-generator",
+    "version": "1.1.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "which",
+    "version": "2.0.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "which",
+    "version": "4.0.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "which-boxed-primitive",
+    "version": "1.1.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "which-builtin-type",
+    "version": "1.2.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "which-collection",
+    "version": "1.0.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "which-typed-array",
+    "version": "1.1.20"
+  }
+]

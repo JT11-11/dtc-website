@@ -1,0 +1,152 @@
+[
+  {
+    "ecosystem": "npm",
+    "name": "levn",
+    "version": "0.4.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "lie",
+    "version": "3.3.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "lightningcss",
+    "version": "1.32.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "lightningcss-android-arm64",
+    "version": "1.32.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "lightningcss-darwin-arm64",
+    "version": "1.32.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "lightningcss-darwin-x64",
+    "version": "1.32.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "lightningcss-freebsd-x64",
+    "version": "1.32.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "lightningcss-linux-arm-gnueabihf",
+    "version": "1.32.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "lightningcss-linux-arm64-gnu",
+    "version": "1.32.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "lightningcss-linux-arm64-musl",
+    "version": "1.32.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "lightningcss-linux-x64-gnu",
+    "version": "1.32.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "lightningcss-linux-x64-musl",
+    "version": "1.32.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "lightningcss-win32-arm64-msvc",
+    "version": "1.32.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "lightningcss-win32-x64-msvc",
+    "version": "1.32.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "lines-and-columns",
+    "version": "1.2.4"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "locate-path",
+    "version": "6.0.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "lodash.merge",
+    "version": "4.6.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "log-symbols",
+    "version": "6.0.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "loose-envify",
+    "version": "1.4.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "lru-cache",
+    "version": "5.1.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "lucide-react",
+    "version": "1.16.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "maath",
+    "version": "0.10.8"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "maath",
+    "version": "0.6.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "magic-string",
+    "version": "0.30.21"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "math-intrinsics",
+    "version": "1.1.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "media-typer",
+    "version": "1.1.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "merge-descriptors",
+    "version": "2.0.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "merge-stream",
+    "version": "2.0.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "merge2",
+    "version": "1.4.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "meshline",
+    "version": "3.3.1"
+  }
+]

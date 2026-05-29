@@ -1,0 +1,152 @@
+[
+  {
+    "ecosystem": "npm",
+    "name": "arraybuffer.prototype.slice",
+    "version": "1.0.4"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "ast-types",
+    "version": "0.16.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "ast-types-flow",
+    "version": "0.0.8"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "async-function",
+    "version": "1.0.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "available-typed-arrays",
+    "version": "1.0.7"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "axe-core",
+    "version": "4.11.3"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "axobject-query",
+    "version": "4.1.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "balanced-match",
+    "version": "1.0.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "balanced-match",
+    "version": "4.0.4"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "base64-js",
+    "version": "1.5.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "baseline-browser-mapping",
+    "version": "2.10.22"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "bidi-js",
+    "version": "1.0.3"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "body-parser",
+    "version": "2.2.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "brace-expansion",
+    "version": "1.1.14"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "brace-expansion",
+    "version": "5.0.5"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "braces",
+    "version": "3.0.3"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "browserslist",
+    "version": "4.28.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "buffer",
+    "version": "6.0.3"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "bundle-name",
+    "version": "4.1.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "bytes",
+    "version": "3.1.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "call-bind",
+    "version": "1.0.9"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "call-bind-apply-helpers",
+    "version": "1.0.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "call-bound",
+    "version": "1.0.4"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "callsites",
+    "version": "3.1.0"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "camera-controls",
+    "version": "3.1.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "caniuse-lite",
+    "version": "1.0.30001790"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "chalk",
+    "version": "4.1.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "chalk",
+    "version": "5.6.2"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "class-variance-authority",
+    "version": "0.7.1"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "cli-cursor",
+    "version": "5.0.0"
+  }
+]

@@ -1,0 +1,152 @@
+[
+  {
+    "ecosystem": "npm",
+    "name": "@img/sharp-darwin-x64",
+    "version": "0.34.5"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@img/sharp-libvips-darwin-arm64",
+    "version": "1.2.4"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@img/sharp-libvips-darwin-x64",
+    "version": "1.2.4"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@img/sharp-libvips-linux-arm",
+    "version": "1.2.4"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@img/sharp-libvips-linux-arm64",
+    "version": "1.2.4"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@img/sharp-libvips-linux-ppc64",
+    "version": "1.2.4"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@img/sharp-libvips-linux-riscv64",
+    "version": "1.2.4"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@img/sharp-libvips-linux-s390x",
+    "version": "1.2.4"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@img/sharp-libvips-linux-x64",
+    "version": "1.2.4"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@img/sharp-libvips-linuxmusl-arm64",
+    "version": "1.2.4"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@img/sharp-libvips-linuxmusl-x64",
+    "version": "1.2.4"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@img/sharp-linux-arm",
+    "version": "0.34.5"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@img/sharp-linux-arm64",
+    "version": "0.34.5"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@img/sharp-linux-ppc64",
+    "version": "0.34.5"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@img/sharp-linux-riscv64",
+    "version": "0.34.5"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@img/sharp-linux-s390x",
+    "version": "0.34.5"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@img/sharp-linux-x64",
+    "version": "0.34.5"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@img/sharp-linuxmusl-arm64",
+    "version": "0.34.5"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@img/sharp-linuxmusl-x64",
+    "version": "0.34.5"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@img/sharp-wasm32",
+    "version": "0.34.5"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@img/sharp-win32-arm64",
+    "version": "0.34.5"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@img/sharp-win32-ia32",
+    "version": "0.34.5"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@img/sharp-win32-x64",
+    "version": "0.34.5"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@inquirer/ansi",
+    "version": "2.0.5"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@inquirer/confirm",
+    "version": "6.0.12"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@inquirer/core",
+    "version": "11.1.9"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@inquirer/figures",
+    "version": "2.0.5"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@inquirer/type",
+    "version": "4.0.5"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@jridgewell/gen-mapping",
+    "version": "0.3.13"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@jridgewell/remapping",
+    "version": "2.3.5"
+  }
+]

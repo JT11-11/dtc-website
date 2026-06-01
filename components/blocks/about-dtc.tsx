@@ -80,11 +80,11 @@ export function AboutDtc() {
       <div className="px-6 sm:px-12 lg:px-24 flex flex-col items-center max-w-360 2xl:max-w-450 3xl:max-w-550 mx-auto">
         <div ref={imageRef} className="relative aspect-21/9 lg:aspect-3/1 w-full overflow-hidden rounded-full mb-16">
           <Image
-            src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=2000&auto=format&fit=crop"
-            alt="Research team collaboration"
+            src="/images/un/flags-duo.jpg"
+            alt="DTC members at the United Nations flag row in New York"
             fill
             sizes="(min-width: 1024px) calc(100vw - 12rem), (min-width: 640px) calc(100vw - 6rem), calc(100vw - 3rem)"
-            className="object-cover"
+            className="object-cover object-[50%_35%]"
           />
         </div>
 

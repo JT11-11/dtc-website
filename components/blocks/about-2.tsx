@@ -21,63 +21,43 @@ interface About2Props {
 const TIMELINE_DATA: TimelineEntry[] = [
   {
     id: 1,
-    title: "Founded at UN IGF",
-    date: "Nov 2022",
-    month: "Nov",
+    title: "Founded at the UN IGF",
+    date: "2022",
+    month: "2022",
     year: "2022",
     description:
-      "The DTC Policy Lab was founded at the 2022 UN Internet Governance Forum in Addis Ababa, Ethiopia — moving youth from being subjects of research to becoming the researchers themselves.",
-    image: "https://images.unsplash.com/photo-1560523159-4a9692d222ef?q=80&w=800&auto=format&fit=crop",
+      "At the invitation of the IGF Secretariat, the Dynamic Teen Coalition was established at the 2022 UN Internet Governance Forum in Ethiopia — the first teen-led coalition at the IGF.",
+    image: "/images/un/flag-portrait.jpg",
   },
   {
     id: 2,
-    title: "Global Teen Restriction Database",
-    date: "2023",
+    title: "UN Advocacy & Research",
+    date: "2023–24",
     month: "2023",
-    year: "2023",
+    year: "2023–24",
     description:
-      "Built the world's first systematic map of age-based internet restrictions, categorized by country and platform — a database with no prior equivalent.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
+      "DTC attended UN events and challenged social media bans globally, and began building the world's first systematic global database of teen online restrictions.",
+    image: "/images/un/group.jpg",
   },
   {
     id: 3,
-    title: "Twisted Pair Legitimacy Theorem",
-    date: "2023",
-    month: "2023",
-    year: "2023",
-    description:
-      "Developed the Twisted Pair Legitimacy Theorem and Lemma C (Ghost Authority) — formal models to diagnose when automated systems or policies exercise authority without legitimate human oversight.",
-    image: "https://images.unsplash.com/photo-1527430253228-e93688616381?q=80&w=800&auto=format&fit=crop",
-  },
-  {
-    id: 4,
-    title: "UN Ageism Audit",
-    date: "2024",
-    month: "2024",
-    year: "2024",
-    description:
-      "Completed a UN Website Ageism Audit and published an opportunity-mapping database identifying structural barriers preventing youth from accessing global governance institutions.",
-    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=800&auto=format&fit=crop",
-  },
-  {
-    id: 5,
-    title: "Peer-Reviewed Research",
-    date: "2024",
-    month: "2024",
-    year: "2024",
-    description:
-      "Submitted a pilot study on how social media restrictions disproportionately isolate LGBTQ+ youth for peer review at The Social Science Journal (Taylor & Francis).",
-    image: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=800&auto=format&fit=crop",
-  },
-  {
-    id: 6,
-    title: "UN-Engaged & Singapore HQ",
+    title: "Global UN Engagement",
     date: "2025",
     month: "2025",
     year: "2025",
     description:
-      "Formalized as a nonprofit via Hack Club 501(c)(3) fiscal sponsorship. Headquartered in Singapore, now participating in ECOSOC and HLPF via the UN Major Group for Children and Youth.",
-    image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=800&auto=format&fit=crop",
+      "Engaged across IGF 2025, the ECOSOC Youth Forum, the HLPF, WSIS+20 and UNGA events. At IGF2025 in Norway, DTC confronted Australia's Ambassador for Cyber Affairs on the impact of teen bans — an exchange that became the basis of our paper.",
+    image: "/images/un/hlpf.jpg",
+  },
+  {
+    id: 4,
+    title: "Policy Lab Launches",
+    date: "2026",
+    month: "2026",
+    year: "2026",
+    description:
+      "DTC evolved into a teen-led policy research lab, headquartered in Singapore. Our paper is under peer review at Taylor & Francis, and we are recruiting teen researchers globally.",
+    image: "/images/un/ga-hall.jpg",
   },
 ];
 
@@ -166,7 +146,7 @@ function Header() {
       className="mb-8 sm:mb-12"
     >
       <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight text-neutral-900 dark:text-white">
-        Our journey in AI
+        Our journey
       </h1>
     </motion.div>
   );
@@ -269,7 +249,7 @@ function Timeline({
       >
         <div className="min-w-[900px] space-y-8">
           {/* Timeline Labels */}
-          <div className="grid grid-cols-6 gap-8">
+          <div className="grid grid-cols-4 gap-8">
             {TIMELINE_DATA.map((entry, index) => (
               <button
                 key={entry.id}
@@ -302,13 +282,13 @@ function Timeline({
                 width:
                   activeIndex === 0
                     ? 0
-                    : `calc(((100% - (5 * 2rem)) / 6) * ${activeIndex} + (2rem * ${activeIndex}))`,
+                    : `calc(((100% - (3 * 2rem)) / 4) * ${activeIndex} + (2rem * ${activeIndex}))`,
               }}
               transition={{ duration: 0.4, ease: [0.32, 0.72, 0, 1] }}
             />
 
             {/* Timeline Dots */}
-            <div className="relative grid grid-cols-6 gap-8">
+            <div className="relative grid grid-cols-4 gap-8">
               {TIMELINE_DATA.map((entry, index) => {
                 const isActive = index === activeIndex;
                 const isPassed = index <= activeIndex;
@@ -339,7 +319,7 @@ function Timeline({
           </div>
 
           {/* Timeline Dates */}
-          <div className="grid grid-cols-6 gap-8">
+          <div className="grid grid-cols-4 gap-8">
             {TIMELINE_DATA.map((entry, index) => (
               <button
                 key={entry.id}
@@ -386,7 +366,7 @@ function Timeline({
       {/* Desktop Timeline */}
       <div className="hidden md:block space-y-8">
         {/* Timeline Labels */}
-        <div className="grid grid-cols-6 gap-2 sm:gap-4">
+        <div className="grid grid-cols-4 gap-2 sm:gap-4">
           {TIMELINE_DATA.map((entry, index) => (
             <button
               key={entry.id}
@@ -419,7 +399,7 @@ function Timeline({
               width:
                 activeIndex === 0
                   ? 0
-                  : `calc(((100% - (5 * 0.5rem)) / 6) * ${activeIndex} + (0.5rem * ${activeIndex}))`,
+                  : `calc(((100% - (3 * 0.5rem)) / 4) * ${activeIndex} + (0.5rem * ${activeIndex}))`,
             }}
             transition={{ duration: 0.4, ease: [0.32, 0.72, 0, 1] }}
           />
@@ -432,13 +412,13 @@ function Timeline({
               width:
                 activeIndex === 0
                   ? 0
-                  : `calc(((100% - (5 * 1rem)) / 6) * ${activeIndex} + (1rem * ${activeIndex}))`,
+                  : `calc(((100% - (3 * 1rem)) / 4) * ${activeIndex} + (1rem * ${activeIndex}))`,
             }}
             transition={{ duration: 0.4, ease: [0.32, 0.72, 0, 1] }}
           />
 
           {/* Timeline Dots */}
-          <div className="relative grid grid-cols-6 gap-2 sm:gap-4">
+          <div className="relative grid grid-cols-4 gap-2 sm:gap-4">
             {TIMELINE_DATA.map((entry, index) => {
               const isActive = index === activeIndex;
               const isPassed = index <= activeIndex;
@@ -470,7 +450,7 @@ function Timeline({
         </div>
 
         {/* Timeline Dates */}
-        <div className="grid grid-cols-6 gap-2 sm:gap-4">
+        <div className="grid grid-cols-4 gap-2 sm:gap-4">
           {TIMELINE_DATA.map((entry, index) => (
             <button
               key={entry.id}

@@ -97,7 +97,7 @@ export function ImpactDtc() {
             Our Global Impact
           </h2>
           <Link
-            href="#contact"
+            href="/partners"
             className="hidden sm:inline-flex items-center justify-center px-6 py-3 rounded-full bg-foreground text-background text-sm font-medium transition-opacity hover:opacity-80"
           >
             Partner with us
@@ -108,8 +108,8 @@ export function ImpactDtc() {
           <div className="row-span-2 flex flex-col gap-4">
             <div className="relative flex-1 w-full overflow-hidden rounded-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=800&auto=format&fit=crop"
-                alt="Research data analysis"
+                src="/images/un/window.jpg"
+                alt="Looking out over the UN grounds and New York skyline from inside the United Nations"
                 fill
                 sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw"
                 className="object-cover"
@@ -117,8 +117,8 @@ export function ImpactDtc() {
             </div>
             <div className="relative flex-1 w-full overflow-hidden rounded-full">
               <Image
-                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop"
-                alt="Collaborative meeting"
+                src="/images/un/official-meeting.jpg"
+                alt="DTC members meeting a UN official at United Nations Headquarters"
                 fill
                 sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw"
                 className="object-cover"
@@ -130,17 +130,17 @@ export function ImpactDtc() {
             <div>
               <QuoteIcon className="w-10 h-10 text-foreground/20 mb-6" />
               <blockquote className="text-2xl lg:text-3xl font-medium leading-snug text-foreground">
-                DTC&apos;s research helped us understand the global landscape for teen digital rights, directly informing our policy advocacy.
+                The laws that govern our online lives are written without us. It&apos;s time teens stopped being the subject of the research and became the researchers.
               </blockquote>
               <div className="mt-6">
-                <p className="font-semibold text-foreground">Partner Organization</p>
-                <p className="text-sm text-foreground/60">Digital Rights Advocate</p>
+                <p className="font-semibold text-foreground">Dynamic Teen Coalition</p>
+                <p className="text-sm text-foreground/60">Youth Policy Lab</p>
               </div>
             </div>
             <div className="flex items-center justify-between mt-auto pt-8">
-              <span className="text-xl font-semibold text-foreground">Impact Report</span>
+              <span className="text-xl font-semibold text-foreground">Our Mission</span>
               <Link
-                href="#"
+                href="/about"
                 className="w-10 h-10 rounded-full bg-foreground/10 flex items-center justify-center hover:bg-foreground hover:text-background transition-colors"
               >
                 <ArrowIcon className="w-4 h-4" />
@@ -156,7 +156,7 @@ export function ImpactDtc() {
             <div className="flex items-center justify-between mt-auto pt-4">
               <span className="text-sm font-medium text-foreground">Global Reach</span>
               <Link
-                href="#"
+                href="/work"
                 className="w-10 h-10 rounded-full bg-foreground/10 flex items-center justify-center hover:bg-foreground hover:text-background transition-colors"
               >
                 <ArrowIcon className="w-4 h-4" />
@@ -166,13 +166,13 @@ export function ImpactDtc() {
 
           <div className="bg-muted/50 rounded-2xl p-6 flex flex-col">
             <div className="flex-1">
-              <p className="text-3xl font-semibold text-foreground">12</p>
-              <p className="text-sm text-foreground/60 mt-1">Studies published or under peer review</p>
+              <p className="text-3xl font-semibold text-foreground">6</p>
+              <p className="text-sm text-foreground/60 mt-1">UN &amp; UN-adjacent forums engaged in 2025</p>
             </div>
             <div className="flex items-center justify-between mt-auto pt-4">
-              <span className="text-sm font-medium text-foreground">Research Output</span>
+              <span className="text-sm font-medium text-foreground">UN Engagement</span>
               <Link
-                href="#"
+                href="/work"
                 className="w-10 h-10 rounded-full bg-foreground/10 flex items-center justify-center hover:bg-foreground hover:text-background transition-colors"
               >
                 <ArrowIcon className="w-4 h-4" />
@@ -194,12 +194,12 @@ export function ImpactDtc() {
 
           <div className="lg:col-span-3 bg-muted/50 rounded-2xl p-8 flex flex-col">
             <p className="text-xl lg:text-2xl font-medium leading-relaxed text-foreground max-w-3xl flex-1">
-              Our database informs policymakers and digital rights advocates across 3 continents, ensuring policies reflect the actual experiences of youth.
+              Our database informs policymakers and digital rights advocates worldwide, ensuring policies reflect the actual experiences of youth.
             </p>
             <div className="flex items-center justify-between mt-auto pt-6">
               <span className="text-xl font-semibold text-foreground">Learn More</span>
               <Link
-                href="#research"
+                href="/work"
                 className="w-10 h-10 rounded-full bg-foreground/10 flex items-center justify-center hover:bg-foreground hover:text-background transition-colors"
               >
                 <ArrowIcon className="w-4 h-4" />

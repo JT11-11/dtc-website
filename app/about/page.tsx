@@ -7,6 +7,8 @@ import About4 from "@/components/blocks/about-4";
 import CTA1 from "@/components/blocks/cta-1";
 import { FooterDtc } from "@/components/blocks/footer-dtc";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { AboutField } from "@/components/blocks/about-field";
+import { OutreachVideos } from "@/components/blocks/outreach-videos";
 
 export const metadata: Metadata = {
   title: "About Us — DTC Policy Lab",
@@ -36,8 +38,7 @@ export default function AboutPage() {
             <p className="mt-6 text-lg sm:text-xl text-neutral-500 dark:text-neutral-400 max-w-2xl leading-relaxed">
               We pay high school researchers to do the global digital policy
               work adults keep promising to include us in. Founded at the 2022
-              UN IGF. Headquartered in Singapore. Fiscalised under Hack Club
-              501(c)(3).
+              UN IGF in Ethiopia. Headquartered in Singapore.
             </p>
           </div>
         </section>
@@ -53,6 +54,12 @@ export default function AboutPage() {
 
         {/* Team */}
         <About7 />
+
+        {/* UN photos */}
+        <AboutField />
+
+        {/* Outreach videos */}
+        <OutreachVideos />
 
         {/* CTA */}
         <CTA1

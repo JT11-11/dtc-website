@@ -14,12 +14,11 @@ interface ValueItem {
 const VALUES: ValueItem[] = [
   {
     id: 1,
-    title: "Paid",
-    heading: "We pay our researchers.",
+    title: "Serious",
+    heading: "Real work. Real stakes.",
     description:
-      "Every DTC researcher is compensated — not with 'experience' or 'exposure', but with actual money. Serious work at the level we do it deserves serious pay, regardless of what grade you're in.",
-    image:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80",
+      "DTC researchers do the same work as adult policy professionals — building databases, publishing in peer-reviewed journals, briefing delegates at the UN. We don't treat youth as a footnote.",
+    image: "/images/team/aditya.jpg",
   },
   {
     id: 2,
@@ -27,8 +26,7 @@ const VALUES: ValueItem[] = [
     heading: "Peer-reviewed, formally structured, citable.",
     description:
       "Our research goes through formal review processes. We publish in academic journals, build mathematical governance frameworks, and produce databases designed to serve as evidence in policy advocacy — not just talking points.",
-    image:
-      "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=800&q=80",
+    image: "/images/un/conf-room.jpg",
   },
   {
     id: 3,
@@ -36,8 +34,7 @@ const VALUES: ValueItem[] = [
     heading: "We close the consultation gap.",
     description:
       "42 countries enacted social media bans with 0% meaningful youth input. That specific, documented failure is what DTC exists to address — not 'youth inclusion' as a vague aspiration, but the concrete, measurable absence of young voices in decisions about their digital lives.",
-    image:
-      "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80",
+    image: "/images/un/sdg-water.jpg",
   },
   {
     id: 4,
@@ -45,8 +42,7 @@ const VALUES: ValueItem[] = [
     heading: "Social media as survival infrastructure.",
     description:
       "For LGBTQ+ youth in hostile homes, low-income students without other networks, and teenagers navigating mental health crises — online spaces aren't entertainment. Restricting them isn't protective. Our research is grounded in that reality, not in moral panic.",
-    image:
-      "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&q=80",
+    image: "/images/un/unga.jpg",
   },
 ];
 

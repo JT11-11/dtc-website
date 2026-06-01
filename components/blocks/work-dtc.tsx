@@ -31,9 +31,9 @@ const workItems: WorkItem[] = [
     title: "Social Media Restrictions &",
     titleItalic: "LGBTQ+ Youth Isolation",
     type: "Empirical Pilot Study",
-    status: "Under peer review — The Social Science Journal, Taylor & Francis",
+    status: "Under peer review — Taylor & Francis (Social Sciences)",
     summary:
-      "The first systematic study linking social media age-restriction policies to documented increases in isolation among LGBTQ+ youth populations. Drawing on survey data and qualitative interviews across multiple countries, we establish a statistically significant relationship between platform access restrictions and self-reported loss of community, support networks, and identity resources among queer teenagers.",
+      "Original research on how blanket, age-based platform restrictions affect marginalized youth — with LGBTQ+ teenagers as the central case. Drawing on survey data and qualitative interviews, the study examines the relationship between platform access restrictions and the loss of community, support networks, and identity resources for the young people who depend on these spaces most.",
     whyItMatters:
       "Policymakers enacting social media bans have consistently cited child safety — but our data shows those bans fall hardest on the teenagers most dependent on online spaces for their safety. For LGBTQ+ youth in hostile households or conservative communities, restricting social media doesn't protect them. It removes their only safe social infrastructure. This study puts evidence behind a claim advocates have been making for years.",
   },
@@ -78,24 +78,26 @@ const workItems: WorkItem[] = [
     number: "05",
     title: "Twisted Pair",
     titleItalic: "Legitimacy Theorem",
-    type: "Formal Governance Framework",
-    status: "Published — DTC Working Paper",
+    type: "Foundational Framework — 3 Primitives",
+    status: "3 Primitives Framework · CC BY 4.0",
     summary:
-      "A formal governance framework establishing that institutional legitimacy requires two mutually reinforcing sources — procedural legitimacy (the process was followed correctly) and representational legitimacy (the affected stakeholders were genuinely included). The theorem proves that either source alone is insufficient: an institution that follows correct procedure but excludes affected parties is not legitimate, and an institution with broad participation but no procedural integrity is not legitimate either. Both conditions must be met, and they reinforce each other.",
+      "A formal result establishing that legitimacy in any decision-permitting system has two independent, jointly necessary layers: a governance layer (authority must be explicitly declared by a human — purpose, authority, and constraints) and a value layer (the affected person retains Agency, Dignity, Continuity, and Interpretive Authority). Total legitimacy holds only when both layers are satisfied; neither substitutes for the other.",
     whyItMatters:
-      "Most arguments for youth inclusion in policy rest on normative or rhetorical grounds. This theorem provides a formal structure for that argument — one that can be cited in governance reform proposals, applied to specific institutional critiques, and tested against concrete cases. It's the theoretical foundation for much of DTC's policy advocacy.",
+      "It gives a precise, citable structure to an argument advocates usually make only rhetorically: a policy can follow correct procedure and still be illegitimate if it strips the people it affects of agency and authorship. Authored under the 3 Primitives framework (3primitives.io), it underpins how we analyse youth exclusion from digital governance.",
+    cta: { label: "Read on 3 Primitives", href: "https://3primitives.io/formal_records/" },
   },
   {
     id: "lemma-c",
     number: "06",
     title: "Lemma C:",
     titleItalic: "Ghost Authority",
-    type: "Formal Governance Framework",
-    status: "Published — DTC Working Paper",
+    type: "Foundational Framework — 3 Primitives",
+    status: "3 Primitives Framework · CC BY 4.0",
     summary:
-      "A formal derivation from the Twisted Pair Legitimacy Theorem establishing that institutions which claim authority over a population without genuine inclusion of that population's stakeholders become 'ghost authorities' — structurally present and procedurally active, but substantively illegitimate. Ghost authorities can enact rules, enforce compliance, and produce outputs, but they do so without the foundational condition that makes governance binding rather than merely coercive.",
+      "A diagnostic result from the same framework: when a protocol or automated system is treated as the source of a decision — rather than as an input to a human decision — authority is exercised without anyone declaring it. That condition is 'Ghost Authority': rules are enforced and outcomes imposed, but no accountable human stands behind them.",
     whyItMatters:
-      "This framework gives precise language to a problem that advocates have described only loosely. When a government bans social media for teenagers without consulting teenagers, it isn't just bad practice — Lemma C establishes it as a formal exercise of ghost authority. That distinction matters for how legal challenges, reform proposals, and advocacy strategies are framed.",
+      "It names a failure mode advocates describe only loosely. When governments restrict teenagers' digital lives through processes no accountable person will own, that is Ghost Authority in action — and Lemma C gives precise language to challenge it. Authored under the 3 Primitives framework (3primitives.io).",
+    cta: { label: "Read on 3 Primitives", href: "https://3primitives.io/formal_records/" },
   },
 ];
 

@@ -33,7 +33,7 @@ const services = [
   { id: 1, title: "Digital Rights Research", href: "/work" },
   { id: 2, title: "Platform Governance", href: "/work" },
   { id: 3, title: "Youth Privacy Advocacy", href: "/about" },
-  { id: 4, title: "AI Governance & Youth", href: "/work" },
+  { id: 4, title: "Social Media Ban Research", href: "/work" },
 ];
 
 function ServiceItem({ title, href, index }: { title: string; href: string; index: number }) {

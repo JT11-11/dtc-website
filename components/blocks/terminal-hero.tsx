@@ -72,7 +72,7 @@ export function TerminalHero() {
           className="mt-8 flex flex-wrap items-center justify-center gap-3"
         >
           <a
-            href="#join"
+            href="/contact"
             className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-black hover:bg-green-300 transition-colors duration-200"
           >
             Join the Lab

@@ -3,23 +3,20 @@
 import Link from "next/link";
 
 const socialLinks = [
-  { label: "Instagram", href: "#", aria: "DTC Policy Lab on Instagram" },
-  { label: "LinkedIn", href: "#", aria: "DTC Policy Lab on LinkedIn" },
-  { label: "Twitter/X", href: "#", aria: "DTC Policy Lab on Twitter/X" },
-  { label: "Substack", href: "#", aria: "DTC Policy Lab on Substack" },
+  { label: "Instagram" },
+  { label: "LinkedIn" },
+  { label: "Twitter/X" },
+  { label: "Substack" },
 ];
 
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
   { label: "Our Work", href: "/work" },
+  { label: "Partners", href: "/partners" },
   { label: "Contact", href: "/contact" },
 ];
 
-const footerLinks = [
-  { label: "Privacy Policy", href: "#" },
-  { label: "Terms of Service", href: "#" },
-];
 
 export function FooterDtc() {
   return (
@@ -58,7 +55,7 @@ export function FooterDtc() {
               <h4 className="text-xs font-semibold uppercase tracking-widest text-background/50 mb-6">Location</h4>
               <div className="mb-5">
                 <p className="font-medium mb-1">Singapore</p>
-                <p className="text-background/60 text-sm">Est. 2022</p>
+                <p className="text-background/60 text-sm">Est. 2026</p>
               </div>
               <div>
                 <p className="font-medium mb-1">Global Network</p>
@@ -74,7 +71,7 @@ export function FooterDtc() {
                 <li><span className="text-background">Digital Rights</span></li>
                 <li><span className="text-background">Youth Privacy</span></li>
                 <li><span className="text-background">Platform Governance</span></li>
-                <li><span className="text-background">AI Governance</span></li>
+                <li><span className="text-background">Social Media Restrictions</span></li>
                 <li><span className="text-background">Global Monitoring</span></li>
               </ul>
             </div>
@@ -100,15 +97,9 @@ export function FooterDtc() {
               <ul className="space-y-4">
                 {socialLinks.map((link) => (
                   <li key={link.label}>
-                    <a
-                      href={link.href}
-                      aria-label={link.aria}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-background hover:text-background/60 transition-colors"
-                    >
+                    <span className="text-background/40">
                       {link.label}
-                    </a>
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -118,19 +109,7 @@ export function FooterDtc() {
       </div>
 
       <div className="px-6 sm:px-12 lg:px-24 py-6 max-w-360 2xl:max-w-450 3xl:max-w-550 mx-auto border-t border-background/10">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="flex items-center gap-8">
-            {footerLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className="text-sm text-background/60 hover:text-background transition-colors"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-background/40">
             © 2026 DTC Policy Lab
           </p>

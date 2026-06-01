@@ -145,9 +145,9 @@ interface Project {
 }
 
 const projects: Project[] = [
-  { id: "1", titleUp: "Global Teen", titleDown: "Restriction Database", image: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=1200&auto=format&fit=crop", description: "Mapping internet censorship targeting minors across 40+ countries" },
-  { id: "2", titleUp: "LGBTQ+ Youth", titleDown: "Online Safety", image: "https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?q=80&w=1200&auto=format&fit=crop", description: "Examining digital spaces and platform policies for queer teens" },
-  { id: "3", titleUp: "Platform Governance", titleDown: "& Youth Rights", image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop", description: "How Big Tech shapes the digital rights of the next generation" },
+  { id: "1", titleUp: "Global Teen", titleDown: "Restriction Database", image: "/images/un/hlpf.jpg", description: "Mapping internet censorship targeting minors across 40+ countries" },
+  { id: "2", titleUp: "LGBTQ+ Youth", titleDown: "Online Safety", image: "/images/un/official-meeting.jpg", description: "Examining digital spaces and platform policies for queer teens" },
+  { id: "3", titleUp: "Platform Governance", titleDown: "& Youth Rights", image: "/images/un/ga-hall.jpg", description: "How Big Tech shapes the digital rights of the next generation" },
 ];
 
 function ProjectOverlay({ project, onClose }: { project: Project | null; onClose: () => void }) {

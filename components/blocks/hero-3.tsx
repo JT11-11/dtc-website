@@ -268,7 +268,7 @@ export function Hero3() {
         </div>
 
         {/* Bottom Section - Title and Links */}
-        <div className="flex flex-col items-start md:flex-row">
+        <div className="flex flex-col items-start md:flex-row md:items-end">
           {/* Title */}
           <h1 className="pb-[4vmax] pl-[4vmax] pr-[4vmax] text-white relative text-[5vmax] leading-tight font-display tracking-tight">
             At the table,
@@ -310,7 +310,7 @@ export function Hero3() {
           </h1>
 
           {/* Links Section */}
-          <div className="bg-white dark:bg-neutral-950 flex-1 h-full rounded-tl-[3vmax] relative font-medium text-[max(1rem,1.4vmax)] flex items-end justify-end pt-[4vmax] self-end pl-[4vmax]">
+          <div className="bg-white dark:bg-neutral-950 md:flex-1 rounded-tl-[3vmax] relative font-medium text-[max(1rem,1.4vmax)] flex items-end justify-end pt-[4vmax] pb-[4vmax] self-end pl-[4vmax]">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

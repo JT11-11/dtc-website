@@ -12,7 +12,7 @@ const backgroundCards = [
   {
     id: 1,
     image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+      "/images/team/aditya.jpg",
     x: "10%",
     y: "12%",
     rotation: -12,
@@ -23,7 +23,7 @@ const backgroundCards = [
   {
     id: 2,
     image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+      "/images/team/jasper.jpg",
     x: "70%",
     y: "10%",
     rotation: 8,
@@ -34,7 +34,7 @@ const backgroundCards = [
   {
     id: 3,
     image:
-      "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=400&fit=crop",
+      "/images/team/tini.jpg",
     x: "30%",
     y: "40%",
     rotation: 15,
@@ -45,7 +45,7 @@ const backgroundCards = [
   {
     id: 4,
     image:
-      "https://images.unsplash.com/photo-1639149888905-fb39731f2e6c?w=400&h=400&fit=crop",
+      "/images/team/tejas.jpg",
     x: "75%",
     y: "67%",
     rotation: -8,
@@ -56,7 +56,7 @@ const backgroundCards = [
   {
     id: 5,
     image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
+      "/images/team/ahaan.jpg",
     x: "55%",
     y: "37%",
     rotation: -12,
@@ -67,7 +67,7 @@ const backgroundCards = [
   {
     id: 6,
     image:
-      "https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=400&h=400&fit=crop",
+      "/images/un/unga.jpg",
     x: "8%",
     y: "67%",
     rotation: -15,
@@ -140,7 +140,7 @@ export interface Cta1Props {
 export default function CTA1({
   headingLine1 = "Ready to change",
   headingLine2 = "the rules?",
-  description = "Join a community of high schoolers doing serious digital policy research. We pay our researchers. We mean it.",
+  description = "Join a community of high schoolers doing serious digital policy research — publishing, briefing delegates, and building the evidence base for youth digital rights.",
   primaryLabel = "Join the Lab",
   primaryHref = "/contact",
   secondaryLabel = "Read our research",

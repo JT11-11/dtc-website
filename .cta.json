@@ -1,0 +1,24 @@
+{
+  "projectName": "excelbot",
+  "mode": "file-router",
+  "typescript": true,
+  "packageManager": "npm",
+  "includeExamples": false,
+  "tailwind": true,
+  "addOnOptions": {},
+  "envVarValues": {
+    "VITE_CLERK_PUBLISHABLE_KEY": "pk_test_ZHJpdmVuLWxhY2V3aW5nLTMzLmNsZXJrLmFjY291bnRzLmRldiQ"
+  },
+  "git": true,
+  "install": true,
+  "routerOnly": false,
+  "version": 1,
+  "framework": "react",
+  "chosenAddOns": [
+    "eslint",
+    "railway",
+    "clerk",
+    "sentry",
+    "shadcn"
+  ]
+}

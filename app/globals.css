@@ -9,7 +9,18 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  /* Display headings are Inter Bold per the DTC YPL Brand Kit. */
+  --font-display: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  /* Editorial "Highlight" accents — Inria Serif Bold Italic. */
+  --font-serif: var(--font-inria), Georgia, "Times New Roman", serif;
+
+  /* DTC YPL Brand Kit v1.0 — raw brand colors */
+  --color-un-blue: var(--un-blue);
+  --color-sky-blue: var(--sky-blue);
+  --color-sun-gold: var(--sun-gold);
+  --color-bronze: var(--bronze);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -49,72 +60,82 @@
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  /* --- DTC YPL Brand Kit v1.0 — raw brand colors --- */
+  --un-blue: #009edb;
+  --sky-blue: #7ac4d9;
+  --sun-gold: #f5c55e;
+  --bronze: #b59653;
+  --paper: #f7f7f5;
+  --ink: #0a0a0b;
+
+  /* --- Light "paper" theme (default) --- */
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --card: #ffffff;
+  --card-foreground: var(--ink);
+  --popover: #ffffff;
+  --popover-foreground: var(--ink);
+  --primary: var(--un-blue);
+  --primary-foreground: #ffffff;
+  --secondary: var(--sky-blue);
+  --secondary-foreground: #08323d;
+  --muted: #eceae2;
+  --muted-foreground: #57564e;
+  --accent: var(--sun-gold);
+  --accent-foreground: #2a2008;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --border: #e4e1d8;
+  --input: #e4e1d8;
+  --ring: var(--un-blue);
+  --chart-1: var(--un-blue);
+  --chart-2: var(--sky-blue);
+  --chart-3: var(--sun-gold);
+  --chart-4: var(--bronze);
+  --chart-5: var(--ink);
+  --radius: 0.85rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: var(--ink);
+  --sidebar-primary: var(--un-blue);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: var(--sun-gold);
+  --sidebar-accent-foreground: #2a2008;
+  --sidebar-border: #e4e1d8;
+  --sidebar-ring: var(--un-blue);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
+  /* --- Cinematic black theme (brand "logo on black" surface) --- */
+  --background: #000000;
+  --foreground: var(--paper);
+  --card: #0e0e10;
+  --card-foreground: var(--paper);
+  --popover: #0e0e10;
+  --popover-foreground: var(--paper);
+  --primary: var(--un-blue);
+  --primary-foreground: #ffffff;
+  --secondary: #14333d;
+  --secondary-foreground: var(--sky-blue);
+  --muted: #161618;
+  --muted-foreground: #a1a09a;
+  --accent: var(--sun-gold);
+  --accent-foreground: #2a2008;
   --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
+  --border: oklch(1 0 0 / 12%);
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --ring: var(--un-blue);
+  --chart-1: var(--un-blue);
+  --chart-2: var(--sky-blue);
+  --chart-3: var(--sun-gold);
+  --chart-4: var(--bronze);
+  --chart-5: var(--paper);
+  --sidebar: #0e0e10;
+  --sidebar-foreground: var(--paper);
+  --sidebar-primary: var(--un-blue);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: var(--sun-gold);
+  --sidebar-accent-foreground: #2a2008;
+  --sidebar-border: oklch(1 0 0 / 12%);
+  --sidebar-ring: var(--un-blue);
 }
 
 @layer base {

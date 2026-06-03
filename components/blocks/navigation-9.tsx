@@ -44,32 +44,26 @@ export default function Navigation9() {
       : "flex items-center gap-2.5 text-white font-semibold shrink-0 drop-shadow-sm"
     : "flex items-center gap-2.5 text-neutral-900 dark:text-white font-semibold shrink-0";
 
-  const logoIconClassName = isHomepage
-    ? scrolled
-      ? "grid place-items-center h-7 w-7 rounded-md bg-white text-neutral-900 text-xs font-bold tracking-tighter"
-      : "grid place-items-center h-7 w-7 rounded-md bg-white/15 border border-white/25 text-white text-xs font-bold tracking-tighter"
-    : "grid place-items-center h-7 w-7 rounded-md bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 text-xs font-bold tracking-tighter";
+  const activeUnderline = "underline underline-offset-[6px] decoration-2 decoration-[var(--un-blue)]";
 
   const linkClassName = (isActive: boolean) => {
     if (isHomepage) {
       return scrolled
         ? isActive
-          ? "text-sm font-medium transition-colors text-white underline underline-offset-4"
+          ? `text-sm font-medium transition-colors text-white ${activeUnderline}`
           : "text-sm font-medium transition-colors text-neutral-400 hover:text-white"
         : isActive
-          ? "text-sm font-medium transition-colors text-white underline underline-offset-4 drop-shadow-sm"
+          ? `text-sm font-medium transition-colors text-white drop-shadow-sm ${activeUnderline}`
           : "text-sm font-medium transition-colors text-white/75 hover:text-white drop-shadow-sm";
     }
     return isActive
-      ? "text-sm font-medium transition-colors text-neutral-900 dark:text-white underline underline-offset-4"
-      : "text-sm font-medium transition-colors text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white";
+      ? `text-sm font-medium transition-colors text-foreground ${activeUnderline}`
+      : "text-sm font-medium transition-colors text-muted-foreground hover:text-foreground";
   };
 
-  const ctaClassName = isHomepage
-    ? scrolled
-      ? "hidden sm:inline-flex items-center px-4 py-2 rounded-lg bg-white text-neutral-900 text-sm font-medium hover:opacity-85 transition-opacity"
-      : "hidden sm:inline-flex items-center px-4 py-2 rounded-lg border border-white/30 bg-white/10 text-white text-sm font-medium backdrop-blur-sm hover:bg-white/20 transition-colors"
-    : "hidden sm:inline-flex items-center px-4 py-2 rounded-lg bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 text-sm font-medium hover:opacity-85 transition-opacity";
+  // Brand CTA — Discord, always Sky Blue (reads on both the black hero and light pages).
+  const ctaClassName =
+    "hidden sm:inline-flex items-center px-4 py-2 rounded-full bg-[var(--sky-blue)] text-[#08323d] text-sm font-semibold hover:brightness-105 transition";
 
   const menuButtonClassName = isHomepage
     ? scrolled
@@ -98,11 +92,8 @@ export default function Navigation9() {
       : "text-sm py-2.5 px-2 rounded-lg transition-colors text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-900";
   };
 
-  const mobileCtaClassName = isHomepage
-    ? scrolled
-      ? "mt-1 text-center w-full px-4 py-2.5 rounded-lg bg-white text-neutral-900 text-sm font-medium"
-      : "mt-1 text-center w-full px-4 py-2.5 rounded-lg border border-white/30 bg-white/10 text-white text-sm font-medium hover:bg-white/20 transition-colors"
-    : "mt-1 text-center w-full px-4 py-2.5 rounded-lg bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 text-sm font-medium";
+  const mobileCtaClassName =
+    "mt-1 text-center w-full px-4 py-2.5 rounded-full bg-[var(--sky-blue)] text-[#08323d] text-sm font-semibold";
 
   return (
     <div className="fixed top-0 left-0 right-0 z-50 px-4 pt-4 sm:px-6 lg:px-8">
@@ -113,10 +104,13 @@ export default function Navigation9() {
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
           className={`relative flex items-center justify-between transition-all duration-300 ease-out ${navClassName}`}
         >
-          {/* Logo */}
-          <a href="/" className={logoClassName}>
-            <span className={logoIconClassName}>D</span>
-            <span className="tracking-tight text-sm sm:text-base">DTC Policy Lab</span>
+          {/* Logo — emblem placeholder (swap for real gold-ring emblem asset) + wordmark */}
+          <a href="/" className={logoClassName} aria-label="DTC Youth Policy Lab — home">
+            <span className="relative grid h-8 w-8 shrink-0 place-items-center rounded-full bg-black ring-2 ring-[var(--sun-gold)]">
+              <span className="block h-3 w-3 rounded-full bg-[var(--un-blue)]" />
+              <span className="absolute inset-[3px] rounded-full ring-1 ring-white/20" />
+            </span>
+            <span className="tracking-tight text-sm sm:text-base">DTC Youth Policy Lab</span>
           </a>
 
           {/* Desktop links */}
@@ -134,8 +128,13 @@ export default function Navigation9() {
 
           {/* Right CTA */}
           <div className="flex items-center gap-2">
-            <a href="/contact" className={ctaClassName}>
-              Get in Touch
+            <a
+              href="https://discord.gg/dtcpolicylab"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={ctaClassName}
+            >
+              Discord
             </a>
             <button
               onClick={() => setOpen((v) => !v)}
@@ -168,11 +167,13 @@ export default function Navigation9() {
                 </a>
               ))}
               <a
-                href="/contact"
+                href="https://discord.gg/dtcpolicylab"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setOpen(false)}
                 className={mobileCtaClassName}
               >
-                Get in Touch
+                Discord
               </a>
             </motion.div>
           )}

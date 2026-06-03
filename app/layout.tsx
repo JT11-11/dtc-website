@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
+import { Inter, Inria_Serif } from "next/font/google";
 import "./globals.css";
 import { OverlayProvider } from "@/lib/overlay-context";
 
@@ -8,14 +8,18 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
+// Brand Kit highlight face — used for italic "Highlight" accents (Inria Serif Bold Italic).
+const inriaSerif = Inria_Serif({
+  variable: "--font-inria",
   subsets: ["latin"],
+  weight: ["300", "400", "700"],
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
-  title: "DTC Policy Lab",
-  description: "A premier, fully teen-led research organization dedicated to digital rights and the formal governance of AI.",
+  title: "DTC Youth Policy Lab",
+  description:
+    "A fully teen-led digital youth policy research lab. Putting teens at the table — not just on the agenda.",
 };
 
 export default function RootLayout({
@@ -26,7 +30,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${spaceGrotesk.variable} h-full antialiased`}
+      className={`${inter.variable} ${inriaSerif.variable} h-full antialiased`}
       suppressHydrationWarning
     >
       <body

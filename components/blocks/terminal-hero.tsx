@@ -11,7 +11,7 @@ const FaultyTerminal = dynamic(
 export function TerminalHero() {
   return (
     <section className="relative w-full h-screen overflow-hidden bg-black">
-      {/* Terminal background */}
+      {/* Terminal background — tinted to UN Blue */}
       <div className="absolute inset-0">
         <FaultyTerminal
           scale={1.5}
@@ -25,61 +25,71 @@ export function TerminalHero() {
           chromaticAberration={0}
           dither={0}
           curvature={0}
-          tint="#4ade80"
+          tint="#009edb"
           mouseReact={true}
           mouseStrength={0.5}
           pageLoadAnimation={true}
-          brightness={0.4}
+          brightness={0.42}
         />
       </div>
 
       {/* Gradient vignette so text pops */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/40 to-black/85 pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.6)_0%,transparent_100%)] pointer-events-none" />
 
       {/* Centred overlay content */}
       <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
+        {/* Eyebrow */}
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.4 }}
+          className="mb-5 text-xs sm:text-sm font-semibold uppercase tracking-[0.28em] text-[var(--sun-gold)] drop-shadow"
+        >
+          Dynamic Teen Coalition · Youth Policy Lab
+        </motion.p>
 
         {/* Headline */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.05] max-w-4xl drop-shadow-xl [text-shadow:_0_2px_10px_rgb(0_0_0_/_80%)]"
+          transition={{ duration: 0.8, delay: 0.55, ease: [0.22, 1, 0.36, 1] }}
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.04] max-w-4xl [text-shadow:_0_2px_14px_rgb(0_0_0_/_75%)]"
         >
-          Policy shaped by the{" "}
-          <em className="not-italic text-green-400 drop-shadow-lg">
-            people it affects most.
-          </em>
+          Policy shaped by{" "}
+          <span className="text-[var(--un-blue)]">the people it affects most.</span>
         </motion.h1>
 
         {/* Subtext */}
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.85 }}
-          className="mt-6 max-w-xl text-base sm:text-lg text-white/80 leading-relaxed font-medium drop-shadow-md"
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="mt-6 max-w-xl text-base sm:text-lg text-white/85 leading-relaxed font-medium drop-shadow-md"
         >
-          A fully teen-led research organisation embedding youth directly
-          into the global digital policy pipeline.
+          A fully teen-led research lab embedding youth directly into the global
+          digital-policy pipeline.{" "}
+          <span className="font-serif italic text-white/95">
+            At the table — not just on the agenda.
+          </span>
         </motion.p>
 
         {/* CTAs */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 1.1 }}
-          className="mt-8 flex flex-wrap items-center justify-center gap-3"
+          transition={{ duration: 0.7, delay: 1.05 }}
+          className="mt-9 flex flex-wrap items-center justify-center gap-3"
         >
           <a
             href="/contact"
-            className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-black hover:bg-green-300 transition-colors duration-200"
+            className="rounded-full bg-[var(--sun-gold)] px-7 py-3 text-sm font-semibold text-black transition-transform duration-200 hover:scale-[1.03] hover:shadow-[0_8px_30px_-8px_rgba(245,197,94,0.6)]"
           >
             Join the Lab
           </a>
           <a
             href="#research"
-            className="rounded-full border border-white/30 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm hover:bg-white/20 transition-colors duration-200"
+            className="rounded-full border border-white/30 bg-white/10 px-7 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-colors duration-200 hover:bg-white/20"
           >
             Our Research
           </a>

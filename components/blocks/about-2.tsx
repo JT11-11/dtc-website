@@ -1,15 +1,19 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, MapPin } from "lucide-react";
 
 interface TimelineEntry {
   id: number;
-  title: string;
-  date: string;
-  month: string;
+  /** Big era label shown as the giant numeral */
   year: string;
+  /** Short rail label */
+  short: string;
+  title: string;
+  /** Word(s) inside the title rendered in the serif gold highlight */
+  highlight: string;
+  place: string;
   description: string;
   image: string;
 }
@@ -18,45 +22,53 @@ interface About2Props {
   displayNavigation?: boolean;
 }
 
+/**
+ * Timeline content is the canonical "OUR HISTORY" arc from the DTC YPL Manifest,
+ * enriched with the 2025 Yearly Wrap. Every claim traces to those source docs.
+ */
 const TIMELINE_DATA: TimelineEntry[] = [
   {
     id: 1,
-    title: "Founded at the UN IGF",
-    date: "2022",
-    month: "2022",
     year: "2022",
+    short: "Founded",
+    title: "Founded at the UN IGF",
+    highlight: "first teen-led coalition",
+    place: "Internet Governance Forum · Ethiopia",
     description:
       "At the invitation of the IGF Secretariat, the Dynamic Teen Coalition was established at the 2022 UN Internet Governance Forum in Ethiopia — the first teen-led coalition at the IGF.",
     image: "/images/un/flag-portrait.jpg",
   },
   {
     id: 2,
-    title: "UN Advocacy & Research",
-    date: "2023–24",
-    month: "2023",
-    year: "2023–24",
+    year: "’23–’24",
+    short: "Advocacy",
+    title: "UN advocacy & the first database",
+    highlight: "first systematic database",
+    place: "UN events · worldwide",
     description:
-      "DTC attended UN events and challenged social media bans globally, and began building the world's first systematic global database of teen online restrictions.",
+      "DTC returned to UN events year after year — challenging blanket social-media bans on the floor and building the first systematic global database of teen online restrictions, country by country, platform by platform.",
     image: "/images/un/group.jpg",
   },
   {
     id: 3,
-    title: "Global UN Engagement",
-    date: "2025",
-    month: "2025",
     year: "2025",
+    short: "The Confrontation",
+    title: "Oslo — The Confrontation",
+    highlight: "became our paper",
+    place: "IGF 2025 · Norway",
     description:
-      "Engaged across IGF 2025, the ECOSOC Youth Forum, the HLPF, WSIS+20 and UNGA events. At IGF2025 in Norway, DTC confronted Australia's Ambassador for Cyber Affairs on the impact of teen bans — an exchange that became the basis of our paper.",
+      "At IGF 2025 in Norway, DTC confronted Australia’s Ambassador for Cyber Affairs, Brendan Dowling, on the impact of teen bans on marginalised youth — the exchange that became our paper. Across the year DTC also engaged the ECOSOC Youth Forum, HLPF, WSIS+20 and UNGA, and ran the first teen-led Dynamic Coalition session at the IGF in twenty years.",
     image: "/images/un/hlpf.jpg",
   },
   {
     id: 4,
-    title: "Policy Lab Launches",
-    date: "2026",
-    month: "2026",
     year: "2026",
+    short: "Policy Lab",
+    title: "The Policy Lab launches",
+    highlight: "researchers, not subjects",
+    place: "Headquartered in Singapore · now",
     description:
-      "DTC evolved into a teen-led policy research lab, headquartered in Singapore. Our paper is under peer review at Taylor & Francis, and we are recruiting teen researchers globally.",
+      "DTC evolves into a fully teen-led policy research lab, headquartered in Singapore. Our paper is under review at Taylor & Francis, and we’re recruiting and paying high-school researchers worldwide — so teens become the researchers, not just the subjects.",
     image: "/images/un/ga-hall.jpg",
   },
 ];
@@ -64,434 +76,196 @@ const TIMELINE_DATA: TimelineEntry[] = [
 export default function About2({ displayNavigation = true }: About2Props = {}) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [resetKey, setResetKey] = useState(0);
-  const timelineRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveIndex((prev) => {
-        const nextIndex = (prev + 1) % TIMELINE_DATA.length;
-        scrollToIndex(nextIndex);
-        return nextIndex;
-      });
-    }, 10000);
-
+      setActiveIndex((prev) => (prev + 1) % TIMELINE_DATA.length);
+    }, 9000);
     return () => clearInterval(interval);
   }, [resetKey]);
 
-  const scrollToIndex = (index: number) => {
-    if (timelineRef.current) {
-      const container = timelineRef.current;
-      const itemWidth = container.scrollWidth / TIMELINE_DATA.length;
-      const scrollPosition = itemWidth * index;
-      container.scrollTo({
-        left: scrollPosition,
-        behavior: "smooth",
-      });
-    }
-  };
+  const go = useCallback((index: number) => {
+    const clamped = (index + TIMELINE_DATA.length) % TIMELINE_DATA.length;
+    setActiveIndex(clamped);
+    setResetKey((k) => k + 1);
+  }, []);
 
-  const handlePrevious = () => {
-    const newIndex = Math.max(0, activeIndex - 1);
-    setActiveIndex(newIndex);
-    scrollToIndex(newIndex);
-    setResetKey((prev) => prev + 1);
-  };
-
-  const handleNext = () => {
-    const newIndex = Math.min(TIMELINE_DATA.length - 1, activeIndex + 1);
-    setActiveIndex(newIndex);
-    scrollToIndex(newIndex);
-    setResetKey((prev) => prev + 1);
-  };
-
-  const handleIndexChange = (index: number) => {
-    setActiveIndex(index);
-    scrollToIndex(index);
-    setResetKey((prev) => prev + 1);
-  };
-
-  const activeEntry = TIMELINE_DATA[activeIndex];
+  const entry = TIMELINE_DATA[activeIndex];
+  const progress = activeIndex / (TIMELINE_DATA.length - 1);
 
   return (
-    <section className="w-full py-12 px-4 sm:px-6 lg:px-8 bg-white dark:bg-neutral-950">
+    <section className="w-full bg-background py-20 sm:py-28 px-6 sm:px-12 lg:px-24">
       <div className="max-w-[1400px] mx-auto w-full">
         {/* Header */}
-        <Header />
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="mb-12 sm:mb-16"
+        >
+          <p className="text-xs sm:text-sm font-semibold uppercase tracking-[0.22em] text-[var(--un-blue)]">
+            Our history
+          </p>
+          <h2 className="mt-3 text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-foreground leading-[1.04] max-w-3xl">
+            From a teen-led coalition to a{" "}
+            <span className="font-serif italic font-bold text-[var(--bronze)]">
+              policy lab.
+            </span>
+          </h2>
+        </motion.div>
 
-        {/* Content Card */}
-        <ContentCard entry={activeEntry} />
-
-        {/* Timeline */}
-        <div className="mt-12 sm:mt-16">
-          <Timeline
-            activeIndex={activeIndex}
-            onIndexChange={handleIndexChange}
-            displayNavigation={displayNavigation}
-            onPrevious={handlePrevious}
-            onNext={handleNext}
-            timelineRef={timelineRef}
-          />
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function Header() {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="mb-8 sm:mb-12"
-    >
-      <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight text-neutral-900 dark:text-white">
-        Our journey
-      </h1>
-    </motion.div>
-  );
-}
-
-function ContentCard({ entry }: { entry: TimelineEntry }) {
-  return (
-    <div className="relative bg-neutral-50 dark:bg-neutral-900 rounded-3xl p-6 overflow-hidden">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-        {/* Left Content */}
-        <div className="flex flex-col justify-between h-full">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={`year-${entry.id}`}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
-            >
-              {/* Year */}
-              <div className="text-sm sm:text-base font-medium text-purple-500">
-                {entry.year}
-              </div>
-            </motion.div>
-          </AnimatePresence>
-
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={`content-${entry.id}`}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
-              className="space-y-2"
-            >
-              {/* Title */}
-              <h2 className="text-3xl font-medium tracking-tight text-neutral-900 dark:text-white">
-                {entry.title}
-              </h2>
-
-              {/* Description */}
-              <p className="text-base tracking-tight text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-xl">
-                {entry.description}
-              </p>
-            </motion.div>
-          </AnimatePresence>
-        </div>
-
-        {/* Right Image */}
-        <div className="flex items-center justify-center lg:justify-end">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={entry.id}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.3 }}
-              className="relative w-full lg:max-w-xs aspect-square max-h-[300px] mx-auto lg:mx-0 lg:ml-auto"
-            >
-              <div className="w-full h-full rounded-md bg-neutral-200 dark:bg-neutral-800 flex items-center justify-center overflow-hidden">
-                <img
-                  src={entry.image}
-                  alt={entry.title}
-                  className="w-3/4 h-3/4 object-contain"
-                />
-              </div>
-            </motion.div>
-          </AnimatePresence>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function Timeline({
-  activeIndex,
-  onIndexChange,
-  displayNavigation,
-  onPrevious,
-  onNext,
-  timelineRef,
-}: {
-  activeIndex: number;
-  onIndexChange: (index: number) => void;
-  displayNavigation: boolean;
-  onPrevious: () => void;
-  onNext: () => void;
-  timelineRef: React.RefObject<HTMLDivElement | null>;
-}) {
-  return (
-    <div className="space-y-8">
-      {/* Scrollable Timeline Container - Mobile */}
-      <div
-        ref={timelineRef}
-        className="md:hidden overflow-x-auto scrollbar-hide -mx-4 px-4"
-        style={{
-          scrollbarWidth: "none",
-          msOverflowStyle: "none",
-        }}
-      >
-        <div className="min-w-[900px] space-y-8">
-          {/* Timeline Labels */}
-          <div className="grid grid-cols-4 gap-8">
-            {TIMELINE_DATA.map((entry, index) => (
-              <button
-                key={entry.id}
-                onClick={() => onIndexChange(index)}
-                className="text-left whitespace-nowrap"
+        {/* Stage */}
+        <div className="relative grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-8 lg:gap-12 items-stretch">
+          {/* Left: giant year + copy */}
+          <div className="relative overflow-hidden rounded-[var(--radius-2xl)] border border-border bg-card p-7 sm:p-10">
+            {/* Ghost numeral backdrop */}
+            <AnimatePresence mode="popLayout">
+              <motion.span
+                key={`ghost-${entry.id}`}
+                aria-hidden
+                initial={{ opacity: 0, scale: 1.05 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                className="pointer-events-none absolute -right-4 -top-10 select-none font-bold tracking-tighter text-[28vw] leading-none text-[var(--un-blue)]/[0.06] lg:text-[16rem]"
               >
-                <div
-                  className={`text-xs sm:text-sm font-medium transition-colors duration-200 ${
-                    index === activeIndex
-                      ? "text-neutral-900 dark:text-white"
-                      : "text-neutral-400 dark:text-neutral-600"
-                  }`}
+                {entry.year.replace("’", "")}
+              </motion.span>
+            </AnimatePresence>
+
+            <div className="relative">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={`copy-${entry.id}`}
+                  initial={{ opacity: 0, y: 24 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -16 }}
+                  transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                 >
-                  {entry.title}
-                </div>
-              </button>
-            ))}
+                  <span className="inline-flex items-center gap-2 rounded-full border border-[var(--un-blue)]/30 bg-[var(--un-blue)]/[0.07] px-3 py-1 text-xs font-medium text-[var(--un-blue)]">
+                    <MapPin className="h-3.5 w-3.5" />
+                    {entry.place}
+                  </span>
+
+                  <div className="mt-5 flex items-baseline gap-4">
+                    <span className="font-bold tracking-tighter text-5xl sm:text-6xl text-foreground">
+                      {entry.year}
+                    </span>
+                  </div>
+
+                  <h3 className="mt-4 text-2xl sm:text-3xl font-bold tracking-tight text-foreground">
+                    {entry.title}
+                  </h3>
+                  <p className="mt-4 max-w-xl text-base sm:text-lg leading-relaxed text-muted-foreground">
+                    {entry.description}
+                  </p>
+                  <p className="mt-5 font-serif italic text-lg text-[var(--bronze)]">
+                    {entry.highlight}
+                  </p>
+                </motion.div>
+              </AnimatePresence>
+            </div>
           </div>
 
-          {/* Timeline Bar */}
+          {/* Right: image */}
+          <div className="relative min-h-[260px] sm:min-h-[340px] lg:min-h-0 overflow-hidden rounded-[var(--radius-2xl)] border border-border bg-muted">
+            <AnimatePresence mode="popLayout">
+              <motion.img
+                key={`img-${entry.id}`}
+                src={entry.image}
+                alt={entry.title}
+                initial={{ opacity: 0, scale: 1.06 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 1.02 }}
+                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+            </AnimatePresence>
+            {/* gold corner accent */}
+            <div className="pointer-events-none absolute bottom-0 left-0 h-16 w-16 bg-[radial-gradient(circle_at_bottom_left,var(--sun-gold)_0%,transparent_70%)] opacity-80" />
+            <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-black/5 rounded-[var(--radius-2xl)]" />
+          </div>
+        </div>
+
+        {/* Progress rail */}
+        <div className="mt-12 sm:mt-16">
           <div className="relative">
-            {/* Background Line */}
-            <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-neutral-200 dark:bg-neutral-800 -translate-y-1/2" />
-
-            {/* Progress Line */}
+            {/* track */}
+            <div className="absolute top-[7px] left-0 right-0 h-[2px] bg-border" />
+            {/* fill */}
             <motion.div
-              className="absolute top-1/2 left-0 h-0.5 bg-neutral-900 dark:bg-white -translate-y-1/2"
+              className="absolute top-[7px] left-0 h-[2px] bg-[var(--un-blue)]"
               initial={false}
-              animate={{
-                width:
-                  activeIndex === 0
-                    ? 0
-                    : `calc(((100% - (3 * 2rem)) / 4) * ${activeIndex} + (2rem * ${activeIndex}))`,
-              }}
-              transition={{ duration: 0.4, ease: [0.32, 0.72, 0, 1] }}
+              animate={{ width: `${progress * 100}%` }}
+              transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
             />
-
-            {/* Timeline Dots */}
-            <div className="relative grid grid-cols-4 gap-8">
-              {TIMELINE_DATA.map((entry, index) => {
-                const isActive = index === activeIndex;
-                const isPassed = index <= activeIndex;
-
+            {/* nodes */}
+            <div className="relative grid grid-cols-4 gap-3 sm:gap-6">
+              {TIMELINE_DATA.map((e, i) => {
+                const isActive = i === activeIndex;
+                const isPassed = i <= activeIndex;
                 return (
                   <button
-                    key={entry.id}
-                    onClick={() => onIndexChange(index)}
-                    className="flex flex-col items-start"
+                    key={e.id}
+                    onClick={() => go(i)}
+                    className="group flex flex-col items-start text-left"
+                    aria-label={`${e.year} — ${e.title}`}
+                    aria-current={isActive ? "true" : undefined}
                   >
-                    <div className="relative w-full flex justify-start">
-                      <motion.div
-                        className={`w-3 h-3 rounded-full border-2 transition-colors duration-200 ${
-                          isPassed
-                            ? "bg-neutral-900 dark:bg-white border-neutral-900 dark:border-white"
-                            : "bg-white dark:bg-neutral-950 border-neutral-200 dark:border-neutral-800"
+                    <span className="relative flex h-4 w-4 items-center justify-center">
+                      <motion.span
+                        className={`block rounded-full border-2 transition-colors duration-200 ${
+                          isActive
+                            ? "border-[var(--sun-gold)] bg-[var(--sun-gold)]"
+                            : isPassed
+                              ? "border-[var(--un-blue)] bg-[var(--un-blue)]"
+                              : "border-border bg-card"
                         }`}
-                        animate={{
-                          scale: isActive ? 1.4 : 1,
-                        }}
+                        animate={{ scale: isActive ? 1.35 : 1, width: 12, height: 12 }}
                         transition={{ duration: 0.2 }}
                       />
-                    </div>
+                    </span>
+                    <span
+                      className={`mt-3 text-sm font-bold tracking-tight transition-colors duration-200 ${
+                        isActive ? "text-foreground" : "text-muted-foreground group-hover:text-foreground"
+                      }`}
+                    >
+                      {e.year}
+                    </span>
+                    <span
+                      className={`text-xs transition-colors duration-200 ${
+                        isActive ? "text-[var(--un-blue)]" : "text-muted-foreground/70"
+                      }`}
+                    >
+                      {e.short}
+                    </span>
                   </button>
                 );
               })}
             </div>
           </div>
 
-          {/* Timeline Dates */}
-          <div className="grid grid-cols-4 gap-8">
-            {TIMELINE_DATA.map((entry, index) => (
+          {displayNavigation && (
+            <div className="mt-8 flex justify-end gap-2">
               <button
-                key={entry.id}
-                onClick={() => onIndexChange(index)}
-                className="text-left whitespace-nowrap"
+                onClick={() => go(activeIndex - 1)}
+                className="grid h-10 w-10 place-items-center rounded-full border border-border text-foreground transition-colors hover:bg-[var(--un-blue)] hover:text-white hover:border-[var(--un-blue)]"
+                aria-label="Previous era"
               >
-                <div
-                  className={`text-xs sm:text-sm transition-colors duration-200 ${
-                    index === activeIndex
-                      ? "text-neutral-900 dark:text-white font-medium"
-                      : "text-neutral-400 dark:text-neutral-600"
-                  }`}
-                >
-                  {entry.date}
-                </div>
+                <ArrowLeft className="h-4 w-4" />
               </button>
-            ))}
-          </div>
+              <button
+                onClick={() => go(activeIndex + 1)}
+                className="grid h-10 w-10 place-items-center rounded-full border border-border text-foreground transition-colors hover:bg-[var(--un-blue)] hover:text-white hover:border-[var(--un-blue)]"
+                aria-label="Next era"
+              >
+                <ArrowRight className="h-4 w-4" />
+              </button>
+            </div>
+          )}
         </div>
       </div>
-
-      {/* Navigation Arrows - Mobile Centered */}
-      {displayNavigation && (
-        <div className="flex justify-center gap-2 md:hidden">
-          <button
-            onClick={onPrevious}
-            disabled={activeIndex === 0}
-            className="w-10 h-10 rounded-full border border-neutral-300 dark:border-neutral-700 flex items-center justify-center hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
-            aria-label="Previous"
-          >
-            <ChevronLeft className="w-5 h-5 text-neutral-900 dark:text-white" />
-          </button>
-          <button
-            onClick={onNext}
-            disabled={activeIndex === TIMELINE_DATA.length - 1}
-            className="w-10 h-10 rounded-full border border-neutral-300 dark:border-neutral-700 flex items-center justify-center hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
-            aria-label="Next"
-          >
-            <ChevronRight className="w-5 h-5 text-neutral-900 dark:text-white" />
-          </button>
-        </div>
-      )}
-
-      {/* Desktop Timeline */}
-      <div className="hidden md:block space-y-8">
-        {/* Timeline Labels */}
-        <div className="grid grid-cols-4 gap-2 sm:gap-4">
-          {TIMELINE_DATA.map((entry, index) => (
-            <button
-              key={entry.id}
-              onClick={() => onIndexChange(index)}
-              className="text-left"
-            >
-              <div
-                className={`text-xs sm:text-sm font-medium transition-colors duration-200 ${
-                  index === activeIndex
-                    ? "text-neutral-900 dark:text-white"
-                    : "text-neutral-400 dark:text-neutral-600"
-                }`}
-              >
-                {entry.title}
-              </div>
-            </button>
-          ))}
-        </div>
-
-        {/* Timeline Bar */}
-        <div className="relative">
-          {/* Background Line */}
-          <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-neutral-200 dark:bg-neutral-800 -translate-y-1/2" />
-
-          {/* Progress Line */}
-          <motion.div
-            className="absolute top-1/2 left-0 h-0.5 bg-neutral-900 dark:bg-white -translate-y-1/2 sm:hidden"
-            initial={false}
-            animate={{
-              width:
-                activeIndex === 0
-                  ? 0
-                  : `calc(((100% - (3 * 0.5rem)) / 4) * ${activeIndex} + (0.5rem * ${activeIndex}))`,
-            }}
-            transition={{ duration: 0.4, ease: [0.32, 0.72, 0, 1] }}
-          />
-
-          {/* Progress Line - Tablet/Desktop */}
-          <motion.div
-            className="hidden sm:block absolute top-1/2 left-0 h-0.5 bg-neutral-900 dark:bg-white -translate-y-1/2"
-            initial={false}
-            animate={{
-              width:
-                activeIndex === 0
-                  ? 0
-                  : `calc(((100% - (3 * 1rem)) / 4) * ${activeIndex} + (1rem * ${activeIndex}))`,
-            }}
-            transition={{ duration: 0.4, ease: [0.32, 0.72, 0, 1] }}
-          />
-
-          {/* Timeline Dots */}
-          <div className="relative grid grid-cols-4 gap-2 sm:gap-4">
-            {TIMELINE_DATA.map((entry, index) => {
-              const isActive = index === activeIndex;
-              const isPassed = index <= activeIndex;
-
-              return (
-                <button
-                  key={entry.id}
-                  onClick={() => onIndexChange(index)}
-                  className="flex flex-col items-start"
-                >
-                  {/* Dot */}
-                  <div className="relative w-full flex justify-start">
-                    <motion.div
-                      className={`w-3 h-3 rounded-full border-2 transition-colors duration-200 ${
-                        isPassed
-                          ? "bg-neutral-900 dark:bg-white border-neutral-900 dark:border-white"
-                          : "bg-white dark:bg-neutral-950 border-neutral-200 dark:border-neutral-800"
-                      }`}
-                      animate={{
-                        scale: isActive ? 1.4 : 1,
-                      }}
-                      transition={{ duration: 0.2 }}
-                    />
-                  </div>
-                </button>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Timeline Dates */}
-        <div className="grid grid-cols-4 gap-2 sm:gap-4">
-          {TIMELINE_DATA.map((entry, index) => (
-            <button
-              key={entry.id}
-              onClick={() => onIndexChange(index)}
-              className="text-left"
-            >
-              <div
-                className={`text-xs border transition-colors w-fit px-2 py-1 rounded-full duration-200 ${
-                  index === activeIndex
-                    ? "text-white bg-neutral-900 border-neutral-500/20"
-                    : "text-neutral-400 dark:text-neutral-600 border-transparent"
-                }`}
-              >
-                {entry.date}
-              </div>
-            </button>
-          ))}
-        </div>
-
-        {/* Navigation Arrows - Desktop Only */}
-        {displayNavigation && (
-          <div className="hidden md:flex justify-end gap-2">
-            <button
-              onClick={onPrevious}
-              disabled={activeIndex === 0}
-              className="w-8 h-8 rounded-md border border-neutral-300 dark:border-neutral-700 flex items-center justify-center hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
-              aria-label="Previous"
-            >
-              <ChevronLeft className="w-4 h-4 text-neutral-900 dark:text-white" />
-            </button>
-            <button
-              onClick={onNext}
-              disabled={activeIndex === TIMELINE_DATA.length - 1}
-              className="w-8 h-8 rounded-md border border-neutral-300 dark:border-neutral-700 flex items-center justify-center hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
-              aria-label="Next"
-            >
-              <ChevronRight className="w-4 h-4 text-neutral-900 dark:text-white" />
-            </button>
-          </div>
-        )}
-      </div>
-    </div>
+    </section>
   );
 }

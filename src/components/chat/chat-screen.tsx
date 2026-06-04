@@ -1,11 +1,8 @@
 import { useClerk, useUser } from '@clerk/clerk-react'
 import {
-  BotIcon,
   BrainIcon,
-  ChevronDownIcon,
   GlobeIcon,
   ImageIcon,
-  LogOutIcon,
   PanelLeftIcon,
   PaperclipIcon,
   SendIcon,
@@ -41,7 +38,7 @@ const starterMessages: Message[] = [
     id: 'assistant-welcome',
     role: 'assistant',
     content:
-      'Hi, I am ExcelBot. Ask me to help reason about a workbook, draft formulas, summarize rows, or plan an automation.',
+      'Hi, I am grid.ai. Ask me to help reason about a workbook, draft formulas, summarize rows, or plan an automation.',
   },
 ]
 
@@ -55,7 +52,7 @@ export function ChatScreen() {
   const [messages, setMessages] = useState(starterMessages)
   const [prompt, setPrompt] = useState('')
   const [activeWorkspace, setActiveWorkspace] = useState('personal')
-  const [activeNav, setActiveNav] = useState('home')
+  const [activeNav, setActiveNav] = useState('chats')
   const [activePill, setActivePill] = useState<
     'reasoning' | 'image' | 'research' | null
   >(null)
@@ -68,9 +65,9 @@ export function ChatScreen() {
 
   const getGreeting = () => {
     const hour = new Date().getHours()
-    if (hour < 12) return 'Good Morning'
-    if (hour < 18) return 'Good Afternoon'
-    return 'Good Evening'
+    if (hour < 12) return 'Good morning'
+    if (hour < 18) return 'Good afternoon'
+    return 'Good evening'
   }
 
   function handleNewChat() {
@@ -131,10 +128,10 @@ export function ChatScreen() {
   }
 
   return (
-    <main className="min-h-screen bg-background/30 text-foreground backdrop-blur-xs">
-      <div className="grid min-h-screen lg:grid-cols-[18rem_1fr]">
+    <main className="min-h-screen bg-background text-foreground">
+      <div className="grid min-h-screen lg:grid-cols-[15rem_1fr]">
         {/* Desktop Sidebar */}
-        <aside className="hidden border-r border-sidebar-border/40 bg-sidebar/50 text-sidebar-foreground lg:flex lg:flex-col backdrop-blur-md">
+        <aside className="hidden border-r border-sidebar-border/40 bg-sidebar text-sidebar-foreground lg:flex lg:flex-col">
           <SidebarContent
             activeChatId={activeChatId}
             chats={chats}
@@ -153,10 +150,10 @@ export function ChatScreen() {
         {isMobileSidebarOpen && (
           <div className="fixed inset-0 z-50 lg:hidden">
             <div
-              className="fixed inset-0 bg-background/40 backdrop-blur-xs"
+              className="fixed inset-0 bg-background/60 backdrop-blur-xs"
               onClick={() => setIsMobileSidebarOpen(false)}
             />
-            <aside className="fixed inset-y-0 left-0 w-72 border-r border-sidebar-border bg-sidebar text-sidebar-foreground flex flex-col shadow-2xl animate-in slide-in-from-left duration-200">
+            <aside className="fixed inset-y-0 left-0 w-64 border-r border-sidebar-border bg-sidebar text-sidebar-foreground flex flex-col shadow-2xl animate-in slide-in-from-left duration-200">
               <SidebarContent
                 activeChatId={activeChatId}
                 chats={chats}
@@ -179,96 +176,79 @@ export function ChatScreen() {
           </div>
         )}
 
+        {/* Main content */}
         <section className="flex min-w-0 flex-col">
-          <header className="flex h-16 items-center justify-between border-b border-border/40 px-4 sm:px-6 bg-background/20 backdrop-blur-md sticky top-0 z-40">
-            <div className="flex items-center gap-3">
-              <Button
-                className="lg:hidden size-8 rounded-lg"
-                size="icon"
-                variant="ghost"
-                onClick={() => setIsMobileSidebarOpen(true)}
-              >
-                <PanelLeftIcon className="size-4" />
-                <span className="sr-only">Open sidebar</span>
-              </Button>
-              <div className="relative">
-                <button
-                  className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-background/80 px-3.5 py-1.5 text-xs font-semibold shadow-xs backdrop-blur-md hover:bg-accent transition-colors cursor-pointer"
-                  type="button"
-                >
-                  <BotIcon className="size-3.5 text-indigo-500" />
-                  <span>ExcelBot 4.5 Pro</span>
-                  <ChevronDownIcon className="size-3 text-muted-foreground" />
-                </button>
-              </div>
-            </div>
+          {/* Mobile topbar */}
+          <header className="flex h-14 items-center gap-3 border-b border-border/40 px-4 lg:hidden">
             <Button
-              onClick={() => void signOut({ redirectUrl: '/' })}
+              className="size-8 rounded-lg"
+              size="icon"
               variant="ghost"
-              size="sm"
-              className="h-8 rounded-lg text-xs gap-1.5 text-muted-foreground hover:text-foreground hover:bg-accent"
+              onClick={() => setIsMobileSidebarOpen(true)}
             >
-              <LogOutIcon data-icon="inline-start" />
-              Sign out
+              <PanelLeftIcon className="size-4" />
+              <span className="sr-only">Open sidebar</span>
             </Button>
+            <div className="flex items-center gap-1.5">
+              <SparklesIcon className="size-4 text-primary" />
+              <span className="text-sm font-semibold">grid.ai</span>
+            </div>
           </header>
 
-          <div className="mx-auto flex w-full max-w-4xl flex-1 flex-col px-4 py-6 sm:px-6 justify-between">
+          <div className="mx-auto flex w-full max-w-3xl flex-1 flex-col px-4 py-6 sm:px-6">
             {hasUserMessages ? (
-              <div className="flex-1 overflow-y-auto rounded-3xl border border-border/40 bg-card/60 backdrop-blur-md p-4 shadow-xs sm:p-6 mb-6">
-                <div className="flex flex-col gap-4">
+              <div className="flex-1 overflow-y-auto py-4 mb-6">
+                <div className="flex flex-col gap-6">
                   {messages.map((message) => (
                     <ChatBubble key={message.id} message={message} />
                   ))}
                 </div>
               </div>
             ) : (
-              <div className="flex-1 flex flex-col items-center justify-center py-12">
-                {/* Glowing sphere/orb */}
-                <div className="relative flex items-center justify-center mb-6">
-                  <div className="absolute size-40 rounded-full bg-gradient-to-tr from-blue-400 via-indigo-400 to-purple-400 opacity-30 blur-3xl animate-pulse" />
-                  <div className="relative size-28 rounded-full bg-gradient-to-tr from-blue-300/40 via-white/60 to-purple-300/40 shadow-[inset_0_4px_12px_rgba(255,255,255,0.8),0_12px_24px_rgba(0,0,0,0.08)] border border-white/50 backdrop-blur-md flex items-center justify-center">
-                    <div className="absolute inset-1 rounded-full bg-gradient-to-b from-white/40 to-transparent" />
-                    <div className="absolute top-2 left-4 size-8 rounded-full bg-white/20 blur-[1px]" />
-                    <SparklesIcon className="size-10 text-indigo-600/80 animate-bounce" />
-                  </div>
-                </div>
-
-                <h1 className="text-4xl font-bold tracking-tight text-center">
-                  {getGreeting()}, {user?.firstName ?? 'User'}
-                </h1>
-                <p className="mt-2 text-xl font-medium text-center text-muted-foreground">
-                  How Can I{' '}
-                  <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                    Assist You Today?
+              <div className="flex flex-1 flex-col items-center justify-center py-16 text-center">
+                <h1 className="text-3xl font-semibold tracking-tight text-foreground">
+                  {getGreeting()},{' '}
+                  <span className="text-muted-foreground">
+                    {user?.firstName ?? 'there'}
                   </span>
+                </h1>
+                <p className="mt-2 text-base text-muted-foreground">
+                  How can I help you today?
                 </p>
               </div>
             )}
 
-            <form className="mt-4" onSubmit={handlePromptSubmit}>
-              <div className="rounded-3xl border border-border/60 bg-background/80 shadow-xl backdrop-blur-md p-3">
+            {/* Composer */}
+            <form onSubmit={handlePromptSubmit}>
+              <div className="rounded-2xl border border-border bg-background shadow-sm">
                 <Textarea
-                  className="w-full max-h-44 min-h-20 resize-none border-0 shadow-none focus-visible:ring-0 bg-transparent text-sm placeholder:text-muted-foreground/70"
+                  className="w-full max-h-44 min-h-[5rem] resize-none border-0 shadow-none focus-visible:ring-0 bg-transparent px-4 pt-4 text-sm placeholder:text-muted-foreground/60"
                   onChange={(event) => setPrompt(event.target.value)}
-                  placeholder="Initiate a query or send a command to the AI..."
+                  placeholder="How can I help you today?"
                   value={prompt}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' && !e.shiftKey) {
+                      e.preventDefault()
+                      if (prompt.trim()) {
+                        e.currentTarget.form?.requestSubmit()
+                      }
+                    }
+                  }}
                 />
-                <div className="flex items-center justify-between gap-3 mt-2 pt-2 border-t border-border/40">
-                  <div className="flex flex-wrap items-center gap-2">
+                <div className="flex items-center justify-between gap-2 px-3 pb-3">
+                  <div className="flex items-center gap-1">
                     <Button
                       type="button"
                       variant="ghost"
                       size="sm"
-                      className="h-8 rounded-full text-xs text-muted-foreground hover:text-foreground"
+                      className="h-8 rounded-full px-2.5 text-xs text-muted-foreground hover:text-foreground"
                     >
                       <PaperclipIcon className="size-3.5" />
+                      <span className="sr-only">Attach</span>
                     </Button>
                     <Button
                       type="button"
-                      variant={
-                        activePill === 'reasoning' ? 'secondary' : 'ghost'
-                      }
+                      variant="ghost"
                       size="sm"
                       onClick={() =>
                         setActivePill(
@@ -276,9 +256,10 @@ export function ChatScreen() {
                         )
                       }
                       className={cn(
-                        'h-8 rounded-full text-xs gap-1.5 px-3 cursor-pointer',
-                        activePill === 'reasoning' &&
-                          'bg-indigo-500/10 text-indigo-600 border border-indigo-500/20 hover:bg-indigo-500/15',
+                        'h-8 rounded-full px-3 text-xs gap-1.5 cursor-pointer',
+                        activePill === 'reasoning'
+                          ? 'bg-muted text-foreground'
+                          : 'text-muted-foreground hover:text-foreground',
                       )}
                     >
                       <BrainIcon className="size-3.5" />
@@ -286,25 +267,24 @@ export function ChatScreen() {
                     </Button>
                     <Button
                       type="button"
-                      variant={activePill === 'image' ? 'secondary' : 'ghost'}
+                      variant="ghost"
                       size="sm"
                       onClick={() =>
                         setActivePill(activePill === 'image' ? null : 'image')
                       }
                       className={cn(
-                        'h-8 rounded-full text-xs gap-1.5 px-3 cursor-pointer',
-                        activePill === 'image' &&
-                          'bg-emerald-500/10 text-emerald-600 border border-emerald-500/20 hover:bg-emerald-500/15',
+                        'h-8 rounded-full px-3 text-xs gap-1.5 cursor-pointer',
+                        activePill === 'image'
+                          ? 'bg-muted text-foreground'
+                          : 'text-muted-foreground hover:text-foreground',
                       )}
                     >
                       <ImageIcon className="size-3.5" />
-                      Create Image
+                      Image
                     </Button>
                     <Button
                       type="button"
-                      variant={
-                        activePill === 'research' ? 'secondary' : 'ghost'
-                      }
+                      variant="ghost"
                       size="sm"
                       onClick={() =>
                         setActivePill(
@@ -312,26 +292,30 @@ export function ChatScreen() {
                         )
                       }
                       className={cn(
-                        'h-8 rounded-full text-xs gap-1.5 px-3 cursor-pointer',
-                        activePill === 'research' &&
-                          'bg-blue-500/10 text-blue-600 border border-blue-500/20 hover:bg-blue-500/15',
+                        'h-8 rounded-full px-3 text-xs gap-1.5 cursor-pointer hidden sm:inline-flex',
+                        activePill === 'research'
+                          ? 'bg-muted text-foreground'
+                          : 'text-muted-foreground hover:text-foreground',
                       )}
                     >
                       <GlobeIcon className="size-3.5" />
-                      Deep Research
+                      Research
                     </Button>
                   </div>
                   <Button
                     disabled={!prompt.trim()}
                     size="icon"
                     type="submit"
-                    className="size-8 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all shrink-0 cursor-pointer"
+                    className="size-8 rounded-full bg-foreground text-background hover:bg-foreground/80 transition-all shrink-0 cursor-pointer disabled:opacity-30"
                   >
                     <SendIcon className="size-3.5" />
-                    <span className="sr-only">Send message</span>
+                    <span className="sr-only">Send</span>
                   </Button>
                 </div>
               </div>
+              <p className="mt-2 text-center text-[10px] text-muted-foreground/50">
+                grid.ai can make mistakes. Double-check important formulas.
+              </p>
             </form>
           </div>
         </section>

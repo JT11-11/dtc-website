@@ -12,11 +12,11 @@ interface TeamMember {
 }
 
 // Real DTC members. Names, roles, countries and contributions are drawn from
-// the Dynamic Teen Coalition 2025 Yearly Wrap — no invented bios.
+// the Dynamic Teen Coalition 2025 Yearly Wrap - no invented bios.
 const team: TeamMember[] = [
   {
     name: "Aditya Majumdar",
-    role: "Research Lead — Social Media Bans",
+    role: "Research Lead, Social Media Bans",
     country: "United States",
     image: "/images/team/aditya.jpg",
     contribution:
@@ -32,11 +32,11 @@ const team: TeamMember[] = [
   },
   {
     name: "Ahaan Nigam",
-    role: "Research & Data",
+    role: "Research, Data & Web Design",
     country: "United States",
     image: "/images/team/ahaan.jpg",
     contribution:
-      "Discrimination case-finding and data structuring across DTC's restriction and ageism research.",
+      "Discrimination case-finding and data structuring across DTC's restriction and ageism research, plus website UX/UI design.",
   },
   {
     name: "Tejas Karusala",
@@ -109,7 +109,7 @@ export default function About7() {
             promising to include us in.
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground">
-            A small, globally distributed team that founded the lab in 2026 —
+            A small, globally distributed team that founded the lab in 2026,
             building on the Dynamic Teen Coalition's work at the UN since 2022.
           </p>
         </motion.div>

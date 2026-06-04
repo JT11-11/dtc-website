@@ -124,7 +124,7 @@ function Card({
           href={audience.href}
           target={audience.href.startsWith("http") ? "_blank" : undefined}
           rel={audience.href.startsWith("http") ? "noopener noreferrer" : undefined}
-          aria-label={`Contact us — ${audience.title}`}
+          aria-label={`Contact us - ${audience.title}`}
         >
           <motion.span
             initial={false}

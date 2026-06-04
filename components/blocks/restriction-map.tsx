@@ -182,7 +182,7 @@ export function RestrictionMap() {
 
   return (
     <div className="w-full">
-      {/* Stat band — verified figures from the DTC YPL Manifest. */}
+      {/* Stat band - verified figures from the DTC YPL Manifest. */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-px overflow-hidden rounded-2xl border border-border bg-border">
         {[
           { n: `${counts.countries || 42}`, l: "countries with bans or restrictions" },
@@ -236,7 +236,7 @@ export function RestrictionMap() {
         <p className="mt-8 text-sm text-muted-foreground">{loadError}</p>
       ) : (
         <div className="mt-6 grid gap-6 lg:grid-cols-[1.6fr_1fr]">
-          {/* The map (visual layer). Decorative — the table below is canonical. */}
+          {/* The map (visual layer). Decorative - the table below is canonical. */}
           <div className="relative rounded-2xl border border-border bg-card p-2">
             <svg
               ref={svgRef}
@@ -383,7 +383,7 @@ export function RestrictionMap() {
             ) : (
               <div className="flex h-full flex-col items-center justify-center py-10 text-center">
                 <p className="text-sm text-muted-foreground">
-                  Select a country on the map — or any row in the table — to read
+                  Select a country on the map, or any row in the table, to read
                   the law, who it affects, and the primary source.
                 </p>
               </div>
@@ -441,7 +441,7 @@ export function RestrictionMap() {
                     </span>
                   </td>
                   <td className="px-4 py-3 text-muted-foreground whitespace-nowrap">
-                    {r.ages || "—"}
+                    {r.ages || "N/A"}
                   </td>
                   <td className="px-4 py-3 text-muted-foreground">{r.law}</td>
                   <td className="px-4 py-3">
@@ -456,7 +456,7 @@ export function RestrictionMap() {
                         Link <ExternalLink className="h-3 w-3" />
                       </a>
                     ) : (
-                      "—"
+                      "N/A"
                     )}
                   </td>
                 </tr>

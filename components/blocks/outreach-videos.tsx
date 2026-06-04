@@ -2,7 +2,7 @@
 
 import { Highlight } from "@/components/ui/highlight";
 
-// Real clips from /public/videos — captured moments of DTC distributing its
+// Real clips from /public/videos - captured moments of DTC distributing its
 // printed briefs and engaging delegates at the UN, not staged productions.
 const videos = [
   { src: "/videos/outreach-1.mp4", label: "Putting the brief in their hands" },

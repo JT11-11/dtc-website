@@ -7,7 +7,7 @@ import { RestrictionMap } from "@/components/blocks/restriction-map";
 import CTA1 from "@/components/blocks/cta-1";
 
 export const metadata: Metadata = {
-  title: "Restriction Database — DTC Youth Policy Lab",
+  title: "Restriction Database · DTC Youth Policy Lab",
   description:
     "The Global Teen Restriction Database: the first systematic effort to map social-media bans and blanket restrictions affecting teenagers, country by country. Every entry is sourced.",
 };
@@ -25,7 +25,7 @@ export default function DatabasePage() {
       />
       <main className="lg:relative lg:z-10 flex-1 bg-background">
         {/* Header */}
-        <section className="pt-8 pb-10 px-6 sm:px-8 lg:px-12 bg-background">
+        <section className="bg-background pt-8 pb-10 px-6 sm:px-8 lg:px-12">
           <div className="max-w-[1400px] mx-auto">
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--sun-gold)] mb-4">
               Global Teen Restriction Database
@@ -36,7 +36,7 @@ export default function DatabasePage() {
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed">
               The first systematic effort to map social-media bans and blanket
-              restrictions affecting teenagers — country by country, law by law.
+              restrictions affecting teenagers, country by country, law by law.
               Every entry traces to a primary source. Built by DTC researchers
               for policy and advocacy use.
             </p>
@@ -53,7 +53,7 @@ export default function DatabasePage() {
         <CTA1
           headingLine1="Use the data."
           headingLine2="Build better policy."
-          description="This database is built to be used — by journalists, advocates, academics, and policymakers. Get in touch to cite it, collaborate on a study, or tell us about a law we're missing."
+          description="This database is built to be used by journalists, advocates, academics, and policymakers. Get in touch to cite it, collaborate on a study, or tell us about a law we're missing."
           primaryLabel="Get in Touch"
           primaryHref="/contact"
           secondaryLabel="About DTC"

@@ -6,9 +6,9 @@ import { Breadcrumb } from "@/components/ui/breadcrumb";
 import CTA1 from "@/components/blocks/cta-1";
 
 export const metadata: Metadata = {
-  title: "Partners — DTC Youth Policy Lab",
+  title: "Partners · DTC Youth Policy Lab",
   description:
-    "Organizations DTC Youth Policy Lab collaborates with on research, outreach, and policy engagement — including the Swayam Initiative and PERME.",
+    "Organizations DTC Youth Policy Lab collaborates with on research, outreach, and policy engagement, including the Swayam Initiative and PERME.",
 };
 
 export default function Partners() {

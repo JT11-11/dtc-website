@@ -35,7 +35,7 @@ export function ContactUsDtc() {
                 Join the community.
               </h2>
               <p className="text-background/60 text-lg leading-relaxed">
-                Our Discord is where the actual work happens — research
+                Our Discord is where the actual work happens: research
                 discussions, draft reviews, UN process updates, and the
                 occasional argument about governance theory. Teens, researchers,
                 and interested adults all welcome.

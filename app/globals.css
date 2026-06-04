@@ -11,10 +11,10 @@
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   /* Display headings are Inter Bold per the DTC YPL Brand Kit. */
   --font-display: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  /* Editorial "Highlight" accents — Inria Serif Bold Italic. */
+  /* Editorial "Highlight" accents - Inria Serif Bold Italic. */
   --font-serif: var(--font-inria), Georgia, "Times New Roman", serif;
 
-  /* DTC YPL Brand Kit v1.0 — raw brand colors */
+  /* DTC YPL Brand Kit v1.0 - raw brand colors */
   --color-un-blue: var(--un-blue);
   --color-sky-blue: var(--sky-blue);
   --color-sun-gold: var(--sun-gold);
@@ -60,7 +60,7 @@
 }
 
 :root {
-  /* --- DTC YPL Brand Kit v1.0 — raw brand colors --- */
+  /* --- DTC YPL Brand Kit v1.0 - raw brand colors --- */
   --un-blue: #009edb;
   --sky-blue: #7ac4d9;
   --sun-gold: #f5c55e;

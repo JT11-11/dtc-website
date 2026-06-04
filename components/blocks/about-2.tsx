@@ -35,7 +35,7 @@ const TIMELINE_DATA: TimelineEntry[] = [
     highlight: "first teen-led coalition",
     place: "Internet Governance Forum · Ethiopia",
     description:
-      "At the invitation of the IGF Secretariat, the Dynamic Teen Coalition was established at the 2022 UN Internet Governance Forum in Ethiopia — the first teen-led coalition at the IGF.",
+      "At the invitation of the IGF Secretariat, the Dynamic Teen Coalition was established at the 2022 UN Internet Governance Forum in Ethiopia: the first teen-led coalition at the IGF.",
     image: "/images/un/flag-portrait.jpg",
   },
   {
@@ -46,18 +46,18 @@ const TIMELINE_DATA: TimelineEntry[] = [
     highlight: "first systematic database",
     place: "UN events · worldwide",
     description:
-      "DTC returned to UN events year after year — challenging blanket social-media bans on the floor and building the first systematic global database of teen online restrictions, country by country, platform by platform.",
+      "DTC returned to UN events year after year, challenging blanket social-media bans on the floor and building the first systematic global database of teen online restrictions, country by country, platform by platform.",
     image: "/images/un/group.jpg",
   },
   {
     id: 3,
     year: "2025",
     short: "The Confrontation",
-    title: "Oslo — The Confrontation",
+    title: "Oslo: The Confrontation",
     highlight: "became our paper",
     place: "IGF 2025 · Norway",
     description:
-      "At IGF 2025 in Norway, DTC confronted Australia’s Ambassador for Cyber Affairs, Brendan Dowling, on the impact of teen bans on marginalised youth — the exchange that became our paper. Across the year DTC also engaged the ECOSOC Youth Forum, HLPF, WSIS+20 and UNGA, and ran the first teen-led Dynamic Coalition session at the IGF in twenty years.",
+      "At IGF 2025 in Norway, DTC confronted Australia’s Ambassador for Cyber Affairs, Brendan Dowling, on the impact of teen bans on marginalised youth. That exchange became our paper. Across the year DTC also engaged the ECOSOC Youth Forum, HLPF, WSIS+20 and UNGA, and ran the first teen-led Dynamic Coalition session at the IGF in twenty years.",
     image: "/images/un/hlpf.jpg",
   },
   {
@@ -68,7 +68,7 @@ const TIMELINE_DATA: TimelineEntry[] = [
     highlight: "researchers, not subjects",
     place: "Headquartered in Singapore · now",
     description:
-      "DTC evolves into a fully teen-led policy research lab, headquartered in Singapore. Our paper is under review at Taylor & Francis, and we’re recruiting and paying high-school researchers worldwide — so teens become the researchers, not just the subjects.",
+      "DTC evolves into a fully teen-led policy research lab, headquartered in Singapore. Our paper is under review at Taylor & Francis, turning years of presence in the room into rigorous, sourced research, so teens become the researchers, not just the subjects.",
     image: "/images/un/ga-hall.jpg",
   },
 ];
@@ -76,6 +76,28 @@ const TIMELINE_DATA: TimelineEntry[] = [
 export default function About2({ displayNavigation = true }: About2Props = {}) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [resetKey, setResetKey] = useState(0);
+
+  // The progress fill must end exactly at the active dot. Because the dots sit
+  // at the start of each grid column (not at evenly-spaced 0/33/66/100%),
+  // we measure the active dot's center rather than using a width percentage,
+  // which would overshoot past the dot.
+  const railRef = useRef<HTMLDivElement>(null);
+  const dotRefs = useRef<(HTMLSpanElement | null)[]>([]);
+  const [fillWidth, setFillWidth] = useState(0);
+
+  useEffect(() => {
+    const measure = () => {
+      const rail = railRef.current;
+      const dot = dotRefs.current[activeIndex];
+      if (!rail || !dot) return;
+      const railRect = rail.getBoundingClientRect();
+      const dotRect = dot.getBoundingClientRect();
+      setFillWidth(dotRect.left + dotRect.width / 2 - railRect.left);
+    };
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, [activeIndex]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -91,7 +113,6 @@ export default function About2({ displayNavigation = true }: About2Props = {}) {
   }, []);
 
   const entry = TIMELINE_DATA[activeIndex];
-  const progress = activeIndex / (TIMELINE_DATA.length - 1);
 
   return (
     <section className="w-full bg-background py-20 sm:py-28 px-6 sm:px-12 lg:px-24">
@@ -190,14 +211,14 @@ export default function About2({ displayNavigation = true }: About2Props = {}) {
 
         {/* Progress rail */}
         <div className="mt-12 sm:mt-16">
-          <div className="relative">
+          <div ref={railRef} className="relative">
             {/* track */}
             <div className="absolute top-[7px] left-0 right-0 h-[2px] bg-border" />
-            {/* fill */}
+            {/* fill - width measured to the active dot's center (no overshoot) */}
             <motion.div
               className="absolute top-[7px] left-0 h-[2px] bg-[var(--un-blue)]"
               initial={false}
-              animate={{ width: `${progress * 100}%` }}
+              animate={{ width: fillWidth }}
               transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
             />
             {/* nodes */}
@@ -210,10 +231,15 @@ export default function About2({ displayNavigation = true }: About2Props = {}) {
                     key={e.id}
                     onClick={() => go(i)}
                     className="group flex flex-col items-start text-left"
-                    aria-label={`${e.year} — ${e.title}`}
+                    aria-label={`${e.year}: ${e.title}`}
                     aria-current={isActive ? "true" : undefined}
                   >
-                    <span className="relative flex h-4 w-4 items-center justify-center">
+                    <span
+                      ref={(el) => {
+                        dotRefs.current[i] = el;
+                      }}
+                      className="relative flex h-4 w-4 items-center justify-center"
+                    >
                       <motion.span
                         className={`block rounded-full border-2 transition-colors duration-200 ${
                           isActive

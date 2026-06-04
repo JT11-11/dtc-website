@@ -4,7 +4,7 @@ import { motion, useReducedMotion } from "motion/react";
 import { Highlight } from "@/components/ui/highlight";
 
 /**
- * UN Roll-Call — a "session called to order" scroll of DTC's verified UN
+ * UN Roll-Call - a "session called to order" scroll of DTC's verified UN
  * footprint. Every entry traces to the DTC YPL Manifest and the 2025 Yearly
  * Wrap. Do not add unverified venues or claims here.
  */
@@ -20,31 +20,31 @@ const ENTRIES: RollCallEntry[] = [
     year: "2022",
     venue: "Internet Governance Forum",
     place: "Ethiopia",
-    note: "Invited by the UN IGF Secretariat to establish the Dynamic Teen Coalition — the first teen-led coalition at the Internet Governance Forum.",
+    note: "Invited by the UN IGF Secretariat to establish the Dynamic Teen Coalition, the first teen-led coalition at the Internet Governance Forum.",
   },
   {
     year: "’23–’24",
     venue: "UN advocacy & the first database",
     place: "UN events · worldwide",
-    note: "Returned to UN events year after year — challenging blanket social-media bans and building the first systematic global database of teen online restrictions.",
+    note: "Returned to UN events year after year, challenging blanket social-media bans and building the first systematic global database of teen online restrictions.",
   },
   {
     year: "2025",
-    venue: "IGF Oslo — The Confrontation",
+    venue: "IGF Oslo: The Confrontation",
     place: "Norway",
-    note: "Confronted Australia’s Ambassador for Cyber Affairs, Brendan Dowling, on the impact of teen bans on marginalised youth — the exchange that became our paper.",
+    note: "Confronted Australia’s Ambassador for Cyber Affairs, Brendan Dowling, on the impact of teen bans on marginalised youth, the exchange that became our paper.",
   },
   {
     year: "2025",
     venue: "ECOSOC YF · HLPF · WSIS+20 · UNGA · IYC",
     place: "via UN MGCY",
-    note: "Beyond the IGF, DTC engaged UN-adjacent processes through the UN Major Group for Children & Youth — delegations, oral interventions, and side events.",
+    note: "Beyond the IGF, DTC engaged UN-adjacent processes through the UN Major Group for Children & Youth: delegations, oral interventions, and side events.",
   },
   {
     year: "2026",
     venue: "Youth Policy Lab",
     place: "Headquartered in Singapore",
-    note: "DTC evolves into a teen-led policy research lab — turning years of presence in the room into rigorous, sourced research.",
+    note: "DTC evolves into a teen-led policy research lab, turning years of presence in the room into rigorous, sourced research.",
   },
 ];
 
@@ -54,7 +54,7 @@ export function UnRollCall() {
   return (
     <section
       id="roll-call"
-      className="bg-background px-6 sm:px-12 lg:px-24 py-20 sm:py-28"
+      className="dark bg-background text-foreground px-6 sm:px-12 lg:px-24 py-20 sm:py-28"
     >
       <div className="max-w-[1400px] mx-auto">
         <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--sun-gold)] mb-4">
@@ -66,7 +66,7 @@ export function UnRollCall() {
         </h2>
         <p className="mt-5 max-w-2xl text-base sm:text-lg text-muted-foreground leading-relaxed">
           A record of where teenagers showed up in global digital-policy
-          processes — and what happened when they did.
+          processes, and what happened when they did.
         </p>
 
         <ol className="mt-14 space-y-0">

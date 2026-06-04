@@ -9,9 +9,9 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Our Work — DTC Youth Policy Lab",
+  title: "Our Work · DTC Youth Policy Lab",
   description:
-    "Peer-reviewed research and systematic databases from DTC Youth Policy Lab — including the Global Teen Restriction Database and original research on how blanket restrictions affect marginalised youth, under review at Taylor & Francis.",
+    "Peer-reviewed research and systematic databases from DTC Youth Policy Lab, including the Global Teen Restriction Database and original research on how blanket restrictions affect marginalised youth, under review at Taylor & Francis.",
 };
 
 export default function WorkPage() {
@@ -79,7 +79,7 @@ export default function WorkPage() {
                   </h2>
                   <p className="mt-4 max-w-xl text-base sm:text-lg text-muted-foreground leading-relaxed">
                     The first systematic effort to map social-media bans and
-                    blanket restrictions affecting teenagers — 42 countries, 48
+                    blanket restrictions affecting teenagers: 42 countries, 48
                     measures, every entry sourced. Explore it on an interactive
                     world map.
                   </p>
@@ -88,21 +88,28 @@ export default function WorkPage() {
                     <ArrowUpRight className="h-4 w-4" />
                   </span>
                 </div>
-                <div className="grid grid-cols-3 gap-px overflow-hidden rounded-2xl border border-border bg-border">
-                  {[
-                    { n: "42", l: "countries" },
-                    { n: "0%", l: "consulted youth" },
-                    { n: "100%", l: "of teens subject" },
-                  ].map((s) => (
-                    <div key={s.l} className="bg-card px-3 py-5 text-center">
-                      <div className="text-2xl sm:text-3xl font-bold tracking-tight text-[var(--un-blue)]">
-                        {s.n}
-                      </div>
-                      <p className="mt-1 text-xs text-muted-foreground leading-snug">
+                <div className="rounded-2xl border border-border bg-background p-6">
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-4">
+                    Mapped by status
+                  </p>
+                  <ul className="space-y-3">
+                    {[
+                      { c: "var(--un-blue)", l: "Passed" },
+                      { c: "var(--sky-blue)", l: "Pending" },
+                      { c: "var(--sun-gold)", l: "Proposed" },
+                    ].map((s) => (
+                      <li
+                        key={s.l}
+                        className="flex items-center gap-3 text-sm font-medium text-foreground"
+                      >
+                        <span
+                          className="h-3 w-3 rounded-full"
+                          style={{ backgroundColor: s.c }}
+                        />
                         {s.l}
-                      </p>
-                    </div>
-                  ))}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </Link>
@@ -113,7 +120,7 @@ export default function WorkPage() {
         <CTA1
           headingLine1="Use our data."
           headingLine2="Build better policy."
-          description="Our research is built to be used — by journalists, advocates, academics, and policymakers. Get in touch if you want to cite our work, collaborate on a study, or access the database."
+          description="Our research is built to be used by journalists, advocates, academics, and policymakers. Get in touch if you want to cite our work, collaborate on a study, or access the database."
           primaryLabel="Get in Touch"
           primaryHref="/contact"
           secondaryLabel="About DTC"

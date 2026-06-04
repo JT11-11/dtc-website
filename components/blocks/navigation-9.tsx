@@ -62,7 +62,7 @@ export default function Navigation9() {
       : "text-sm font-medium transition-colors text-muted-foreground hover:text-foreground";
   };
 
-  // Brand CTA — Discord, always Sky Blue (reads on both the black hero and light pages).
+  // Brand CTA - Discord, always Sky Blue (reads on both the black hero and light pages).
   const ctaClassName =
     "hidden sm:inline-flex items-center px-4 py-2 rounded-full bg-[var(--sky-blue)] text-[#08323d] text-sm font-semibold hover:brightness-105 transition";
 
@@ -105,8 +105,8 @@ export default function Navigation9() {
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
           className={`relative flex items-center justify-between transition-all duration-300 ease-out ${navClassName}`}
         >
-          {/* Logo — emblem placeholder (swap for real gold-ring emblem asset) + wordmark */}
-          <a href="/" className={logoClassName} aria-label="DTC Youth Policy Lab — home">
+          {/* Logo - emblem placeholder (swap for real gold-ring emblem asset) + wordmark */}
+          <a href="/" className={logoClassName} aria-label="DTC Youth Policy Lab home">
             <span className="relative grid h-8 w-8 shrink-0 place-items-center rounded-full bg-black ring-2 ring-[var(--sun-gold)]">
               <span className="block h-3 w-3 rounded-full bg-[var(--un-blue)]" />
               <span className="absolute inset-[3px] rounded-full ring-1 ring-white/20" />

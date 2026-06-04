@@ -5,7 +5,7 @@ import gsap from "gsap";
 import { cn } from "@/lib/utils";
 
 export interface ClickStackProps {
-  /** Renderable content for each card — images, text, JSX, or any React node */
+  /** Renderable content for each card - images, text, JSX, or any React node */
   items?: React.ReactNode[];
   /** Width of each card in pixels */
   cardWidth?: number;

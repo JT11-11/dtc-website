@@ -141,6 +141,7 @@ export function ImpactDtc() {
               <span className="text-xl font-semibold text-foreground">Our Mission</span>
               <Link
                 href="/about"
+                aria-label="About DTC Youth Policy Lab"
                 className="w-10 h-10 rounded-full bg-foreground/10 flex items-center justify-center hover:bg-foreground hover:text-background transition-colors"
               >
                 <ArrowIcon className="w-4 h-4" />
@@ -195,7 +196,7 @@ export function ImpactDtc() {
 
           <div className="lg:col-span-3 bg-muted/50 rounded-2xl p-8 flex flex-col">
             <p className="text-xl lg:text-2xl font-medium leading-relaxed text-foreground max-w-3xl flex-1">
-              The Global Teen Restriction Database maps every social-media ban and blanket restriction affecting teens — country by country, each entry sourced — so policy can reflect the actual experiences of youth.
+              The Global Teen Restriction Database maps every social-media ban and blanket restriction affecting teens, country by country, each entry sourced, so policy can reflect the actual experiences of youth.
             </p>
             <div className="flex items-center justify-between mt-auto pt-6">
               <span className="text-xl font-semibold text-foreground">Explore the database</span>

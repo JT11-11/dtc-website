@@ -7,7 +7,7 @@ import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { Highlight } from "@/components/ui/highlight";
 
 export const metadata: Metadata = {
-  title: "Contact — DTC Youth Policy Lab",
+  title: "Contact · DTC Youth Policy Lab",
   description:
     "Get in touch with DTC Youth Policy Lab. We work with researchers, journalists, policymakers, and teenagers who want to do this work. Email us at hello@dtcpolicylab.org.",
 };
@@ -39,7 +39,7 @@ export default function ContactPage() {
         <CTA1
           headingLine1="Not ready to email?"
           headingLine2="Start in Discord."
-          description="Our Discord is where the actual work happens — research discussions, draft reviews, UN process updates. Teens, researchers, and interested adults all welcome."
+          description="Our Discord is where the actual work happens: research discussions, draft reviews, UN process updates. Teens, researchers, and interested adults all welcome."
           primaryLabel="Join Discord"
           primaryHref="https://discord.gg/dtcpolicylab"
           secondaryLabel="Read our research"

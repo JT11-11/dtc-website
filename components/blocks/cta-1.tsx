@@ -141,7 +141,7 @@ export interface Cta1Props {
 export default function CTA1({
   headingLine1 = "Ready to change",
   headingLine2 = "the rules?",
-  description = "Join a community of high schoolers doing serious digital policy research — publishing, briefing delegates, and building the evidence base for youth digital rights.",
+  description = "Join a community of high schoolers doing serious digital policy research: publishing, briefing delegates, and building the evidence base for youth digital rights.",
   primaryLabel = "Join the Lab",
   primaryHref = "/contact",
   secondaryLabel = "Read our research",

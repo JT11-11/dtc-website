@@ -8,7 +8,7 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-// Brand Kit highlight face — used for italic "Highlight" accents (Inria Serif Bold Italic).
+// Brand Kit highlight face - used for italic "Highlight" accents (Inria Serif Bold Italic).
 const inriaSerif = Inria_Serif({
   variable: "--font-inria",
   subsets: ["latin"],
@@ -19,7 +19,7 @@ const inriaSerif = Inria_Serif({
 export const metadata: Metadata = {
   title: "DTC Youth Policy Lab",
   description:
-    "A fully teen-led digital youth policy research lab. Putting teens at the table — not just on the agenda.",
+    "A fully teen-led digital youth policy research lab. Putting teens at the table, not just on the agenda.",
 };
 
 export default function RootLayout({

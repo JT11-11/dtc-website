@@ -11,7 +11,7 @@ const FaultyTerminal = dynamic(
 export function TerminalHero() {
   return (
     <section className="relative w-full h-screen overflow-hidden bg-black">
-      {/* Terminal background — tinted to UN Blue */}
+      {/* Terminal background - tinted to UN Blue */}
       <div className="absolute inset-0">
         <FaultyTerminal
           scale={1.5}
@@ -70,7 +70,7 @@ export function TerminalHero() {
           A fully teen-led research lab embedding youth directly into the global
           digital-policy pipeline.{" "}
           <span className="font-serif italic text-white/95">
-            At the table — not just on the agenda.
+            At the table, not just on the agenda.
           </span>
         </motion.p>
 

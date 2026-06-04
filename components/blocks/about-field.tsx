@@ -69,7 +69,7 @@ export function AboutField() {
         </div>
 
         <p className="mt-6 text-sm text-muted-foreground">
-          DTC at the United Nations, New York — engaging across UN processes:
+          DTC at the United Nations, New York, engaging across UN processes:
           the IGF (2022–2025), and now the ECOSOC Youth Forum, HLPF, WSIS+20 and
           UNGA via the UN Major Group for Children &amp; Youth (2025).
         </p>

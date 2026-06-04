@@ -31,11 +31,11 @@ const workItems: WorkItem[] = [
     title: "Social Media Restrictions &",
     titleItalic: "LGBTQ+ Youth Isolation",
     type: "Empirical Pilot Study",
-    status: "Under peer review — Taylor & Francis (Social Sciences)",
+    status: "Under peer review · Taylor & Francis (Social Sciences)",
     summary:
-      "Original research on how blanket, age-based platform restrictions affect marginalized youth — with LGBTQ+ teenagers as the central case. Drawing on survey data and qualitative interviews, the study examines the relationship between platform access restrictions and the loss of community, support networks, and identity resources for the young people who depend on these spaces most.",
+      "Original research on how blanket, age-based platform restrictions affect marginalized youth, with LGBTQ+ teenagers as the central case. Drawing on survey data and qualitative interviews, the study examines the relationship between platform access restrictions and the loss of community, support networks, and identity resources for the young people who depend on these spaces most.",
     whyItMatters:
-      "Policymakers enacting social media bans have consistently cited child safety — but our data shows those bans fall hardest on the teenagers most dependent on online spaces for their safety. For LGBTQ+ youth in hostile households or conservative communities, restricting social media doesn't protect them. It removes their only safe social infrastructure. This study puts evidence behind a claim advocates have been making for years.",
+      "Policymakers enacting social media bans have consistently cited child safety, but our data shows those bans fall hardest on the teenagers most dependent on online spaces for their safety. For LGBTQ+ youth in hostile households or conservative communities, restricting social media doesn't protect them. It removes their only safe social infrastructure. This study puts evidence behind a claim advocates have been making for years.",
   },
   {
     id: "restriction-database",
@@ -43,9 +43,9 @@ const workItems: WorkItem[] = [
     title: "The Global Teen",
     titleItalic: "Restriction Database",
     type: "Systematic Database",
-    status: "Active — ongoing data collection and updates",
+    status: "Active · ongoing data collection and updates",
     summary:
-      "The world's first systematic map of age-based internet restrictions. The database documents every formal legislative instrument, executive order, and platform policy that restricts minors' access to social media, messaging platforms, or general internet services across 40+ countries — including the type of restriction, legal basis, enforcement mechanisms, and reported implementation outcomes.",
+      "The world's first systematic map of age-based internet restrictions. The database documents every formal legislative instrument, executive order, and platform policy that restricts minors' access to social media, messaging platforms, or general internet services across 40+ countries, including the type of restriction, legal basis, enforcement mechanisms, and reported implementation outcomes.",
     whyItMatters:
       "Before this project, no comprehensive picture of the global restriction landscape existed. Policymakers in one country had no systematic way to learn from outcomes in another. Advocates lacked the evidentiary base to challenge restrictions in court or in policy rooms. We built the map that should have existed before anyone started legislating.",
   },
@@ -57,9 +57,9 @@ const workItems: WorkItem[] = [
     type: "Institutional Audit",
     status: "Completed",
     summary:
-      "A systematic audit examining how youth are framed across UN agency websites — whether young people appear as subjects of policy (things to be managed) or as agents (participants who shape decisions). We also assessed whether the websites themselves were navigable and accessible for young people seeking to engage with UN processes, including language complexity, navigation structure, and availability of entry-point information.",
+      "A systematic audit examining how youth are framed across UN agency websites: whether young people appear as subjects of policy (things to be managed) or as agents (participants who shape decisions). We also assessed whether the websites themselves were navigable and accessible for young people seeking to engage with UN processes, including language complexity, navigation structure, and availability of entry-point information.",
     whyItMatters:
-      "Institutions that claim to include youth but design their public-facing presence to exclude them are performing participation, not practicing it. This audit produced a concrete, citable record of that gap — and a baseline against which future improvements can be measured.",
+      "Institutions that claim to include youth but design their public-facing presence to exclude them are performing participation, not practicing it. This audit produced a concrete, citable record of that gap, and a baseline against which future improvements can be measured.",
   },
   {
     id: "opportunity-mapping",
@@ -67,21 +67,21 @@ const workItems: WorkItem[] = [
     title: "Youth Access Barriers in",
     titleItalic: "Global Governance",
     type: "Opportunity-Mapping Database",
-    status: "Active — Phase 2 in progress",
+    status: "Active · Phase 2 in progress",
     summary:
-      "A database mapping the structural barriers youth face when attempting to participate in major international governance processes — the UN system, the ITU, the WTO, regional bodies, and others. We document accreditation requirements, age restrictions, language barriers, financial barriers (travel costs, registration fees), and the structural design choices that effectively exclude young people from the rooms where decisions get made.",
+      "A database mapping the structural barriers youth face when attempting to participate in major international governance processes: the UN system, the ITU, the WTO, regional bodies, and others. We document accreditation requirements, age restrictions, language barriers, financial barriers (travel costs, registration fees), and the structural design choices that effectively exclude young people from the rooms where decisions get made.",
     whyItMatters:
-      "Youth participation is only as real as the actual mechanisms that enable it. This database turns vague claims about 'youth inclusion' into auditable, specific claims about access — and identifies which processes have the lowest and highest barriers to meaningful engagement.",
+      "Youth participation is only as real as the actual mechanisms that enable it. This database turns vague claims about 'youth inclusion' into auditable, specific claims about access, and identifies which processes have the lowest and highest barriers to meaningful engagement.",
   },
   {
     id: "twisted-pair",
     number: "05",
     title: "Twisted Pair",
     titleItalic: "Legitimacy Theorem",
-    type: "Foundational Framework — 3 Primitives",
+    type: "Foundational Framework · 3 Primitives",
     status: "3 Primitives Framework · CC BY 4.0",
     summary:
-      "A formal result establishing that legitimacy in any decision-permitting system has two independent, jointly necessary layers: a governance layer (authority must be explicitly declared by a human — purpose, authority, and constraints) and a value layer (the affected person retains Agency, Dignity, Continuity, and Interpretive Authority). Total legitimacy holds only when both layers are satisfied; neither substitutes for the other.",
+      "A formal result establishing that legitimacy in any decision-permitting system has two independent, jointly necessary layers: a governance layer (authority must be explicitly declared by a human: purpose, authority, and constraints) and a value layer (the affected person retains Agency, Dignity, Continuity, and Interpretive Authority). Total legitimacy holds only when both layers are satisfied; neither substitutes for the other.",
     whyItMatters:
       "It gives a precise, citable structure to an argument advocates usually make only rhetorically: a policy can follow correct procedure and still be illegitimate if it strips the people it affects of agency and authorship. Authored under the 3 Primitives framework (3primitives.io), it underpins how we analyse youth exclusion from digital governance.",
     cta: { label: "Read on 3 Primitives", href: "https://3primitives.io/formal_records/" },
@@ -91,12 +91,12 @@ const workItems: WorkItem[] = [
     number: "06",
     title: "Lemma C:",
     titleItalic: "Ghost Authority",
-    type: "Foundational Framework — 3 Primitives",
+    type: "Foundational Framework · 3 Primitives",
     status: "3 Primitives Framework · CC BY 4.0",
     summary:
-      "A diagnostic result from the same framework: when a protocol or automated system is treated as the source of a decision — rather than as an input to a human decision — authority is exercised without anyone declaring it. That condition is 'Ghost Authority': rules are enforced and outcomes imposed, but no accountable human stands behind them.",
+      "A diagnostic result from the same framework: when a protocol or automated system is treated as the source of a decision, rather than as an input to a human decision, authority is exercised without anyone declaring it. That condition is 'Ghost Authority': rules are enforced and outcomes imposed, but no accountable human stands behind them.",
     whyItMatters:
-      "It names a failure mode advocates describe only loosely. When governments restrict teenagers' digital lives through processes no accountable person will own, that is Ghost Authority in action — and Lemma C gives precise language to challenge it. Authored under the 3 Primitives framework (3primitives.io).",
+      "It names a failure mode advocates describe only loosely. When governments restrict teenagers' digital lives through processes no accountable person will own, that is Ghost Authority in action, and Lemma C gives precise language to challenge it. Authored under the 3 Primitives framework (3primitives.io).",
     cta: { label: "Read on 3 Primitives", href: "https://3primitives.io/formal_records/" },
   },
 ];

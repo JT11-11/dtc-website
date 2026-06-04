@@ -17,7 +17,7 @@ const VALUES: ValueItem[] = [
     title: "Serious",
     heading: "Real work. Real stakes.",
     description:
-      "DTC researchers do the same work as adult policy professionals — building databases, publishing in peer-reviewed journals, briefing delegates at the UN. We don't treat youth as a footnote.",
+      "DTC researchers do the same work as adult policy professionals: building databases, publishing in peer-reviewed journals, briefing delegates at the UN. We don't treat youth as a footnote.",
     image: "/images/team/aditya.jpg",
   },
   {
@@ -25,7 +25,7 @@ const VALUES: ValueItem[] = [
     title: "Rigorous",
     heading: "Peer-reviewed, formally structured, citable.",
     description:
-      "Our research goes through formal review processes. We publish in academic journals, build mathematical governance frameworks, and produce databases designed to serve as evidence in policy advocacy — not just talking points.",
+      "Our research goes through formal review processes. We publish in academic journals, build mathematical governance frameworks, and produce databases designed to serve as evidence in policy advocacy, not just talking points.",
     image: "/images/un/conf-room.jpg",
   },
   {
@@ -33,7 +33,7 @@ const VALUES: ValueItem[] = [
     title: "Specific",
     heading: "We close the consultation gap.",
     description:
-      "42 countries enacted social media bans with 0% meaningful youth input. That specific, documented failure is what DTC exists to address — not 'youth inclusion' as a vague aspiration, but the concrete, measurable absence of young voices in decisions about their digital lives.",
+      "42 countries enacted social media bans with 0% meaningful youth input. That specific, documented failure is what DTC exists to address, not 'youth inclusion' as a vague aspiration, but the concrete, measurable absence of young voices in decisions about their digital lives.",
     image: "/images/un/sdg-water.jpg",
   },
   {
@@ -41,7 +41,7 @@ const VALUES: ValueItem[] = [
     title: "Grounded",
     heading: "Social media as survival infrastructure.",
     description:
-      "For LGBTQ+ youth in hostile homes, low-income students without other networks, and teenagers navigating mental health crises — online spaces aren't entertainment. Restricting them isn't protective. Our research is grounded in that reality, not in moral panic.",
+      "For LGBTQ+ youth in hostile homes, low-income students without other networks, and teenagers navigating mental health crises, online spaces aren't entertainment. Restricting them isn't protective. Our research is grounded in that reality, not in moral panic.",
     image: "/images/un/unga.jpg",
   },
 ];

@@ -12,8 +12,8 @@ if (typeof window !== "undefined") {
 
 const faqs = [
   {
-    question: "What is DTC Policy Lab?",
-    answer: "DTC Policy Lab is a fully teen-led research organization focused on youth digital rights and the policies that govern young people's online lives. We conduct rigorous research to ensure youth voices are represented in global digital policy discussions.",
+    question: "What is DTC Youth Policy Lab?",
+    answer: "DTC Youth Policy Lab is a fully teen-led research organization focused on youth digital rights and the policies that govern young people's online lives. We conduct rigorous research to ensure youth voices are represented in global digital policy discussions.",
   },
   {
     question: "Who can join?",

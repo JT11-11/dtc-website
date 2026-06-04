@@ -1,5 +1,7 @@
 "use client";
 
+import { Highlight } from "@/components/ui/highlight";
+
 // Real clips from /public/videos — captured moments of DTC distributing its
 // printed briefs and engaging delegates at the UN, not staged productions.
 const videos = [
@@ -11,15 +13,15 @@ const videos = [
 
 export function OutreachVideos() {
   return (
-    <section className="w-full py-16 px-6 sm:px-8 lg:px-12 bg-white dark:bg-neutral-950">
+    <section className="w-full py-16 px-6 sm:px-8 lg:px-12 bg-background">
       <div className="max-w-[1400px] mx-auto">
-        <p className="text-xs font-semibold uppercase tracking-widest text-neutral-400 mb-4">
+        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--sun-gold)] mb-4">
           In Motion
         </p>
-        <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-neutral-900 dark:text-white mb-3">
-          Out in the world.
+        <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-foreground mb-3">
+          Out <Highlight>in the world.</Highlight>
         </h2>
-        <p className="text-base text-neutral-500 dark:text-neutral-400 max-w-xl leading-relaxed mb-12">
+        <p className="text-base text-muted-foreground max-w-xl leading-relaxed mb-12">
           Policy research is only as good as the conversations it starts. A few
           captured moments from DTC out in the field.
         </p>
@@ -28,7 +30,7 @@ export function OutreachVideos() {
           {videos.map((video, i) => (
             <div
               key={i}
-              className="relative overflow-hidden rounded-2xl bg-neutral-100 dark:bg-neutral-900 aspect-[9/16]"
+              className="relative overflow-hidden rounded-2xl bg-muted aspect-[9/16]"
             >
               <video
                 src={video.src}

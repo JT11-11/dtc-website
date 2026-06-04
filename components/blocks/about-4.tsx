@@ -60,8 +60,8 @@ function ValuesList({ activeIndex }: { activeIndex: number }) {
         >
           <h3
             className={`text-2xl sm:text-3xl lg:text-5xl xl:text-6xl font-light tracking-tight transition-colors duration-500 ${activeIndex === index
-              ? "text-neutral-900 dark:text-white"
-              : "text-neutral-300 dark:text-neutral-700"
+              ? "text-foreground"
+              : "text-foreground/20"
               }`}
           >
             {value.title}
@@ -151,7 +151,7 @@ function ProgressSection({ progress }: { progress: number }) {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4 }}
-        className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400"
+        className="text-sm sm:text-base text-muted-foreground"
       >
         What makes us different
       </motion.p>
@@ -172,7 +172,7 @@ function ProgressSection({ progress }: { progress: number }) {
             fill="none"
             stroke="currentColor"
             strokeWidth="4"
-            className="text-neutral-200 dark:text-neutral-800"
+            className="text-border"
           />
           {/* Progress circle */}
           <circle
@@ -183,7 +183,7 @@ function ProgressSection({ progress }: { progress: number }) {
             stroke="currentColor"
             strokeWidth="4"
             strokeLinecap="round"
-            className="text-neutral-900 dark:text-white"
+            className="text-[var(--un-blue)]"
             strokeDasharray={`${progress * 188} 188`}
           />
         </svg>
@@ -203,10 +203,10 @@ function ContentSection({ activeValue }: { activeValue: ValueItem }) {
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight text-neutral-900 dark:text-white mb-4 sm:mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight text-foreground mb-4 sm:mb-6">
             {activeValue.heading}
           </h2>
-          <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed">
+          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
             {activeValue.description}
           </p>
         </motion.div>
@@ -249,7 +249,7 @@ export default function About4() {
   }, []);
 
   return (
-    <section className="w-full flex items-center py-12 px-4 sm:px-6 lg:px-8 bg-white dark:bg-neutral-950">
+    <section className="w-full flex items-center py-12 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-[1400px] mx-auto w-full">
         {/* Mobile/Tablet: Stack vertically with progress overlaid on image */}
         <div className="flex flex-col gap-12 sm:gap-16 lg:hidden">

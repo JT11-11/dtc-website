@@ -150,13 +150,14 @@ export function ImpactDtc() {
 
           <div className="bg-muted/50 rounded-2xl p-6 flex flex-col">
             <div className="flex-1">
-              <p className="text-3xl font-semibold text-foreground">40+</p>
-              <p className="text-sm text-foreground/60 mt-1">Countries monitored</p>
+              <p className="text-3xl font-semibold text-[var(--un-blue)]">42</p>
+              <p className="text-sm text-foreground/60 mt-1">Countries with teen bans or restrictions</p>
             </div>
             <div className="flex items-center justify-between mt-auto pt-4">
-              <span className="text-sm font-medium text-foreground">Global Reach</span>
+              <span className="text-sm font-medium text-foreground">Restriction Database</span>
               <Link
-                href="/work"
+                href="/work/database"
+                aria-label="Explore the Global Teen Restriction Database"
                 className="w-10 h-10 rounded-full bg-foreground/10 flex items-center justify-center hover:bg-foreground hover:text-background transition-colors"
               >
                 <ArrowIcon className="w-4 h-4" />
@@ -194,12 +195,13 @@ export function ImpactDtc() {
 
           <div className="lg:col-span-3 bg-muted/50 rounded-2xl p-8 flex flex-col">
             <p className="text-xl lg:text-2xl font-medium leading-relaxed text-foreground max-w-3xl flex-1">
-              Our database informs policymakers and digital rights advocates worldwide, ensuring policies reflect the actual experiences of youth.
+              The Global Teen Restriction Database maps every social-media ban and blanket restriction affecting teens — country by country, each entry sourced — so policy can reflect the actual experiences of youth.
             </p>
             <div className="flex items-center justify-between mt-auto pt-6">
-              <span className="text-xl font-semibold text-foreground">Learn More</span>
+              <span className="text-xl font-semibold text-foreground">Explore the database</span>
               <Link
-                href="/work"
+                href="/work/database"
+                aria-label="Explore the Global Teen Restriction Database"
                 className="w-10 h-10 rounded-full bg-foreground/10 flex items-center justify-center hover:bg-foreground hover:text-background transition-colors"
               >
                 <ArrowIcon className="w-4 h-4" />

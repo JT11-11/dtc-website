@@ -7,6 +7,7 @@ import {
   useTransform,
   MotionValue,
 } from "motion/react";
+import { Highlight } from "@/components/ui/highlight";
 
 const backgroundCards = [
   {
@@ -163,7 +164,7 @@ export default function CTA1({
 
   return (
     <section
-      className="relative w-full min-h-screen flex items-center justify-center py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-neutral-950 overflow-hidden"
+      className="relative w-full min-h-screen flex items-center justify-center py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-background overflow-hidden"
       onMouseMove={handleMouseMove}
     >
       {/* Background Cards Layer */}
@@ -184,7 +185,7 @@ export default function CTA1({
         <div className="max-w-4xl mx-auto text-center">
           {/* Heading */}
           <motion.h2
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-4 sm:mb-6 text-neutral-900 dark:text-white tracking-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-4 sm:mb-6 text-foreground tracking-tight"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -194,14 +195,14 @@ export default function CTA1({
             {headingLine2 && (
               <>
                 <br />
-                {headingLine2}
+                <Highlight>{headingLine2}</Highlight>
               </>
             )}
           </motion.h2>
 
           {/* Description */}
           <motion.p
-            className="text-base sm:text-lg md:text-xl text-neutral-600 dark:text-neutral-400 leading-relaxed mb-8 sm:mb-10 max-w-xl mx-auto"
+            className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 sm:mb-10 max-w-xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -220,14 +221,14 @@ export default function CTA1({
           >
             <a
               href={primaryHref}
-              className="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 text-sm font-semibold hover:opacity-85 transition-opacity w-full sm:w-auto"
+              className="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-[var(--sun-gold)] text-black text-sm font-semibold transition-transform duration-200 hover:scale-[1.03] hover:shadow-[0_8px_30px_-8px_rgba(245,197,94,0.6)] w-full sm:w-auto"
             >
               {primaryLabel}
             </a>
             {secondaryLabel && secondaryHref && (
               <a
                 href={secondaryHref}
-                className="inline-flex items-center justify-center px-8 py-3.5 rounded-full border border-neutral-300 dark:border-neutral-700 text-neutral-700 dark:text-neutral-300 text-sm font-medium hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors w-full sm:w-auto"
+                className="inline-flex items-center justify-center px-8 py-3.5 rounded-full border border-border text-foreground text-sm font-medium hover:bg-muted transition-colors w-full sm:w-auto"
               >
                 {secondaryLabel}
               </a>

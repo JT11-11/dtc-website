@@ -46,7 +46,7 @@ export function FooterDtc() {
       <div className="px-6 sm:px-12 lg:px-24 py-16 lg:py-24 max-w-360 2xl:max-w-450 3xl:max-w-550 mx-auto">
         <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-8">
           <div className="pb-8 lg:pb-0 border-b lg:border-b-0 border-background/10">
-            <span className="text-4xl font-medium tracking-tight">DTC Policy Lab</span>
+            <span className="text-4xl font-medium tracking-tight">DTC Youth Policy Lab</span>
             <p className="mt-4 text-background/60 text-2xl lg:text-4xl">Teen voices in the policy room.</p>
           </div>
 
@@ -111,7 +111,7 @@ export function FooterDtc() {
       <div className="px-6 sm:px-12 lg:px-24 py-6 max-w-360 2xl:max-w-450 3xl:max-w-550 mx-auto border-t border-background/10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-background/40">
-            © 2026 DTC Policy Lab
+            © 2026 DTC Youth Policy Lab
           </p>
 
           <p className="text-sm text-background/40">

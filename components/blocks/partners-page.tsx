@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowUpRight } from "lucide-react";
+import { Highlight } from "@/components/ui/highlight";
 
 const partners = [
   {
@@ -32,13 +33,13 @@ const partners = [
 export function PartnersPage() {
   return (
     <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 py-16">
-      <p className="text-xs font-semibold uppercase tracking-widest text-neutral-400 mb-4">
+      <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--sun-gold)] mb-4">
         Partnerships
       </p>
-      <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-neutral-900 dark:text-white leading-[1.0] max-w-4xl">
-        Who we work with.
+      <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground leading-[1.0] max-w-4xl">
+        Who we <Highlight>work with.</Highlight>
       </h1>
-      <p className="mt-6 text-lg sm:text-xl text-neutral-500 dark:text-neutral-400 max-w-2xl leading-relaxed">
+      <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed">
         Good policy research doesn&apos;t happen in isolation. These are the
         organizations we collaborate with on research, outreach, and building a
         fairer internet for young people.
@@ -48,18 +49,18 @@ export function PartnersPage() {
         {partners.map((partner) => (
           <div
             key={partner.name}
-            className="bg-neutral-50 dark:bg-neutral-900 rounded-3xl p-8 sm:p-10 flex flex-col gap-6"
+            className="bg-muted rounded-3xl p-8 sm:p-10 flex flex-col gap-6"
           >
             <div>
-              <p className="text-xs font-semibold uppercase tracking-widest text-neutral-400 mb-3">
+              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--sun-gold)] mb-3">
                 {partner.region}
               </p>
-              <h2 className="text-3xl font-semibold tracking-tight text-neutral-900 dark:text-white">
+              <h2 className="text-3xl font-semibold tracking-tight text-foreground">
                 {partner.name}
               </h2>
             </div>
 
-            <p className="text-base text-neutral-600 dark:text-neutral-400 leading-relaxed flex-1">
+            <p className="text-base text-muted-foreground leading-relaxed flex-1">
               {partner.description}
             </p>
 
@@ -69,7 +70,7 @@ export function PartnersPage() {
                   href={partner.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 text-sm font-medium hover:opacity-80 transition-opacity"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[var(--sun-gold)] text-black text-sm font-semibold hover:scale-[1.03] transition-transform"
                 >
                   {partner.linkLabel}
                   <ArrowUpRight className="w-4 h-4" />
@@ -81,7 +82,7 @@ export function PartnersPage() {
                   href={db.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-neutral-300 dark:border-neutral-700 text-neutral-900 dark:text-white text-sm font-medium hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-border text-foreground text-sm font-medium hover:bg-card transition-colors"
                 >
                   {db.label}
                   <ArrowUpRight className="w-4 h-4" />
@@ -92,8 +93,8 @@ export function PartnersPage() {
         ))}
       </div>
 
-      <div className="mt-20 border-t border-neutral-200 dark:border-neutral-800 pt-16">
-        <p className="text-xs font-semibold uppercase tracking-widest text-neutral-400 mb-4">
+      <div className="mt-20 border-t border-border pt-16">
+        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--sun-gold)] mb-4">
           Also in Partnership With
         </p>
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">

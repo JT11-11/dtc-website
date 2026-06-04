@@ -1,5 +1,7 @@
 "use client";
 
+import { Highlight } from "@/components/ui/highlight";
+
 const photos = [
   {
     src: "/images/un/ga-hall.jpg",
@@ -37,15 +39,15 @@ const photos = [
 
 export function AboutField() {
   return (
-    <section className="w-full py-16 px-6 sm:px-8 lg:px-12 bg-neutral-50 dark:bg-neutral-900">
+    <section className="w-full py-16 px-6 sm:px-8 lg:px-12 bg-muted">
       <div className="max-w-[1400px] mx-auto">
-        <p className="text-xs font-semibold uppercase tracking-widest text-neutral-400 mb-4">
+        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--sun-gold)] mb-4">
           Beyond the Lab
         </p>
-        <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-neutral-900 dark:text-white mb-3">
-          We show up in person.
+        <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-foreground mb-3">
+          We show up <Highlight>in person.</Highlight>
         </h2>
-        <p className="text-base text-neutral-500 dark:text-neutral-400 max-w-xl leading-relaxed mb-12">
+        <p className="text-base text-muted-foreground max-w-xl leading-relaxed mb-12">
           Research lives in documents, but change happens in rooms. Here is what
           it looks like when the DTC team shows up at the table.
         </p>
@@ -54,7 +56,7 @@ export function AboutField() {
           {photos.map((photo, i) => (
             <div
               key={i}
-              className="mb-4 break-inside-avoid overflow-hidden rounded-2xl bg-neutral-200 dark:bg-neutral-800"
+              className="mb-4 break-inside-avoid overflow-hidden rounded-2xl bg-muted"
             >
               <img
                 src={photo.src}
@@ -66,10 +68,10 @@ export function AboutField() {
           ))}
         </div>
 
-        <p className="mt-6 text-sm text-neutral-400 dark:text-neutral-600">
-          DTC at the United Nations, New York — engaging across the IGF,
-          ECOSOC/HLPF, WSIS+20 and UNGA events, and the 17 Sustainable
-          Development Goals (2025).
+        <p className="mt-6 text-sm text-muted-foreground">
+          DTC at the United Nations, New York — engaging across UN processes:
+          the IGF (2022–2025), and now the ECOSOC Youth Forum, HLPF, WSIS+20 and
+          UNGA via the UN Major Group for Children &amp; Youth (2025).
         </p>
       </div>
     </section>

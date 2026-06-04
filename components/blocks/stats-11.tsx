@@ -3,43 +3,45 @@
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
+import { Highlight } from "@/components/ui/highlight";
 
+// Brand-tinted stat cards (light tints of the DTC YPL palette).
 const cards = [
   {
     title: "Countries with social media bans on minors",
     label: "Enacted without youth consultation",
     value: "42",
-    source: "Our research",
-    href: "/work",
-    bg: "#dcd0f5",
-    tint: "#6b5aa3",
+    source: "Restriction Database",
+    href: "/work/database",
+    bg: "#dbeefb",
+    tint: "#0b6f9c",
   },
   {
     title: "Meaningful youth policy input",
     label: "Documented across those 42 countries",
     value: "0%",
     source: "Consultation gap",
-    href: "/work",
-    bg: "#ffd4b8",
-    tint: "#b86535",
+    href: "/work/database",
+    bg: "#fbeccb",
+    tint: "#8a6a1f",
   },
   {
-    title: "Countries in our restriction database",
-    label: "Mapped — world's first systematic index",
-    value: "40+",
+    title: "Measures tracked in our database",
+    label: "World's first systematic index, every entry sourced",
+    value: "48",
     source: "Global Teen DB",
-    href: "/work",
-    bg: "#c7e8d4",
-    tint: "#2e7d52",
+    href: "/work/database",
+    bg: "#dff0f4",
+    tint: "#2c7a8c",
   },
   {
     title: "Foundational governance frameworks",
     label: "Twisted Pair Theorem + Lemma C",
     value: "2",
     source: "3 Primitives",
-    href: "/work",
-    bg: "#fce4ec",
-    tint: "#ad3060",
+    href: "https://3primitives.io/",
+    bg: "#efe7d4",
+    tint: "#7c6326",
   },
   {
     title: "Pilot study under peer review",
@@ -47,8 +49,8 @@ const cards = [
     value: "1",
     source: "Marginalized Youth Study",
     href: "/work",
-    bg: "#e3f2fd",
-    tint: "#1565c0",
+    bg: "#e9f4fb",
+    tint: "#0b6f9c",
   },
 ];
 
@@ -77,7 +79,7 @@ export default function Stats11() {
   }, [isDesktop]);
 
   return (
-    <section className="w-full py-16 sm:py-20 px-6 sm:px-8 lg:px-12 bg-white dark:bg-neutral-950">
+    <section className="w-full py-16 sm:py-20 px-6 sm:px-8 lg:px-12 bg-background">
       <div className="max-w-[1400px] mx-auto w-full">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
@@ -86,11 +88,12 @@ export default function Stats11() {
           transition={{ duration: 0.5 }}
           className="mb-12 sm:mb-16"
         >
-          <p className="text-xs font-semibold uppercase tracking-widest text-neutral-500 mb-3">
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--sun-gold)] mb-3">
             The numbers
           </p>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-neutral-900 dark:text-white tracking-tight max-w-2xl leading-[1.05]">
-            The consultation gap, by the numbers.
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground tracking-tight max-w-2xl leading-[1.05]">
+            The consultation gap,{" "}
+            <Highlight>by the numbers.</Highlight>
           </h2>
         </motion.div>
 

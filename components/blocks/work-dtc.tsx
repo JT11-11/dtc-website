@@ -99,6 +99,71 @@ const workItems: WorkItem[] = [
       "It names a failure mode advocates describe only loosely. When governments restrict teenagers' digital lives through processes no accountable person will own, that is Ghost Authority in action, and Lemma C gives precise language to challenge it. Authored under the 3 Primitives framework (3primitives.io).",
     cta: { label: "Read on 3 Primitives", href: "https://3primitives.io/formal_records/" },
   },
+  {
+    id: "adci-audit",
+    number: "07",
+    title: "ADCI Restriction",
+    titleItalic: "Audit",
+    type: "Community Tool",
+    status: "Live · by HelloComerade",
+    summary:
+      "An interactive globe-view tool mapping ADCI restriction data, built by community contributor HelloComerade. Provides a visual interface for exploring the restriction landscape, building on DTC's open dataset.",
+    whyItMatters:
+      "Community tools that build on DTC's data validate the downstream value of systematic, open data collection. The ADCI Audit demonstrates how DTC's restriction dataset enables independent researchers and builders to create new forms of accountability.",
+    cta: { label: "Open the Audit", href: "https://adciaudit.base44.app/GlobeView" },
+  },
+  {
+    id: "digital-trade-hack-2026",
+    number: "08",
+    title: "Digital Trade",
+    titleItalic: "Hack 2026",
+    type: "Hackathon Entry · KMITL",
+    status: "Completed · 2026",
+    summary:
+      "DTC's entry to the Digital Trade Hack 2026 at King Mongkut's Institute of Technology Ladkrabang (KMITL). A working prototype applying DTC's digital-governance research to a regtech challenge, with a full demo on YouTube and project documentation available.",
+    whyItMatters:
+      "Competitions like the Digital Trade Hack connect DTC's policy research to engineering and regulatory-technology audiences, demonstrating that youth-led policy work produces functional, deployable outputs — not just position papers.",
+    cta: { label: "Watch Demo", href: "https://www.youtube.com/watch?v=7NsyYwT0-E4" },
+  },
+  {
+    id: "tfgbv-article",
+    number: "09",
+    title: "Technology-Facilitated",
+    titleItalic: "Gender-Based Violence",
+    type: "Research Article",
+    status: "Completed · Awaiting review at JOTS",
+    summary:
+      "A completed research article examining Technology-Facilitated Gender-Based Violence (TFGBV) and its policy dimensions. Submitted for peer review at JOTS; not yet published.",
+    whyItMatters:
+      "Platform-enabled gender-based violence is one of the most rapidly escalating harms in digital policy. DTC's article contributes youth-researcher analysis to a field where most published work comes from outside the generation most affected.",
+    cta: { label: "Read Article", href: "https://docs.google.com/document/d/1X522DMmbluR1yeSeB5UZl6vMB5WRy0ZjBc2r9sRsB30/edit?tab=t.0" },
+  },
+  {
+    id: "tfgbv-4p-commentary",
+    number: "10",
+    title: "TFGBV",
+    titleItalic: "4P Commentary",
+    type: "Commentary",
+    status: "Completed",
+    summary:
+      "A commentary applying the 4P framework to Technology-Facilitated Gender-Based Violence (TFGBV), examining how the framework maps onto platform-mediated harm and where it requires adaptation for the digital context.",
+    whyItMatters:
+      "Policy frameworks travel faster than the evidence base. Commentary that maps standard tools onto new harm types helps policymakers apply existing instruments more precisely — and flags where structural gaps make new frameworks necessary.",
+    cta: { label: "Read Commentary", href: "https://docs.google.com/document/d/1hXdePXGfxR-1x1_eRtlfgBHP_tDF2hA_V2DDEkJ7PJg/edit?usp=sharing" },
+  },
+  {
+    id: "social-media-op-ed",
+    number: "11",
+    title: "Social Media",
+    titleItalic: "Legislature Op-Ed",
+    type: "Op-Ed · In Progress",
+    status: "In progress · not yet published",
+    summary:
+      "An op-ed examining current social media legislation from a youth digital-rights perspective. Currently in development — tracking the accelerating legislative landscape across key jurisdictions.",
+    whyItMatters:
+      "Op-eds reach journalists and policymakers in formats that peer-reviewed papers don't. Publishing timely, substantiated youth perspectives on fast-moving legislation is a distinct form of impact that complements DTC's research pipeline.",
+    cta: { label: "View Draft", href: "https://docs.google.com/document/d/1a1Gd3rPUvgERkk61lXXgQvArg4sz1oxbwIDf4E6P9-4/edit?tab=t.7ie21aen62ys" },
+  },
 ];
 
 function WorkOverlay({

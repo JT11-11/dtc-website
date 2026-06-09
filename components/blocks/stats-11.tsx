@@ -1,86 +1,143 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { motion } from "motion/react";
+import { useEffect, useRef, useState } from "react";
+import { motion, useInView } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
 import { Highlight } from "@/components/ui/highlight";
 
-// Brand-tinted stat cards (light tints of the DTC YPL palette).
 const cards = [
   {
-    title: "Countries with social media bans on minors",
-    label: "Enacted without youth consultation",
-    value: "42",
+    value: 42,
+    suffix: "",
+    label: "Countries with social media bans on minors",
+    sub: "None consulted youth",
     source: "Restriction Database",
     href: "/work/database",
-    bg: "#dbeefb",
-    tint: "#0b6f9c",
+    bg: "var(--un-blue)",
+    fg: "#ffffff",
   },
   {
-    title: "Meaningful youth policy input",
-    label: "Documented across those 42 countries",
-    value: "0%",
+    value: 0,
+    suffix: "%",
+    label: "Meaningful youth policy input",
     source: "Consultation gap",
     href: "/work/database",
-    bg: "#fbeccb",
-    tint: "#8a6a1f",
+    bg: "var(--sun-gold)",
+    fg: "#1a1400",
   },
   {
-    title: "Measures tracked in our database",
-    label: "World's first systematic index, every entry sourced",
-    value: "48",
+    value: 48,
+    suffix: "",
+    label: "Measures tracked in our database",
+    sub: "Every entry sourced",
     source: "Global Teen DB",
     href: "/work/database",
-    bg: "#dff0f4",
-    tint: "#2c7a8c",
+    bg: "var(--sky-blue)",
+    fg: "#07252e",
   },
   {
-    title: "Foundational governance frameworks",
-    label: "Twisted Pair Theorem + Lemma C",
-    value: "2",
+    value: 2,
+    suffix: "",
+    label: "Governance frameworks we've authored",
+    sub: "Twisted Pair Theorem + Lemma C",
     source: "3 Primitives",
     href: "https://3primitives.io/",
-    bg: "#efe7d4",
-    tint: "#7c6326",
+    bg: "var(--bronze)",
+    fg: "#ffffff",
   },
   {
-    title: "Pilot study under peer review",
-    label: "Taylor & Francis (Social Sciences)",
-    value: "1",
+    value: 1,
+    suffix: "",
+    label: "Peer-reviewed studies in progress",
     source: "Marginalized Youth Study",
     href: "/work",
-    bg: "#e9f4fb",
-    tint: "#0b6f9c",
+    bg: "var(--ink)",
+    fg: "var(--paper)",
   },
 ];
 
-const SHORT = 340;
-const TALL = 430;
-const CYCLE_MS = 2400;
-
-export default function Stats11() {
-  const [active, setActive] = useState(0);
-  const [isDesktop, setIsDesktop] = useState(false);
+function useCountUp(target: number, duration = 1400, active: boolean) {
+  const [count, setCount] = useState(0);
+  const started = useRef(false);
 
   useEffect(() => {
-    const mq = window.matchMedia("(min-width: 768px)");
-    const update = () => setIsDesktop(mq.matches);
-    update();
-    mq.addEventListener("change", update);
-    return () => mq.removeEventListener("change", update);
-  }, []);
+    if (!active || started.current) return;
+    if (target === 0) { setCount(0); return; }
+    started.current = true;
+    const startTime = performance.now();
+    const tick = (now: number) => {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      // ease out cubic
+      const ease = 1 - Math.pow(1 - progress, 3);
+      setCount(Math.round(ease * target));
+      if (progress < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }, [active, target, duration]);
 
-  useEffect(() => {
-    if (!isDesktop) return;
-    const id = setInterval(() => {
-      setActive((a) => (a + 1) % cards.length);
-    }, CYCLE_MS);
-    return () => clearInterval(id);
-  }, [isDesktop]);
+  return count;
+}
+
+function StatCard({ card, index }: { card: typeof cards[0]; index: number }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: true, margin: "-80px" });
+  const count = useCountUp(card.value, 1200 + index * 100, inView);
 
   return (
-    <section className="w-full py-16 sm:py-20 px-6 sm:px-8 lg:px-12 bg-background">
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 28 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.55, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
+      className="group relative flex flex-col justify-between rounded-3xl p-7 sm:p-8 overflow-hidden min-h-[220px] sm:min-h-[260px] cursor-default"
+      style={{ backgroundColor: card.bg, color: card.fg }}
+    >
+      {/* Top label */}
+      <p className="text-sm sm:text-base font-semibold leading-snug max-w-[14ch] opacity-80">
+        {card.label}
+      </p>
+
+      {/* Bottom section */}
+      <div className="flex flex-col gap-1 mt-6">
+        {card.sub && (
+          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] opacity-50 mb-1">
+            {card.sub}
+          </p>
+        )}
+
+        {/* Count-up number */}
+        <span className="text-6xl sm:text-7xl font-bold tracking-tight tabular-nums leading-none">
+          {count}{card.suffix}
+        </span>
+
+        <a
+          href={card.href}
+          target={card.href.startsWith("http") ? "_blank" : undefined}
+          rel={card.href.startsWith("http") ? "noopener noreferrer" : undefined}
+          className="mt-3 inline-flex items-center gap-1 text-xs font-bold opacity-60 hover:opacity-100 transition-opacity w-fit"
+          style={{ color: card.fg }}
+        >
+          <ArrowUpRight className="w-3.5 h-3.5" />
+          {card.source}
+        </a>
+      </div>
+
+      {/* Subtle corner glow on hover */}
+      <div
+        className="pointer-events-none absolute -bottom-10 -right-10 h-40 w-40 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-500 blur-2xl"
+        style={{ backgroundColor: card.fg }}
+      />
+    </motion.div>
+  );
+}
+
+export default function Stats11() {
+  return (
+    <section className="w-full py-16 sm:py-24 px-6 sm:px-8 lg:px-12 bg-background">
       <div className="max-w-[1400px] mx-auto w-full">
+
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -97,52 +154,10 @@ export default function Stats11() {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-3 sm:gap-4">
-          {cards.map((c, i) => (
-            <div key={i} className="md:h-[430px] flex items-end">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                animate={
-                  isDesktop
-                    ? {
-                        height: active === i ? TALL : SHORT,
-                        color: active === i ? "#171717" : c.tint,
-                      }
-                    : { height: "auto", color: "#171717" }
-                }
-                transition={{
-                  opacity: { duration: 0.5, delay: 0.08 * i },
-                  y: { duration: 0.5, delay: 0.08 * i },
-                  height: { duration: 0.9, ease: [0.22, 1, 0.36, 1] },
-                  color: { duration: 0.9, ease: [0.22, 1, 0.36, 1] },
-                }}
-                style={{ backgroundColor: c.bg }}
-                className="w-full rounded-2xl p-5 sm:p-6 flex flex-col justify-between gap-6 overflow-hidden"
-              >
-                <span className="text-sm sm:text-base font-medium leading-snug">
-                  {c.title}
-                </span>
-                <div className="flex flex-col gap-1.5">
-                  {c.label && (
-                    <span className="text-xs sm:text-sm font-medium opacity-70 leading-snug">
-                      {c.label}
-                    </span>
-                  )}
-                  <span className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
-                    {c.value}
-                  </span>
-                  <a
-                    href={c.href}
-                    className="mt-2 inline-flex items-center gap-1 text-xs font-bold hover:underline w-fit"
-                  >
-                    <ArrowUpRight className="w-3 h-3" />
-                    {c.source}
-                  </a>
-                </div>
-              </motion.div>
-            </div>
+        {/* Color-blocked stat cards grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          {cards.map((card, i) => (
+            <StatCard key={i} card={card} index={i} />
           ))}
         </div>
       </div>

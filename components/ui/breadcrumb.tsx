@@ -13,7 +13,7 @@ export function Breadcrumb({ items }: BreadcrumbProps) {
   return (
     <nav
       aria-label="Breadcrumb"
-      className="pt-24 pb-2 px-6 sm:px-8 lg:px-12 bg-background"
+      className="relative z-10 pt-[88px] pb-2 px-6 sm:px-8 lg:px-12 bg-background"
     >
       <div className="max-w-[1400px] mx-auto">
         <ol className="flex items-center gap-2 text-sm text-muted-foreground">

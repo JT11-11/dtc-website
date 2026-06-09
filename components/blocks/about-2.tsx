@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { ArrowLeft, ArrowRight, MapPin } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 interface TimelineEntry {
   id: number;
@@ -36,7 +36,7 @@ const TIMELINE_DATA: TimelineEntry[] = [
     place: "Internet Governance Forum · Ethiopia",
     description:
       "At the invitation of the IGF Secretariat, the Dynamic Teen Coalition was established at the 2022 UN Internet Governance Forum in Ethiopia: the first teen-led coalition at the IGF.",
-    image: "/images/un/flag-portrait.jpg",
+    image: "/images/un/group.jpg",
   },
   {
     id: 2,
@@ -47,17 +47,17 @@ const TIMELINE_DATA: TimelineEntry[] = [
     place: "UN events · worldwide",
     description:
       "DTC returned to UN events year after year, challenging blanket social-media bans on the floor and building the first systematic global database of teen online restrictions, country by country, platform by platform.",
-    image: "/images/un/group.jpg",
+    image: "/images/un/conf-room.jpg",
   },
   {
     id: 3,
     year: "2025",
-    short: "The Confrontation",
-    title: "Oslo: The Confrontation",
+    short: "IGF 2025",
+    title: "Oslo: IGF 2025",
     highlight: "became our paper",
     place: "IGF 2025 · Norway",
     description:
-      "At IGF 2025 in Norway, DTC confronted Australia’s Ambassador for Cyber Affairs, Brendan Dowling, on the impact of teen bans on marginalised youth. That exchange became our paper. Across the year DTC also engaged the ECOSOC Youth Forum, HLPF, WSIS+20 and UNGA, and ran the first teen-led Dynamic Coalition session at the IGF in twenty years.",
+      "At IGF 2025 in Norway, DTC questioned the Australian government on their position on the impact of teen bans on marginalised youth. That exchange became our paper. Across the year DTC also engaged the ECOSOC Youth Forum, HLPF, WSIS+20 and UNGA, and ran the first teen-led Dynamic Coalition session at the IGF in twenty years.",
     image: "/images/un/hlpf.jpg",
   },
   {
@@ -125,7 +125,7 @@ export default function About2({ displayNavigation = true }: About2Props = {}) {
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="mb-12 sm:mb-16"
         >
-          <p className="text-xs sm:text-sm font-semibold uppercase tracking-[0.22em] text-[var(--un-blue)]">
+          <p className="text-xs sm:text-sm font-semibold uppercase tracking-[0.22em] text-[var(--sun-gold)]">
             Our history
           </p>
           <h2 className="mt-3 text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-foreground leading-[1.04] max-w-3xl">
@@ -149,7 +149,7 @@ export default function About2({ displayNavigation = true }: About2Props = {}) {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                className="pointer-events-none absolute -right-4 -top-10 select-none font-bold tracking-tighter text-[28vw] leading-none text-[var(--un-blue)]/[0.06] lg:text-[16rem]"
+                className="pointer-events-none absolute -right-4 -top-10 select-none font-bold tracking-tighter text-[28vw] leading-none text-[var(--sun-gold)]/[0.08] lg:text-[16rem]"
               >
                 {entry.year.replace("’", "")}
               </motion.span>
@@ -164,12 +164,7 @@ export default function About2({ displayNavigation = true }: About2Props = {}) {
                   exit={{ opacity: 0, y: -16 }}
                   transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                 >
-                  <span className="inline-flex items-center gap-2 rounded-full border border-[var(--un-blue)]/30 bg-[var(--un-blue)]/[0.07] px-3 py-1 text-xs font-medium text-[var(--un-blue)]">
-                    <MapPin className="h-3.5 w-3.5" />
-                    {entry.place}
-                  </span>
-
-                  <div className="mt-5 flex items-baseline gap-4">
+                  <div className="flex items-baseline gap-4">
                     <span className="font-bold tracking-tighter text-5xl sm:text-6xl text-foreground">
                       {entry.year}
                     </span>
@@ -216,7 +211,7 @@ export default function About2({ displayNavigation = true }: About2Props = {}) {
             <div className="absolute top-[7px] left-0 right-0 h-[2px] bg-border" />
             {/* fill - width measured to the active dot's center (no overshoot) */}
             <motion.div
-              className="absolute top-[7px] left-0 h-[2px] bg-[var(--un-blue)]"
+              className="absolute top-[7px] left-0 h-[2px] bg-[var(--sun-gold)]"
               initial={false}
               animate={{ width: fillWidth }}
               transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
@@ -245,7 +240,7 @@ export default function About2({ displayNavigation = true }: About2Props = {}) {
                           isActive
                             ? "border-[var(--sun-gold)] bg-[var(--sun-gold)]"
                             : isPassed
-                              ? "border-[var(--un-blue)] bg-[var(--un-blue)]"
+                              ? "border-[var(--sun-gold)] bg-[var(--sun-gold)]"
                               : "border-border bg-card"
                         }`}
                         animate={{ scale: isActive ? 1.35 : 1, width: 12, height: 12 }}
@@ -261,7 +256,7 @@ export default function About2({ displayNavigation = true }: About2Props = {}) {
                     </span>
                     <span
                       className={`text-xs transition-colors duration-200 ${
-                        isActive ? "text-[var(--un-blue)]" : "text-muted-foreground/70"
+                        isActive ? "text-[var(--sun-gold)]" : "text-muted-foreground/70"
                       }`}
                     >
                       {e.short}
@@ -276,14 +271,14 @@ export default function About2({ displayNavigation = true }: About2Props = {}) {
             <div className="mt-8 flex justify-end gap-2">
               <button
                 onClick={() => go(activeIndex - 1)}
-                className="grid h-10 w-10 place-items-center rounded-full border border-border text-foreground transition-colors hover:bg-[var(--un-blue)] hover:text-white hover:border-[var(--un-blue)]"
+                className="grid h-10 w-10 place-items-center rounded-full border border-border text-foreground transition-colors hover:bg-[var(--sun-gold)] hover:text-white hover:border-[var(--sun-gold)]"
                 aria-label="Previous era"
               >
                 <ArrowLeft className="h-4 w-4" />
               </button>
               <button
                 onClick={() => go(activeIndex + 1)}
-                className="grid h-10 w-10 place-items-center rounded-full border border-border text-foreground transition-colors hover:bg-[var(--un-blue)] hover:text-white hover:border-[var(--un-blue)]"
+                className="grid h-10 w-10 place-items-center rounded-full border border-border text-foreground transition-colors hover:bg-[var(--sun-gold)] hover:text-white hover:border-[var(--sun-gold)]"
                 aria-label="Next era"
               >
                 <ArrowRight className="h-4 w-4" />

@@ -6,7 +6,7 @@ import { Highlight } from "@/components/ui/highlight";
 const partners = [
   {
     name: "Swayam Initiative",
-    region: "MENA Region",
+    region: "Research Partner",
     description:
       "Swayam Initiative works to build policy literacy and civic engagement across the Middle East and North Africa. We connected through shared goals around youth voice in governance, and have been collaborating on how young people can shape the digital policy landscape in their communities.",
     link: "https://policy-mena-path.base44.app/",
@@ -14,14 +14,10 @@ const partners = [
   },
   {
     name: "PERME",
-    region: "Research Partner",
+    region: "MENA Region",
     description:
       "PERME shares our commitment to rigorous, data-driven policy research. Our collaboration has focused on building shared research infrastructure and databases that both organizations can use to inform advocacy and policy recommendations at regional and international levels.",
     databases: [
-      {
-        label: "Policy Database",
-        href: "https://docs.google.com/spreadsheets/d/1bn4IupxTEsWR9vetTepZzZMIQtCdziZ6UdgLi9a0O_Q/edit?gid=939924722#gid=939924722",
-      },
       {
         label: "Research Tracker",
         href: "https://docs.google.com/spreadsheets/d/1zHiw7h_BNnXkTRnvXF-Ov8QYzRTmdVR-j0HwA5AWBos/edit?gid=0#gid=0",
@@ -70,7 +66,7 @@ export function PartnersPage() {
                   href={partner.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[var(--sun-gold)] text-black text-sm font-semibold hover:scale-[1.03] transition-transform"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[var(--sun-gold)] text-white text-sm font-semibold hover:scale-[1.03] transition-transform"
                 >
                   {partner.linkLabel}
                   <ArrowUpRight className="w-4 h-4" />

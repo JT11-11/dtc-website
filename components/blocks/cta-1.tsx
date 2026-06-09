@@ -221,14 +221,14 @@ export default function CTA1({
           >
             <a
               href={primaryHref}
-              className="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-[var(--sun-gold)] text-black text-sm font-semibold transition-transform duration-200 hover:scale-[1.03] hover:shadow-[0_8px_30px_-8px_rgba(168,116,42,0.45)] w-full sm:w-auto"
+              className="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-foreground text-background text-sm font-semibold transition-opacity duration-200 hover:opacity-85 w-full sm:w-auto"
             >
               {primaryLabel}
             </a>
             {secondaryLabel && secondaryHref && (
               <a
                 href={secondaryHref}
-                className="inline-flex items-center justify-center px-8 py-3.5 rounded-full border border-border text-foreground text-sm font-medium hover:bg-muted transition-colors w-full sm:w-auto"
+                className="inline-flex items-center justify-center px-8 py-3.5 rounded-full border border-foreground/20 bg-transparent text-foreground text-sm font-medium hover:bg-foreground/5 transition-colors w-full sm:w-auto"
               >
                 {secondaryLabel}
               </a>

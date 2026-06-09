@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "motion/react";
-import { Home, Users, Briefcase, Database, Handshake, Mail, Menu, X } from "lucide-react";
+import { Home, Users, Briefcase, Handshake, Mail, Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useOverlay } from "@/lib/overlay-context";
 
@@ -11,7 +11,6 @@ const navLinks = [
   { label: "Home", href: "/", icon: Home },
   { label: "About Us", href: "/about", icon: Users },
   { label: "Our Work", href: "/work", icon: Briefcase },
-  { label: "Database", href: "/work/database", icon: Database },
   { label: "Partners", href: "/partners", icon: Handshake },
   { label: "Contact", href: "/contact", icon: Mail },
 ];

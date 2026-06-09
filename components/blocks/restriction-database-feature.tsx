@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { Highlight } from "@/components/ui/highlight";
-import { DotLottiePlayer } from "@/components/blocks/dotlottie-player";
+import {
+  DotLottieLoop,
+  DotLottiePlayer,
+} from "@/components/blocks/dotlottie-player";
 
 export function RestrictionDatabaseFeature() {
   return (
@@ -25,7 +28,7 @@ export function RestrictionDatabaseFeature() {
             </span>
           </div>
 
-          {/* Right — lottie frame */}
+          {/* Right — layered lotties */}
           <div className="relative min-h-[320px] sm:min-h-[400px] lg:min-h-[480px] border-t lg:border-t-0 lg:border-l border-border/70 overflow-hidden">
             <div
               className="absolute inset-0 bg-gradient-to-br from-[#f5ebe8] via-background to-[#e8edf5]"
@@ -44,11 +47,20 @@ export function RestrictionDatabaseFeature() {
             />
 
             <DotLottiePlayer
-              src="/b3ec7600-116f-11ee-8494-3bb557282823.lottie"
+              src="/logo/579e2816-1166-11ee-972b-3fb4ae03d417.lottie"
               scrollSpeed={1.8}
-              scrollClassName="relative z-10 flex h-full min-h-[320px] sm:min-h-[400px] lg:min-h-[480px] items-center justify-center p-8 sm:p-10 lg:p-12"
-              className="relative aspect-square w-full max-w-[420px] rounded-2xl border border-border/60 bg-card/70 shadow-sm overflow-hidden [&_canvas]:relative [&_canvas]:z-0"
+              scrollClassName="absolute inset-0 z-0 min-h-[320px] sm:min-h-[400px] lg:min-h-[480px] pointer-events-none"
+              className="absolute inset-0 h-full w-full"
             />
+
+            <div className="relative z-10 flex h-full min-h-[320px] sm:min-h-[400px] lg:min-h-[480px] items-center justify-center p-8 sm:p-10 lg:p-12 pointer-events-none">
+              <div className="pointer-events-auto aspect-square w-full max-w-[420px] rounded-2xl border border-border/60 bg-card shadow-sm overflow-hidden p-6 sm:p-8">
+                <DotLottieLoop
+                  src="/b3ec7600-116f-11ee-8494-3bb557282823.lottie"
+                  className="h-full w-full"
+                />
+              </div>
+            </div>
           </div>
         </Link>
       </div>

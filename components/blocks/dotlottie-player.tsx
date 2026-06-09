@@ -29,6 +29,25 @@ function getScrollProgress(
   return Math.min(1, Math.max(0, raw * scrollSpeed));
 }
 
+export function DotLottieLoop({
+  src,
+  className,
+}: {
+  src: string;
+  className?: string;
+}) {
+  return (
+    <DotLottieReact
+      src={src}
+      loop
+      autoplay
+      useFrameInterpolation
+      renderConfig={{ autoResize: true }}
+      className={className ?? "h-full w-full"}
+    />
+  );
+}
+
 export function DotLottiePlayer({
   src,
   scrollClassName,

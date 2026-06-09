@@ -30,9 +30,9 @@ const ENTRIES: RollCallEntry[] = [
   },
   {
     year: "2025",
-    venue: "IGF Oslo: The Confrontation",
+    venue: "IGF Oslo: IGF 2025",
     place: "Norway",
-    note: "Confronted Australia’s Ambassador for Cyber Affairs, Brendan Dowling, on the impact of teen bans on marginalised youth, the exchange that became our paper.",
+    note: "Questioned the Australian government on their position on the impact of teen bans on marginalised youth, the exchange that became our paper.",
   },
   {
     year: "2025",

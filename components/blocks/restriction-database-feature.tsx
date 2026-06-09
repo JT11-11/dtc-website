@@ -13,7 +13,6 @@ export function RestrictionDatabaseFeature() {
           href="/work/database"
           className="group grid w-full overflow-hidden rounded-3xl border border-border bg-card transition-colors hover:border-[var(--un-blue)]/40 lg:grid-cols-[1fr_1.05fr]"
         >
-          {/* Left — copy */}
           <div className="flex flex-col justify-center p-8 sm:p-10 lg:p-12">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-foreground leading-[1.1]">
               The Global Teen{" "}
@@ -49,8 +48,8 @@ export function RestrictionDatabaseFeature() {
             <DotLottiePlayer
               src="/logo/579e2816-1166-11ee-972b-3fb4ae03d417.lottie"
               scrollSpeed={1.8}
-              scrollClassName="absolute inset-0 z-0 min-h-[320px] sm:min-h-[400px] lg:min-h-[480px] pointer-events-none"
-              className="absolute inset-0 h-full w-full"
+              scrollClassName="absolute inset-0 z-0 min-h-[320px] sm:min-h-[400px] lg:min-h-[480px] pointer-events-none overflow-visible"
+              className="absolute left-1/2 top-1/2 h-[100%] w-[150%] -translate-x-1/2 -translate-y-1/2"
             />
 
             <div className="relative z-10 flex h-full min-h-[320px] sm:min-h-[400px] lg:min-h-[480px] items-center justify-center p-8 sm:p-10 lg:p-12 pointer-events-none">

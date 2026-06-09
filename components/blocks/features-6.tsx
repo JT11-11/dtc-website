@@ -79,7 +79,7 @@ function Card({
       transition={{ duration: 0.3, delay: 0.05 * index }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="relative rounded-2xl bg-neutral-100 dark:bg-neutral-900 p-6 min-h-[360px] flex flex-col overflow-hidden"
+      className="relative rounded-2xl bg-muted p-6 min-h-[360px] flex flex-col overflow-hidden"
     >
       <motion.div
         initial={false}
@@ -92,9 +92,9 @@ function Card({
         }}
       />
 
-      <Icon className="relative w-5 h-5 text-neutral-900 dark:text-neutral-200" />
+      <Icon className="relative w-5 h-5 text-foreground" strokeWidth={1.5} />
 
-      <p className="relative mt-3 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-[220px]">
+      <p className="relative mt-3 font-sans text-xs sm:text-sm text-muted-foreground leading-relaxed max-w-[220px]">
         {words.map((w, wi) => (
           <motion.span
             key={wi}
@@ -117,7 +117,7 @@ function Card({
       </p>
 
       <div className="relative mt-auto flex items-center justify-between pt-8">
-        <span className="text-base sm:text-lg font-bold text-foreground">
+        <span className="font-sans text-base sm:text-lg font-semibold text-foreground leading-snug">
           {audience.title}
         </span>
         <a
@@ -133,7 +133,7 @@ function Card({
               color: hovered ? "#ffffff" : "rgb(64 64 64)",
             }}
             transition={{ duration: 0.3 }}
-            className="w-10 h-10 rounded-full flex items-center justify-center dark:bg-neutral-800 dark:text-neutral-300"
+            className="w-10 h-10 rounded-full flex items-center justify-center bg-border/60 text-muted-foreground"
           >
             <motion.span
               animate={{ x: hovered ? 2 : 0 }}

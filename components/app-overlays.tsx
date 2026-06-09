@@ -33,7 +33,6 @@ export function AppOverlays() {
   const previousPathRef = useRef<string | null>(null);
   const bootedRef = useRef(false);
   const [isBooting, setIsBooting] = useState(true);
-  const [isWelcomeReady, setIsWelcomeReady] = useState(false);
   const [welcomePlayer, setWelcomePlayer] = useState<DotLottie | null>(null);
   const { mode, showWelcome, showLoading, hideOverlay } = useOverlay();
 
@@ -91,18 +90,12 @@ export function AppOverlays() {
   }, [hideOverlay, pathname, showLoading, showWelcome]);
 
   useEffect(() => {
-    if (mode !== "welcome") {
-      setIsWelcomeReady(false);
-      return;
-    }
-
-    if (!welcomePlayer) return;
+    if (mode !== "welcome" || !welcomePlayer) return;
 
     let started = false;
     const startWelcome = () => {
       if (started) return;
       started = true;
-      setIsWelcomeReady(true);
       welcomePlayer.stop();
       welcomePlayer.setFrame(0);
       welcomePlayer.play();
@@ -148,13 +141,6 @@ export function AppOverlays() {
           {visibleMode && (
             <div className="flex flex-col items-center justify-center px-6 text-center">
               <div className={visibleMode === "welcome" ? "relative h-40 w-[min(82vw,42rem)] sm:h-52" : "h-28 w-28 sm:h-36 sm:w-36"}>
-                {visibleMode === "welcome" && !isWelcomeReady && (
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="font-serif text-5xl italic tracking-[0.06em] text-[var(--sun-gold)] sm:text-7xl">
-                      Welcome
-                    </span>
-                  </div>
-                )}
                 <DotLottieReact
                   src={visibleMode === "welcome" ? WELCOME_ANIMATION : LOADING_ANIMATION}
                   autoplay

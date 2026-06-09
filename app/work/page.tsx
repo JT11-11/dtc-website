@@ -50,7 +50,7 @@ export default function WorkPage() {
                 rel="noopener noreferrer"
                 className="group border-b-2 border-foreground hover:border-muted-foreground"
               >
-                <p className="text-xl sm:text-2xl font-medium text-foreground group-hover:text-muted-foreground transition-colors pb-1">
+                <p className="text-xl sm:text-2xl font-bold text-foreground group-hover:text-muted-foreground transition-colors pb-1">
                   3 Primitives
                 </p>
               </a>

@@ -163,7 +163,7 @@ function ServiceItem({ title, href, index }: { title: string; href: string; inde
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <span className="text-[clamp(1.5rem,4vw,4rem)] font-light tracking-tight text-foreground">
+        <span className="text-[clamp(1.5rem,4vw,4rem)] font-bold tracking-tight text-foreground">
           {title}
         </span>
       </a>
@@ -176,7 +176,7 @@ function ServiceItem({ title, href, index }: { title: string; href: string; inde
           ref={overlayInnerRef}
           className="flex items-center justify-between h-full px-6 sm:px-12 lg:px-24 translate-y--101"
         >
-          <span className="text-[clamp(1.5rem,4vw,4rem)] font-light tracking-tight text-background">
+          <span className="text-[clamp(1.5rem,4vw,4rem)] font-bold tracking-tight text-background">
             {chars}
           </span>
           <svg
@@ -251,7 +251,7 @@ export function ServicesDtc() {
       >
         <h2
           ref={titleRef}
-          className="text-center text-[clamp(2.5rem,7vw,7rem)] font-medium leading-[1.1] tracking-tight text-foreground max-w-350"
+          className="text-center text-[clamp(2.5rem,7vw,7rem)] font-bold leading-[1.1] tracking-tight text-foreground max-w-350"
         >
           <SplitText>Youth-led research shaping the rules of the digital world.</SplitText>
         </h2>

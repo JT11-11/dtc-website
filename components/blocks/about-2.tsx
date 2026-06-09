@@ -181,7 +181,7 @@ export default function About2({ displayNavigation = true }: About2Props = {}) {
                   <p className="mt-4 max-w-xl text-base sm:text-lg leading-relaxed text-muted-foreground">
                     {entry.description}
                   </p>
-                  <p className="mt-5 font-serif italic text-lg text-[var(--bronze)]">
+                  <p className="mt-5 font-serif italic font-bold text-lg text-[var(--bronze)]">
                     {entry.highlight}
                   </p>
                 </motion.div>

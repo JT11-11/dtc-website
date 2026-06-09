@@ -21,7 +21,7 @@ export function Highlight({
   return (
     <span
       className={cn(
-        "font-serif italic",
+        "font-serif italic font-bold",
         color === "gold" ? "text-[var(--sun-gold)]" : "text-[var(--un-blue)]",
         className,
       )}

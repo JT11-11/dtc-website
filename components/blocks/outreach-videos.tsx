@@ -18,7 +18,7 @@ export function OutreachVideos() {
         <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--sun-gold)] mb-4">
           In Motion
         </p>
-        <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-foreground mb-3">
+        <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground mb-3">
           Out <Highlight>in the world.</Highlight>
         </h2>
         <p className="text-base text-muted-foreground max-w-xl leading-relaxed mb-12">

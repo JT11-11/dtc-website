@@ -270,7 +270,7 @@ export function Hero3() {
         {/* Bottom Section - Title and Links */}
         <div className="flex flex-col items-start md:flex-row md:items-end">
           {/* Title */}
-          <h1 className="pb-[4vmax] pl-[4vmax] pr-[4vmax] text-white relative text-[5vmax] leading-tight font-display tracking-tight">
+          <h1 className="pb-[4vmax] pl-[4vmax] pr-[4vmax] text-white relative text-[5vmax] leading-tight font-display font-bold tracking-tight">
             At the table,
             <br />
             not just on the agenda.

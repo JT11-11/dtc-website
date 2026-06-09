@@ -16,7 +16,7 @@ export function ContactUsDtc() {
           </p>
           <a
             href="mailto:hello@dtcpolicylab.org"
-            className="block text-[clamp(1.5rem,5vw,4rem)] font-medium tracking-tight text-foreground hover:text-muted-foreground transition-colors break-all sm:break-normal"
+            className="block text-[clamp(1.5rem,5vw,4rem)] font-bold tracking-tight text-foreground hover:text-muted-foreground transition-colors break-all sm:break-normal"
           >
             hello@dtcpolicylab.org
           </a>
@@ -31,7 +31,7 @@ export function ContactUsDtc() {
         <div className="max-w-360 2xl:max-w-450 3xl:max-w-550 mx-auto">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
             <div className="max-w-xl">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-background mb-4">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-background mb-4">
                 Join the community.
               </h2>
               <p className="text-background/60 text-lg leading-relaxed">

@@ -42,7 +42,7 @@ export default function Features6() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.3 }}
-          className="text-3xl sm:text-4xl md:text-5xl font-medium text-foreground tracking-tight leading-[1.15] max-w-3xl mb-10 sm:mb-14"
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground tracking-tight leading-[1.15] max-w-3xl mb-10 sm:mb-14"
         >
           Who should reach out?
         </motion.h2>
@@ -117,7 +117,7 @@ function Card({
       </p>
 
       <div className="relative mt-auto flex items-center justify-between pt-8">
-        <span className="text-base sm:text-lg text-foreground">
+        <span className="text-base sm:text-lg font-bold text-foreground">
           {audience.title}
         </span>
         <a

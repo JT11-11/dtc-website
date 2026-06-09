@@ -92,7 +92,7 @@ export default function AboutPage() {
                       <span className="grid h-10 w-10 place-items-center rounded-full bg-[var(--sun-gold)]/15 text-[var(--bronze)]">
                         <Icon className="h-5 w-5" />
                       </span>
-                      <h3 className="text-lg font-semibold text-foreground">
+                      <h3 className="text-lg font-bold text-foreground">
                         {h.title}
                       </h3>
                     </div>

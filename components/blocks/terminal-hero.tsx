@@ -69,7 +69,7 @@ export function TerminalHero() {
         >
           A fully teen-led research lab embedding youth directly into the global
           digital-policy pipeline.{" "}
-          <span className="font-serif italic text-white/95">
+          <span className="font-serif italic font-bold text-white/95">
             At the table, not just on the agenda.
           </span>
         </motion.p>

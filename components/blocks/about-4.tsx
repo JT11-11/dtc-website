@@ -59,7 +59,7 @@ function ValuesList({ activeIndex }: { activeIndex: number }) {
           transition={{ duration: 0.6, delay: index * 0.1 }}
         >
           <h3
-            className={`text-2xl sm:text-3xl lg:text-5xl xl:text-6xl font-light tracking-tight transition-colors duration-500 ${activeIndex === index
+            className={`text-2xl sm:text-3xl lg:text-5xl xl:text-6xl font-bold tracking-tight transition-colors duration-500 ${activeIndex === index
               ? "text-foreground"
               : "text-foreground/20"
               }`}
@@ -203,7 +203,7 @@ function ContentSection({ activeValue }: { activeValue: ValueItem }) {
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight text-foreground mb-4 sm:mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-4 sm:mb-6">
             {activeValue.heading}
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">

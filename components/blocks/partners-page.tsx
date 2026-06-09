@@ -55,7 +55,7 @@ export function PartnersPage() {
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--sun-gold)] mb-3">
                 {partner.region}
               </p>
-              <h2 className="text-3xl font-semibold tracking-tight text-foreground">
+              <h2 className="text-3xl font-bold tracking-tight text-foreground">
                 {partner.name}
               </h2>
             </div>
@@ -104,7 +104,7 @@ export function PartnersPage() {
             rel="noopener noreferrer"
             className="group border-b-2 border-foreground hover:border-muted-foreground"
           >
-            <p className="text-xl sm:text-2xl font-medium text-foreground group-hover:text-muted-foreground transition-colors pb-1">
+            <p className="text-xl sm:text-2xl font-bold text-foreground group-hover:text-muted-foreground transition-colors pb-1">
               3 Primitives
             </p>
           </a>

@@ -93,7 +93,7 @@ export function ImpactDtc() {
     <section ref={sectionRef} id="impact" className="bg-background py-24 lg:py-32">
       <div className="px-6 sm:px-12 lg:px-24 max-w-360 2xl:max-w-450 3xl:max-w-550 mx-auto">
         <div ref={headerRef} className="flex items-center justify-between mb-12 lg:mb-16">
-          <h2 className="text-3xl lg:text-4xl font-medium tracking-tight text-foreground">
+          <h2 className="text-3xl lg:text-4xl font-bold tracking-tight text-foreground">
             Our Global Impact
           </h2>
           <Link
@@ -129,7 +129,7 @@ export function ImpactDtc() {
           <div className="lg:col-span-2 row-span-2 bg-muted/50 rounded-2xl p-8 flex flex-col">
             <div>
               <QuoteIcon className="w-10 h-10 text-foreground/20 mb-6" />
-              <blockquote className="text-2xl lg:text-3xl font-medium leading-snug text-foreground">
+              <blockquote className="text-2xl lg:text-3xl font-bold leading-snug text-foreground">
                 The laws that govern our online lives are written without us. It&apos;s time teens stopped being the subject of the research and became the researchers.
               </blockquote>
               <div className="mt-6">

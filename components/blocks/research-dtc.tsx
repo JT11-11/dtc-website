@@ -186,7 +186,7 @@ function ProjectOverlay({ project, onClose }: { project: Project | null; onClose
                   transition={{ duration: 0.4, delay: 0.2 }}
                   className="text-center"
                 >
-                  <p className="text-white text-xl sm:text-2xl md:text-3xl font-light">Coming Soon</p>
+                  <p className="text-white text-xl sm:text-2xl md:text-3xl font-bold">Coming Soon</p>
                 </motion.div>
               </div>
             )}
@@ -198,9 +198,9 @@ function ProjectOverlay({ project, onClose }: { project: Project | null; onClose
             exit={{ opacity: 0, x: -20 }}
             transition={{ duration: 0.4, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
           >
-            <h2 className="text-[clamp(2rem,8vw,6rem)] font-medium leading-[0.95] tracking-tight text-white">
+            <h2 className="text-[clamp(2rem,8vw,6rem)] font-bold leading-[0.95] tracking-tight text-white">
               <span className="block">{project.titleUp}</span>
-              <span className="block font-serif italic">{project.titleDown}</span>
+              <span className="block font-serif italic font-bold">{project.titleDown}</span>
             </h2>
           </motion.div>
           <motion.div
@@ -320,9 +320,9 @@ function ProjectItem({ project, index, onHover, onClick }: { project: Project; i
           </div>
           <div className={`flex flex-col md:w-2/5 ${isEven ? "" : "md:text-right"}`}>
             <span className="text-base font-medium uppercase tracking-widest text-muted-foreground mb-6">0{index + 1}</span>
-            <h3 ref={titleRef} className="text-[clamp(2.5rem,6vw,6rem)] leading-[1.05] tracking-tight text-foreground mb-8">
-              <span className="font-medium">{project.titleUp}</span><br />
-              <span className="font-serif italic">{project.titleDown}</span>
+            <h3 ref={titleRef} className="text-[clamp(2.5rem,6vw,6rem)] font-bold leading-[1.05] tracking-tight text-foreground mb-8">
+              <span className="block">{project.titleUp}</span>
+              <span className="block font-serif italic font-bold">{project.titleDown}</span>
             </h3>
             <p ref={descRef} className={`text-muted-foreground text-xl leading-relaxed ${isEven ? "max-w-lg" : "max-w-lg md:ml-auto"}`}>
               {project.description}
@@ -355,8 +355,8 @@ export function ResearchDtc() {
       <BlobCursor isVisible={isCursorVisible} />
       <ProjectOverlay project={selectedProject} onClose={handleClose} />
       <div className="pb-16">
-        <VelocityText baseVelocity={80} className="text-[clamp(4rem,12vw,14rem)] font-medium italic tracking-tight text-foreground uppercase px-8">
-          Research <span className="font-serif font-thin">& Policy</span>&nbsp;
+        <VelocityText baseVelocity={80} className="text-[clamp(4rem,12vw,14rem)] font-bold tracking-tight text-foreground uppercase px-8">
+          Research <span className="font-serif italic font-bold">& Policy</span>&nbsp;
         </VelocityText>
       </div>
       <div className="flex flex-col">

@@ -124,7 +124,7 @@ export function FaqDtc() {
       <div className="px-6 sm:px-12 lg:px-24 max-w-4xl mx-auto">
         <h2
           ref={titleRef}
-          className="text-4xl lg:text-5xl font-medium tracking-tight text-foreground text-center mb-12 lg:mb-16"
+          className="text-4xl lg:text-5xl font-bold tracking-tight text-foreground text-center mb-12 lg:mb-16"
         >
           Frequently Asked
           <br />

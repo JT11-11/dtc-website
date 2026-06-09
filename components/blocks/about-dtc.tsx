@@ -88,7 +88,7 @@ export function AboutDtc() {
           />
         </div>
 
-        <h2 ref={headingRef} className="text-[clamp(1.75rem,4vw,3rem)] font-medium leading-[1.2] tracking-tight text-center mx-auto text-foreground max-w-4xl">
+        <h2 ref={headingRef} className="text-[clamp(1.75rem,4vw,3rem)] font-bold leading-[1.2] tracking-tight text-center mx-auto text-foreground max-w-4xl">
           At DTC Youth Policy Lab, we believe teen voices shouldn&apos;t be an afterthought in digital policy: they should lead it.
         </h2>
 

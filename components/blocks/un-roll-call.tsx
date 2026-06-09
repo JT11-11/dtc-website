@@ -90,7 +90,7 @@ export function UnRollCall() {
               {/* Entry */}
               <div>
                 <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-                  <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-foreground">
+                  <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-foreground">
                     {e.venue}
                   </h3>
                   <span className="inline-flex items-center rounded-full border border-border bg-card px-2.5 py-0.5 text-xs font-medium text-muted-foreground">

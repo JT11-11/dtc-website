@@ -73,7 +73,7 @@ function TeamCard({ member, index }: { member: TeamMember; index: number }) {
         />
       </div>
       <div className="flex flex-col gap-1">
-        <h3 className="text-base sm:text-lg font-semibold text-foreground leading-snug">
+        <h3 className="text-base sm:text-lg font-bold text-foreground leading-snug">
           {member.name}
         </h3>
         <p className="text-xs sm:text-sm font-medium text-muted-foreground leading-snug">

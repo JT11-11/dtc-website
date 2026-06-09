@@ -221,7 +221,7 @@ export default function CTA1({
           >
             <a
               href={primaryHref}
-              className="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-[var(--sun-gold)] text-black text-sm font-semibold transition-transform duration-200 hover:scale-[1.03] hover:shadow-[0_8px_30px_-8px_rgba(245,197,94,0.6)] w-full sm:w-auto"
+              className="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-[var(--sun-gold)] text-black text-sm font-semibold transition-transform duration-200 hover:scale-[1.03] hover:shadow-[0_8px_30px_-8px_rgba(168,116,42,0.45)] w-full sm:w-auto"
             >
               {primaryLabel}
             </a>

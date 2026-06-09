@@ -130,7 +130,7 @@ export default function About2({ displayNavigation = true }: About2Props = {}) {
           </p>
           <h2 className="mt-3 text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-foreground leading-[1.04] max-w-3xl">
             From a teen-led coalition to a{" "}
-            <span className="font-serif italic font-bold text-[var(--bronze)]">
+            <span className="font-serif italic font-normal text-[var(--bronze)]">
               policy lab.
             </span>
           </h2>
@@ -181,7 +181,7 @@ export default function About2({ displayNavigation = true }: About2Props = {}) {
                   <p className="mt-4 max-w-xl text-base sm:text-lg leading-relaxed text-muted-foreground">
                     {entry.description}
                   </p>
-                  <p className="mt-5 font-serif italic font-bold text-lg text-[var(--bronze)]">
+                  <p className="mt-5 font-serif italic font-normal text-lg text-[var(--bronze)]">
                     {entry.highlight}
                   </p>
                 </motion.div>

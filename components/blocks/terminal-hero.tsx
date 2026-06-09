@@ -69,7 +69,7 @@ export function TerminalHero() {
         >
           A fully teen-led research lab embedding youth directly into the global
           digital-policy pipeline.{" "}
-          <span className="font-serif italic font-bold text-white/95">
+          <span className="font-serif italic font-normal text-white/95">
             At the table, not just on the agenda.
           </span>
         </motion.p>
@@ -83,7 +83,7 @@ export function TerminalHero() {
         >
           <a
             href="/contact"
-            className="rounded-full bg-[var(--sun-gold)] px-7 py-3 text-sm font-semibold text-black transition-transform duration-200 hover:scale-[1.03] hover:shadow-[0_8px_30px_-8px_rgba(245,197,94,0.6)]"
+            className="rounded-full bg-[var(--sun-gold)] px-7 py-3 text-sm font-semibold text-black transition-transform duration-200 hover:scale-[1.03] hover:shadow-[0_8px_30px_-8px_rgba(168,116,42,0.45)]"
           >
             Join the Lab
           </a>

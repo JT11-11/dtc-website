@@ -239,7 +239,7 @@ function WorkOverlay({
             {/* Title */}
             <h2 className="text-[clamp(2.5rem,7vw,6rem)] font-bold leading-[1.0] tracking-tight text-background mb-12">
               <span className="block">{item.title}</span>
-              <span className="block font-serif italic font-bold">{item.titleItalic}</span>
+              <span className="block font-serif italic font-normal">{item.titleItalic}</span>
             </h2>
 
             {/* Content */}
@@ -382,7 +382,7 @@ function WorkItemRow({
           <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-6 min-w-0">
             <span className="text-[clamp(1.25rem,3.5vw,3rem)] font-bold tracking-tight text-foreground leading-tight">
               {item.title}{" "}
-              <span className="font-serif italic font-bold">{item.titleItalic}</span>
+              <span className="font-serif italic font-normal">{item.titleItalic}</span>
             </span>
           </div>
         </div>
@@ -423,7 +423,7 @@ function WorkItemRow({
             </span>
             <span className="text-[clamp(1.25rem,3.5vw,3rem)] font-bold tracking-tight text-background leading-tight">
               {item.title}{" "}
-              <span className="font-serif italic font-bold">{item.titleItalic}</span>
+              <span className="font-serif italic font-normal">{item.titleItalic}</span>
             </span>
           </div>
           <svg

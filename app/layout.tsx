@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
-import { Inter, Inria_Serif } from "next/font/google";
+import { DM_Sans, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import { OverlayProvider } from "@/lib/overlay-context";
 
-const inter = Inter({
-  variable: "--font-inter",
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
-// Brand Kit highlight face - used for italic "Highlight" accents (Inria Serif Bold Italic).
-const inriaSerif = Inria_Serif({
-  variable: "--font-inria",
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-instrument-serif",
   subsets: ["latin"],
-  weight: ["300", "400", "700"],
+  weight: "400",
   style: ["normal", "italic"],
 });
 
@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${inriaSerif.variable} h-full antialiased`}
+      className={`${dmSans.variable} ${instrumentSerif.variable} h-full antialiased`}
       suppressHydrationWarning
     >
       <body

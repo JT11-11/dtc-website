@@ -200,7 +200,7 @@ function ProjectOverlay({ project, onClose }: { project: Project | null; onClose
           >
             <h2 className="text-[clamp(2rem,8vw,6rem)] font-bold leading-[0.95] tracking-tight text-white">
               <span className="block">{project.titleUp}</span>
-              <span className="block font-serif italic font-bold">{project.titleDown}</span>
+              <span className="block font-serif italic font-normal">{project.titleDown}</span>
             </h2>
           </motion.div>
           <motion.div
@@ -322,7 +322,7 @@ function ProjectItem({ project, index, onHover, onClick }: { project: Project; i
             <span className="text-base font-medium uppercase tracking-widest text-muted-foreground mb-6">0{index + 1}</span>
             <h3 ref={titleRef} className="text-[clamp(2.5rem,6vw,6rem)] font-bold leading-[1.05] tracking-tight text-foreground mb-8">
               <span className="block">{project.titleUp}</span>
-              <span className="block font-serif italic font-bold">{project.titleDown}</span>
+              <span className="block font-serif italic font-normal">{project.titleDown}</span>
             </h3>
             <p ref={descRef} className={`text-muted-foreground text-xl leading-relaxed ${isEven ? "max-w-lg" : "max-w-lg md:ml-auto"}`}>
               {project.description}
@@ -356,7 +356,7 @@ export function ResearchDtc() {
       <ProjectOverlay project={selectedProject} onClose={handleClose} />
       <div className="pb-16">
         <VelocityText baseVelocity={80} className="text-[clamp(4rem,12vw,14rem)] font-bold tracking-tight text-foreground uppercase px-8">
-          Research <span className="font-serif italic font-bold">& Policy</span>&nbsp;
+          Research <span className="font-serif italic font-normal">& Policy</span>&nbsp;
         </VelocityText>
       </div>
       <div className="flex flex-col">

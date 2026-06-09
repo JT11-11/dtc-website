@@ -33,7 +33,8 @@ export function DotLottiePlayer({
   src,
   scrollClassName,
   className,
-  scrollSpeed = 1.6,
+  scrollSpeed = 0.4,
+  
 }: DotLottiePlayerProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const playerRef = useRef<DotLottie | null>(null);

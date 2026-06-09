@@ -466,13 +466,6 @@ export function WorkDtc() {
     <section id="work" className="bg-background relative">
       <WorkOverlay item={selectedItem} onClose={handleClose} />
 
-      {/* Instruction note */}
-      <div className="px-6 sm:px-8 lg:px-12 py-8 max-w-[1400px] mx-auto">
-        <p className="text-sm text-muted-foreground">
-          Click any entry to read the full research summary and why it matters.
-        </p>
-      </div>
-
       {/* Work items list */}
       <div className="w-full border-t border-foreground/10">
         {workItems.map((item) => (

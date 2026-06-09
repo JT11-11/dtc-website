@@ -106,7 +106,7 @@ export function HeaderDtc() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              DTC Policy Lab
+              DTC Youth Policy Lab
             </motion.a>
 
             <div className="relative h-12 sm:h-16">

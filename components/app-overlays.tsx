@@ -1,5 +1,6 @@
 "use client";
 
+import "@/lib/dotlottie-init";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";

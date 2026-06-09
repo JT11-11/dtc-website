@@ -52,7 +52,7 @@ export default function Navigation9() {
                 />
               </div>
               <span className="font-sans font-bold text-sm sm:text-[15px] tracking-tight text-white truncate hidden sm:block">
-                DTC Policy Lab
+                DTC Youth Policy Lab
               </span>
             </a>
 

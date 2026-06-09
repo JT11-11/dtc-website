@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "postinstall": "mkdir -p public/static && cp node_modules/@lottiefiles/dotlottie-web/dist/dotlottie-player.wasm public/static/dotlottie-player.wasm"
   },
   "dependencies": {
     "@base-ui/react": "^1.4.1",

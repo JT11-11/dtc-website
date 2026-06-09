@@ -1,5 +1,6 @@
 "use client";
 
+import "@/lib/dotlottie-init";
 import { useEffect, useRef, useState, type RefObject } from "react";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import type { DotLottie } from "@lottiefiles/dotlottie-web";

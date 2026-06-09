@@ -1,9 +1,13 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { Check, Copy } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faLinkedin, faXTwitter } from "@fortawesome/free-brands-svg-icons";
+
+const CONTACT_EMAIL = "hello@dtcpolicylab.org";
 
 const byPrefixAndName = {
   fab: {
@@ -48,16 +52,44 @@ const navLinks = [
   { label: "Contact", href: "/contact" },
 ];
 
+function FooterEmail() {
+  const [copied, setCopied] = useState(false);
+
+  const copyEmail = async () => {
+    await navigator.clipboard.writeText(CONTACT_EMAIL);
+    setCopied(true);
+    window.setTimeout(() => setCopied(false), 2000);
+  };
+
+  return (
+    <div className="flex flex-wrap items-center justify-center gap-3 sm:justify-start sm:gap-4">
+      <a
+        href={`mailto:${CONTACT_EMAIL}`}
+        className="text-2xl sm:text-5xl lg:text-7xl font-bold tracking-tight hover:opacity-80 transition-opacity break-all sm:break-normal"
+      >
+        {CONTACT_EMAIL}
+      </a>
+      <button
+        type="button"
+        onClick={copyEmail}
+        aria-label={copied ? "Email copied" : "Copy email address"}
+        className="inline-flex h-10 w-10 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-full border border-background/20 text-background transition-colors hover:border-background/50 hover:bg-background/10"
+      >
+        {copied ? (
+          <Check className="h-4 w-4 sm:h-5 sm:w-5" aria-hidden />
+        ) : (
+          <Copy className="h-4 w-4 sm:h-5 sm:w-5" aria-hidden />
+        )}
+      </button>
+    </div>
+  );
+}
+
 export function FooterDtc() {
   return (
     <footer id="contact" className="lg:sticky lg:bottom-0 lg:z-0 bg-foreground text-background">
       <div className="px-6 sm:px-12 lg:px-24 pt-24 lg:pt-32 pb-16 lg:pb-24 text-center sm:text-left max-w-360 2xl:max-w-450 3xl:max-w-550 mx-auto">
-        <a
-          href="mailto:hello@dtcpolicylab.org"
-          className="text-2xl sm:text-5xl lg:text-7xl font-bold tracking-tight hover:opacity-80 transition-opacity break-all sm:break-normal"
-        >
-          hello@dtcpolicylab.org
-        </a>
+        <FooterEmail />
 
         <div className="mt-10">
           <Link

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans, Instrument_Serif } from "next/font/google";
 import "./globals.css";
+import { AppOverlays } from "@/components/app-overlays";
 import { OverlayProvider } from "@/lib/overlay-context";
 
 const dmSans = DM_Sans({
@@ -38,6 +39,7 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <OverlayProvider>
+          <AppOverlays />
           {children}
         </OverlayProvider>
       </body>

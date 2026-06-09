@@ -179,10 +179,12 @@ export default function About4() {
 
   return (
     <section className="w-full bg-background px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-      <div className="mx-auto w-full max-w-[1400px]">
-        <div className="flex flex-col gap-8 sm:gap-10 lg:grid lg:grid-cols-[max-content_minmax(0,1fr)] lg:items-start lg:gap-8 xl:gap-12">
-          <ValuesList activeIndex={activeIndex} onSelect={selectValue} />
-          <ContentSection activeValue={activeValue} />
+      <div className="mx-auto flex min-h-[70vh] w-full max-w-[1400px] flex-col items-center justify-center">
+        <div className="mx-auto w-full max-w-4xl">
+          <div className="flex flex-col gap-8 sm:gap-10 lg:grid lg:grid-cols-[max-content_minmax(0,1fr)] lg:items-start lg:justify-center lg:gap-8 xl:max-w-5xl xl:gap-12">
+            <ValuesList activeIndex={activeIndex} onSelect={selectValue} />
+            <ContentSection activeValue={activeValue} />
+          </div>
         </div>
 
         <div className="mt-12 flex justify-center sm:mt-16">

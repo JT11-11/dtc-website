@@ -1,9 +1,6 @@
 import Link from "next/link";
 import { Highlight } from "@/components/ui/highlight";
-import {
-  DotLottieLoop,
-  DotLottiePlayer,
-} from "@/components/blocks/dotlottie-player";
+import { RestrictionDatabaseLotties } from "@/components/blocks/restriction-database-lotties";
 
 export function RestrictionDatabaseFeature() {
   return (
@@ -27,40 +24,7 @@ export function RestrictionDatabaseFeature() {
             </span>
           </div>
 
-          {/* Right — layered lotties */}
-          <div className="relative min-h-[320px] sm:min-h-[400px] lg:min-h-[480px] border-t lg:border-t-0 lg:border-l border-border/70 overflow-hidden">
-            <div
-              className="absolute inset-0 bg-gradient-to-br from-[#f5ebe8] via-background to-[#e8edf5]"
-              aria-hidden
-            />
-            <div
-              className="absolute inset-0 opacity-40 pointer-events-none"
-              style={{
-                backgroundImage: `
-                  linear-gradient(to right, rgba(228, 225, 216, 0.5) 1px, transparent 1px),
-                  linear-gradient(to bottom, rgba(228, 225, 216, 0.5) 1px, transparent 1px)
-                `,
-                backgroundSize: "24px 24px",
-              }}
-              aria-hidden
-            />
-
-            <DotLottiePlayer
-              src="/logo/579e2816-1166-11ee-972b-3fb4ae03d417.lottie"
-              scrollSpeed={1.8}
-              scrollClassName="absolute inset-0 z-0 min-h-[320px] sm:min-h-[400px] lg:min-h-[480px] pointer-events-none overflow-visible"
-              className="absolute left-1/2 top-1/2 h-[100%] w-[150%] -translate-x-1/2 -translate-y-1/2"
-            />
-
-            <div className="relative z-10 flex h-full min-h-[320px] sm:min-h-[400px] lg:min-h-[480px] items-center justify-center p-8 sm:p-10 lg:p-12 pointer-events-none">
-              <div className="pointer-events-auto aspect-square w-full max-w-[420px] rounded-2xl border border-border/60 bg-card shadow-sm overflow-hidden p-6 sm:p-8">
-                <DotLottieLoop
-                  src="/b3ec7600-116f-11ee-8494-3bb557282823.lottie"
-                  className="h-full w-full"
-                />
-              </div>
-            </div>
-          </div>
+          <RestrictionDatabaseLotties />
         </Link>
       </div>
     </section>

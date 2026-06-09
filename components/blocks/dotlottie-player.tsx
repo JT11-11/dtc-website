@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type RefObject } from "react";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import type { DotLottie } from "@lottiefiles/dotlottie-web";
 
@@ -8,6 +8,8 @@ interface DotLottiePlayerProps {
   src: string;
   /** Element used to measure scroll progress */
   scrollClassName?: string;
+  /** Optional external element for scroll measurement (e.g. shared column) */
+  scrollMeasureRef?: RefObject<HTMLElement | null>;
   /** Visual wrapper around the canvas */
   className?: string;
   /** Higher = animation completes over less scroll distance. Default 1.6 */
@@ -19,6 +21,9 @@ function getScrollProgress(
   viewportHeight: number,
   scrollSpeed: number,
 ) {
+  // Off-screen — reset to start (frame 0)
+  if (rect.bottom <= 0 || rect.top >= viewportHeight) return 0;
+
   const center = rect.top + rect.height / 2;
   const start = viewportHeight * 0.92;
   const end = viewportHeight * 0.08;
@@ -51,11 +56,14 @@ export function DotLottieLoop({
 export function DotLottiePlayer({
   src,
   scrollClassName,
+  scrollMeasureRef,
   className,
   scrollSpeed = 0.4,
-  
 }: DotLottiePlayerProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
+
+  const getScrollElement = () =>
+    scrollMeasureRef?.current ?? scrollRef.current;
   const playerRef = useRef<DotLottie | null>(null);
   const readyRef = useRef(false);
   const rafRef = useRef<number | null>(null);
@@ -67,7 +75,7 @@ export function DotLottiePlayer({
 
   useEffect(() => {
     const scrub = () => {
-      const scrollEl = scrollRef.current;
+      const scrollEl = getScrollElement();
       const player = playerRef.current;
       if (!scrollEl || !player || !readyRef.current) return;
 
@@ -108,7 +116,7 @@ export function DotLottiePlayer({
       dotLottie.stop();
       dotLottie.setFrame(0);
 
-      const scrollEl = scrollRef.current;
+      const scrollEl = getScrollElement();
       if (!scrollEl) return;
 
       const progress = getScrollProgress(
@@ -131,19 +139,25 @@ export function DotLottiePlayer({
     };
   }, [dotLottie, scrollSpeed]);
 
+  const lottie = (
+    <DotLottieReact
+      src={src}
+      loop={false}
+      autoplay={false}
+      useFrameInterpolation
+      renderConfig={{ autoResize: true }}
+      className="h-full w-full"
+      dotLottieRefCallback={setDotLottie}
+    />
+  );
+
+  if (scrollMeasureRef) {
+    return <div className={className}>{lottie}</div>;
+  }
+
   return (
     <div ref={scrollRef} className={scrollClassName}>
-      <div className={className}>
-        <DotLottieReact
-          src={src}
-          loop={false}
-          autoplay={false}
-          useFrameInterpolation
-          renderConfig={{ autoResize: true }}
-          className="h-full w-full"
-          dotLottieRefCallback={setDotLottie}
-        />
-      </div>
+      <div className={className}>{lottie}</div>
     </div>
   );
 }

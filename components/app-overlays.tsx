@@ -122,7 +122,7 @@ export function AppOverlays() {
   }, [hideOverlay, mode, welcomePlayer]);
 
   useEffect(() => {
-    if (mode !== "welcome") return;
+    if (mode !== "welcome" && mode !== "loading") return;
 
     const scrollY = window.scrollY;
     const { style } = document.body;

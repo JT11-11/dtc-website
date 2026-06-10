@@ -121,6 +121,44 @@ export function AppOverlays() {
     };
   }, [hideOverlay, mode, welcomePlayer]);
 
+  useEffect(() => {
+    if (mode !== "welcome") return;
+
+    const scrollY = window.scrollY;
+    const { style } = document.body;
+    const previous = {
+      position: style.position,
+      top: style.top,
+      left: style.left,
+      right: style.right,
+      overflow: style.overflow,
+      width: style.width,
+    };
+
+    style.position = "fixed";
+    style.top = `-${scrollY}px`;
+    style.left = "0";
+    style.right = "0";
+    style.width = "100%";
+    style.overflow = "hidden";
+
+    const blockScroll = (event: Event) => event.preventDefault();
+    document.addEventListener("wheel", blockScroll, { passive: false });
+    document.addEventListener("touchmove", blockScroll, { passive: false });
+
+    return () => {
+      document.removeEventListener("wheel", blockScroll);
+      document.removeEventListener("touchmove", blockScroll);
+      style.position = previous.position;
+      style.top = previous.top;
+      style.left = previous.left;
+      style.right = previous.right;
+      style.overflow = previous.overflow;
+      style.width = previous.width;
+      window.scrollTo(0, scrollY);
+    };
+  }, [mode]);
+
   const visibleMode = mode === "welcome" || mode === "loading" ? mode : null;
   const shouldShowOverlay = isBooting || visibleMode;
 
@@ -133,7 +171,7 @@ export function AppOverlays() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.35, ease: "easeOut" }}
-          className="fixed inset-0 z-[9999] flex items-center justify-center text-foreground"
+          className="fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden overscroll-none touch-none text-foreground"
           style={{ backgroundColor: visibleMode === "loading" ? "#f2f2f2" : "#ffffff" }}
           aria-live="polite"
           aria-label={visibleMode === "welcome" ? "Welcome" : "Loading"}

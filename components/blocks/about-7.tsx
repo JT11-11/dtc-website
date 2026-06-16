@@ -49,7 +49,7 @@ const team: TeamMember[] = [
   {
     name: "Lương Long Giang",
     role: "Primitives Lead",
-    country: "3 Primitives",
+    country: "Vietnam / United States",
     image: "/images/team/tini.jpg",
     contribution:
       "Leading the 3 Primitives collaboration and composed DTC's 2026 theme music.",

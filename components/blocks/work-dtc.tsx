@@ -21,6 +21,7 @@ interface WorkItem {
   status: string;
   summary: string;
   whyItMatters: string;
+  workInProgress?: boolean;
   cta?: { label: string; href: string };
 }
 
@@ -131,12 +132,12 @@ const workItems: WorkItem[] = [
     title: "Technology-Facilitated",
     titleItalic: "Gender-Based Violence",
     type: "Research Article",
-    status: "Completed · Awaiting review at JOTS",
+    status: "Work in progress",
+    workInProgress: true,
     summary:
-      "A completed research article examining Technology-Facilitated Gender-Based Violence (TFGBV) and its policy dimensions. Submitted for peer review at JOTS; not yet published.",
+      "A research article examining Technology-Facilitated Gender-Based Violence (TFGBV) and its policy dimensions. Currently in development ahead of submission for peer review.",
     whyItMatters:
       "Platform-enabled gender-based violence is one of the most rapidly escalating harms in digital policy. DTC's article contributes youth-researcher analysis to a field where most published work comes from outside the generation most affected.",
-    cta: { label: "Read Article", href: "https://docs.google.com/document/d/1X522DMmbluR1yeSeB5UZl6vMB5WRy0ZjBc2r9sRsB30/edit?tab=t.0" },
   },
   {
     id: "tfgbv-4p-commentary",
@@ -144,25 +145,25 @@ const workItems: WorkItem[] = [
     title: "TFGBV",
     titleItalic: "4P Commentary",
     type: "Commentary",
-    status: "Completed",
+    status: "Work in progress",
+    workInProgress: true,
     summary:
       "A commentary applying the 4P framework to Technology-Facilitated Gender-Based Violence (TFGBV), examining how the framework maps onto platform-mediated harm and where it requires adaptation for the digital context.",
     whyItMatters:
       "Policy frameworks travel faster than the evidence base. Commentary that maps standard tools onto new harm types helps policymakers apply existing instruments more precisely — and flags where structural gaps make new frameworks necessary.",
-    cta: { label: "Read Commentary", href: "https://docs.google.com/document/d/1hXdePXGfxR-1x1_eRtlfgBHP_tDF2hA_V2DDEkJ7PJg/edit?usp=sharing" },
   },
   {
     id: "social-media-op-ed",
     number: "11",
     title: "Social Media",
     titleItalic: "Legislature Op-Ed",
-    type: "Op-Ed · In Progress",
-    status: "In progress · not yet published",
+    type: "Op-Ed",
+    status: "Work in progress",
+    workInProgress: true,
     summary:
       "An op-ed examining current social media legislation from a youth digital-rights perspective. Currently in development — tracking the accelerating legislative landscape across key jurisdictions.",
     whyItMatters:
       "Op-eds reach journalists and policymakers in formats that peer-reviewed papers don't. Publishing timely, substantiated youth perspectives on fast-moving legislation is a distinct form of impact that complements DTC's research pipeline.",
-    cta: { label: "View Draft", href: "https://docs.google.com/document/d/1a1Gd3rPUvgERkk61lXXgQvArg4sz1oxbwIDf4E6P9-4/edit?tab=t.7ie21aen62ys" },
   },
 ];
 
@@ -228,12 +229,20 @@ function WorkOverlay({
 
             {/* Type + status */}
             <div className="flex flex-col sm:flex-row gap-3 mb-10">
-              <span className="inline-block rounded-full border border-background/20 px-4 py-1 text-xs font-medium uppercase tracking-widest text-background/60">
-                {item.type}
-              </span>
-              <span className="inline-block rounded-full bg-background/10 px-4 py-1 text-xs font-medium text-background/60">
-                {item.status}
-              </span>
+              {item.workInProgress ? (
+                <span className="inline-block rounded-full border border-background/20 px-4 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-background/60">
+                  Work in Progress
+                </span>
+              ) : (
+                <>
+                  <span className="inline-block rounded-full border border-background/20 px-4 py-1 text-xs font-medium uppercase tracking-widest text-background/60">
+                    {item.type}
+                  </span>
+                  <span className="inline-block rounded-full bg-background/10 px-4 py-1 text-xs font-medium text-background/60">
+                    {item.status}
+                  </span>
+                </>
+              )}
             </div>
 
             {/* Title */}
@@ -387,22 +396,30 @@ function WorkItemRow({
           </div>
         </div>
         <div className="flex flex-col items-end gap-2 shrink-0">
-          <span className="hidden sm:block text-xs font-medium uppercase tracking-widest text-muted-foreground">
-            {item.type}
-          </span>
-          <svg
-            className="w-6 h-6 text-foreground/40"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={1.5}
-              d="M7 17L17 7M17 7H7M17 7V17"
-            />
-          </svg>
+          {item.workInProgress ? (
+            <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+              Work in Progress
+            </span>
+          ) : (
+            <>
+              <span className="hidden sm:block text-xs font-medium uppercase tracking-widest text-muted-foreground">
+                {item.type}
+              </span>
+              <svg
+                className="w-6 h-6 text-foreground/40"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  d="M7 17L17 7M17 7H7M17 7V17"
+                />
+              </svg>
+            </>
+          )}
         </div>
       </button>
 
@@ -426,19 +443,25 @@ function WorkItemRow({
               <span className="font-serif italic font-normal">{item.titleItalic}</span>
             </span>
           </div>
-          <svg
-            className="w-8 h-8 md:w-12 md:h-12 shrink-0 text-background"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={1.5}
-              d="M7 17L17 7M17 7H7M17 7V17"
-            />
-          </svg>
+          {item.workInProgress ? (
+            <span className="shrink-0 text-[10px] sm:text-xs font-semibold uppercase tracking-[0.18em] text-background/50">
+              Work in Progress
+            </span>
+          ) : (
+            <svg
+              className="w-8 h-8 md:w-12 md:h-12 shrink-0 text-background"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1.5}
+                d="M7 17L17 7M17 7H7M17 7V17"
+              />
+            </svg>
+          )}
         </div>
       </div>
     </div>

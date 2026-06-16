@@ -24,6 +24,14 @@ const partners = [
       },
     ],
   },
+  {
+    name: "3 Primitives",
+    region: "Foundational Framework",
+    description:
+      "Core research and infrastructure built in collaboration with 3 Primitives, advancing the foundation of our policy work — including formal governance frameworks that underpin how we analyse youth exclusion from digital policy.",
+    link: "https://3primitives.io/",
+    linkLabel: "Visit 3 Primitives",
+  },
 ];
 
 export function PartnersPage() {
@@ -41,7 +49,7 @@ export function PartnersPage() {
         fairer internet for young people.
       </p>
 
-      <div className="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {partners.map((partner) => (
           <div
             key={partner.name}
@@ -87,28 +95,6 @@ export function PartnersPage() {
             </div>
           </div>
         ))}
-      </div>
-
-      <div className="mt-20 border-t border-border pt-16">
-        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--sun-gold)] mb-4">
-          Also in Partnership With
-        </p>
-        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
-          <a
-            href="https://3primitives.io/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group border-b-2 border-foreground hover:border-muted-foreground"
-          >
-            <p className="text-xl sm:text-2xl font-bold text-foreground group-hover:text-muted-foreground transition-colors pb-1">
-              3 Primitives
-            </p>
-          </a>
-          <p className="text-muted-foreground text-base max-w-2xl">
-            Core research and infrastructure built in collaboration with 3
-            Primitives, advancing the foundation of our policy work.
-          </p>
-        </div>
       </div>
     </div>
   );

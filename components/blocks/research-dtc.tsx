@@ -142,10 +142,18 @@ interface Project {
   titleDown: string;
   image: string;
   description: string;
+  imagePosition?: [number, number];
 }
 
 const projects: Project[] = [
-  { id: "1", titleUp: "Global Teen", titleDown: "Restriction Database", image: "/images/un/hlpf.jpg", description: "Mapping internet censorship targeting minors across 40+ countries" },
+  {
+    id: "1",
+    titleUp: "Global Teen",
+    titleDown: "Restriction Database",
+    image: "/images/un/hlpf.jpg",
+    description: "Mapping internet censorship targeting minors across 40+ countries",
+    imagePosition: [0.76, 0.28],
+  },
   { id: "2", titleUp: "LGBTQ+ Youth", titleDown: "Online Safety", image: "/images/un/official-meeting.jpg", description: "Examining digital spaces and platform policies for queer teens" },
   { id: "3", titleUp: "Platform Governance", titleDown: "& Youth Rights", image: "/images/un/ga-hall.jpg", description: "How Big Tech shapes the digital rights of the next generation" },
 ];
@@ -176,7 +184,18 @@ function ProjectOverlay({ project, onClose }: { project: Project | null; onClose
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={project.image} alt={`${project.titleUp} ${project.titleDown}`} className="h-full w-full object-cover" />
+            <img
+              src={project.image}
+              alt={`${project.titleUp} ${project.titleDown}`}
+              className="h-full w-full object-cover"
+              style={
+                project.imagePosition
+                  ? {
+                      objectPosition: `${project.imagePosition[0] * 100}% ${project.imagePosition[1] * 100}%`,
+                    }
+                  : undefined
+              }
+            />
             <div className="absolute inset-0 bg-black/40" />
             {isComingSoon && (
               <div className="absolute inset-0 flex items-center justify-center">
@@ -315,7 +334,11 @@ function ProjectItem({ project, index, onHover, onClick }: { project: Project; i
               ref={canvasWrapperRef}
               className="absolute inset-0 w-full h-full preserve-3d-scale"
             >
-              <WaterRipple src={project.image} maskRadius={maskRadius} />
+              <WaterRipple
+                src={project.image}
+                maskRadius={maskRadius}
+                imagePosition={project.imagePosition}
+              />
             </div>
           </div>
           <div className={`flex flex-col md:w-2/5 ${isEven ? "" : "md:text-right"}`}>

@@ -12,7 +12,6 @@ const cards = [
     label: "Countries with social media bans on minors",
     sub: "None consulted youth",
     source: "Restriction Database",
-    href: "/work/database",
     bg: "var(--un-blue)",
     fg: "#ffffff",
   },
@@ -21,7 +20,6 @@ const cards = [
     suffix: "%",
     label: "Meaningful youth policy input",
     source: "Consultation gap",
-    href: "/work/database",
     bg: "var(--sun-gold)",
     fg: "#1a1400",
   },
@@ -31,7 +29,6 @@ const cards = [
     label: "Measures tracked in our database",
     sub: "Every entry sourced",
     source: "Global Teen DB",
-    href: "/work/database",
     bg: "var(--sky-blue)",
     fg: "#07252e",
   },
@@ -41,7 +38,6 @@ const cards = [
     label: "Governance frameworks we've authored",
     sub: "Twisted Pair Theorem + Lemma C",
     source: "3 Primitives",
-    href: "https://3primitives.io/",
     bg: "var(--bronze)",
     fg: "#ffffff",
   },
@@ -50,7 +46,6 @@ const cards = [
     suffix: "",
     label: "Peer-reviewed studies in progress",
     source: "Marginalized Youth Study",
-    href: "/work",
     bg: "var(--ink)",
     fg: "var(--paper)",
   },
@@ -111,16 +106,13 @@ function StatCard({ card, index }: { card: typeof cards[0]; index: number }) {
           {count}{card.suffix}
         </span>
 
-        <a
-          href={card.href}
-          target={card.href.startsWith("http") ? "_blank" : undefined}
-          rel={card.href.startsWith("http") ? "noopener noreferrer" : undefined}
-          className="mt-3 inline-flex items-center gap-1 text-xs font-bold opacity-60 hover:opacity-100 transition-opacity w-fit"
+        <span
+          className="mt-3 inline-flex items-center gap-1 text-xs font-bold opacity-60 w-fit"
           style={{ color: card.fg }}
         >
           <ArrowUpRight className="w-3.5 h-3.5" />
           {card.source}
-        </a>
+        </span>
       </div>
 
       {/* Subtle corner glow on hover */}

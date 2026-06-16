@@ -11,6 +11,7 @@ import { AboutField } from "@/components/blocks/about-field";
 import { OutreachVideos } from "@/components/blocks/outreach-videos";
 import { Highlight } from "@/components/ui/highlight";
 import { Features5 } from "@/components/blocks/features-5";
+import { AboutFounders } from "@/components/blocks/about-founders";
 
 export const metadata: Metadata = {
   title: "About Us · DTC Youth Policy Lab",
@@ -54,6 +55,9 @@ export default function AboutPage() {
 
         {/* What makes us different */}
         <About4 />
+
+        {/* Founders */}
+        <AboutFounders />
 
         {/* Team */}
         <About7 />

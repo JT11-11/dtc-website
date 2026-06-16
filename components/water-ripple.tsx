@@ -29,7 +29,7 @@ const vertexShader = `
 
 const fragmentShader = `
   uniform sampler2D uTexture, uDisplacement;
-  uniform vec2 uResolution, uTextureSize, uMaskCenter;
+  uniform vec2 uResolution, uTextureSize, uMaskCenter, uTextureAnchor;
   uniform float uMaskRadius, uTime;
   varying vec2 vUv;
   const float PI = 3.141592653589793238;
@@ -49,8 +49,9 @@ const fragmentShader = `
 
   vec2 getCoverUV(vec2 uv, vec2 texSize) {
     float scale = max(uResolution.x / texSize.x, uResolution.y / texSize.y);
-    vec2 offset = (uResolution - texSize * scale) * 0.5;
-    return (uv * uResolution - offset) / (texSize * scale);
+    vec2 scaledTex = texSize * scale;
+    vec2 offset = (scaledTex - uResolution) * uTextureAnchor;
+    return (uv * uResolution + offset) / scaledTex;
   }
 
   vec3 applyDuotone(vec3 c) {
@@ -94,7 +95,15 @@ function createBrushTexture(): THREE.Texture {
   return tex;
 }
 
-function WaterRippleScene({ src, maskRadius }: { src: string; maskRadius: number }) {
+function WaterRippleScene({
+  src,
+  maskRadius,
+  imagePosition = [0.5, 0.5],
+}: {
+  src: string;
+  maskRadius: number;
+  imagePosition?: [number, number];
+}) {
   const { size, gl } = useThree();
   const mainMaterialRef = useRef<THREE.ShaderMaterial>(null);
   const imageTexture = useTexture(src);
@@ -185,9 +194,12 @@ function WaterRippleScene({ src, maskRadius }: { src: string; maskRadius: number
     return () => canvas.removeEventListener("pointermove", onMove);
   }, [gl]);
 
+  const imagePositionRef = useRef(imagePosition);
+
   useEffect(() => { imageTextureRef.current = imageTexture; }, [imageTexture]);
   useEffect(() => { sizeRef.current = size; }, [size]);
   useEffect(() => { maskRadiusRef.current = maskRadius; }, [maskRadius]);
+  useEffect(() => { imagePositionRef.current = imagePosition; }, [imagePosition]);
 
   const uniforms = useMemo(
     () => ({
@@ -197,6 +209,7 @@ function WaterRippleScene({ src, maskRadius }: { src: string; maskRadius: number
       uTextureSize: { value: new THREE.Vector2(1, 1) },
       uMaskRadius: { value: 0 },
       uMaskCenter: { value: new THREE.Vector2(0.5, 0.5) },
+      uTextureAnchor: { value: new THREE.Vector2(imagePosition[0], imagePosition[1]) },
       uTime: { value: 0 },
     }),
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -235,6 +248,12 @@ function WaterRippleScene({ src, maskRadius }: { src: string; maskRadius: number
       const img = imageTextureRef.current.image as HTMLImageElement;
       if (u.uTextureSize && img?.width && img?.height) u.uTextureSize.value.set(img.width, img.height);
       if (u.uMaskRadius) u.uMaskRadius.value = maskRadiusRef.current;
+      if (u.uTextureAnchor) {
+        u.uTextureAnchor.value.set(
+          imagePositionRef.current[0],
+          imagePositionRef.current[1],
+        );
+      }
       if (u.uTime) u.uTime.value = timeRef.current;
     }
     gl.setRenderTarget(prev);
@@ -258,7 +277,15 @@ function WaterRippleScene({ src, maskRadius }: { src: string; maskRadius: number
 
 const emptySubscribe = () => () => {};
 
-export function WaterRipple({ src, maskRadius }: { src: string; maskRadius: number }) {
+export function WaterRipple({
+  src,
+  maskRadius,
+  imagePosition = [0.5, 0.5],
+}: {
+  src: string;
+  maskRadius: number;
+  imagePosition?: [number, number];
+}) {
   const isMounted = useSyncExternalStore(
     emptySubscribe,
     () => true,
@@ -274,7 +301,7 @@ export function WaterRipple({ src, maskRadius }: { src: string; maskRadius: numb
           className="w-full h-full"
           frameloop="always"
         >
-          <WaterRippleScene src={src} maskRadius={maskRadius} />
+          <WaterRippleScene src={src} maskRadius={maskRadius} imagePosition={imagePosition} />
           <EffectComposer multisampling={0}>
             <Bloom intensity={0.35} luminanceThreshold={0.65} luminanceSmoothing={0.8} mipmapBlur levels={3} />
           </EffectComposer>

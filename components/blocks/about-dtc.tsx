@@ -84,7 +84,7 @@ export function AboutDtc() {
             alt="DTC members at the United Nations flag row in New York"
             fill
             sizes="(min-width: 1024px) calc(100vw - 12rem), (min-width: 640px) calc(100vw - 6rem), calc(100vw - 3rem)"
-            className="object-cover object-[50%_35%]"
+            className="object-cover object-[50%_68%]"
           />
         </div>
 

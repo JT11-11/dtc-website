@@ -93,7 +93,7 @@ export default function Navigation9() {
             {/* Right: Discord CTA & Mobile Menu */}
             <div className="flex items-center gap-2 sm:gap-3 shrink-0">
               <a
-                href="https://discord.gg/dtcpolicylab"
+                href="https://discord.gg/EGg4jpP4Sk"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-white hover:bg-neutral-100 text-black text-xs sm:text-sm font-semibold transition-all hover:scale-[1.02] active:scale-[0.98]"

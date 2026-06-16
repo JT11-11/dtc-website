@@ -41,7 +41,7 @@ export default function ContactPage() {
           headingLine2="Start in Discord."
           description="Our Discord is where the actual work happens: research discussions, draft reviews, UN process updates. Teens, researchers, and interested adults all welcome."
           primaryLabel="Join Discord"
-          primaryHref="https://discord.gg/dtcpolicylab"
+          primaryHref="https://discord.gg/EGg4jpP4Sk"
           secondaryLabel="Read our research"
           secondaryHref="/work"
         />

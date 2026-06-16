@@ -21,7 +21,7 @@ const audiences = [
     title: "Teenager who wants to do this work",
     desc: "If you're a high schooler interested in doing serious digital policy research (not a summer programme, not a certificate), join our community and build real experience.",
     blob: "rgba(52,211,153,0.85)",
-    href: "https://discord.gg/dtcpolicylab",
+    href: "https://discord.gg/EGg4jpP4Sk",
   },
   {
     title: "Digital rights or civil society",

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Features6 from "@/components/blocks/features-6";
 
-const DISCORD_INVITE_URL = "https://discord.gg/dtcpolicylab";
+const DISCORD_INVITE_URL = "https://discord.gg/EGg4jpP4Sk";
 
 export function ContactUsDtc() {
   return (

@@ -54,6 +54,14 @@ const team: TeamMember[] = [
     contribution:
       "Leading the 3 Primitives collaboration and composed DTC's 2026 theme music.",
   },
+  {
+    name: "Hisham Abdul Hafeez Jamali",
+    role: "Publication Head",
+    country: "UAE / Pakistan",
+    image: "/images/team/image.png",
+    contribution:
+      "Leads DTC's publication pipeline, preparing research and policy outputs for release.",
+  },
 ];
 
 function TeamCard({ member, index }: { member: TeamMember; index: number }) {
@@ -63,26 +71,26 @@ function TeamCard({ member, index }: { member: TeamMember; index: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: 0.07 * index }}
-      className="flex flex-col gap-3"
+      className="flex flex-col gap-2"
     >
-      <div className="relative aspect-square rounded-2xl bg-muted overflow-hidden">
+      <div className="relative aspect-square rounded-xl bg-muted overflow-hidden">
         <img
           src={member.image}
           alt={member.name}
           className="w-full h-full object-cover"
         />
       </div>
-      <div className="flex flex-col gap-1">
-        <h3 className="text-base sm:text-lg font-bold text-foreground leading-snug">
+      <div className="flex flex-col gap-0.5">
+        <h3 className="text-sm font-bold text-foreground leading-snug lg:text-[13px] xl:text-sm">
           {member.name}
         </h3>
-        <p className="text-xs sm:text-sm font-medium text-muted-foreground leading-snug">
+        <p className="text-[11px] font-medium text-muted-foreground leading-snug lg:text-[10px] xl:text-[11px]">
           {member.role}
         </p>
-        <p className="text-xs text-muted-foreground/70">
+        <p className="text-[10px] text-muted-foreground/70 lg:text-[9px] xl:text-[10px]">
           {member.country}
         </p>
-        <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+        <p className="mt-1.5 text-[11px] text-muted-foreground leading-relaxed line-clamp-3 lg:text-[10px] xl:text-[11px]">
           {member.contribution}
         </p>
       </div>
@@ -114,7 +122,7 @@ export default function About7() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5 sm:gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-3">
           {team.map((member, i) => (
             <TeamCard key={member.name} member={member} index={i} />
           ))}

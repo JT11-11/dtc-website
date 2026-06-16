@@ -153,17 +153,17 @@ const workItems: WorkItem[] = [
       "Policy frameworks travel faster than the evidence base. Commentary that maps standard tools onto new harm types helps policymakers apply existing instruments more precisely — and flags where structural gaps make new frameworks necessary.",
   },
   {
-    id: "social-media-op-ed",
+    id: "social-media-policy-paper",
     number: "11",
     title: "Social Media",
-    titleItalic: "Legislature Op-Ed",
-    type: "Op-Ed",
+    titleItalic: "Legislative Policy Paper",
+    type: "Policy Paper",
     status: "Work in progress",
     workInProgress: true,
     summary:
-      "An op-ed examining current social media legislation from a youth digital-rights perspective. Currently in development — tracking the accelerating legislative landscape across key jurisdictions.",
+      "A policy paper examining current social media legislation from a youth digital-rights perspective. Currently in development — tracking the accelerating legislative landscape across key jurisdictions.",
     whyItMatters:
-      "Op-eds reach journalists and policymakers in formats that peer-reviewed papers don't. Publishing timely, substantiated youth perspectives on fast-moving legislation is a distinct form of impact that complements DTC's research pipeline.",
+      "Policy papers give policymakers structured, evidence-based analysis they can cite in briefings and legislative debate. A youth-led paper on fast-moving social media law fills a gap that opinion pieces alone cannot — rigorous argument grounded in DTC's research.",
   },
 ];
 

@@ -15,10 +15,10 @@ export function ContactUsDtc() {
             Direct Email
           </p>
           <a
-            href="mailto:hello@dtcpolicylab.org"
+            href="mailto:hello@dynamicteencoalition.com"
             className="block text-[clamp(1.5rem,5vw,4rem)] font-bold tracking-tight text-foreground hover:text-muted-foreground transition-colors break-all sm:break-normal"
           >
-            hello@dtcpolicylab.org
+            hello@dynamicteencoalition.com
           </a>
         </div>
       </section>

@@ -7,7 +7,7 @@ import { Check, Copy } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faLinkedin, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 
-const CONTACT_EMAIL = "hello@dtcpolicylab.org";
+const CONTACT_EMAIL = "hello@dynamicteencoalition.com";
 
 const byPrefixAndName = {
   fab: {

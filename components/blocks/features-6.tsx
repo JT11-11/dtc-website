@@ -9,13 +9,13 @@ const audiences = [
     title: "Researcher or journalist",
     desc: "Want to use our restriction database, cite our work, or collaborate on a study? Email us and we'll respond within a week. Our data is built to be used.",
     blob: "rgba(56,189,248,0.85)",
-    href: "mailto:hello@dtcpolicylab.org",
+    href: "mailto:hello@dynamicteencoalition.com",
   },
   {
     title: "Policymaker or institutional partner",
     desc: "We engage with governance bodies, digital rights organisations, and academic institutions. We're happy to brief, collaborate, or provide evidence for specific policy processes.",
     blob: "rgba(168,139,250,0.85)",
-    href: "mailto:hello@dtcpolicylab.org",
+    href: "mailto:hello@dynamicteencoalition.com",
   },
   {
     title: "Teenager who wants to do this work",
@@ -27,7 +27,7 @@ const audiences = [
     title: "Digital rights or civil society",
     desc: "Working on platform governance, youth rights, or internet freedom? We're actively looking for partners who want evidence behind their advocacy. Let's talk.",
     blob: "rgba(251,191,36,0.85)",
-    href: "mailto:hello@dtcpolicylab.org",
+    href: "mailto:hello@dynamicteencoalition.com",
   },
 ];
 

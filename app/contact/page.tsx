@@ -9,7 +9,7 @@ import { Highlight } from "@/components/ui/highlight";
 export const metadata: Metadata = {
   title: "Contact · DTC Youth Policy Lab",
   description:
-    "Get in touch with DTC Youth Policy Lab. We work with researchers, journalists, policymakers, and teenagers who want to do this work. Email us at hello@dtcpolicylab.org.",
+    "Get in touch with DTC Youth Policy Lab. We work with researchers, journalists, policymakers, and teenagers who want to do this work. Email us at hello@dynamicteencoalition.com.",
 };
 
 export default function ContactPage() {

@@ -110,15 +110,14 @@ export default function About7() {
           className="flex flex-col gap-3 max-w-2xl mb-12 sm:mb-16"
         >
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--sun-gold)]">
-            The team
+            Leadership team
           </p>
           <h2 className="text-4xl sm:text-5xl font-bold text-foreground tracking-tight leading-tight">
-            High schoolers <Highlight>doing the work</Highlight> adults keep
-            promising to include us in.
+            The people <Highlight>leading the work.</Highlight>
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground">
-            A small, globally distributed team that founded the lab in 2026,
-            building on the Dynamic Teen Coalition's work at the UN since 2022.
+            A globally distributed leadership team building the lab in 2026,
+            on top of the Dynamic Teen Coalition&apos;s work at the UN since 2022.
           </p>
         </motion.div>
 

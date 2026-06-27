@@ -16,7 +16,7 @@ import { AboutFounders } from "@/components/blocks/about-founders";
 export const metadata: Metadata = {
   title: "About Us · DTC Youth Policy Lab",
   description:
-    "DTC Youth Policy Lab is a fully teen-led research organisation putting high school students at the centre of global digital-policy work. Founded at the 2022 UN IGF in Ethiopia, headquartered in Singapore.",
+    "DTC Youth Policy Lab is a fully teen-led research organisation putting high school students at the centre of global digital-policy work. Founded at the IGF in 2023 in Kyoto, headquartered in Singapore.",
 };
 
 export default function AboutPage() {
@@ -39,7 +39,7 @@ export default function AboutPage() {
             <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed">
               A fully teen-led research lab putting young people into the global
               digital-policy pipeline: as the researchers, not just the
-              subjects. Founded at the 2022 UN IGF in Ethiopia. Headquartered in
+              subjects. Founded at the IGF in 2023 in Kyoto. Headquartered in
               Singapore.
             </p>
           </div>

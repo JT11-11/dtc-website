@@ -117,7 +117,7 @@ export default function About7() {
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground">
             A globally distributed leadership team building the lab in 2026,
-            on top of the Dynamic Teen Coalition&apos;s work at the UN since 2022.
+            on top of the Dynamic Teen Coalition&apos;s work at the UN since the IGF in 2023 in Kyoto.
           </p>
         </motion.div>
 

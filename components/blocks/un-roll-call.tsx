@@ -17,9 +17,9 @@ interface RollCallEntry {
 
 const ENTRIES: RollCallEntry[] = [
   {
-    year: "2022",
+    year: "2023",
     venue: "Internet Governance Forum",
-    place: "Ethiopia",
+    place: "Kyoto",
     note: "Invited by the UN IGF Secretariat to establish the Dynamic Teen Coalition, the first teen-led coalition at the Internet Governance Forum.",
   },
   {

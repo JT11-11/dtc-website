@@ -78,7 +78,10 @@ export function AboutDtc() {
   return (
     <section ref={sectionRef} id="mission" className="bg-background pb-24 lg:pb-32">
       <div className="px-6 sm:px-12 lg:px-24 flex flex-col items-center max-w-360 2xl:max-w-450 3xl:max-w-550 mx-auto">
-        <div ref={imageRef} className="relative aspect-21/9 lg:aspect-3/1 w-full overflow-hidden rounded-full mb-16">
+        <div
+          ref={imageRef}
+          className="relative mb-16 w-full min-h-[220px] aspect-[4/3] overflow-hidden rounded-2xl sm:min-h-[280px] sm:aspect-[16/10] sm:rounded-3xl lg:min-h-[360px] lg:aspect-[2/1] lg:rounded-[2rem]"
+        >
           <Image
             src="/images/un/flags-duo.jpg"
             alt="DTC members at the United Nations flag row in New York"

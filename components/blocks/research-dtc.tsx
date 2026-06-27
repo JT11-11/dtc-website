@@ -342,7 +342,6 @@ function ProjectItem({ project, index, onHover, onClick }: { project: Project; i
             </div>
           </div>
           <div className={`flex flex-col md:w-2/5 ${isEven ? "" : "md:text-right"}`}>
-            <span className="text-base font-medium uppercase tracking-widest text-muted-foreground mb-6">0{index + 1}</span>
             <h3 ref={titleRef} className="text-[clamp(2.5rem,6vw,6rem)] font-bold leading-[1.05] tracking-tight text-foreground mb-8">
               <span className="block">{project.titleUp}</span>
               <span className="block font-serif italic font-normal">{project.titleDown}</span>

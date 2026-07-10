@@ -115,13 +115,13 @@ export function ImpactDtc() {
                 className="object-cover"
               />
             </div>
-            <div className="relative flex-1 w-full overflow-hidden rounded-full">
+            <div className="relative flex-1 w-full overflow-hidden rounded-2xl">
               <Image
-                src="/images/un/official-meeting.jpg"
+                src="/images/un/Wittner-article109.png"
                 alt="DTC members meeting a UN official at United Nations Headquarters"
                 fill
                 sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw"
-                className="object-cover"
+                className="object-cover object-center"
               />
             </div>
           </div>

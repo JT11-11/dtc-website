@@ -37,7 +37,7 @@ const VALUES: ValueItem[] = [
     title: "Grounded",
     heading: "Social media as survival infrastructure.",
     description:
-      "For LGBTQ+ youth in hostile homes, low-income students without other networks, and teenagers navigating mental health crises, online spaces aren't entertainment. Restricting them isn't protective. Our research is grounded in that reality, not in moral panic.",
+      "For marginalized youth in hostile homes, low-income students without other networks, and teenagers navigating mental health crises, online spaces aren't entertainment. Restricting them isn't protective. Our research is grounded in that reality, not in moral panic.",
   },
 ];
 

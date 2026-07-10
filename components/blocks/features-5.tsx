@@ -8,9 +8,9 @@ import { Highlight } from "@/components/ui/highlight";
 const features = [
   {
     icon: Heart,
-    title: "LGBTQ+ Youth",
+    title: "Marginalized Youth",
     description:
-      "For many queer teens, social media is their only access to community, affirmation, and crisis resources, particularly in unsupportive homes or conservative regions.",
+      "For many marginalized teens, social media is their only access to community, affirmation, and crisis resources, particularly in unsupportive homes or conservative regions.",
   },
   {
     icon: AlertTriangle,

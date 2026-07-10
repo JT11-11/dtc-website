@@ -5,10 +5,8 @@ import { Highlight } from "@/components/ui/highlight";
 // Real clips from /public/videos - captured moments of DTC distributing its
 // printed briefs and engaging delegates at the UN, not staged productions.
 const videos = [
-  { src: "/videos/outreach-1.mp4", label: "Putting the brief in their hands" },
-  { src: "/videos/IMG_3402.mp4", label: "Reaching delegations on the floor" },
-  { src: "/videos/IMG_3403.mp4", label: "Conversations between sessions" },
-  { src: "/videos/IMG_3407.mp4", label: "Making the case in person" },
+  { src: "/videos/IMG_3426.mp4", label: "Hisham at the UN" },
+  { src: "/videos/IMG_3428.mp4", label: "Hisham in conversation" },
 ];
 
 export function OutreachVideos() {
@@ -26,7 +24,7 @@ export function OutreachVideos() {
           captured moments from DTC out in the field.
         </p>
 
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 gap-4">
           {videos.map((video, i) => (
             <div
               key={i}

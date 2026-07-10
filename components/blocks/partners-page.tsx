@@ -13,18 +13,6 @@ const partners = [
     linkLabel: "Visit Swayam Initiative",
   },
   {
-    name: "PERME",
-    region: "MENA Region",
-    description:
-      "PERME shares our commitment to rigorous, data-driven policy research. Our collaboration has focused on building shared research infrastructure and databases that both organizations can use to inform advocacy and policy recommendations at regional and international levels.",
-    databases: [
-      {
-        label: "Research Tracker",
-        href: "https://docs.google.com/spreadsheets/d/1zHiw7h_BNnXkTRnvXF-Ov8QYzRTmdVR-j0HwA5AWBos/edit?gid=0#gid=0",
-      },
-    ],
-  },
-  {
     name: "3 Primitives",
     region: "Foundational Framework",
     description:
@@ -49,7 +37,7 @@ export function PartnersPage() {
         fairer internet for young people.
       </p>
 
-      <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl">
         {partners.map((partner) => (
           <div
             key={partner.name}
@@ -80,18 +68,6 @@ export function PartnersPage() {
                   <ArrowUpRight className="w-4 h-4" />
                 </a>
               )}
-              {partner.databases?.map((db) => (
-                <a
-                  key={db.label}
-                  href={db.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-border text-foreground text-sm font-medium hover:bg-card transition-colors"
-                >
-                  {db.label}
-                  <ArrowUpRight className="w-4 h-4" />
-                </a>
-              ))}
             </div>
           </div>
         ))}

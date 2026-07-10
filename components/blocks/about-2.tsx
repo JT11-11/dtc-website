@@ -29,13 +29,13 @@ interface About2Props {
 const TIMELINE_DATA: TimelineEntry[] = [
   {
     id: 1,
-    year: "2023",
+    year: "2022",
     short: "Founded",
     title: "Founded at the UN IGF",
     highlight: "first teen-led coalition",
     place: "Internet Governance Forum · Kyoto",
     description:
-      "At the invitation of the IGF Secretariat, the Dynamic Teen Coalition was established at the 2023 UN Internet Governance Forum in Kyoto: the first teen-led coalition at the IGF.",
+      "At the invitation of the IGF Secretariat, the Dynamic Teen Coalition was established at the 2022 UN Internet Governance Forum in Kyoto: the first teen-led coalition at the IGF.",
     image: "/images/un/group.jpg",
   },
   {

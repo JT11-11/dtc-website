@@ -148,14 +148,44 @@ interface Project {
 const projects: Project[] = [
   {
     id: "1",
-    titleUp: "Global Teen",
-    titleDown: "Restriction Database",
-    image: "/images/un/hlpf.jpg",
-    description: "Mapping internet censorship targeting minors across 40+ countries",
+    titleUp: "Social Media Restrictions &",
+    titleDown: "Marginalized Youth Isolation",
+    image: "/images/un/official-meeting.jpg",
+    description: "Examining how blanket platform restrictions affect the teenagers who depend on these spaces most",
     imagePosition: [0.76, 0.28],
   },
-  { id: "2", titleUp: "LGBTQ+ Youth", titleDown: "Online Safety", image: "/images/un/official-meeting.jpg", description: "Examining digital spaces and platform policies for queer teens" },
-  { id: "3", titleUp: "Platform Governance", titleDown: "& Youth Rights", image: "/images/un/ga-hall.jpg", description: "How Big Tech shapes the digital rights of the next generation" },
+  {
+    id: "2",
+    titleUp: "Global Teen",
+    titleDown: "Restriction Database",
+    image: "/images/un/coalitionUN.png",
+    description: "Mapping internet censorship targeting minors across 40+ countries",
+    imagePosition: [0.5, 0.5],
+  },
+  {
+    id: "3",
+    titleUp: "Youth Access Barriers in",
+    titleDown: "Global Governance",
+    image: "/images/un/ga-hall.jpg",
+    description: "Documenting structural barriers preventing youth participation in international governance",
+    imagePosition: [0.5, 0.5],
+  },
+  {
+    id: "4",
+    titleUp: "ADCI Restriction",
+    titleDown: "Audit",
+    image: "/images/un/window.jpg",
+    description: "Interactive globe-view tool mapping restriction data across jurisdictions",
+    imagePosition: [0.5, 0.5],
+  },
+  {
+    id: "5",
+    titleUp: "Digital Trade",
+    titleDown: "Hack 2026",
+    image: "/images/un/conf-room.jpg",
+    description: "Award-winning prototype applying digital-governance research to regtech challenges",
+    imagePosition: [0.5, 0.5],
+  },
 ];
 
 function ProjectOverlay({ project, onClose }: { project: Project | null; onClose: () => void }) {
@@ -169,8 +199,6 @@ function ProjectOverlay({ project, onClose }: { project: Project | null; onClose
     window.addEventListener("keydown", handleEscape);
     return () => window.removeEventListener("keydown", handleEscape);
   }, [onClose]);
-
-  const isComingSoon = project?.id === "2";
 
   return (
     <AnimatePresence>
@@ -197,18 +225,6 @@ function ProjectOverlay({ project, onClose }: { project: Project | null; onClose
               }
             />
             <div className="absolute inset-0 bg-black/40" />
-            {isComingSoon && (
-              <div className="absolute inset-0 flex items-center justify-center">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: 0.2 }}
-                  className="text-center"
-                >
-                  <p className="text-white text-xl sm:text-2xl md:text-3xl font-bold">Coming Soon</p>
-                </motion.div>
-              </div>
-            )}
           </motion.div>
           <motion.div
             className="absolute left-4 top-4 z-10 sm:left-6 sm:top-6 md:left-12 md:top-12 lg:left-16 lg:top-16"
@@ -325,7 +341,7 @@ function ProjectItem({ project, index, onHover, onClick }: { project: Project; i
         <div className={`flex flex-col gap-8 ${isEven ? "md:flex-row" : "md:flex-row-reverse"} md:items-center md:gap-16`}>
           <div
             ref={imageContainerRef}
-            className="relative aspect-4/3 w-full overflow-hidden rounded-full md:w-3/5"
+            className="relative aspect-4/3 w-full overflow-hidden rounded-2xl md:w-3/5"
             onMouseMove={handleMouseMove}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}

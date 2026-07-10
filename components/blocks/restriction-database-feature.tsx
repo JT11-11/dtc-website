@@ -48,8 +48,8 @@ export function RestrictionDatabaseFeature() {
                       onClick={() => setIsOpen(false)}
                       className="flex items-center gap-2 px-3 py-2 text-sm text-popover-foreground hover:bg-muted transition-colors"
                     >
-                      <span className="font-medium">Globe View</span>
-                      <span className="text-xs text-muted-foreground">adciaudit.base44.app</span>
+                      <span className="font-medium">ADCI Restriction Audit</span>
+                      <span className="text-xs text-muted-foreground">Interactive globe view</span>
                     </Link>
                     <Link
                       href="https://docs.google.com/spreadsheets/d/1zHiw7h_BNnXkTRnvXF-Ov8QYzRTmdVR-j0HwA5AWBos/edit?gid=0#gid=0"
@@ -58,7 +58,7 @@ export function RestrictionDatabaseFeature() {
                       onClick={() => setIsOpen(false)}
                       className="flex items-center gap-2 px-3 py-2 text-sm text-popover-foreground hover:bg-muted transition-colors"
                     >
-                      <span className="font-medium">Spreadsheet View</span>
+                      <span className="font-medium">Full Database</span>
                       <span className="text-xs text-muted-foreground">Google Sheets</span>
                     </Link>
                   </div>

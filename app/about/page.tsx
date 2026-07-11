@@ -12,7 +12,7 @@ import { OutreachVideos } from "@/components/blocks/outreach-videos";
 import { Highlight } from "@/components/ui/highlight";
 import { Features5 } from "@/components/blocks/features-5";
 import { AboutFounders } from "@/components/blocks/about-founders";
-import { FileDown } from "lucide-react";
+import { YearlyReports } from "@/components/blocks/yearly-reports";
 
 export const metadata: Metadata = {
   title: "About Us · DTC Youth Policy Lab",
@@ -51,6 +51,9 @@ export default function AboutPage() {
 
         <Features5 />
 
+        {/* Yearly reports */}
+        <YearlyReports />
+
         {/* Timeline */}
         <About2 displayNavigation={true} />
 
@@ -62,41 +65,6 @@ export default function AboutPage() {
 
         {/* Team */}
         <About7 />
-
-        {/* Yearly Reports */}
-        <section className="w-full py-16 sm:py-20 px-6 sm:px-8 lg:px-12 bg-background">
-          <div className="max-w-[1400px] mx-auto">
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--sun-gold)] mb-4">
-              Reports
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground mb-6">
-              Yearly Reports
-            </h2>
-            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl leading-relaxed mb-8">
-              Our annual reports document our research, UN engagement, and growth as a youth-led policy lab.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <a
-                href="/reports/Dynamic Teen Coalition Yearly Wrap 2025.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[var(--sun-gold)] text-white text-sm font-semibold hover:scale-[1.03] transition-transform"
-              >
-                <FileDown className="w-4 h-4" />
-                2025 Yearly Wrap
-              </a>
-              <a
-                href="/reports/2025 DTC Mid Year Brief.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-border text-foreground text-sm font-medium hover:bg-card transition-colors"
-              >
-                <FileDown className="w-4 h-4" />
-                2025 Mid Year Brief
-              </a>
-            </div>
-          </div>
-        </section>
 
         {/* UN photos */}
         <AboutField />

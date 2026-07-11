@@ -5,6 +5,8 @@ import { Highlight } from "@/components/ui/highlight";
 // Real clips from /public/videos - captured moments of DTC distributing its
 // printed briefs and engaging delegates at the UN, not staged productions.
 const videos = [
+  { src: "/videos/IMG_3403.mp4", label: "Conversations between sessions" },
+  { src: "/videos/IMG_3407.mp4", label: "Making the case in person" },
   { src: "/videos/IMG_3426.mp4", label: "Hisham at the UN" },
   { src: "/videos/IMG_3428.mp4", label: "Hisham in conversation" },
 ];

@@ -114,31 +114,6 @@ export function FooterDtc() {
 
           <div className="flex flex-col sm:flex-row gap-16 lg:gap-24">
             <div>
-              <h4 className="text-xs font-semibold uppercase tracking-widest text-background/50 mb-6">Location</h4>
-              <div className="mb-5">
-                <p className="font-medium mb-1">Singapore</p>
-                <p className="text-background/60 text-sm">Est. 2026</p>
-              </div>
-              <div>
-                <p className="font-medium mb-1">Global Network</p>
-                <p className="text-background/60 text-sm">
-                  Fully Remote
-                </p>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="text-xs font-semibold uppercase tracking-widest text-background/50 mb-6">Focus Areas</h4>
-              <ul className="space-y-4">
-                <li><span className="text-background">Digital Rights</span></li>
-                <li><span className="text-background">Youth Privacy</span></li>
-                <li><span className="text-background">Platform Governance</span></li>
-                <li><span className="text-background">Social Media Restrictions</span></li>
-                <li><span className="text-background">Global Monitoring</span></li>
-              </ul>
-            </div>
-
-            <div>
               <h4 className="text-xs font-semibold uppercase tracking-widest text-background/50 mb-6">Navigation</h4>
               <ul className="space-y-4">
                 {navLinks.map((link) => (

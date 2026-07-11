@@ -3,6 +3,8 @@
 /* eslint-disable */
 
 import { useEffect, useRef, useLayoutEffect, useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useOverlay } from "@/lib/overlay-context";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -143,6 +145,9 @@ interface Project {
   image: string;
   description: string;
   imagePosition?: [number, number];
+  href?: string;
+  ctaLabel?: string;
+  preferPhoto?: boolean;
 }
 
 const projects: Project[] = [
@@ -158,9 +163,12 @@ const projects: Project[] = [
     id: "2",
     titleUp: "Global Teen",
     titleDown: "Restriction Database",
-    image: "/images/un/coalitionUN.png",
+    image: "/images/un/hlpf.jpg",
     description: "Mapping internet censorship targeting minors across 40+ countries",
-    imagePosition: [0.5, 0.5],
+    imagePosition: [0.58, 0.32],
+    href: "/work/database",
+    ctaLabel: "Explore the Database",
+    preferPhoto: true,
   },
   {
     id: "3",
@@ -188,7 +196,13 @@ const projects: Project[] = [
   },
 ];
 
-function ProjectOverlay({ project, onClose }: { project: Project | null; onClose: () => void }) {
+function ProjectOverlay({
+  project,
+  onClose,
+}: {
+  project: Project | null;
+  onClose: () => void;
+}) {
   useEffect(() => {
     document.body.style.overflow = project ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
@@ -237,6 +251,15 @@ function ProjectOverlay({ project, onClose }: { project: Project | null; onClose
               <span className="block">{project.titleUp}</span>
               <span className="block font-serif italic font-normal">{project.titleDown}</span>
             </h2>
+            {project.href && project.ctaLabel && (
+              <Link
+                href={project.href}
+                onClick={onClose}
+                className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-white/90"
+              >
+                {project.ctaLabel}
+              </Link>
+            )}
           </motion.div>
           <motion.div
             className="absolute right-4 top-4 z-20 sm:right-6 sm:top-6 md:right-12 md:top-12 lg:right-16 lg:top-16"
@@ -262,7 +285,17 @@ function ProjectOverlay({ project, onClose }: { project: Project | null; onClose
   );
 }
 
-function ProjectItem({ project, index, onHover, onClick }: { project: Project; index: number; onHover: (isHovering: boolean) => void; onClick: () => void }) {
+function ProjectItem({
+  project,
+  index,
+  onHover,
+  onClick,
+}: {
+  project: Project;
+  index: number;
+  onHover: (isHovering: boolean) => void;
+  onClick: () => void;
+}) {
   const containerRef = useRef<HTMLDivElement>(null);
   const imageContainerRef = useRef<HTMLDivElement>(null);
   const canvasWrapperRef = useRef<HTMLDivElement>(null);
@@ -298,8 +331,18 @@ function ProjectItem({ project, index, onHover, onClick }: { project: Project; i
     scaleYTo.current?.(value);
   };
 
-  const handleMouseEnter = () => { onHover(true); setImageScale(1.22); };
-  const handleMouseLeave = () => { onHover(false); xTo.current?.(0); yTo.current?.(0); setImageScale(1.15); };
+  const handleMouseEnter = () => {
+    onHover(true);
+    if (!project.preferPhoto) setImageScale(1.22);
+  };
+  const handleMouseLeave = () => {
+    onHover(false);
+    if (!project.preferPhoto) {
+      xTo.current?.(0);
+      yTo.current?.(0);
+      setImageScale(1.15);
+    }
+  };
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -341,21 +384,43 @@ function ProjectItem({ project, index, onHover, onClick }: { project: Project; i
         <div className={`flex flex-col gap-8 ${isEven ? "md:flex-row" : "md:flex-row-reverse"} md:items-center md:gap-16`}>
           <div
             ref={imageContainerRef}
-            className="relative aspect-4/3 w-full overflow-hidden rounded-2xl md:w-3/5"
-            onMouseMove={handleMouseMove}
+            className="relative aspect-4/3 w-full overflow-hidden rounded-full md:w-3/5"
+            onMouseMove={project.preferPhoto ? undefined : handleMouseMove}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <div
-              ref={canvasWrapperRef}
-              className="absolute inset-0 w-full h-full preserve-3d-scale"
-            >
-              <WaterRipple
-                src={project.image}
-                maskRadius={maskRadius}
-                imagePosition={project.imagePosition}
-              />
-            </div>
+            {project.preferPhoto ? (
+              <div className="absolute inset-0 overflow-hidden rounded-full border border-border/60 bg-muted shadow-sm">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={project.image}
+                  alt={`${project.titleUp} ${project.titleDown}`}
+                  className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                  style={
+                    project.imagePosition
+                      ? {
+                          objectPosition: `${project.imagePosition[0] * 100}% ${project.imagePosition[1] * 100}%`,
+                        }
+                      : undefined
+                  }
+                />
+                <div
+                  className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-[var(--un-blue)]/10"
+                  aria-hidden
+                />
+              </div>
+            ) : (
+              <div
+                ref={canvasWrapperRef}
+                className="absolute inset-0 w-full h-full preserve-3d-scale"
+              >
+                <WaterRipple
+                  src={project.image}
+                  maskRadius={maskRadius}
+                  imagePosition={project.imagePosition}
+                />
+              </div>
+            )}
           </div>
           <div className={`flex flex-col md:w-2/5 ${isEven ? "" : "md:text-right"}`}>
             <h3 ref={titleRef} className="text-[clamp(2.5rem,6vw,6rem)] font-bold leading-[1.05] tracking-tight text-foreground mb-8">
@@ -365,6 +430,30 @@ function ProjectItem({ project, index, onHover, onClick }: { project: Project; i
             <p ref={descRef} className={`text-muted-foreground text-xl leading-relaxed ${isEven ? "max-w-lg" : "max-w-lg md:ml-auto"}`}>
               {project.description}
             </p>
+            {project.href && project.ctaLabel && (
+              <Link
+                href={project.href}
+                onClick={(e) => e.stopPropagation()}
+                className={`mt-8 inline-flex w-fit items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-[var(--un-blue)]/40 hover:text-[var(--un-blue)] ${isEven ? "" : "md:ml-auto"}`}
+              >
+                {project.ctaLabel}
+                <svg
+                  width="16"
+                  height="16"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={1.5}
+                    d="M7 17L17 7M17 7H7M17 7V17"
+                  />
+                </svg>
+              </Link>
+            )}
           </div>
         </div>
       </div>
@@ -373,12 +462,17 @@ function ProjectItem({ project, index, onHover, onClick }: { project: Project; i
 }
 
 export function ResearchDtc() {
+  const router = useRouter();
   const [isCursorVisible, setIsCursorVisible] = useState(false);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const { setIsOverlayOpen } = useOverlay();
 
   const handleProjectClick = (project: Project) => {
     setIsCursorVisible(false);
+    if (project.href) {
+      router.push(project.href);
+      return;
+    }
     setSelectedProject(project);
     setIsOverlayOpen(true);
   };

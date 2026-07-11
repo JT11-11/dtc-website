@@ -52,14 +52,12 @@ export function RestrictionDatabaseFeature() {
                       <span className="text-xs text-muted-foreground">Interactive globe view</span>
                     </Link>
                     <Link
-                      href="https://docs.google.com/spreadsheets/d/1zHiw7h_BNnXkTRnvXF-Ov8QYzRTmdVR-j0HwA5AWBos/edit?gid=0#gid=0"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href="/work/database"
                       onClick={() => setIsOpen(false)}
                       className="flex items-center gap-2 px-3 py-2 text-sm text-popover-foreground hover:bg-muted transition-colors"
                     >
-                      <span className="font-medium">Full Database</span>
-                      <span className="text-xs text-muted-foreground">Google Sheets</span>
+                      <span className="font-medium">Spreadsheet View</span>
+                      <span className="text-xs text-muted-foreground">Database</span>
                     </Link>
                   </div>
                 </>

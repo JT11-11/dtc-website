@@ -32,18 +32,6 @@ export default function WorkPage() {
               Not position papers. Not youth summits. Peer-reviewed research and
               systematic databases built to stand up in policy rooms.
             </p>
-            <p className="mt-4 text-base text-muted-foreground">
-              Core infrastructure built with{" "}
-              <a
-                href="https://3primitives.io/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground underline underline-offset-4 decoration-foreground/40 hover:decoration-foreground transition-colors"
-              >
-                3 Primitives
-              </a>
-              .
-            </p>
           </div>
         </section>
 

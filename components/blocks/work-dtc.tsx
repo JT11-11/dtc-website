@@ -82,7 +82,7 @@ const workItems: WorkItem[] = [
     type: "Community Tool",
     status: "Live · by Aditya",
     summary:
-      "An interactive globe-view tool mapping ADCI restriction data, built by community contributor Aditya. Provides a visual interface for exploring the restriction landscape, building on DTC's open dataset.",
+      "An interactive globe-view tool mapping ADCI restriction data, built by Executive Director Aditya. Provides a visual interface for exploring the restriction landscape, building on DTC's open dataset.",
     whyItMatters:
       "Community tools that build on DTC's data validate the downstream value of systematic, open data collection. The ADCI Audit demonstrates how DTC's restriction dataset enables independent researchers and builders to create new forms of accountability.",
     cta: { label: "Open the Audit", href: "https://adciaudit.base44.app/GlobeView" },

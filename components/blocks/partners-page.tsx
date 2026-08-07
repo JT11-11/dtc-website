@@ -12,14 +12,6 @@ const partners = [
     link: "https://policy-mena-path.base44.app/",
     linkLabel: "Visit Swayam Initiative",
   },
-  {
-    name: "3 Primitives",
-    region: "Foundational Framework",
-    description:
-      "Core research and infrastructure built in collaboration with 3 Primitives, advancing the foundation of our policy work — including formal governance frameworks that underpin how we analyse youth exclusion from digital policy.",
-    link: "https://3primitives.io/",
-    linkLabel: "Visit 3 Primitives",
-  },
 ];
 
 export function PartnersPage() {

@@ -16,7 +16,7 @@ interface TeamMember {
 const team: TeamMember[] = [
   {
     name: "Aditya Majumdar",
-    role: "Research Lead, Social Media Bans",
+    role: "Executive Director",
     country: "United States",
     image: "/images/team/aditya.jpg",
     contribution:
@@ -48,11 +48,11 @@ const team: TeamMember[] = [
   },
   {
     name: "Lương Long Giang",
-    role: "Primitives Lead",
+    role: "Music Lead",
     country: "Vietnam / United States",
     image: "/images/team/tini.jpg",
     contribution:
-      "Leading the 3 Primitives collaboration and composed DTC's 2026 theme music.",
+      "Composed DTC's 2026 theme music.",
   },
   {
     name: "Hisham Abdul Hafeez Jamali",

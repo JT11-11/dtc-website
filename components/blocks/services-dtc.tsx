@@ -30,10 +30,10 @@ function SplitText({ children }: { children: string }) {
 }
 
 const services = [
-  { id: 1, title: "Digital Rights Research", href: "/work" },
-  { id: 2, title: "Platform Governance", href: "/work" },
-  { id: 3, title: "Youth Privacy Advocacy", href: "/about" },
-  { id: 4, title: "Social Media Ban Research", href: "/work" },
+  { id: 1, title: "Youth-led Research", href: "/work" },
+  { id: 2, title: "Public-interest Analysis", href: "/work" },
+  { id: 3, title: "Civic Education & Advocacy", href: "/about" },
+  { id: 4, title: "Ideas into Action", href: "/contact" },
 ];
 
 function ServiceItem({ title, href, index }: { title: string; href: string; index: number }) {
@@ -253,7 +253,7 @@ export function ServicesDtc() {
           ref={titleRef}
           className="text-center text-[clamp(2.5rem,7vw,7rem)] font-bold leading-[1.1] tracking-tight text-foreground max-w-350"
         >
-          <SplitText>Youth-led research shaping the rules of the digital world.</SplitText>
+          <SplitText>Youth-led research making sense of the world and changing it.</SplitText>
         </h2>
       </div>
 

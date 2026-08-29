@@ -1,12 +1,46 @@
 "use client";
 
+import { useCallback, useRef } from "react";
 import { Highlight } from "@/components/ui/highlight";
+
+const youtubeEmbed = "https://www.youtube.com/embed/l8QCTR9W0dk?start=2931&rel=0&modestbranding=1&playsinline=1";
+
+function YouTubeCard({ label, embedUrl }: { label: string; embedUrl: string }) {
+  const iframeRef = useRef<HTMLIFrameElement | null>(null);
+
+  const handleLoad = useCallback(() => {
+    const iframe = iframeRef.current;
+    if (!iframe || !iframe.contentWindow) return;
+
+    iframe.contentWindow.postMessage(
+      JSON.stringify({ event: "command", func: "setPlaybackRate", args: [0.9] }),
+      "*",
+    );
+  }, []);
+
+  return (
+    <div className="relative overflow-hidden rounded-2xl bg-muted aspect-[9/16]">
+      <iframe
+        ref={iframeRef}
+        src={embedUrl}
+        title={label}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+        onLoad={handleLoad}
+        className="h-full w-full"
+      />
+      <p className="absolute bottom-0 left-0 right-0 px-4 py-3 text-sm font-medium text-white bg-gradient-to-t from-black/60 to-transparent pointer-events-none">
+        {label}
+      </p>
+    </div>
+  );
+}
 
 // Real clips from /public/videos - captured moments of DTC distributing its
 // printed briefs and engaging delegates at the UN, not staged productions.
 const videos = [
-  { src: "/videos/IMG_3403.mp4", label: "Conversations between sessions" },
-  { src: "/videos/IMG_3407.mp4", label: "Making the case in person" },
+  { kind: "youtube", label: "Making the case in person", embedUrl: "https://www.youtube.com/embed/7NsyYwT0-E4?rel=0&modestbranding=1&playsinline=1" },
+  { kind: "youtube", label: "Hackathon", embedUrl: youtubeEmbed },
   { src: "/videos/IMG_3426.mp4", label: "Hisham at the UN" },
   { src: "/videos/IMG_3428.mp4", label: "Hisham in conversation" },
 ];
@@ -32,17 +66,23 @@ export function OutreachVideos() {
               key={i}
               className="relative overflow-hidden rounded-2xl bg-muted aspect-[9/16]"
             >
-              <video
-                src={video.src}
-                controls
-                muted
-                playsInline
-                preload="metadata"
-                className="w-full h-full object-cover"
-              />
-              <p className="absolute bottom-0 left-0 right-0 px-4 py-3 text-sm font-medium text-white bg-gradient-to-t from-black/60 to-transparent pointer-events-none">
-                {video.label}
-              </p>
+              {video.kind === "youtube" ? (
+                <YouTubeCard label={video.label} embedUrl={video.embedUrl ?? youtubeEmbed} />
+              ) : (
+                <>
+                  <video
+                    src={video.src}
+                    controls
+                    muted
+                    playsInline
+                    preload="metadata"
+                    className="w-full h-full object-cover"
+                  />
+                  <p className="absolute bottom-0 left-0 right-0 px-4 py-3 text-sm font-medium text-white bg-gradient-to-t from-black/60 to-transparent pointer-events-none">
+                    {video.label}
+                  </p>
+                </>
+              )}
             </div>
           ))}
         </div>

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s · DTC Youth Policy Lab",
   },
   description:
-    "A fully teen-led digital youth policy research lab. Putting teens at the table, not just on the agenda.",
+    "A youth-led nonprofit think tank working across issues that matter to young people, from technology and media to governance, rights, and policy work.",
   icons: {
     icon: [{ url: "/images/brand/youth-policy-lab-emblem.png", type: "image/png" }],
     apple: [{ url: "/images/brand/youth-policy-lab-emblem.png", type: "image/png" }],

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Navigation9 from "@/components/blocks/navigation-9";
-import Stats11 from "@/components/blocks/stats-11";
 import About7 from "@/components/blocks/about-7";
 import About2 from "@/components/blocks/about-2";
 import About4 from "@/components/blocks/about-4";
@@ -17,7 +16,7 @@ import { YearlyReports } from "@/components/blocks/yearly-reports";
 export const metadata: Metadata = {
   title: "About Us · DTC Youth Policy Lab",
   description:
-    "DTC Youth Policy Lab is a fully teen-led research organisation putting high school students at the centre of global digital-policy work. Founded in 2022, headquartered in Singapore.",
+    "DTC Youth Policy Lab is a USA-based, remote-first youth-led nonprofit think tank working internationally. Young people lead research, public-interest projects, and policy work that responds to the issues affecting their lives.",
 };
 
 export default function AboutPage() {
@@ -34,20 +33,18 @@ export default function AboutPage() {
               About DTC Youth Policy Lab
             </p>
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground leading-[1.0] max-w-4xl">
-              Teen-led policy work.{" "}
-              <Highlight>Not youth-washing.</Highlight>
+              Young people doing the work.{" "}
+              <Highlight>Not just being consulted.</Highlight>
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-              A fully teen-led research lab putting young people into the global
-              digital-policy pipeline: as the researchers, not just the
-              subjects. Founded in 2022. Headquartered in
-              Singapore.
+              A youth-led nonprofit think tank working across the issues shaping
+              young people&apos;s lives through policy research, public conversation,
+              and practical action. We build useful public knowledge and help turn
+              ideas into action. Founded in 2022 in the USA, working
+              internationally and remotely.
             </p>
           </div>
         </section>
-
-        {/* Stats */}
-        <Stats11 />
 
         <Features5 />
 
@@ -76,9 +73,9 @@ export default function AboutPage() {
         <CTA1
           headingLine1="Join the people"
           headingLine2="closing the gap."
-          description="We're looking for high schoolers who want to do rigorous research. Policymakers, researchers, and journalists: we'd love to talk."
-          primaryLabel="Join the Lab"
-          primaryHref="/contact"
+          description="We're looking for young people who want to research, create, and contribute to work that matters. Researchers, educators, journalists, and community partners: we'd love to talk."
+          primaryLabel="Apply to Work With Us"
+          primaryHref="https://docs.google.com/forms/d/e/1FAIpQLSd4g0qwbKTAwuC0ZDQ5jiJkL4EX8IJD2gjG78amCRCTo5MJug/viewform?usp=sharing&ouid=107113160450238823877"
           secondaryLabel="Read our research"
           secondaryHref="/work"
         />

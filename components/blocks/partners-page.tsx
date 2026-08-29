@@ -3,16 +3,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { Highlight } from "@/components/ui/highlight";
 
-const partners = [
-  {
-    name: "Swayam Initiative",
-    region: "Research Partner",
-    description:
-      "Swayam Initiative works to build policy literacy and civic engagement across the Middle East and North Africa. We connected through shared goals around youth voice in governance, and have been collaborating on how young people can shape the digital policy landscape in their communities.",
-    link: "https://policy-mena-path.base44.app/",
-    linkLabel: "Visit Swayam Initiative",
-  },
-];
+const partners = [];
 
 export function PartnersPage() {
   return (
@@ -24,9 +15,9 @@ export function PartnersPage() {
         Who we <Highlight>work with.</Highlight>
       </h1>
       <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-        Good policy research doesn&apos;t happen in isolation. These are the
+        Youth-led work doesn&apos;t happen in isolation. These are the
         organizations we collaborate with on research, outreach, and building a
-        fairer internet for young people.
+        fairer future for young people.
       </p>
 
       <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl">

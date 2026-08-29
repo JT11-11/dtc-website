@@ -48,11 +48,11 @@ const team: TeamMember[] = [
   },
   {
     name: "Lương Long Giang",
-    role: "Music Lead",
+    role: "Outreach & Community",
     country: "Vietnam / United States",
     image: "/images/team/tini.jpg",
     contribution:
-      "Composed DTC's 2026 theme music.",
+      "Supports DTC's outreach and community engagement with young people and collaborators.",
   },
   {
     name: "Hisham Abdul Hafeez Jamali",

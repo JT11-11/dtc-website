@@ -3,9 +3,6 @@
 /* eslint-disable */
 
 import { useEffect, useRef, useLayoutEffect, useState } from "react";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { useOverlay } from "@/lib/overlay-context";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
@@ -16,77 +13,10 @@ import {
   useMotionValue,
   useVelocity,
   useAnimationFrame,
-  AnimatePresence,
 } from "motion/react";
-import { WaterRipple } from "@/components/water-ripple";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
-}
-
-function BlobCursor({ isVisible }: { isVisible: boolean }) {
-  const blobRef = useRef<HTMLDivElement>(null);
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-  const smoothX = useSpring(mouseX, { damping: 30, stiffness: 400, mass: 0.2 });
-  const smoothY = useSpring(mouseY, { damping: 30, stiffness: 400, mass: 0.2 });
-  const velocityX = useVelocity(smoothX);
-  const velocityY = useVelocity(smoothY);
-
-  const speed = useTransform(() => Math.sqrt(velocityX.get() ** 2 + velocityY.get() ** 2));
-  const scaleAlongMotion = useTransform(speed, [0, 800, 2000], [1, 1.3, 1.6]);
-  const scalePerp = useTransform(speed, [0, 800, 2000], [1, 0.8, 0.65]);
-  const rotate = useTransform(() => Math.atan2(velocityY.get(), velocityX.get()) * (180 / Math.PI));
-
-  useEffect(() => {
-    let rafId: number | null = null;
-    let lastX = 0, lastY = 0;
-    const handleMouseMove = (e: MouseEvent) => {
-      lastX = e.clientX;
-      lastY = e.clientY;
-      if (rafId === null) {
-        rafId = requestAnimationFrame(() => {
-          mouseX.set(lastX);
-          mouseY.set(lastY);
-          rafId = null;
-        });
-      }
-    };
-    window.addEventListener("mousemove", handleMouseMove, { passive: true });
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-      if (rafId !== null) cancelAnimationFrame(rafId);
-    };
-  }, [mouseX, mouseY]);
-
-  return (
-    <motion.div
-      ref={blobRef}
-      className="pointer-events-none fixed z-50 flex items-center justify-center"
-      style={{ left: smoothX, top: smoothY, x: "-50%", y: "-50%" }}
-      initial={{ opacity: 0, scale: 0 }}
-      animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0 }}
-      transition={{ opacity: { duration: 0.3, ease: "easeOut" }, scale: { duration: 0.3, ease: [0.34, 1.56, 0.64, 1] } }}
-    >
-      <motion.div style={{ rotate }}>
-        <motion.div
-          className="flex h-20 w-20 items-center justify-center rounded-full bg-foreground"
-          style={{ scaleX: scaleAlongMotion, scaleY: scalePerp }}
-        >
-          <motion.span
-            className="text-sm font-medium uppercase tracking-wide text-background"
-            style={{
-              rotate: useTransform(rotate, (r) => -r),
-              scaleX: useTransform(scaleAlongMotion, (s) => 1 / s),
-              scaleY: useTransform(scalePerp, (s) => 1 / s),
-            }}
-          >
-            Open
-          </motion.span>
-        </motion.div>
-      </motion.div>
-    </motion.div>
-  );
 }
 
 function useElementWidth<T extends HTMLElement>(ref: React.RefObject<T | null>): number {
@@ -142,12 +72,7 @@ interface Project {
   id: string;
   titleUp: string;
   titleDown: string;
-  image: string;
   description: string;
-  imagePosition?: [number, number];
-  href?: string;
-  ctaLabel?: string;
-  preferPhoto?: boolean;
 }
 
 const projects: Project[] = [
@@ -155,194 +80,44 @@ const projects: Project[] = [
     id: "1",
     titleUp: "Social Media Restrictions &",
     titleDown: "Marginalized Youth Isolation",
-    image: "/images/un/official-meeting.jpg",
     description: "Examining how blanket platform restrictions affect the teenagers who depend on these spaces most",
-    imagePosition: [0.76, 0.28],
   },
   {
     id: "2",
     titleUp: "Global Teen",
     titleDown: "Restriction Database",
-    image: "/images/un/hlpf.jpg",
     description: "Mapping internet censorship targeting minors across 40+ countries",
-    imagePosition: [0.58, 0.32],
-    href: "/work/database",
-    ctaLabel: "Explore the Database",
-    preferPhoto: true,
   },
   {
     id: "3",
     titleUp: "Youth Access Barriers in",
     titleDown: "Global Governance",
-    image: "/images/un/ga-hall.jpg",
     description: "Documenting structural barriers preventing youth participation in international governance",
-    imagePosition: [0.5, 0.5],
   },
   {
     id: "4",
     titleUp: "ADCI Restriction",
     titleDown: "Audit",
-    image: "/images/un/window.jpg",
     description: "Interactive globe-view tool mapping restriction data across jurisdictions",
-    imagePosition: [0.5, 0.5],
   },
   {
     id: "5",
     titleUp: "Digital Trade",
     titleDown: "Hack 2026",
-    image: "/images/un/conf-room.jpg",
     description: "Award-winning prototype applying digital-governance research to regtech challenges",
-    imagePosition: [0.5, 0.5],
   },
 ];
-
-function ProjectOverlay({
-  project,
-  onClose,
-}: {
-  project: Project | null;
-  onClose: () => void;
-}) {
-  useEffect(() => {
-    document.body.style.overflow = project ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
-  }, [project]);
-
-  useEffect(() => {
-    const handleEscape = (e: KeyboardEvent) => e.key === "Escape" && onClose();
-    window.addEventListener("keydown", handleEscape);
-    return () => window.removeEventListener("keydown", handleEscape);
-  }, [onClose]);
-
-  return (
-    <AnimatePresence>
-      {project && (
-        <motion.div className="fixed inset-0 z-[100]" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }}>
-          <motion.div
-            className="absolute inset-0"
-            initial={{ scale: 1.1 }}
-            animate={{ scale: 1 }}
-            exit={{ scale: 1.05 }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={project.image}
-              alt={`${project.titleUp} ${project.titleDown}`}
-              className="h-full w-full object-cover"
-              style={
-                project.imagePosition
-                  ? {
-                      objectPosition: `${project.imagePosition[0] * 100}% ${project.imagePosition[1] * 100}%`,
-                    }
-                  : undefined
-              }
-            />
-            <div className="absolute inset-0 bg-black/40" />
-          </motion.div>
-          <motion.div
-            className="absolute left-4 top-4 z-10 sm:left-6 sm:top-6 md:left-12 md:top-12 lg:left-16 lg:top-16"
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -20 }}
-            transition={{ duration: 0.4, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <h2 className="text-[clamp(2rem,8vw,6rem)] font-bold leading-[0.95] tracking-tight text-white">
-              <span className="block">{project.titleUp}</span>
-              <span className="block font-serif italic font-normal">{project.titleDown}</span>
-            </h2>
-            {project.href && project.ctaLabel && (
-              <Link
-                href={project.href}
-                onClick={onClose}
-                className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-white/90"
-              >
-                {project.ctaLabel}
-              </Link>
-            )}
-          </motion.div>
-          <motion.div
-            className="absolute right-4 top-4 z-20 sm:right-6 sm:top-6 md:right-12 md:top-12 lg:right-16 lg:top-16"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.8 }}
-            transition={{ duration: 0.3, delay: 0.1 }}
-          >
-            <button
-              onClick={onClose}
-              className="flex h-12 w-12 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-sm transition-all hover:bg-white/30 hover:scale-110 active:scale-95 md:h-14 md:w-14"
-              aria-label="Close overlay"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <line x1="18" y1="6" x2="6" y2="18" />
-                <line x1="6" y1="6" x2="18" y2="18" />
-              </svg>
-            </button>
-          </motion.div>
-        </motion.div>
-      )}
-    </AnimatePresence>
-  );
-}
 
 function ProjectItem({
   project,
   index,
-  onHover,
-  onClick,
 }: {
   project: Project;
   index: number;
-  onHover: (isHovering: boolean) => void;
-  onClick: () => void;
 }) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const imageContainerRef = useRef<HTMLDivElement>(null);
-  const canvasWrapperRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const descRef = useRef<HTMLParagraphElement>(null);
-  const [maskRadius, setMaskRadius] = useState(0);
-  const isEven = index % 2 === 0;
-
-  const xTo = useRef<gsap.QuickToFunc | null>(null);
-  const yTo = useRef<gsap.QuickToFunc | null>(null);
-  const scaleXTo = useRef<gsap.QuickToFunc | null>(null);
-  const scaleYTo = useRef<gsap.QuickToFunc | null>(null);
-
-  useEffect(() => {
-    if (!canvasWrapperRef.current) return;
-    xTo.current = gsap.quickTo(canvasWrapperRef.current, "x", { duration: 0.8, ease: "power3.out" });
-    yTo.current = gsap.quickTo(canvasWrapperRef.current, "y", { duration: 0.8, ease: "power3.out" });
-    scaleXTo.current = gsap.quickTo(canvasWrapperRef.current, "scaleX", { duration: 0.6, ease: "power2.out" });
-    scaleYTo.current = gsap.quickTo(canvasWrapperRef.current, "scaleY", { duration: 0.6, ease: "power2.out" });
-  }, []);
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const rect = imageContainerRef.current?.getBoundingClientRect();
-    if (!rect || !xTo.current || !yTo.current) return;
-    const x = (e.clientX - rect.left) / rect.width - 0.5;
-    const y = (e.clientY - rect.top) / rect.height - 0.5;
-    xTo.current(-x * 30);
-    yTo.current(-y * 30);
-  };
-
-  const setImageScale = (value: number) => {
-    scaleXTo.current?.(value);
-    scaleYTo.current?.(value);
-  };
-
-  const handleMouseEnter = () => {
-    onHover(true);
-    if (!project.preferPhoto) setImageScale(1.22);
-  };
-  const handleMouseLeave = () => {
-    onHover(false);
-    if (!project.preferPhoto) {
-      xTo.current?.(0);
-      yTo.current?.(0);
-      setImageScale(1.15);
-    }
-  };
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -350,110 +125,30 @@ function ProjectItem({
     gsap.set(title, { y: 60, opacity: 0 });
     gsap.set(desc, { y: 40, opacity: 0 });
 
-    const maskTl = gsap.timeline({
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "top 80%",
-        end: "top -20%",
-        scrub: 1.5,
-        invalidateOnRefresh: true,
-        onUpdate: (self) => setMaskRadius(self.progress * 1200),
-        onLeaveBack: () => setMaskRadius(0),
-      },
-    });
-    maskTl.to({}, { duration: 1 });
-
     const textTl = gsap.timeline({
       scrollTrigger: { trigger: containerRef.current, start: "top 50%", toggleActions: "play none none reverse" },
     });
     textTl.to(title, { y: 0, opacity: 1, duration: 1, ease: "power3.out" })
       .to(desc, { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" }, "-=0.6");
 
-    return () => { maskTl.kill(); textTl.kill(); };
+    return () => textTl.kill();
   }, []);
 
   return (
     <div
       ref={containerRef}
-      className="group cursor-pointer py-16 md:py-24"
-      onClick={onClick}
-      onMouseEnter={() => onHover(true)}
-      onMouseLeave={() => onHover(false)}
+      className="border-t border-border py-12 first:border-t-0 md:py-16"
     >
       <div className="mx-auto max-w-360 px-6 sm:px-12 lg:px-24 2xl:max-w-450 3xl:max-w-550">
-        <div className={`flex flex-col gap-8 ${isEven ? "md:flex-row" : "md:flex-row-reverse"} md:items-center md:gap-16`}>
-          <div
-            ref={imageContainerRef}
-            className="relative aspect-4/3 w-full overflow-hidden rounded-full md:w-3/5"
-            onMouseMove={project.preferPhoto ? undefined : handleMouseMove}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          >
-            {project.preferPhoto ? (
-              <div className="absolute inset-0 overflow-hidden rounded-full border border-border/60 bg-muted shadow-sm">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={project.image}
-                  alt={`${project.titleUp} ${project.titleDown}`}
-                  className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
-                  style={
-                    project.imagePosition
-                      ? {
-                          objectPosition: `${project.imagePosition[0] * 100}% ${project.imagePosition[1] * 100}%`,
-                        }
-                      : undefined
-                  }
-                />
-                <div
-                  className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-[var(--un-blue)]/10"
-                  aria-hidden
-                />
-              </div>
-            ) : (
-              <div
-                ref={canvasWrapperRef}
-                className="absolute inset-0 w-full h-full preserve-3d-scale"
-              >
-                <WaterRipple
-                  src={project.image}
-                  maskRadius={maskRadius}
-                  imagePosition={project.imagePosition}
-                />
-              </div>
-            )}
-          </div>
-          <div className={`flex flex-col md:w-2/5 ${isEven ? "" : "md:text-right"}`}>
+        <div className="flex flex-col gap-4 md:flex-row md:items-baseline md:justify-between md:gap-16">
+          <div className="flex flex-col md:w-2/5">
             <h3 ref={titleRef} className="text-[clamp(2.5rem,6vw,6rem)] font-bold leading-[1.05] tracking-tight text-foreground mb-8">
               <span className="block">{project.titleUp}</span>
               <span className="block font-serif italic font-normal">{project.titleDown}</span>
             </h3>
-            <p ref={descRef} className={`text-muted-foreground text-xl leading-relaxed ${isEven ? "max-w-lg" : "max-w-lg md:ml-auto"}`}>
+            <p ref={descRef} className="text-muted-foreground text-xl leading-relaxed md:w-3/5">
               {project.description}
             </p>
-            {project.href && project.ctaLabel && (
-              <Link
-                href={project.href}
-                onClick={(e) => e.stopPropagation()}
-                className={`mt-8 inline-flex w-fit items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-[var(--un-blue)]/40 hover:text-[var(--un-blue)] ${isEven ? "" : "md:ml-auto"}`}
-              >
-                {project.ctaLabel}
-                <svg
-                  width="16"
-                  height="16"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  aria-hidden
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1.5}
-                    d="M7 17L17 7M17 7H7M17 7V17"
-                  />
-                </svg>
-              </Link>
-            )}
           </div>
         </div>
       </div>
@@ -462,30 +157,8 @@ function ProjectItem({
 }
 
 export function ResearchDtc() {
-  const router = useRouter();
-  const [isCursorVisible, setIsCursorVisible] = useState(false);
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const { setIsOverlayOpen } = useOverlay();
-
-  const handleProjectClick = (project: Project) => {
-    setIsCursorVisible(false);
-    if (project.href) {
-      router.push(project.href);
-      return;
-    }
-    setSelectedProject(project);
-    setIsOverlayOpen(true);
-  };
-
-  const handleClose = () => {
-    setSelectedProject(null);
-    setIsOverlayOpen(false);
-  };
-
   return (
     <section id="research" className="projects bg-background relative py-24">
-      <BlobCursor isVisible={isCursorVisible} />
-      <ProjectOverlay project={selectedProject} onClose={handleClose} />
       <div className="pb-16">
         <VelocityText baseVelocity={80} className="text-[clamp(4rem,12vw,14rem)] font-bold tracking-tight text-foreground uppercase px-8">
           Research <span className="font-serif italic font-normal">& Policy</span>&nbsp;
@@ -493,7 +166,7 @@ export function ResearchDtc() {
       </div>
       <div className="flex flex-col">
         {projects.map((project, index) => (
-          <ProjectItem key={project.id} project={project} index={index} onHover={setIsCursorVisible} onClick={() => handleProjectClick(project)} />
+          <ProjectItem key={project.id} project={project} index={index} />
         ))}
       </div>
     </section>

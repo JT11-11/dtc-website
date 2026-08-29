@@ -9,7 +9,7 @@ import { Highlight } from "@/components/ui/highlight";
 export const metadata: Metadata = {
   title: "Contact · DTC Youth Policy Lab",
   description:
-    "Get in touch with DTC Youth Policy Lab. We work with researchers, journalists, policymakers, and teenagers who want to do this work. Email us at hello@dynamicteencoalition.com.",
+    "Get in touch with DTC Youth Policy Lab, a youth-led nonprofit think tank. We work with young people, researchers, journalists, educators, and community partners.",
 };
 
 export default function ContactPage() {
@@ -28,9 +28,9 @@ export default function ContactPage() {
               Let&apos;s <Highlight>talk.</Highlight>
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-              We&apos;re a team of high schoolers doing serious policy research.
+              We&apos;re a youth-led team doing serious public-interest work.
               We don&apos;t have a PR department. If you email us, an actual
-              researcher will write back.
+              person from the community will write back.
             </p>
           </div>
         </section>
@@ -38,12 +38,12 @@ export default function ContactPage() {
         <ContactUsDtc />
         <CTA1
           headingLine1="Not ready to email?"
-          headingLine2="Start in Discord."
-          description="Our Discord is where the actual work happens: research discussions, draft reviews, UN process updates. Teens, researchers, and interested adults all welcome."
-          primaryLabel="Join Discord"
-          primaryHref="https://discord.gg/EGg4jpP4Sk"
-          secondaryLabel="Read our research"
-          secondaryHref="/work"
+          headingLine2="Join the work."
+          description="Apply to work with DTC through our application form, or join the Discord community to meet people, exchange ideas, and hear about opportunities."
+          primaryLabel="Apply to Work With Us"
+          primaryHref="https://docs.google.com/forms/d/e/1FAIpQLSd4g0qwbKTAwuC0ZDQ5jiJkL4EX8IJD2gjG78amCRCTo5MJug/viewform?usp=sharing&ouid=107113160450238823877"
+          secondaryLabel="Join the Community"
+          secondaryHref="https://discord.gg/EGg4jpP4Sk"
         />
       </main>
       <FooterDtc />

@@ -13,19 +13,19 @@ const audiences = [
   },
   {
     title: "Policymaker or institutional partner",
-    desc: "We engage with governance bodies, digital rights organisations, and academic institutions. We're happy to brief, collaborate, or provide evidence for specific policy processes.",
+    desc: "We work with community groups, governance bodies, nonprofits, and academic institutions. We're happy to collaborate, share evidence, or build a project together.",
     blob: "rgba(168,139,250,0.85)",
     href: "mailto:hello@dynamicteencoalition.com",
   },
   {
     title: "Teenager who wants to do this work",
-    desc: "If you're a high schooler interested in doing serious digital policy research (not a summer programme, not a certificate), join our community and build real experience.",
+    desc: "If you're a young person interested in doing serious research and public-interest work (not a summer programme, not a certificate), join our community and build real experience.",
     blob: "rgba(52,211,153,0.85)",
     href: "https://discord.gg/EGg4jpP4Sk",
   },
   {
-    title: "Digital rights or civil society",
-    desc: "Working on platform governance, youth rights, or internet freedom? We're actively looking for partners who want evidence behind their advocacy. Let's talk.",
+    title: "Nonprofit or civil society partner",
+    desc: "Working on an issue that affects young people? We're looking for partners who want youth-led evidence, ideas, and participation behind their work. Let's talk.",
     blob: "rgba(251,191,36,0.85)",
     href: "mailto:hello@dynamicteencoalition.com",
   },

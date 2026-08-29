@@ -10,7 +10,7 @@ import { RestrictionDatabaseFeature } from "@/components/blocks/restriction-data
 export const metadata: Metadata = {
   title: "Our Work · DTC Youth Policy Lab",
   description:
-    "Peer-reviewed research and systematic databases from DTC Youth Policy Lab, including the Global Teen Restriction Database and original research on how blanket restrictions affect marginalised youth, under review at Taylor & Francis.",
+    "Research, databases, and public-interest projects from DTC Youth Policy Lab, a youth-led nonprofit think tank. Explore work on youth participation, public policy, governance, and more.",
 };
 
 export default function WorkPage() {
@@ -29,8 +29,8 @@ export default function WorkPage() {
               What we <Highlight>actually build.</Highlight>
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-              Not position papers. Not youth summits. Peer-reviewed research and
-              systematic databases built to stand up in policy rooms.
+              Not just opinions. Research, projects, and public knowledge built
+              by young people to stand up in the real world.
             </p>
           </div>
         </section>
@@ -41,7 +41,7 @@ export default function WorkPage() {
         <CTA1
           headingLine1="Use our data."
           headingLine2="Build better policy."
-          description="Our research is built to be used by journalists, advocates, academics, and policymakers. Get in touch if you want to cite our work, collaborate on a study, or access the database."
+          description="Our work is built to be used by journalists, advocates, academics, communities, and institutions. Get in touch if you want to cite our work, collaborate on a project, or access the database."
           primaryLabel="Get in Touch"
           primaryHref="/contact"
           secondaryLabel="About DTC"

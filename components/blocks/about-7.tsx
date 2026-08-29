@@ -62,6 +62,14 @@ const team: TeamMember[] = [
     contribution:
       "Leads DTC's publication pipeline, preparing research and policy outputs for release.",
   },
+  {
+    name: "Hunthavi Vipassana",
+    role: "Deputy Head of Publications",
+    country: "India",
+    image: "/images/team/hunthavi.svg",
+    contribution:
+      "Works with Hisham leading the publications and outputs of the organization.",
+  },
 ];
 
 function TeamCard({ member, index }: { member: TeamMember; index: number }) {

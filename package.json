@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "postinstall": "node -e \"const fs=require('fs'); const path=require('path'); const dir=path.join(process.cwd(),'public','static'); fs.mkdirSync(dir,{recursive:true}); const src=require.resolve('@lottiefiles/dotlottie-web/dist/dotlottie-player.wasm'); const dst=path.join(dir,'dotlottie-player.wasm'); fs.copyFileSync(src,dst);\""
+    "postinstall": "node -e \"const fs=require('fs'); const path=require('path'); const dir=path.join(process.cwd(),'public','static'); fs.mkdirSync(dir,{recursive:true}); const packageEntry=require.resolve('@lottiefiles/dotlottie-web'); const src=path.join(path.dirname(packageEntry),'dotlottie-player.wasm'); const dst=path.join(dir,'dotlottie-player.wasm'); fs.copyFileSync(src,dst);\""
   },
   "dependencies": {
     "@base-ui/react": "^1.4.1",

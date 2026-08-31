@@ -3,7 +3,15 @@
 import { ArrowUpRight } from "lucide-react";
 import { Highlight } from "@/components/ui/highlight";
 
-const partners = [];
+type Partner = {
+  name: string;
+  region: string;
+  description: string;
+  link?: string;
+  linkLabel?: string;
+};
+
+const partners: Partner[] = [];
 
 export function PartnersPage() {
   return (

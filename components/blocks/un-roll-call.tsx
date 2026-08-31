@@ -43,8 +43,8 @@ const ENTRIES: RollCallEntry[] = [
   {
     year: "2026",
     venue: "Youth Policy Lab",
-    place: "Headquartered in Singapore",
-    note: "DTC evolves into a teen-led policy research lab, turning years of presence in the room into rigorous, sourced research.",
+    place: "USA-based · international and remote",
+    note: "DTC evolves into a USA-based, remote-first youth-led nonprofit think tank, turning years of youth participation into rigorous, sourced research.",
   },
 ];
 
@@ -65,7 +65,7 @@ export function UnRollCall() {
           <Highlight>in the room.</Highlight>
         </h2>
         <p className="mt-5 max-w-2xl text-base sm:text-lg text-muted-foreground leading-relaxed">
-          A record of where teenagers showed up in global digital-policy
+          A record of where teenagers showed up in global policy and governance
           processes, and what happened when they did.
         </p>
 

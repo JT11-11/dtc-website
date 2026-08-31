@@ -105,11 +105,11 @@ const workItems: WorkItem[] = [
     number: "07",
     title: "Technology-Facilitated",
     titleItalic: "Gender-Based Violence",
-    type: "Research Article",
+    type: "Op-Ed",
     status: "Work in progress",
     workInProgress: true,
     summary:
-      "A research article examining Technology-Facilitated Gender-Based Violence (TFGBV) and its policy dimensions. Currently in development ahead of submission for peer review.",
+      "An op-ed examining Technology-Facilitated Gender-Based Violence (TFGBV) and its policy dimensions. Currently in development.",
     whyItMatters:
       "Platform-enabled gender-based violence is one of the most rapidly escalating harms in digital policy. DTC's article contributes youth-researcher analysis to a field where most published work comes from outside the generation most affected.",
   },
@@ -119,25 +119,41 @@ const workItems: WorkItem[] = [
     title: "TFGBV",
     titleItalic: "4P Commentary",
     type: "Commentary",
-    status: "Work in progress",
-    workInProgress: true,
+    status: "Completed",
     summary:
       "A commentary applying the 4P framework to Technology-Facilitated Gender-Based Violence (TFGBV), examining how the framework maps onto platform-mediated harm and where it requires adaptation for the digital context.",
     whyItMatters:
-      "Policy frameworks travel faster than the evidence base. Commentary that maps standard tools onto new harm types helps policymakers apply existing instruments more precisely — and flags where structural gaps make new frameworks necessary.",
+      "Policy frameworks travel faster than the evidence base. Commentary that maps standard tools onto new harm types helps policymakers apply existing instruments more precisely and flags where structural gaps make new frameworks necessary.",
+    cta: {
+      label: "Read the Commentary",
+      href: "https://docs.google.com/document/d/1hXdePXGfxR-1x1_eRtlfgBHP_tDF2hA_V2DDEkJ7PJg/edit?usp=sharing",
+    },
   },
   {
     id: "social-media-policy-paper",
     number: "09",
-    title: "Social Media",
-    titleItalic: "Legislative Policy Paper",
-    type: "Policy Paper",
-    status: "Work in progress",
-    workInProgress: true,
+    title: "The Case for Statutory Regulation as the",
+    titleItalic: "Preferred Governance Model for Social Media Platforms",
+    type: "Policy Paper · Preprint",
+    status: "Preprint · Under review at Taylor & Francis (Social Sciences)",
     summary:
-      "A policy paper examining current social media legislation from a youth digital-rights perspective. Currently in development — tracking the accelerating legislative landscape across key jurisdictions.",
+      "A 10-page preprint by Hisham Jamali, Hunthavi Vipassana, and Tejas Karusala, posted on SSRN on August 7, 2026 and written July 28, 2026. The paper makes the normative and objective case for statutory regulation as the preferred way to govern social media platforms, arguing that it fits the economic realities of a free market, prevents unlawful censorship, and creates a unified regulatory framework. Keywords: Social Media, Internet Policy, Digital Governance, Statutory Regulation.",
     whyItMatters:
-      "Policy papers give policymakers structured, evidence-based analysis they can cite in briefings and legislative debate. A youth-led paper on fast-moving social media law fills a gap that opinion pieces alone cannot — rigorous argument grounded in DTC's research.",
+      "The paper recommends strong roles for intergovernmental institutions and international law, an international court of arbitration, and a digital-rights statutory court to resolve disputes among users, platforms, and governments. It condemns blanket social-media bans and extremely strong regulation while proposing principles for better policy design. These recommendations offer policymakers a structured alternative to fragmented platform governance and overbroad restrictions.",
+    cta: { label: "Read the Preprint", href: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7198900" },
+  },
+  {
+    id: "icc-prosecutorial-patterns",
+    number: "10",
+    title: "Prosecutorial Patterns at the ICC:",
+    titleItalic: "Trigger Mechanisms, Geography, and Case Outcomes",
+    type: "Research Paper",
+    status: "Completed · SSRN preprint",
+    summary:
+      "A 23-page study by Aditya Majumdar, posted on SSRN on August 15, 2026 and written August 12, 2026. The paper analyzes all 75 defendant-proceedings involving 74 unique individuals indicted by the International Criminal Court between 2005 and 2026, examining geography, trigger mechanisms, alleged crimes, and case outcomes. Using web-scraped data cross-verified with official court records, it investigates the pattern of African cases and accusations of anti-African bias. Keywords: International Law, International Criminal Court, Selective Justice, Geopolitics, African Bias in ICC.",
+    whyItMatters:
+      "The study finds that 78.7% of proceedings originate from African states, while the largest number of African cases were initiated through state referrals tied with UN Security Council referrals. A chi-square analysis finds a statistically significant relationship between how a case reaches the ICC and its eventual outcome (χ² = 38.42, p < 0.001, Cramer's V = 0.41). It also finds that 40% of defendants remain at large, rising to 87.5% for non-African cases, offering a data-based contribution to debates about ICC selectivity, geopolitics, and accountability.",
+    cta: { label: "Read the Paper", href: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7274078" },
   },
 ];
 

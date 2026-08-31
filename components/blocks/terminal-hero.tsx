@@ -46,7 +46,7 @@ export function TerminalHero() {
           transition={{ duration: 0.7, delay: 0.4 }}
           className="mb-5 text-xs sm:text-sm font-semibold uppercase tracking-[0.28em] text-[var(--sun-gold)] drop-shadow"
         >
-          Dynamic Teen Coalition · Youth Policy Lab
+          Dynamic Teen Coalition · Youth-led Think Tank
         </motion.p>
 
         {/* Headline */}
@@ -56,8 +56,8 @@ export function TerminalHero() {
           transition={{ duration: 0.8, delay: 0.55, ease: [0.22, 1, 0.36, 1] }}
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.04] max-w-4xl [text-shadow:_0_2px_14px_rgb(0_0_0_/_75%)]"
         >
-          Policy shaped by{" "}
-          <span className="text-[var(--un-blue)]">the people it affects most.</span>
+          Young people shaping{" "}
+          <span className="text-[var(--un-blue)]">what comes next.</span>
         </motion.h1>
 
         {/* Subtext */}
@@ -67,8 +67,9 @@ export function TerminalHero() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="mt-6 max-w-xl text-base sm:text-lg text-white/85 leading-relaxed font-medium drop-shadow-md"
         >
-          A fully teen-led research lab embedding youth directly into the global
-          digital-policy pipeline.{" "}
+          A youth-led nonprofit think tank turning lived experience into
+          research, public conversation, and practical change across policy work
+          and public-interest issues.{" "}
           <span className="font-serif italic font-normal text-white/95">
             At the table, not just on the agenda.
           </span>
@@ -82,10 +83,12 @@ export function TerminalHero() {
           className="mt-9 flex flex-wrap items-center justify-center gap-3"
         >
           <a
-            href="/contact"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSd4g0qwbKTAwuC0ZDQ5jiJkL4EX8IJD2gjG78amCRCTo5MJug/viewform?usp=sharing&ouid=107113160450238823877"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-full bg-[var(--sun-gold)] px-7 py-3 text-sm font-semibold text-black transition-transform duration-200 hover:scale-[1.03] hover:shadow-[0_8px_30px_-8px_rgba(168,116,42,0.45)]"
           >
-            Join the Lab
+            Apply to Work With Us
           </a>
           <a
             href="#research"

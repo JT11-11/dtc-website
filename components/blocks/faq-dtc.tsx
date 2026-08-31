@@ -13,15 +13,15 @@ if (typeof window !== "undefined") {
 const faqs = [
   {
     question: "What is DTC Youth Policy Lab?",
-    answer: "DTC Youth Policy Lab is a fully teen-led research organization focused on youth digital rights and the policies that govern young people's online lives. We conduct rigorous research to ensure youth voices are represented in global digital policy discussions.",
+    answer: "DTC Youth Policy Lab is a youth-led nonprofit think tank. Young people lead research, public-interest projects, and policy work across the issues that shape their lives, from rights and governance to digital systems and public conversation.",
   },
   {
     question: "Who can join?",
-    answer: "Any passionate teenager who is interested in digital rights, policy, research, or advocacy can apply to join our lab. We welcome members from diverse backgrounds and locations globally.",
+    answer: "Any passionate young person interested in research, public-interest work, civic life, or advocacy can apply to join our community. We welcome members from diverse backgrounds and locations globally.",
   },
   {
     question: "How does the research process work?",
-    answer: "Our research process is highly collaborative. Teams of teen researchers identify pressing issues, conduct qualitative and quantitative studies, review policy frameworks, and produce reports that are often submitted for peer review or directly shared with policymakers.",
+    answer: "Our research process is highly collaborative. Young researchers identify pressing issues, conduct qualitative and quantitative studies, investigate existing evidence, and produce work that can inform communities, institutions, and public debate.",
   },
   {
     question: "Do I need prior experience?",
@@ -29,7 +29,7 @@ const faqs = [
   },
   {
     question: "How does DTC influence real policy?",
-    answer: "We actively share our findings with policymakers, digital rights organizations, and tech companies. Our global teen restriction database and various reports provide concrete data that advocates use to shape legislation and platform guidelines.",
+    answer: "We share our findings with communities, journalists, researchers, institutions, and policymakers. Our projects turn young people's perspectives and evidence into resources that help others understand problems and act on them.",
   },
 ];
 

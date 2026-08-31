@@ -63,12 +63,12 @@ const TIMELINE_DATA: TimelineEntry[] = [
   {
     id: 4,
     year: "2026",
-    short: "Policy Lab",
-    title: "The Policy Lab launches",
+    short: "Think Tank",
+    title: "The youth-led think tank takes shape",
     highlight: "researchers, not subjects",
-    place: "Headquartered in Singapore · now",
+    place: "USA-based · international and remote · now",
     description:
-      "DTC evolves into a fully teen-led policy research lab, headquartered in Singapore. Our paper is under review at Taylor & Francis, turning years of presence in the room into rigorous, sourced research, so teens become the researchers, not just the subjects.",
+      "DTC grows into a USA-based, remote-first youth-led nonprofit think tank working internationally. Our research turns years of youth participation into rigorous, sourced work, so young people become the researchers and builders, not just the subjects.",
     image: "/images/un/ga-hall.jpg",
   },
 ];
@@ -131,7 +131,7 @@ export default function About2({ displayNavigation = true }: About2Props = {}) {
           <h2 className="mt-3 text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-foreground leading-[1.04] max-w-3xl">
             From a teen-led coalition to a{" "}
             <span className="font-serif italic font-normal text-[var(--bronze)]">
-              policy lab.
+              youth-led think tank.
             </span>
           </h2>
         </motion.div>

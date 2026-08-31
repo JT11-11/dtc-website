@@ -48,11 +48,11 @@ const team: TeamMember[] = [
   },
   {
     name: "Lương Long Giang",
-    role: "Music Lead",
+    role: "Outreach & Community",
     country: "Vietnam / United States",
     image: "/images/team/tini.jpg",
     contribution:
-      "Composed DTC's 2026 theme music.",
+      "Supports DTC's outreach and community engagement with young people and collaborators.",
   },
   {
     name: "Hisham Abdul Hafeez Jamali",
@@ -61,6 +61,14 @@ const team: TeamMember[] = [
     image: "/images/team/image.png",
     contribution:
       "Leads DTC's publication pipeline, preparing research and policy outputs for release.",
+  },
+  {
+    name: "Hunthavi Vipassana",
+    role: "Deputy Head of Publications",
+    country: "India",
+    image: "/images/team/hunthavi.svg",
+    contribution:
+      "Works with Hisham leading the publications and outputs of the organization.",
   },
 ];
 

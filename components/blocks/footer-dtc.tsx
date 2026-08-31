@@ -93,10 +93,12 @@ export function FooterDtc() {
 
         <div className="mt-10">
           <Link
-            href="/contact"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSd4g0qwbKTAwuC0ZDQ5jiJkL4EX8IJD2gjG78amCRCTo5MJug/viewform?usp=sharing&ouid=107113160450238823877"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-full bg-background text-foreground hover:bg-background/90 transition-colors ring-1 ring-background/30"
           >
-            Join the Lab
+            Apply to Work With Us
           </Link>
         </div>
       </div>
@@ -109,7 +111,7 @@ export function FooterDtc() {
         <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-8">
           <div className="pb-8 lg:pb-0 border-b lg:border-b-0 border-background/10">
             <span className="text-4xl font-bold tracking-tight">DTC Youth Policy Lab</span>
-            <p className="mt-4 text-background/60 text-2xl lg:text-4xl font-bold">Teen voices in the policy room.</p>
+            <p className="mt-4 text-background/60 text-2xl lg:text-4xl font-bold">Young people shaping what comes next.</p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-16 lg:gap-24">

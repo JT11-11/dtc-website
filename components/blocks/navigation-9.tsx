@@ -90,7 +90,7 @@ export default function Navigation9() {
               })}
             </div>
 
-            {/* Right: Discord CTA & Mobile Menu */}
+            {/* Right: Community CTA & Mobile Menu */}
             <div className="flex items-center gap-2 sm:gap-3 shrink-0">
               <a
                 href="https://discord.gg/EGg4jpP4Sk"
@@ -105,7 +105,7 @@ export default function Navigation9() {
                   height={14}
                   className="h-3.5 w-3.5 object-contain"
                 />
-                <span>Discord</span>
+                <span>Community</span>
               </a>
 
               <button

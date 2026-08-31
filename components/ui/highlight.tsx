@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
  * that ties every heading on the site to the brand (e.g. the gold phrase in
  * "Policy shaped by the people it affects most").
  *
- * Usage: <h1>Teen-led policy work. <Highlight>Not youth-washing.</Highlight></h1>
+ * Usage: <h1>Young people doing the work. <Highlight>Not just being consulted.</Highlight></h1>
  */
 export function Highlight({
   children,

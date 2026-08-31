@@ -40,7 +40,7 @@ export default function AboutPage() {
               A youth-led nonprofit think tank working across the issues shaping
               young people&apos;s lives through policy research, public conversation,
               and practical action. We build useful public knowledge and help turn
-              ideas into action. Founded in 2022 in the USA, working
+              ideas into action. Founded in 2023 in Ethiopia, working
               internationally and remotely.
             </p>
           </div>

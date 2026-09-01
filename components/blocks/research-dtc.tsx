@@ -131,7 +131,9 @@ function ProjectItem({
     textTl.to(title, { y: 0, opacity: 1, duration: 1, ease: "power3.out" })
       .to(desc, { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" }, "-=0.6");
 
-    return () => textTl.kill();
+    return () => {
+      textTl.kill();
+    };
   }, []);
 
   return (

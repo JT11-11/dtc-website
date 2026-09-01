@@ -29,13 +29,13 @@ interface About2Props {
 const TIMELINE_DATA: TimelineEntry[] = [
   {
     id: 1,
-    year: "2022",
+    year: "2023",
     short: "Founded",
-    title: "Founded at the UN IGF",
+    title: "Founded in Ethiopia",
     highlight: "first teen-led coalition",
-    place: "Internet Governance Forum · Kyoto",
+    place: "Ethiopia",
     description:
-      "At the invitation of the IGF Secretariat, the Dynamic Teen Coalition was established at the 2022 UN Internet Governance Forum in Kyoto: the first teen-led coalition at the IGF.",
+      "The Dynamic Teen Coalition was founded in Ethiopia in 2023, becoming the first teen-led coalition at the Internet Governance Forum.",
     image: "/images/un/group.jpg",
   },
   {

@@ -16,7 +16,7 @@ import { YearlyReports } from "@/components/blocks/yearly-reports";
 export const metadata: Metadata = {
   title: "About Us · DTC Youth Policy Lab",
   description:
-    "DTC Youth Policy Lab is a USA-based, remote-first youth-led nonprofit think tank working internationally. Young people lead research, public-interest projects, and policy work that responds to the issues affecting their lives.",
+    "DTC Youth Policy Lab is a USA-based, remote-first youth-led think tank working internationally. Young people lead research, public-interest projects, and policy work that responds to the issues affecting their lives.",
 };
 
 export default function AboutPage() {
@@ -37,7 +37,7 @@ export default function AboutPage() {
               <Highlight>Not just being consulted.</Highlight>
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-              A youth-led nonprofit think tank working across the issues shaping
+              A youth-led think tank working across the issues shaping
               young people&apos;s lives through policy research, public conversation,
               and practical action. We build useful public knowledge and help turn
               ideas into action. Founded in 2023 in Ethiopia, working

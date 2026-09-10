@@ -71,37 +71,32 @@ export function UnRollCall() {
 
         <ol className="mt-14 space-y-0">
           {ENTRIES.map((e, i) => (
-            <motion.li
+            <li
               key={`${e.year}-${e.venue}`}
-              initial={reduce ? false : { opacity: 0, y: 28 }}
-              whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{
-                duration: 0.55,
-                ease: [0.22, 1, 0.36, 1],
-                delay: reduce ? 0 : Math.min(i * 0.06, 0.3),
-              }}
               className="group grid grid-cols-1 gap-4 border-t border-border py-8 sm:grid-cols-[minmax(0,9rem)_1fr] sm:gap-10 last:border-b"
             >
               {/* Year numeral */}
               <div className="text-4xl sm:text-5xl font-bold tracking-tighter text-foreground/25 transition-colors duration-300 group-hover:text-[var(--un-blue)]">
                 {e.year}
               </div>
+
               {/* Entry */}
               <div>
                 <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
                   <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-foreground">
                     {e.venue}
                   </h3>
+
                   <span className="inline-flex items-center rounded-full border border-border bg-card px-2.5 py-0.5 text-xs font-medium text-muted-foreground">
                     {e.place}
                   </span>
                 </div>
+
                 <p className="mt-2 max-w-2xl text-base text-muted-foreground leading-relaxed">
                   {e.note}
                 </p>
               </div>
-            </motion.li>
+            </li>
           ))}
         </ol>
       </div>

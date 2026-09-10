@@ -239,3 +239,10 @@
   .grid-rows-0fr { grid-template-rows: 0fr; }
   .grid-rows-1fr { grid-template-rows: 1fr; }
 }
+
+body { /* i figured it would look best if the cursor was default for the body, but pointer for buttons and links */
+  cursor: default;
+  button, a, [role="button"] {
+    cursor: pointer;
+  }
+}

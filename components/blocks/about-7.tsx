@@ -66,7 +66,7 @@ const team: TeamMember[] = [
     name: "Hunthavi Vipassana",
     role: "Deputy Head of Publications",
     country: "India",
-    image: "/images/team/hunthavi.svg",
+    image: "/images/team/Hunthavi.webp",
     contribution:
       "Works with Hisham leading the publications and outputs of the organization.",
   },

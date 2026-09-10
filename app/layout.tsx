@@ -18,6 +18,7 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://dtcpolicylab.org"),
   applicationName: "DTC Youth Policy Lab",
   title: {
     default: "DTC Youth Policy Lab",
@@ -25,9 +26,37 @@ export const metadata: Metadata = {
   },
   description:
     "A youth-led nonprofit think tank working across issues that matter to young people, from technology and media to governance, rights, and policy work.",
+  keywords: [
+    "DTC Youth Policy Lab",
+    "youth policy",
+    "digital rights",
+    "technology policy",
+    "young people",
+    "public interest",
+    "global advocacy",
+  ],
   icons: {
     icon: [{ url: "/images/brand/youth-policy-lab-emblem.png", type: "image/png" }],
     apple: [{ url: "/images/brand/youth-policy-lab-emblem.png", type: "image/png" }],
+  },
+  openGraph: {
+    title: "DTC Youth Policy Lab",
+    description:
+      "A youth-led nonprofit think tank working across technology, media, governance, rights, and policy.",
+    url: "https://dtcpolicylab.org",
+    siteName: "DTC Youth Policy Lab",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DTC Youth Policy Lab",
+    description:
+      "A youth-led nonprofit think tank working across issues that matter to young people.",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

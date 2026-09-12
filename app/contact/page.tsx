@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import Navigation9 from "@/components/blocks/navigation-9";
 import { FooterDtc } from "@/components/blocks/footer-dtc";
 import { ContactUsDtc } from "@/components/blocks/contact-us-dtc";
+import { ContactForm } from "@/components/blocks/contact-form";
 import CTA1 from "@/components/blocks/cta-1";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { Highlight } from "@/components/ui/highlight";
+import { APPLY_FORM_URL, DISCORD_INVITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact · DTC Youth Policy Lab",
@@ -35,15 +37,16 @@ export default function ContactPage() {
           </div>
         </section>
 
+        <ContactForm />
         <ContactUsDtc />
         <CTA1
           headingLine1="Not ready to email?"
           headingLine2="Join the work."
           description="Apply to work with DTC through our application form, or join the Discord community to meet people, exchange ideas, and hear about opportunities."
           primaryLabel="Apply to Work With Us"
-          primaryHref="https://docs.google.com/forms/d/e/1FAIpQLSd4g0qwbKTAwuC0ZDQ5jiJkL4EX8IJD2gjG78amCRCTo5MJug/viewform?usp=sharing&ouid=107113160450238823877"
+          primaryHref={APPLY_FORM_URL}
           secondaryLabel="Join the Community"
-          secondaryHref="https://discord.gg/EGg4jpP4Sk"
+          secondaryHref={DISCORD_INVITE_URL}
         />
       </main>
       <FooterDtc />

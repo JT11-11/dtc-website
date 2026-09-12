@@ -41,7 +41,10 @@ export const COUNTRY_TO_ISO: Record<string, string> = {
   "New Zealand": "554",
   Norway: "578",
   Pakistan: "586",
-  Philipines: "608", // (sic) — CSV spelling; ISO 608 = Philippines
+  Philippines: "608",
+  // Legacy alias — the CSV previously misspelled this as "Philipines".
+  // Kept so old cached/edited CSVs still map instead of dropping to table-only.
+  Philipines: "608",
   Poland: "616",
   Portugal: "620",
   Singapore: "702",
@@ -89,7 +92,10 @@ export function isoForCountry(raw: string): string | null {
 
 export function normalizeStatus(raw: string): RestrictionStatus {
   const s = raw.trim().toLowerCase();
-  if (s.startsWith("pass")) return "Passed";
+  // CSV source-of-truth uses "Implemented" for enacted/in-force measures.
+  // That is the equivalent of "Passed" in the map legend + API.
+  if (s.startsWith("pass") || s.startsWith("implem") || s.startsWith("enact") || s.startsWith("in force") || s === "active")
+    return "Passed";
   if (s.startsWith("pend")) return "Pending";
   return "Proposed";
 }

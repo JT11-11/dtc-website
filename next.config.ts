@@ -47,6 +47,14 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  // Server routes read public/data/* with fs at runtime. File-tracing
+  // doesn't always pick those up for serverless bundles, so pin them:
+  // without this, /api/restrictions can 404 its dataset on Vercel.
+  outputFileTracingIncludes: {
+    "/api/restrictions": ["./public/data/restrictions.csv"],
+    "/api/search": ["./public/data/restrictions.csv"],
+    "/work/database": ["./public/data/restrictions.csv"],
+  },
   turbopack: {
     root: path.join(__dirname),
   },

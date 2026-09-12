@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useRef } from "react";
+import { useCallback, useRef, useState } from "react";
 import { Highlight } from "@/components/ui/highlight";
 
 const youtubeEmbed = "https://www.youtube.com/embed/l8QCTR9W0dk?start=2931&rel=0&modestbranding=1&playsinline=1";
@@ -45,6 +45,35 @@ const videos = [
   { src: "/videos/IMG_3428.mp4", label: "Hisham in conversation" },
 ];
 
+// Self-hosted clips are Git-LFS tracked, which Vercel's build clone does
+// not fetch — so they 404 in production until migrated to Vercel Blob or
+// similar (see docs/VERCEL.md). Degrade to a labeled tile instead of a
+// broken player when the file is missing.
+function LocalClip({ src, label }: { src: string; label: string }) {
+  const [failed, setFailed] = useState(false);
+  if (failed || !src) {
+    return (
+      <div className="flex h-full w-full flex-col items-center justify-center gap-2 p-6 text-center">
+        <p className="text-sm font-semibold text-foreground">{label}</p>
+        <p className="text-xs text-muted-foreground">
+          Clip unavailable in this deployment.
+        </p>
+      </div>
+    );
+  }
+  return (
+    <video
+      src={src}
+      controls
+      muted
+      playsInline
+      preload="metadata"
+      onError={() => setFailed(true)}
+      className="w-full h-full object-cover"
+    />
+  );
+}
+
 export function OutreachVideos() {
   return (
     <section className="w-full py-16 px-6 sm:px-8 lg:px-12 bg-background">
@@ -70,14 +99,7 @@ export function OutreachVideos() {
                 <YouTubeCard label={video.label} embedUrl={video.embedUrl ?? youtubeEmbed} />
               ) : (
                 <>
-                  <video
-                    src={video.src}
-                    controls
-                    muted
-                    playsInline
-                    preload="metadata"
-                    className="w-full h-full object-cover"
-                  />
+                  <LocalClip src={video.src ?? ""} label={video.label} />
                   <p className="absolute bottom-0 left-0 right-0 px-4 py-3 text-sm font-medium text-white bg-gradient-to-t from-black/60 to-transparent pointer-events-none">
                     {video.label}
                   </p>

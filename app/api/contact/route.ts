@@ -1,20 +1,30 @@
 import { type NextRequest, NextResponse } from "next/server";
 import { promises as fs } from "node:fs";
+import { randomUUID } from "node:crypto";
 import path from "node:path";
 import { CONTACT_EMAIL } from "@/lib/site";
-import { checkRateLimit, validateContact } from "@/lib/contact";
+import {
+  checkRateLimit,
+  contactQueueDir,
+  validateContact,
+} from "@/lib/contact";
 
 /**
  * POST /api/contact
  * Body: { name, email, topic, message, website? (honeypot) }
  *
  * Pipeline: honeypot → validation → rate limit → deliver.
- * Delivery today: Resend when RESEND_API_KEY (+ CONTACT_TO_EMAIL) is set,
- * otherwise the submission is appended to a gitignored local queue
- * (data/contact-queue/) for self-hosted/dev triage. Either way the client
+ * Delivery: Resend when RESEND_API_KEY (+ CONTACT_TO_EMAIL) is set,
+ * otherwise the submission lands in the local queue (gitignored
+ * data/contact-queue/, /tmp on Vercel) for triage. Either way the client
  * gets the same 200 response — never leak which path was taken.
+ *
+ * GET /api/contact — queued-submission inbox for triage. Requires
+ * CONTACT_ADMIN_TOKEN as `Authorization: Bearer <token>` or `?token=`.
+ * Returns 404 (as if nonexistent) when unconfigured or unauthorized.
  */
 export async function POST(request: NextRequest) {
+  const rid = randomUUID().slice(0, 8);
   let body: unknown;
   try {
     body = await request.json();
@@ -33,14 +43,16 @@ export async function POST(request: NextRequest) {
 
   // Bots fill the honeypot: pretend success, deliver nothing.
   if (input.website) {
+    console.log(`[contact:${rid}] honeypot trip, dropped`);
     return NextResponse.json({ ok: true });
   }
 
   const ip =
     request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ??
     "unknown";
-  const limit = checkRateLimit(`${ip}:${input.email.toLowerCase()}`);
+  const limit = await checkRateLimit(`${ip}:${input.email.toLowerCase()}`);
   if (!limit.allowed) {
+    console.log(`[contact:${rid}] rate-limited ${ip}`);
     return NextResponse.json(
       { error: "Too many messages. Please try again later." },
       {
@@ -69,7 +81,9 @@ export async function POST(request: NextRequest) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: process.env.CONTACT_FROM_EMAIL ?? `DTC Site <site@${new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://dtcpolicylab.org").hostname}>`,
+        from:
+          process.env.CONTACT_FROM_EMAIL ??
+          `DTC Site <site@${new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://dtcpolicylab.org").hostname}>`,
         to: [to],
         reply_to: input.email,
         subject: `[dtcpolicylab.org/${input.topic}] message from ${input.name}`,
@@ -77,23 +91,66 @@ export async function POST(request: NextRequest) {
       }),
     });
     if (!res.ok) {
-      console.error("[contact] Resend delivery failed:", await res.text());
+      console.error(
+        `[contact:${rid}] Resend delivery failed, queuing:`,
+        await res.text(),
+      );
       await queueLocally(record);
+    } else {
+      console.log(
+        `[contact:${rid}] delivered topic=${input.topic} from=${input.email}`,
+      );
     }
   } else {
+    if (process.env.VERCEL) {
+      console.warn(
+        `[contact:${rid}] no RESEND_API_KEY on Vercel — submission only queued to ephemeral /tmp (see docs/VERCEL.md)`,
+      );
+    }
     await queueLocally(record);
   }
 
   return NextResponse.json({ ok: true });
 }
 
+export async function GET(request: NextRequest) {
+  const token = process.env.CONTACT_ADMIN_TOKEN;
+  const auth = request.headers.get("authorization");
+  const provided = auth?.startsWith("Bearer ")
+    ? auth.slice(7)
+    : (request.nextUrl.searchParams.get("token") ?? "");
+  if (!token || provided !== token) {
+    return NextResponse.json({ error: "Not found." }, { status: 404 });
+  }
+  const dir = contactQueueDir();
+  let files: string[] = [];
+  try {
+    files = (await fs.readdir(dir))
+      .filter((f) => f.endsWith(".json"))
+      .sort()
+      .reverse()
+      .slice(0, 100);
+  } catch {
+    return NextResponse.json({ total: 0, items: [] });
+  }
+  const items: unknown[] = [];
+  for (const f of files) {
+    try {
+      items.push(JSON.parse(await fs.readFile(path.join(dir, f), "utf-8")));
+    } catch {
+      // Skip unreadable entries rather than failing the whole inbox.
+    }
+  }
+  return NextResponse.json({ total: items.length, items });
+}
+
 async function queueLocally(record: Record<string, unknown>) {
   try {
-    const dir = path.join(process.cwd(), "data", "contact-queue");
+    const dir = contactQueueDir();
     await fs.mkdir(dir, { recursive: true });
     const file = path.join(
       dir,
-      `${Date.now()}-${Math.random().toString(36).slice(2, 8)}.json`,
+      `${Date.now()}-${randomUUID().slice(0, 6)}.json`,
     );
     await fs.writeFile(file, JSON.stringify(record, null, 2), "utf-8");
   } catch (err) {

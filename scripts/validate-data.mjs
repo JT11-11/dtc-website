@@ -97,6 +97,25 @@ if (showcase.includes("const workItems")) {
   fail("work-dtc.tsx still defines its own workItems — import from @/lib/work");
 }
 
+// --- vercel + backend wiring --------------------------------------------------
+const nextConfig = fs.readFileSync(path.join(root, "next.config.ts"), "utf-8");
+for (const route of ["/api/restrictions", "/api/search", "/work/database"]) {
+  if (!nextConfig.includes(route) || !nextConfig.includes("outputFileTracingIncludes")) {
+    fail(`next.config.ts: ${route} missing from outputFileTracingIncludes — dataset may 404 on Vercel`);
+  }
+}
+const vercelignore = fs.readFileSync(path.join(root, ".vercelignore"), "utf-8");
+if (!vercelignore.includes("DTCInformation/")) {
+  fail(".vercelignore must exclude DTCInformation/ (deployment bloat)");
+}
+for (const f of ["app/api/docs/route.ts", "app/feed.xml/route.ts", "app/api/contact/route.ts", "docs/VERCEL.md"]) {
+  if (!fs.existsSync(path.join(root, f))) fail(`missing expected backend file: ${f}`);
+}
+const contactLib = fs.readFileSync(path.join(root, "lib", "contact.ts"), "utf-8");
+if (!contactLib.includes("UPSTASH_REDIS_REST_URL") || !contactLib.includes("contactQueueDir")) {
+  fail("lib/contact.ts must wire Upstash fallback + Vercel-safe queue dir");
+}
+
 // --- report -----------------------------------------------------------------
 for (const w of warnings) console.warn("warn:", w);
 if (errors.length) {

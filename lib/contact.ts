@@ -65,27 +65,79 @@ export function validateContact(input: unknown): {
   return { ok: true, value: { name, email, topic: topic as ContactTopic, message, website } };
 }
 
-// --- Minimal in-memory sliding-window rate limiter --------------------------
-// Per server instance. Good enough for a low-traffic site today; for
-// multi-instance/serverless production, replace with Upstash Redis or
-// Arcjet — same checkRateLimit() signature.
-const WINDOW_MS = 60 * 60 * 1000;
+import { tmpdir } from "node:os";
+import path from "node:path";
+
+// --- Rate limiting ----------------------------------------------------------
+// Shared limiter when Upstash Redis REST credentials are present (works
+// across serverless instances, zero new dependencies — plain fetch),
+// per-instance in-memory sliding window otherwise.
+const WINDOW_S = 60 * 60;
+const WINDOW_MS = WINDOW_S * 1000;
 const MAX_PER_WINDOW = 5;
 const hits = new Map<string, number[]>();
 
-export function checkRateLimit(key: string): {
+async function upstashLimit(key: string): Promise<{
+  allowed: boolean;
+  retryAfterSeconds: number;
+} | null> {
+  const url = process.env.UPSTASH_REDIS_REST_URL?.replace(/\/$/, "");
+  const token = process.env.UPSTASH_REDIS_REST_TOKEN;
+  if (!url || !token) return null;
+  const headers = { Authorization: `Bearer ${token}` };
+  const redisKey = `contact-rl:${encodeURIComponent(key)}`;
+  try {
+    const incr = await fetch(`${url}/incr/${redisKey}`, { headers });
+    if (!incr.ok) return null;
+    const count = Number(( (await incr.json()) as { result: unknown }).result);
+    if (Number.isNaN(count)) return null;
+    if (count === 1) {
+      await fetch(`${url}/expire/${redisKey}/${WINDOW_S}`, { headers }).catch(
+        () => {},
+      );
+      return { allowed: true, retryAfterSeconds: 0 };
+    }
+    if (count <= MAX_PER_WINDOW) return { allowed: true, retryAfterSeconds: 0 };
+    const ttlRes = await fetch(`${url}/ttl/${redisKey}`, { headers });
+    const ttl = ttlRes.ok
+      ? Number(((await ttlRes.json()) as { result: unknown }).result)
+      : WINDOW_S;
+    return {
+      allowed: false,
+      retryAfterSeconds: Number.isFinite(ttl) && ttl > 0 ? ttl : WINDOW_S,
+    };
+  } catch {
+    return null; // Redis hiccup — fall through to memory limiter, stay up.
+  }
+}
+
+function memoryLimit(key: string): {
   allowed: boolean;
   retryAfterSeconds: number;
 } {
   const now = Date.now();
   const recent = (hits.get(key) ?? []).filter((t) => now - t < WINDOW_MS);
   if (recent.length >= MAX_PER_WINDOW) {
-    const retryAfterSeconds = Math.ceil(
-      (recent[0] + WINDOW_MS - now) / 1000,
-    );
+    const retryAfterSeconds = Math.ceil((recent[0] + WINDOW_MS - now) / 1000);
     return { allowed: false, retryAfterSeconds };
   }
   recent.push(now);
   hits.set(key, recent);
   return { allowed: true, retryAfterSeconds: 0 };
+}
+
+export async function checkRateLimit(key: string): Promise<{
+  allowed: boolean;
+  retryAfterSeconds: number;
+}> {
+  return (await upstashLimit(key)) ?? memoryLimit(key);
+}
+
+// --- Local submission queue -------------------------------------------------
+// Crash buffer for when no mail provider is configured. Vercel functions
+// have a read-only filesystem outside /tmp, so queue there on Vercel
+// (still ephemeral — set RESEND_API_KEY in production, see docs/VERCEL.md).
+export function contactQueueDir(): string {
+  if (process.env.VERCEL) return path.join(tmpdir(), "dtc-contact-queue");
+  return path.join(process.cwd(), "data", "contact-queue");
 }

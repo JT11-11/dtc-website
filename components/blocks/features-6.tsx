@@ -3,31 +3,32 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 import { Search, Landmark, GraduationCap, Users, ArrowRight } from "lucide-react";
+import { CONTACT_EMAIL, DISCORD_INVITE_URL } from "@/lib/site";
 
 const audiences = [
   {
     title: "Researcher or journalist",
     desc: "Want to use our restriction database, cite our work, or collaborate on a study? Email us and we'll respond within a week. Our data is built to be used.",
     blob: "rgba(56,189,248,0.85)",
-    href: "mailto:hello@dynamicteencoalition.com",
+    href: `mailto:${CONTACT_EMAIL}`,
   },
   {
     title: "Policymaker or institutional partner",
     desc: "We work with community groups, governance bodies, nonprofits, and academic institutions. We're happy to collaborate, share evidence, or build a project together.",
     blob: "rgba(168,139,250,0.85)",
-    href: "mailto:hello@dynamicteencoalition.com",
+    href: `mailto:${CONTACT_EMAIL}`,
   },
   {
     title: "Teenager who wants to do this work",
     desc: "If you're a young person interested in doing serious research and public-interest work (not a summer programme, not a certificate), join our community and build real experience.",
     blob: "rgba(52,211,153,0.85)",
-    href: "https://discord.gg/EGg4jpP4Sk",
+    href: DISCORD_INVITE_URL,
   },
   {
     title: "Nonprofit or civil society partner",
     desc: "Working on an issue that affects young people? We're looking for partners who want youth-led evidence, ideas, and participation behind their work. Let's talk.",
     blob: "rgba(251,191,36,0.85)",
-    href: "mailto:hello@dynamicteencoalition.com",
+    href: `mailto:${CONTACT_EMAIL}`,
   },
 ];
 

@@ -2,8 +2,7 @@
 
 import Link from "next/link";
 import Features6 from "@/components/blocks/features-6";
-
-const DISCORD_INVITE_URL = "https://discord.gg/EGg4jpP4Sk";
+import { CONTACT_EMAIL, DISCORD_INVITE_URL } from "@/lib/site";
 
 export function ContactUsDtc() {
   return (
@@ -15,10 +14,10 @@ export function ContactUsDtc() {
             Direct Email
           </p>
           <a
-            href="mailto:hello@dynamicteencoalition.com"
+            href={`mailto:${CONTACT_EMAIL}`}
             className="block text-[clamp(1.5rem,5vw,4rem)] font-bold tracking-tight text-foreground hover:text-muted-foreground transition-colors break-all sm:break-normal"
           >
-            hello@dynamicteencoalition.com
+            {CONTACT_EMAIL}
           </a>
         </div>
       </section>

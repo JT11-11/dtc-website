@@ -76,27 +76,48 @@ export function RestrictionMap() {
   const [loadError, setLoadError] = useState<string | null>(null);
   const svgRef = useRef<SVGSVGElement>(null);
 
-  // Load both datasets on the client.
+  // Load data: validated API first, static CSV as offline fallback.
   useEffect(() => {
     let cancelled = false;
     (async () => {
       try {
-        const [csvText, topo] = await Promise.all([
-          fetch("/data/restrictions.csv").then((r) => r.text()),
-          fetch("/data/world-110m.json").then(
-            (r) => r.json() as Promise<WorldTopology>,
-          ),
-        ]);
-        if (cancelled) return;
-        const parsed = parseCsv(csvText);
-        // Flag (don't guess) any country we couldn't map to a geography.
-        const unmapped = findUnmappedCountries(parsed);
-        if (unmapped.length) {
-          console.warn(
-            "[RestrictionMap] CSV countries with no ISO mapping (table-only):",
-            unmapped,
-          );
+        let parsed: Restriction[] | null = null;
+        try {
+          const res = await fetch("/api/restrictions");
+          if (res.ok) {
+            const data = (await res.json()) as {
+              measures: Restriction[];
+              unmapped: string[];
+            };
+            parsed = data.measures;
+            // Flag (don't guess) any country we couldn't map to a geography.
+            if (data.unmapped.length) {
+              console.warn(
+                "[RestrictionMap] CSV countries with no ISO mapping (table-only):",
+                data.unmapped,
+              );
+            }
+          }
+        } catch {
+          // API unreachable (offline/static export) — fall back to the CSV.
         }
+        if (!parsed) {
+          const csvText = await fetch("/data/restrictions.csv").then((r) =>
+            r.text(),
+          );
+          parsed = parseCsv(csvText);
+          const unmapped = findUnmappedCountries(parsed);
+          if (unmapped.length) {
+            console.warn(
+              "[RestrictionMap] CSV countries with no ISO mapping (table-only):",
+              unmapped,
+            );
+          }
+        }
+        const topo = await fetch("/data/world-110m.json").then(
+          (r) => r.json() as Promise<WorldTopology>,
+        );
+        if (cancelled) return;
         const fc = feature(
           topo as never,
           (topo as { objects: { countries: never } }).objects.countries,

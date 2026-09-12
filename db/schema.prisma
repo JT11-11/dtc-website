@@ -1,0 +1,79 @@
+// Database migration target for the Restriction Database + contact inbox.
+//
+// Status: FORWARD PATH, not wired at runtime. The site runs today on the
+// validated CSV (lib/restrictions.ts) plus the /api/* layer, which keeps the
+// exact same shapes as the tables below — so migrating later means swapping
+// the loader implementation, not redesigning the API.
+//
+// To adopt:
+//   1. npm i -D prisma && npm i @prisma/client
+//   2. Copy this file to prisma/schema.prisma (repo root)
+//   3. Set DATABASE_URL, run `prisma migrate dev`, then
+//      `node scripts/seed-postgres.mjs > seed.sql` (or adapt it to
+//      prisma.client.measure.createMany) to import the CSV.
+//   4. Point lib/restrictions.ts at Prisma instead of fs.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum MeasureStatus {
+  Passed
+  Pending
+  Proposed
+}
+
+model Measure {
+  id          Int           @id @default(autoincrement())
+  country     String
+  /// ISO 3166-1 numeric, zero-padded ("036"), matching world-atlas ids.
+  /// Null = known country with no map geometry (table-only).
+  iso         String?
+  law         String
+  date        String        @default("")
+  status      MeasureStatus
+  ages        String        @default("")
+  description String        @default("")
+  sources     Source[]
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  @@index([country])
+  @@index([status])
+}
+
+model Source {
+  id        Int     @id @default(autoincrement())
+  url       String
+  measure   Measure @relation(fields: [measureId], references: [id], onDelete: Cascade)
+  measureId Int
+
+  @@index([measureId])
+}
+
+enum ContactTopic {
+  general
+  press
+  research
+  partnership
+  apply
+}
+
+model ContactSubmission {
+  id         Int          @id @default(autoincrement())
+  name       String
+  email      String
+  topic      ContactTopic
+  message    String
+  /// Null once triaged/delivered; local-queue filename before that.
+  queuedRef  String?
+  receivedAt DateTime     @default(now())
+
+  @@index([topic])
+  @@index([receivedAt])
+}

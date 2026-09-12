@@ -1,0 +1,12 @@
+# Files excluded from Vercel deployments (not from git).
+#
+# Why: these are source-of-truth docs and CI-only files. Nothing in the
+# app serves them (yearly reports link to Google Drive; no route reads
+# DTCInformation/), and they add ~25MB+ of PDFs to every deployment.
+# Videos in public/videos/ are Git-LFS tracked — Vercel does NOT fetch
+# LFS objects at build time, so those 404 in production until they are
+# migrated to Vercel Blob or another CDN (see docs/VERCEL.md).
+DTCInformation/
+*.docx
+DTC_INNOSpark_Pitch_v2.pdf
+.github/

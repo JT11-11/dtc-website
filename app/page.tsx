@@ -4,6 +4,7 @@ import Navigation9 from "@/components/blocks/navigation-9";
 import { TerminalHero } from "@/components/blocks/terminal-hero";
 import { AboutDtc } from "@/components/blocks/about-dtc";
 import { UnRollCall } from "@/components/blocks/un-roll-call";
+import { ConferencesDtc } from "@/components/blocks/conferences-dtc";
 import { ImpactDtc } from "@/components/blocks/impact-dtc";
 import { FaqDtc } from "@/components/blocks/faq-dtc";
 import { FooterDtc } from "@/components/blocks/footer-dtc";
@@ -18,6 +19,7 @@ export default function LandingPage() {
         <AboutDtc />
         <div className="px-6 sm:px-12 lg:px-24"><div className="border-t border-border max-w-[1400px] mx-auto" /></div>
         <UnRollCall />
+        <ConferencesDtc />
         <div className="px-6 sm:px-12 lg:px-24"><div className="border-t border-border max-w-[1400px] mx-auto" /></div>
         <ImpactDtc />
         <div className="px-6 sm:px-12 lg:px-24"><div className="border-t border-border max-w-[1400px] mx-auto" /></div>

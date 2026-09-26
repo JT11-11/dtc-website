@@ -31,7 +31,7 @@ export const yearlyReports: YearlyReport[] = [
   },
   {
     year: "2023",
-    description: "Inaugural launch and foundational policy frameworks from IGF Kyoto.",
+    description: "Inaugural launch and foundational policy frameworks from IGF Ethiopia.",
     href: "",
     image: "/images/un/hlpf.jpg",
     imagePosition: "58% 32%",

@@ -21,25 +21,22 @@ export default function ContactPage() {
         {/* Page header */}
         <section className="pt-8 pb-12 px-6 sm:px-8 lg:px-12 bg-background">
           <div className="max-w-[1400px] mx-auto">
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--sun-gold)] mb-4">
-              Get in Touch
-            </p>
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground leading-[1.0] max-w-4xl">
-              Let&apos;s <Highlight>talk.</Highlight>
+              Contact <Highlight>us.</Highlight>
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-              We&apos;re a youth-led team doing serious public-interest work.
-              We don&apos;t have a PR department. If you email us, an actual
-              person from the community will write back.
+              We&apos;re a youth-led team working on public-interest research. We
+              don&apos;t have a PR department. If you email us, someone from the
+              community will write back.
             </p>
           </div>
         </section>
 
         <ContactUsDtc />
         <CTA1
-          headingLine1="Not ready to email?"
-          headingLine2="Join the work."
-          description="Apply to work with DTC through our application form, or join the Discord community to meet people, exchange ideas, and hear about opportunities."
+          headingLine1="Apply to work"
+          headingLine2="with us."
+          description="Apply through our form, or join the Discord to meet people and hear about opportunities."
           primaryLabel="Apply to Work With Us"
           primaryHref="https://docs.google.com/forms/d/e/1FAIpQLSd4g0qwbKTAwuC0ZDQ5jiJkL4EX8IJD2gjG78amCRCTo5MJug/viewform?usp=sharing&ouid=107113160450238823877"
           secondaryLabel="Join the Community"

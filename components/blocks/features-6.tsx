@@ -7,25 +7,25 @@ import { Search, Landmark, GraduationCap, Users, ArrowRight } from "lucide-react
 const audiences = [
   {
     title: "Researcher or journalist",
-    desc: "Want to use our restriction database, cite our work, or collaborate on a study? Email us and we'll respond within a week. Our data is built to be used.",
+    desc: "If you want to use our restriction database, cite our work, or collaborate on a study, email us. We'll respond within a week.",
     blob: "rgba(56,189,248,0.85)",
     href: "mailto:hello@dynamicteencoalition.com",
   },
   {
     title: "Policymaker or institutional partner",
-    desc: "We work with community groups, governance bodies, nonprofits, and academic institutions. We're happy to collaborate, share evidence, or build a project together.",
+    desc: "We work with community groups, governance bodies, nonprofits, and academic institutions. Email us if you want to collaborate, share evidence, or build a project together.",
     blob: "rgba(168,139,250,0.85)",
     href: "mailto:hello@dynamicteencoalition.com",
   },
   {
     title: "Teenager who wants to do this work",
-    desc: "If you're a young person interested in doing serious research and public-interest work (not a summer programme, not a certificate), join our community and build real experience.",
+    desc: "If you're a young person who wants to do research and public-interest work, join the community. This isn't a summer programme or a certificate. It's a place to learn by doing the work.",
     blob: "rgba(52,211,153,0.85)",
     href: "https://discord.gg/EGg4jpP4Sk",
   },
   {
     title: "Nonprofit or civil society partner",
-    desc: "Working on an issue that affects young people? We're looking for partners who want youth-led evidence, ideas, and participation behind their work. Let's talk.",
+    desc: "If you work on an issue affecting young people, get in touch. We're interested in partnerships that include youth-led evidence and participation.",
     blob: "rgba(251,191,36,0.85)",
     href: "mailto:hello@dynamicteencoalition.com",
   },

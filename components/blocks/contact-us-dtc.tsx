@@ -11,9 +11,6 @@ export function ContactUsDtc() {
       {/* ── EMAIL CTA ────────────────────────────────────────────── */}
       <section className="bg-background py-12 px-6 sm:px-8 lg:px-12 border-b border-foreground/10">
         <div className="max-w-[1400px] mx-auto">
-          <p className="text-sm font-medium uppercase tracking-widest text-muted-foreground mb-4">
-            Direct Email
-          </p>
           <a
             href="mailto:hello@dynamicteencoalition.com"
             className="block text-[clamp(1.5rem,5vw,4rem)] font-bold tracking-tight text-foreground hover:text-muted-foreground transition-colors break-all sm:break-normal"
@@ -35,9 +32,9 @@ export function ContactUsDtc() {
                 Join the community.
               </h2>
               <p className="text-background/60 text-lg leading-relaxed">
-                Our Discord is a place to meet the community, exchange ideas,
-                hear about opportunities, and stay connected to what we are
-                doing. Teens, researchers, and interested adults are all
+                Our Discord is for meeting other people in the community,
+                trading ideas, hearing about opportunities, and keeping up
+                with DTC. Teens, researchers, and interested adults are
                 welcome.
               </p>
             </div>

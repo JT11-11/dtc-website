@@ -56,8 +56,8 @@ export function TerminalHero() {
           transition={{ duration: 0.8, delay: 0.55, ease: [0.22, 1, 0.36, 1] }}
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.04] max-w-4xl [text-shadow:_0_2px_14px_rgb(0_0_0_/_75%)]"
         >
-          Young people shaping{" "}
-          <span className="text-[var(--un-blue)]">what comes next.</span>
+          Policy work by{" "}
+          <span className="text-[var(--un-blue)]">the people living with it.</span>
         </motion.h1>
 
         {/* Subtext */}
@@ -67,11 +67,10 @@ export function TerminalHero() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="mt-6 max-w-xl text-base sm:text-lg text-white/85 leading-relaxed font-medium drop-shadow-md"
         >
-          A youth-led nonprofit think tank turning lived experience into
-          research, public conversation, and practical change across policy work
-          and public-interest issues.{" "}
+          We&apos;re a youth-led nonprofit think tank researching the policies
+          that land on young people&apos;s desks, phones, and lives.{" "}
           <span className="font-serif italic font-normal text-white/95">
-            At the table, not just on the agenda.
+            We do the homework.
           </span>
         </motion.p>
 
@@ -88,13 +87,13 @@ export function TerminalHero() {
             rel="noopener noreferrer"
             className="rounded-full bg-[var(--sun-gold)] px-7 py-3 text-sm font-semibold text-black transition-transform duration-200 hover:scale-[1.03] hover:shadow-[0_8px_30px_-8px_rgba(168,116,42,0.45)]"
           >
-            Apply to Work With Us
+            Work With Us
           </a>
           <a
             href="#research"
             className="rounded-full border border-white/30 bg-white/10 px-7 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-colors duration-200 hover:bg-white/20"
           >
-            Our Research
+            Read Our Work
           </a>
         </motion.div>
       </div>

@@ -92,7 +92,7 @@ export function AboutDtc() {
         </div>
 
         <h2 ref={headingRef} className="text-[clamp(1.75rem,4vw,3rem)] font-bold leading-[1.2] tracking-tight text-center mx-auto text-foreground max-w-4xl">
-          At DTC Youth Policy Lab, young people do more than lend their voices: they lead the questions, the research, and the work that follows.
+          At DTC Youth Policy Lab, young people set the questions, do the research, and publish the work.
         </h2>
 
         <Link
@@ -100,7 +100,7 @@ export function AboutDtc() {
           href="/about"
           className="inline-flex items-center justify-center mt-8 px-6 py-3 rounded-full bg-foreground text-background text-lg tracking-tight font-medium transition-opacity hover:opacity-80"
         >
-          About Us
+          Meet DTC
         </Link>
       </div>
     </section>

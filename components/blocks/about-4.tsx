@@ -13,31 +13,31 @@ interface ValueItem {
 const VALUES: ValueItem[] = [
   {
     id: 1,
-    title: "Serious",
-    heading: "Real work. Real stakes.",
+    title: "Useful",
+    heading: "Work people can use.",
     description:
-      "DTC researchers do the same work as adult policy professionals: building databases, publishing in peer-reviewed journals, briefing delegates at the UN. We don't treat youth as a footnote.",
+      "DTC researchers build databases, publish in peer-reviewed journals, and brief delegates at the UN. Age does not make the footnotes optional.",
   },
   {
     id: 2,
-    title: "Rigorous",
-    heading: "Peer-reviewed, formally structured, citable.",
+    title: "Citable",
+    heading: "Built to hold up under a footnote.",
     description:
-      "Our research goes through formal review processes. We publish in academic journals, build mathematical governance frameworks, and produce databases designed to serve as evidence in policy advocacy, not just talking points.",
+      "Our research goes through formal review. We publish in academic journals, build mathematical governance frameworks, and maintain databases that advocates can cite.",
   },
   {
     id: 3,
     title: "Specific",
-    heading: "We close the consultation gap.",
+    heading: "The consultation gap has receipts.",
     description:
-      "42 countries enacted social media bans with 0% meaningful youth input. That specific, documented failure is what DTC exists to address, not 'youth inclusion' as a vague aspiration, but the concrete, measurable absence of young voices in decisions about their digital lives.",
+      "Forty-two countries enacted social-media bans with 0% meaningful youth input. We document that failure and the decisions it leaves young people out of.",
   },
   {
     id: 4,
     title: "Grounded",
-    heading: "Social media as survival infrastructure.",
+    heading: "For some teens, online access is infrastructure.",
     description:
-      "For marginalized youth in hostile homes, low-income students without other networks, and teenagers navigating mental health crises, online spaces aren't entertainment. Restricting them isn't protective. Our research is grounded in that reality, not in moral panic.",
+      "For marginalised youth in hostile homes, low-income students without other networks, and teenagers navigating mental-health crises, online spaces can provide connection and information. Our research starts there, not with moral panic.",
   },
 ];
 
@@ -87,7 +87,7 @@ function ProgressSection({ progress }: { progress: number }) {
         transition={{ duration: 0.6, delay: 0.4 }}
         className="text-sm sm:text-base text-muted-foreground"
       >
-        What makes us different
+        How we work
       </motion.p>
 
       <motion.div

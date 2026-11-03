@@ -20,31 +20,31 @@ const ENTRIES: RollCallEntry[] = [
     year: "2022",
     venue: "Internet Governance Forum",
     place: "Kyoto",
-    note: "Invited by the UN IGF Secretariat to establish the Dynamic Teen Coalition, the first teen-led coalition at the Internet Governance Forum.",
+    note: "The UN IGF Secretariat invited us to establish the Dynamic Teen Coalition, the first teen-led coalition at the Internet Governance Forum.",
   },
   {
     year: "’23–’24",
     venue: "UN advocacy & the first database",
     place: "UN events · worldwide",
-    note: "Returned to UN events year after year, challenging blanket social-media bans and building the first systematic global database of teen online restrictions.",
+    note: "We kept returning to UN events, challenged blanket social-media bans, and began a global database of teen online restrictions.",
   },
   {
     year: "2025",
     venue: "IGF Oslo: IGF 2025",
     place: "Norway",
-    note: "Questioned the Australian government on their position on the impact of teen bans on marginalised youth, the exchange that became our paper.",
+    note: "We questioned the Australian government about how teen bans affect marginalised youth. The exchange became our paper.",
   },
   {
     year: "2025",
     venue: "ECOSOC YF · HLPF · WSIS+20 · UNGA · IYC",
     place: "via UN MGCY",
-    note: "Beyond the IGF, DTC engaged UN-adjacent processes through the UN Major Group for Children & Youth: delegations, oral interventions, and side events.",
+    note: "Through the UN Major Group for Children & Youth, DTC joined delegations, made oral interventions, and ran side events beyond the IGF.",
   },
   {
     year: "2026",
     venue: "Youth Policy Lab",
     place: "USA-based · international and remote",
-    note: "DTC evolves into a USA-based, remote-first youth-led nonprofit think tank, turning years of youth participation into rigorous, sourced research.",
+    note: "DTC became a USA-based, remote-first youth-led nonprofit think tank, carrying years of participation into sourced research.",
   },
 ];
 
@@ -58,15 +58,15 @@ export function UnRollCall() {
     >
       <div className="max-w-[1400px] mx-auto">
         <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--sun-gold)] mb-4">
-          Roll Call
+          Where we&apos;ve been
         </p>
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-foreground leading-[1.05] max-w-3xl">
-          Years of being{" "}
-          <Highlight>in the room.</Highlight>
+          We&apos;ve spent years{" "}
+          <Highlight>showing up.</Highlight>
         </h2>
         <p className="mt-5 max-w-2xl text-base sm:text-lg text-muted-foreground leading-relaxed">
-          A record of where teenagers showed up in global policy and governance
-          processes, and what happened when they did.
+          A record of our work in global policy and governance, from Kyoto to
+          New York.
         </p>
 
         <ol className="mt-14 space-y-0">

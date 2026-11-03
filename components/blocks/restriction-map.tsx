@@ -187,7 +187,7 @@ export function RestrictionMap() {
         {[
           { n: `${counts.countries || 42}`, l: "countries with bans or restrictions" },
           { n: "0%", l: "developed with meaningful youth consultation" },
-          { n: "100%", l: "of affected teens are subject to them" },
+          { n: "100%", l: "of affected teens subject to them" },
         ].map((s) => (
           <div key={s.l} className="bg-card px-6 py-7">
             <div className="text-4xl sm:text-5xl font-bold tracking-tight text-[var(--un-blue)]">
@@ -383,8 +383,8 @@ export function RestrictionMap() {
             ) : (
               <div className="flex h-full flex-col items-center justify-center py-10 text-center">
                 <p className="text-sm text-muted-foreground">
-                  Select a country on the map, or any row in the table, to read
-                  the law, who it affects, and the primary source.
+                  Select a country or table row to read the law, who it
+                  affects, and the primary source.
                 </p>
               </div>
             )}
@@ -396,7 +396,7 @@ export function RestrictionMap() {
       <div className="mt-10">
         <div className="flex items-baseline justify-between">
           <h3 className="text-lg font-bold tracking-tight text-foreground">
-            All {counts.measures || 48} measures
+            All {counts.measures || 48} tracked measures
           </h3>
           <p className="text-sm text-muted-foreground">
             {visibleRows.length} shown

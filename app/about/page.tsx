@@ -16,7 +16,7 @@ import { YearlyReports } from "@/components/blocks/yearly-reports";
 export const metadata: Metadata = {
   title: "About Us · DTC Youth Policy Lab",
   description:
-    "DTC Youth Policy Lab is a USA-based, remote-first youth-led think tank working internationally. Young people lead research, public-interest projects, and policy work that responds to the issues affecting their lives.",
+    "DTC Youth Policy Lab is a USA-based, remote-first youth-led think tank working internationally on research, public-interest projects, and policy.",
 };
 
 export default function AboutPage() {
@@ -33,14 +33,12 @@ export default function AboutPage() {
               About DTC Youth Policy Lab
             </p>
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground leading-[1.0] max-w-4xl">
-              Young people doing the work.{" "}
-              <Highlight>Not just being consulted.</Highlight>
+              Young people doing{" "}
+              <Highlight>the policy work.</Highlight>
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-              A youth-led think tank working across the issues shaping
-              young people&apos;s lives through policy research, public conversation,
-              and practical action. We build useful public knowledge and help turn
-              ideas into action. Founded in 2023 in Ethiopia, working
+              We&apos;re a youth-led think tank researching the policies that
+              affect young people. Founded in Ethiopia in 2023, we now work
               internationally and remotely.
             </p>
           </div>
@@ -71,10 +69,10 @@ export default function AboutPage() {
 
         {/* CTA */}
         <CTA1
-          headingLine1="Join the people"
-          headingLine2="closing the gap."
-          description="We're looking for young people who want to research, create, and contribute to work that matters. Researchers, educators, journalists, and community partners: we'd love to talk."
-          primaryLabel="Apply to Work With Us"
+          headingLine1="Want to work"
+          headingLine2="with us?"
+          description="We&apos;re looking for young people who want to research, create, and contribute. Researchers, educators, journalists, and community partners are welcome too."
+          primaryLabel="Work With Us"
           primaryHref="https://docs.google.com/forms/d/e/1FAIpQLSd4g0qwbKTAwuC0ZDQ5jiJkL4EX8IJD2gjG78amCRCTo5MJug/viewform?usp=sharing&ouid=107113160450238823877"
           secondaryLabel="Read our research"
           secondaryHref="/work"

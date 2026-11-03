@@ -139,10 +139,10 @@ export interface Cta1Props {
 }
 
 export default function CTA1({
-  headingLine1 = "Ready to change",
-  headingLine2 = "the rules?",
-  description = "Join a community of young people doing serious public-interest work across the issues that shape our lives, from governance and rights to digital systems and public policy.",
-  primaryLabel = "Join the Lab",
+  headingLine1 = "Want to get",
+  headingLine2 = "involved?",
+  description = "Join young people researching public-interest questions, from governance and rights to digital systems and policy.",
+  primaryLabel = "Work With Us",
   primaryHref = "/contact",
   secondaryLabel = "Read our research",
   secondaryHref = "/work",

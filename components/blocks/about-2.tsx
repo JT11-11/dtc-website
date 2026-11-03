@@ -35,7 +35,7 @@ const TIMELINE_DATA: TimelineEntry[] = [
     highlight: "first teen-led coalition",
     place: "Ethiopia",
     description:
-      "The Dynamic Teen Coalition was founded in Ethiopia in 2023, becoming the first teen-led coalition at the Internet Governance Forum.",
+      "The Dynamic Teen Coalition was founded in Ethiopia in 2023 and became the first teen-led coalition at the Internet Governance Forum.",
     image: "/images/un/group.jpg",
   },
   {
@@ -46,7 +46,7 @@ const TIMELINE_DATA: TimelineEntry[] = [
     highlight: "first systematic database",
     place: "UN events · worldwide",
     description:
-      "DTC returned to UN events year after year, challenging blanket social-media bans on the floor and building the first systematic global database of teen online restrictions, country by country, platform by platform.",
+      "DTC kept returning to UN events, challenged blanket social-media bans, and built a global database of teen online restrictions, country by country and platform by platform.",
     image: "/images/un/conf-room.jpg",
   },
   {
@@ -57,7 +57,7 @@ const TIMELINE_DATA: TimelineEntry[] = [
     highlight: "became our paper",
     place: "IGF 2025 · Norway",
     description:
-      "At IGF 2025 in Norway, DTC questioned the Australian government on their position on the impact of teen bans on marginalised youth. That exchange became our paper. Across the year DTC also engaged the ECOSOC Youth Forum, HLPF, WSIS+20 and UNGA, and ran the first teen-led Dynamic Coalition session at the IGF in twenty years.",
+      "At IGF 2025 in Norway, DTC asked the Australian government how teen bans affect marginalised youth. That exchange became our paper. We also joined the ECOSOC Youth Forum, HLPF, WSIS+20, and UNGA, and ran the first teen-led Dynamic Coalition session at the IGF in twenty years.",
     image: "/images/un/hlpf.jpg",
   },
   {
@@ -65,10 +65,10 @@ const TIMELINE_DATA: TimelineEntry[] = [
     year: "2026",
     short: "Think Tank",
     title: "The youth-led think tank takes shape",
-    highlight: "researchers, not subjects",
+    highlight: "researchers and builders",
     place: "USA-based · international and remote · now",
     description:
-      "DTC grows into a USA-based, remote-first youth-led nonprofit think tank working internationally. Our research turns years of youth participation into rigorous, sourced work, so young people become the researchers and builders, not just the subjects.",
+      "DTC became a USA-based, remote-first youth-led nonprofit think tank working internationally. We turn years of youth participation into sourced research and practical work.",
     image: "/images/un/ga-hall.jpg",
   },
 ];
@@ -126,12 +126,12 @@ export default function About2({ displayNavigation = true }: About2Props = {}) {
           className="mb-12 sm:mb-16"
         >
           <p className="text-xs sm:text-sm font-semibold uppercase tracking-[0.22em] text-[var(--sun-gold)]">
-            Our history
+            How we got here
           </p>
           <h2 className="mt-3 text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-foreground leading-[1.04] max-w-3xl">
             From a teen-led coalition to a{" "}
             <span className="font-serif italic font-normal text-[var(--bronze)]">
-              youth-led think tank.
+              youth-led think tank
             </span>
           </h2>
         </motion.div>

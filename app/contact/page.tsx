@@ -9,7 +9,7 @@ import { Highlight } from "@/components/ui/highlight";
 export const metadata: Metadata = {
   title: "Contact · DTC Youth Policy Lab",
   description:
-    "Get in touch with DTC Youth Policy Lab, a youth-led nonprofit think tank. We work with young people, researchers, journalists, educators, and community partners.",
+    "Contact DTC Youth Policy Lab, a youth-led nonprofit think tank. We work with young people, researchers, journalists, educators, and community partners.",
 };
 
 export default function ContactPage() {
@@ -26,18 +26,18 @@ export default function ContactPage() {
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed">
               We&apos;re a youth-led team working on public-interest research. We
-              don&apos;t have a PR department. If you email us, someone from the
-              community will write back.
+              don&apos;t have a PR department. If you email us, an actual person
+              will write back.
             </p>
           </div>
         </section>
 
         <ContactUsDtc />
         <CTA1
-          headingLine1="Apply to work"
-          headingLine2="with us."
-          description="Apply through our form, or join the Discord to meet people and hear about opportunities."
-          primaryLabel="Apply to Work With Us"
+          headingLine1="Want to do"
+          headingLine2="this work?"
+          description="Apply through our form or join the Discord to meet people and hear about opportunities."
+          primaryLabel="Work With Us"
           primaryHref="https://docs.google.com/forms/d/e/1FAIpQLSd4g0qwbKTAwuC0ZDQ5jiJkL4EX8IJD2gjG78amCRCTo5MJug/viewform?usp=sharing&ouid=107113160450238823877"
           secondaryLabel="Join the Community"
           secondaryHref="https://discord.gg/EGg4jpP4Sk"

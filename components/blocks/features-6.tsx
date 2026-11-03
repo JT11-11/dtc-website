@@ -7,25 +7,25 @@ import { Search, Landmark, GraduationCap, Users, ArrowRight } from "lucide-react
 const audiences = [
   {
     title: "Researcher or journalist",
-    desc: "If you want to use our restriction database, cite our work, or collaborate on a study, email us. We'll respond within a week.",
+    desc: "Want to use the restriction database, cite our work, or collaborate on a study? Email us. We'll get back to you within a week.",
     blob: "rgba(56,189,248,0.85)",
     href: "mailto:hello@dynamicteencoalition.com",
   },
   {
     title: "Policymaker or institutional partner",
-    desc: "We work with community groups, governance bodies, nonprofits, and academic institutions. Email us if you want to collaborate, share evidence, or build a project together.",
+    desc: "We work with community groups, governance bodies, nonprofits, and academic institutions. Email us if you'd like to compare notes, share evidence, or build a project together.",
     blob: "rgba(168,139,250,0.85)",
     href: "mailto:hello@dynamicteencoalition.com",
   },
   {
     title: "Teenager who wants to do this work",
-    desc: "If you're a young person who wants to do research and public-interest work, join the community. This isn't a summer programme or a certificate. It's a place to learn by doing the work.",
+    desc: "If you're a young person who wants to do research and public-interest work, join the community. We're a working group, so you learn by working.",
     blob: "rgba(52,211,153,0.85)",
     href: "https://discord.gg/EGg4jpP4Sk",
   },
   {
     title: "Nonprofit or civil society partner",
-    desc: "If you work on an issue affecting young people, get in touch. We're interested in partnerships that include youth-led evidence and participation.",
+    desc: "If you work on an issue affecting young people, get in touch. We're interested in partnerships with youth-led evidence and a clear job to do.",
     blob: "rgba(251,191,36,0.85)",
     href: "mailto:hello@dynamicteencoalition.com",
   },
@@ -44,7 +44,7 @@ export default function Features6() {
           transition={{ duration: 0.3 }}
           className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground tracking-tight leading-[1.15] max-w-3xl mb-10 sm:mb-14"
         >
-          Who should reach out?
+          Who should email us?
         </motion.h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">

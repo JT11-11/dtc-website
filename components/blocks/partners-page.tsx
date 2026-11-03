@@ -17,15 +17,14 @@ export function PartnersPage() {
   return (
     <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 py-16">
       <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--sun-gold)] mb-4">
-        Partnerships
+        Partners
       </p>
       <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground leading-[1.0] max-w-4xl">
-        Who we <Highlight>work with.</Highlight>
+        Who we&apos;re <Highlight>working with.</Highlight>
       </h1>
       <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-        Youth-led work doesn&apos;t happen in isolation. These are the
-        organizations we collaborate with on research, outreach, and building a
-        fairer future for young people.
+        Good work needs company. These are the organisations we collaborate
+        with on research, outreach, and policy work.
       </p>
 
       <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl">

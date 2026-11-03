@@ -17,21 +17,21 @@ export interface YearlyReport {
 export const yearlyReports: YearlyReport[] = [
   {
     year: "2025",
-    description: "Global expansion, UN briefings, and the release of the Global Teen Restriction Database.",
+    description: "UN briefings, wider international work, and the Global Teen Restriction Database.",
     href: "https://drive.google.com/file/d/1YFORMClMFQcPXVIfR0WmGsIrE667TXy3/view?usp=sharing",
     image: "/images/un/group.jpg",
     imagePosition: "50% 40%",
   },
   {
     year: "2024",
-    description: "Auditing international governance bodies and mapping digital rights.",
+    description: "Audits of international governance bodies and digital-rights mapping.",
     href: "",
     image: "/images/un/ga-hall.jpg",
     imagePosition: "50% 35%",
   },
   {
     year: "2023",
-    description: "Inaugural launch and foundational policy frameworks from IGF Kyoto.",
+    description: "Our launch and early policy frameworks from IGF Kyoto.",
     href: "",
     image: "/images/un/hlpf.jpg",
     imagePosition: "58% 32%",
@@ -134,14 +134,13 @@ export function YearlyReports() {
         >
           <div className="flex max-w-2xl flex-col gap-3">
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--sun-gold)]">
-              Annual Briefings
+              Annual reports
             </p>
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              The record of <Highlight>our impact.</Highlight>
+              What we did, <Highlight>year by year.</Highlight>
             </h2>
             <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Detailed institutional briefs tracking our empirical research, global
-              audits, and youth-led policy interventions.
+              Reports on our research, global audits, and policy work.
             </p>
           </div>
         </motion.div>

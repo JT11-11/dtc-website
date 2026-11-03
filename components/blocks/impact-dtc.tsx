@@ -94,13 +94,13 @@ export function ImpactDtc() {
       <div className="px-6 sm:px-12 lg:px-24 max-w-360 2xl:max-w-450 3xl:max-w-550 mx-auto">
         <div ref={headerRef} className="flex items-center justify-between mb-12 lg:mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold tracking-tight text-foreground">
-            Our Global Impact
+            The work, in numbers
           </h2>
           <Link
             href="/partners"
             className="hidden sm:inline-flex items-center justify-center px-6 py-3 rounded-full bg-foreground text-background text-sm font-medium transition-opacity hover:opacity-80"
           >
-            Partner with us
+            Work with us
           </Link>
         </div>
 
@@ -130,7 +130,7 @@ export function ImpactDtc() {
             <div>
               <QuoteIcon className="w-10 h-10 text-foreground/20 mb-6" />
               <blockquote className="text-2xl lg:text-3xl font-bold leading-snug text-foreground">
-                The laws that govern our online lives are written without us. It&apos;s time teens stopped being the subject of the research and became the researchers.
+                Too many rules for young people&apos;s online lives are written without young people in the room. We&apos;d like to make that harder.
               </blockquote>
               <div className="mt-6">
                 <p className="font-semibold text-foreground">Dynamic Teen Coalition</p>
@@ -138,7 +138,7 @@ export function ImpactDtc() {
               </div>
             </div>
             <div className="flex items-center justify-between mt-auto pt-8">
-              <span className="text-xl font-semibold text-foreground">Our Mission</span>
+              <span className="text-xl font-semibold text-foreground">Why we&apos;re here</span>
               <Link
                 href="/about"
                 aria-label="About DTC Youth Policy Lab"
@@ -152,10 +152,10 @@ export function ImpactDtc() {
           <div className="bg-muted/50 rounded-2xl p-6 flex flex-col">
             <div className="flex-1">
               <p className="text-3xl font-semibold text-[var(--un-blue)]">42</p>
-              <p className="text-sm text-foreground/60 mt-1">Countries with teen bans or restrictions</p>
+              <p className="text-sm text-foreground/60 mt-1">Countries with teen bans or restrictions on the books</p>
             </div>
             <div className="flex items-center justify-between mt-auto pt-4">
-              <span className="text-sm font-medium text-foreground">Restriction Database</span>
+              <span className="text-sm font-medium text-foreground">Restriction database</span>
               <Link
                 href="/work/database"
                 aria-label="Explore the Global Teen Restriction Database"
@@ -169,10 +169,10 @@ export function ImpactDtc() {
           <div className="bg-muted/50 rounded-2xl p-6 flex flex-col">
             <div className="flex-1">
               <p className="text-3xl font-semibold text-foreground">6</p>
-              <p className="text-sm text-foreground/60 mt-1">UN &amp; UN-adjacent forums engaged in 2025</p>
+              <p className="text-sm text-foreground/60 mt-1">UN and UN-adjacent forums we joined in 2025</p>
             </div>
             <div className="flex items-center justify-between mt-auto pt-4">
-              <span className="text-sm font-medium text-foreground">UN Engagement</span>
+              <span className="text-sm font-medium text-foreground">UN engagement</span>
               <Link
                 href="/work"
                 className="w-10 h-10 rounded-full bg-foreground/10 flex items-center justify-center hover:bg-foreground hover:text-background transition-colors"
@@ -186,17 +186,17 @@ export function ImpactDtc() {
             <div className="flex-1">
               <p className="text-3xl lg:text-4xl font-semibold text-foreground">100%</p>
               <p className="text-foreground/60 mt-2">
-                Teen-Led
+                Teen-led
               </p>
             </div>
             <div className="mt-auto pt-6">
-              <p className="text-sm font-medium text-foreground">By youth, for youth</p>
+              <p className="text-sm font-medium text-foreground">Run by young people</p>
             </div>
           </div>
 
           <div className="lg:col-span-3 bg-muted/50 rounded-2xl p-8 flex flex-col">
             <p className="text-xl lg:text-2xl font-medium leading-relaxed text-foreground max-w-3xl flex-1">
-              The Global Teen Restriction Database maps every social-media ban and blanket restriction affecting teens, country by country, each entry sourced, so policy can reflect the actual experiences of youth.
+              The Global Teen Restriction Database tracks social-media bans and blanket restrictions affecting teens, country by country, with sources for every entry.
             </p>
             <div className="flex items-center justify-between mt-auto pt-6">
               <span className="text-xl font-semibold text-foreground">Explore the database</span>

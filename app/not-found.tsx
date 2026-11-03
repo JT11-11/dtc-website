@@ -18,16 +18,15 @@ export default function NotFoundPage() {
               404
             </p>
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground leading-[1.0] max-w-4xl">
-              Looks like you&apos;ve wandered off the <Highlight>map.</Highlight>
+              This page <Highlight>isn&apos;t here.</Highlight>
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-              The page you&apos;re looking for doesn&apos;t exist, may have been moved, 
-              or might never have existed in the first place. Even the best 
-              researchers hit a dead end sometimes.
+              It may have moved, been deleted, or never existed. Research has
+              dead ends; websites do too.
             </p>
             <br />
             <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-              Feel free to head back &nbsp;
+              Head back &nbsp;
               <Link
                 href="/"
                 className="text-foreground underline decoration-border underline-offset-4 transition-colors hover:decoration-foreground"

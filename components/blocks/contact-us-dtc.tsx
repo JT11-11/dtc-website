@@ -29,13 +29,12 @@ export function ContactUsDtc() {
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
             <div className="max-w-xl">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-background mb-4">
-                Join the community.
+                Join the community
               </h2>
               <p className="text-background/60 text-lg leading-relaxed">
-                Our Discord is for meeting other people in the community,
-                trading ideas, hearing about opportunities, and keeping up
-                with DTC. Teens, researchers, and interested adults are
-                welcome.
+                Our Discord is where people meet, trade ideas, hear about
+                opportunities, and keep up with DTC. Teens, researchers, and
+                interested adults are welcome.
               </p>
             </div>
             <div className="flex flex-col gap-3 shrink-0">

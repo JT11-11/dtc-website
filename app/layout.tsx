@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: "%s · DTC Youth Policy Lab",
   },
   description:
-    "A youth-led nonprofit think tank working across issues that matter to young people, from technology and media to governance, rights, and policy work.",
+    "A youth-led nonprofit think tank researching technology, media, governance, rights, and the policies young people live with.",
   keywords: [
     "DTC Youth Policy Lab",
     "youth policy",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "DTC Youth Policy Lab",
     description:
-      "A youth-led nonprofit think tank working across technology, media, governance, rights, and policy.",
+      "A youth-led nonprofit think tank researching technology, media, governance, rights, and policy.",
     url: "https://dtcpolicylab.org",
     siteName: "DTC Youth Policy Lab",
     type: "website",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "DTC Youth Policy Lab",
     description:
-      "A youth-led nonprofit think tank working across issues that matter to young people.",
+      "A youth-led nonprofit think tank researching the issues that affect young people.",
   },
   robots: {
     index: true,

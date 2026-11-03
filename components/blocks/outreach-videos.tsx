@@ -40,7 +40,7 @@ function YouTubeCard({ label, embedUrl }: { label: string; embedUrl: string }) {
 // printed briefs and engaging delegates at the UN, not staged productions.
 const videos = [
   { kind: "youtube", label: "Making the case in person", embedUrl: "https://www.youtube.com/embed/7NsyYwT0-E4?rel=0&modestbranding=1&playsinline=1" },
-  { kind: "youtube", label: "Hackathon", embedUrl: youtubeEmbed },
+  { kind: "youtube", label: "At the hackathon", embedUrl: youtubeEmbed },
   { src: "/videos/IMG_3426.mp4", label: "Hisham at the UN" },
   { src: "/videos/IMG_3428.mp4", label: "Hisham in conversation" },
 ];
@@ -50,14 +50,13 @@ export function OutreachVideos() {
     <section className="w-full py-16 px-6 sm:px-8 lg:px-12 bg-background">
       <div className="max-w-[1400px] mx-auto">
         <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--sun-gold)] mb-4">
-          In Motion
+          Out and about
         </p>
         <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground mb-3">
-          Out <Highlight>in the world.</Highlight>
+          The work <Highlight>off the page.</Highlight>
         </h2>
         <p className="text-base text-muted-foreground max-w-xl leading-relaxed mb-12">
-          Policy research is only as good as the conversations it starts. A few
-          captured moments from DTC out in the field.
+          A few moments from DTC meetings, presentations, and projects.
         </p>
 
         <div className="grid grid-cols-2 gap-4">

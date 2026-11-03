@@ -8,7 +8,7 @@ import CTA1 from "@/components/blocks/cta-1";
 export const metadata: Metadata = {
   title: "Partners · DTC Youth Policy Lab",
   description:
-    "Organizations DTC Youth Policy Lab collaborates with on research, outreach, and policy engagement.",
+    "Organizations DTC Youth Policy Lab collaborates with on research, outreach, and policy work.",
 };
 
 export default function Partners() {
@@ -19,9 +19,9 @@ export default function Partners() {
       <main className="lg:relative lg:z-10 flex-1 bg-background">
         <PartnersPage />
         <CTA1
-          headingLine1="Want to work"
-          headingLine2="with us?"
-          description="We are always looking for organizations that share our belief that young people belong in the policy conversation, not just as subjects of it. Get in touch and let's figure out what we can build together."
+          headingLine1="Got a project"
+          headingLine2="we should discuss?"
+          description="We work with organizations that want young people involved in policy decisions. Get in touch and we&apos;ll see whether there&apos;s a useful project to build."
           primaryLabel="Get in Touch"
           primaryHref="/contact"
           secondaryLabel="See Our Research"

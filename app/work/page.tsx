@@ -10,7 +10,7 @@ import { RestrictionDatabaseFeature } from "@/components/blocks/restriction-data
 export const metadata: Metadata = {
   title: "Our Work · DTC Youth Policy Lab",
   description:
-    "Research, databases, and public-interest projects from DTC Youth Policy Lab, a youth-led nonprofit think tank. Explore work on youth participation, public policy, governance, and more.",
+    "Research, databases, and public-interest projects from DTC Youth Policy Lab. Explore our work on youth participation, public policy, and governance.",
 };
 
 export default function WorkPage() {
@@ -23,14 +23,14 @@ export default function WorkPage() {
         <section className="pt-8 pb-12 px-6 sm:px-8 lg:px-12 bg-background">
           <div className="max-w-[1400px] mx-auto">
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--sun-gold)] mb-4">
-              Research &amp; Output
+              The work
             </p>
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground leading-[1.0] lg:whitespace-nowrap">
-              What we <Highlight>actually build.</Highlight>
+              What we&apos;ve <Highlight>built so far.</Highlight>
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-              Not just opinions. Research, projects, and public knowledge built
-              by young people to stand up in the real world.
+              Papers, databases, tools, and projects from young people who
+              prefer evidence to hot takes.
             </p>
           </div>
         </section>
@@ -39,9 +39,9 @@ export default function WorkPage() {
 
         <WorkDtc />
         <CTA1
-          headingLine1="Use our data."
-          headingLine2="Build better policy."
-          description="Our work is built to be used by journalists, advocates, academics, communities, and institutions. Get in touch if you want to cite our work, collaborate on a project, or access the database."
+          headingLine1="Put the data"
+          headingLine2="to work."
+          description="Journalists, advocates, academics, communities, and institutions can use our work. Get in touch to cite it, collaborate, or access the database."
           primaryLabel="Get in Touch"
           primaryHref="/contact"
           secondaryLabel="About DTC"

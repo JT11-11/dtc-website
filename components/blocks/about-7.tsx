@@ -20,7 +20,7 @@ const team: TeamMember[] = [
     country: "United States",
     image: "/images/team/aditya.jpg",
     contribution:
-      "Built the world's first global database documenting social media bans affecting teens, and led IGF advocacy challenging blanket teen bans with national representatives.",
+      "Built the global database documenting social-media bans affecting teens and led IGF advocacy challenging blanket teen bans with national representatives.",
   },
   {
     name: "Jasper Tay",
@@ -28,7 +28,7 @@ const team: TeamMember[] = [
     country: "Singapore",
     image: "/images/team/jasper.jpg",
     contribution:
-      "Authored the first comprehensive study of ageism across the IGF's National and Regional Initiatives (NRIs), and led DTC's website development.",
+      "Authored a comprehensive study of ageism across the IGF's National and Regional Initiatives (NRIs) and led DTC's website development.",
   },
   {
     name: "Ahaan Nigam",
@@ -36,7 +36,7 @@ const team: TeamMember[] = [
     country: "United States",
     image: "/images/team/ahaan.jpg",
     contribution:
-      "Discrimination case-finding and data structuring across DTC's restriction and ageism research, plus website UX/UI design.",
+      "Does discrimination case-finding and data structuring across DTC's restriction and ageism research, plus website UX/UI design.",
   },
   {
     name: "Tejas Karusala",
@@ -44,7 +44,7 @@ const team: TeamMember[] = [
     country: "United States",
     image: "/images/team/tejas.jpg",
     contribution:
-      "Technical testing and applied work, plus website functionality and improvements.",
+      "Handles technical testing, applied work, and website functionality and improvements.",
   },
   {
     name: "Lương Long Giang",
@@ -52,7 +52,7 @@ const team: TeamMember[] = [
     country: "Vietnam / United States",
     image: "/images/team/tini.jpg",
     contribution:
-      "Supports DTC's outreach and community engagement with young people and collaborators.",
+      "Supports DTC's outreach and work with young people and collaborators.",
   },
   {
     name: "Hisham Abdul Hafeez Jamali",
@@ -68,7 +68,7 @@ const team: TeamMember[] = [
     country: "India",
     image: "/images/team/Hunthavi.webp",
     contribution:
-      "Works with Hisham leading the publications and outputs of the organization.",
+      "Works with Hisham on DTC's publications and outputs.",
   },
 ];
 
@@ -118,14 +118,14 @@ export default function About7() {
           className="flex flex-col gap-3 max-w-2xl mb-12 sm:mb-16"
         >
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--sun-gold)]">
-            Leadership team
+            The team
           </p>
           <h2 className="text-4xl sm:text-5xl font-bold text-foreground tracking-tight leading-tight">
-            The people <Highlight>leading the work.</Highlight>
+            The people <Highlight>doing the work.</Highlight>
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground">
-            A globally distributed leadership team building the lab in 2026,
-            on top of the Dynamic Teen Coalition&apos;s work at the UN since 2022.
+            A globally distributed team building the lab in 2026, following the
+            Dynamic Teen Coalition&apos;s UN work since 2022.
           </p>
         </motion.div>
 

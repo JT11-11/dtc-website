@@ -18,7 +18,7 @@ export function RestrictionDatabaseFeature() {
               <Highlight>Restriction Database.</Highlight>
             </h2>
             <p className="mt-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
-              The first systematic effort to map social-media bans and blanket
+              A country-by-country record of social-media bans and blanket
               restrictions affecting teenagers
             </p>
             
@@ -30,7 +30,7 @@ export function RestrictionDatabaseFeature() {
                 aria-haspopup="menu"
                 type="button"
               >
-                Open the database
+                Browse the database
               </button>
               
               {isOpen && (
@@ -49,14 +49,14 @@ export function RestrictionDatabaseFeature() {
                       className="flex items-center gap-2 px-3 py-2 text-sm text-popover-foreground hover:bg-muted transition-colors"
                     >
                       <span className="font-medium">ADCI Restriction Audit</span>
-                      <span className="text-xs text-muted-foreground">Interactive globe view</span>
+                      <span className="text-xs text-muted-foreground">Interactive globe</span>
                     </Link>
                     <Link
                       href="/work/database"
                       onClick={() => setIsOpen(false)}
                       className="flex items-center gap-2 px-3 py-2 text-sm text-popover-foreground hover:bg-muted transition-colors"
                     >
-                      <span className="font-medium">Spreadsheet View</span>
+                      <span className="font-medium">Table view</span>
                       <span className="text-xs text-muted-foreground">Database</span>
                     </Link>
                   </div>

@@ -10,25 +10,25 @@ const features = [
     icon: Heart,
     title: "Marginalized Youth",
     description:
-      "For many marginalized teens, social media is their only access to community, affirmation, and crisis resources, particularly in unsupportive homes or conservative regions.",
+      "For many marginalised teens, social media is their only route to community, affirmation, and crisis resources, especially in unsupportive homes or conservative regions.",
   },
   {
     icon: AlertTriangle,
     title: "Youth in Crisis",
     description:
-      "Teenagers who use platforms to process trauma and navigate mental-health crises lose a vital means of expression and support.",
+      "Teenagers using platforms to process trauma or navigate mental-health crises can lose a vital source of expression and support.",
   },
   {
     icon: GraduationCap,
     title: "Low-Income Students",
     description:
-      "Platforms are the primary education and networking infrastructure for youth without access to elite institutions or paid opportunities.",
+      "Platforms can be the main education and networking infrastructure for young people without elite institutions or paid opportunities.",
   },
   {
     icon: Globe,
     title: "Youth in All Contexts",
     description:
-      "From Australia to the UK to sub-Saharan Africa, restrictions play out differently, but the exclusion of youth voices from the process is universal.",
+      "From Australia and the UK to sub-Saharan Africa, restrictions work differently. Young people are routinely left out of the process.",
   },
 ];
 
@@ -46,7 +46,7 @@ export function Features5() {
             transition={{ duration: 0.4 }}
             className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--sun-gold)] mb-4"
           >
-            Who blanket restrictions hurt most
+            Who blanket restrictions leave behind
           </motion.p>
 
           <motion.h2
@@ -56,8 +56,8 @@ export function Features5() {
             transition={{ duration: 0.4, delay: 0.05 }}
             className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground max-w-3xl leading-[1.05]"
           >
-            The teens who depend on these spaces{" "}
-            <Highlight>most.</Highlight>
+            Some teens have{" "}
+            <Highlight>more to lose.</Highlight>
           </motion.h2>
         </div>
 
@@ -119,9 +119,8 @@ export function Features5() {
           transition={{ duration: 0.4, delay: 0.3 }}
           className="mt-12 max-w-3xl text-lg text-muted-foreground leading-relaxed"
         >
-          These groups need more online access, not less. That documented
-          failure, not a vague aspiration toward &ldquo;youth inclusion,&rdquo; is
-          what DTC exists to address.
+          These groups need online access. Our work documents what restrictions
+          cost them, country by country.
         </motion.p>
       </div>
     </section>

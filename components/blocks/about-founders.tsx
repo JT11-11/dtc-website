@@ -15,13 +15,13 @@ interface Founder {
 const founders: Founder[] = [
   {
     name: "Pyrate Ruby Passell",
-    role: "DTC Founders",
+    role: "DTC founder",
     location: "Australia / United States",
     image: "/images/team/pyratepic.webp",
   },
   {
     name: "Stacy Gildenston",
-    role: "DTC Founders",
+    role: "DTC founder",
     location: "Australia / United States",
     image: "/images/team/stacypic.webp",
     imagePosition: "50% 22%",
@@ -118,10 +118,10 @@ export function AboutFounders() {
           className="mb-10 flex max-w-2xl flex-col gap-3 sm:mb-12"
         >
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--sun-gold)]">
-            The Founders
+            The founders
           </p>
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl leading-tight">
-            The people who <Highlight>started it.</Highlight>
+            The people who <Highlight>got us started.</Highlight>
           </h2>
         </motion.div>
 

@@ -34,9 +34,9 @@ const workItems: WorkItem[] = [
     type: "Empirical Pilot Study",
     status: "Under peer review · Taylor & Francis (Social Sciences)",
     summary:
-      "Original research on how blanket, age-based platform restrictions affect marginalized youth, with marginalized teenagers as the central case. Drawing on survey data and qualitative interviews, the study examines the relationship between platform access restrictions and the loss of community, support networks, and identity resources for the young people who depend on these spaces most.",
+      "A study of how blanket, age-based platform restrictions affect marginalised youth. Using survey data and qualitative interviews, it examines how restrictions limit access to community, support networks, and identity resources for young people who depend on these spaces.",
     whyItMatters:
-      "Policymakers enacting social media bans have consistently cited child safety, but our data shows those bans fall hardest on the teenagers most dependent on online spaces for their safety. For marginalized youth in hostile households or conservative communities, restricting social media doesn't protect them. It removes their only safe social infrastructure. This study puts evidence behind a claim advocates have been making for years.",
+      "Policymakers often cite child safety when introducing social-media bans. Our data examines how those bans fall on teenagers who rely on online spaces for safety, community, and information. For marginalised youth in hostile households or conservative communities, restricting social media can remove their only safe social infrastructure.",
   },
   {
     id: "restriction-database",
@@ -46,9 +46,9 @@ const workItems: WorkItem[] = [
     type: "Systematic Database",
     status: "Active · ongoing data collection and updates",
     summary:
-      "The world's first systematic map of age-based internet restrictions. The database documents every formal legislative instrument, executive order, and platform policy that restricts minors' access to social media, messaging platforms, or general internet services across 40+ countries, including the type of restriction, legal basis, enforcement mechanisms, and reported implementation outcomes.",
+      "A systematic map of age-based internet restrictions. The database documents formal legislative instruments, executive orders, and platform policies restricting minors' access to social media, messaging platforms, or general internet services across 40+ countries, including restriction type, legal basis, enforcement, and reported outcomes.",
     whyItMatters:
-      "Before this project, no comprehensive picture of the global restriction landscape existed. Policymakers in one country had no systematic way to learn from outcomes in another. Advocates lacked the evidentiary base to challenge restrictions in court or in policy rooms. We built the map that should have existed before anyone started legislating.",
+      "Policymakers in one country often have no systematic way to learn from outcomes in another. Advocates need evidence to challenge restrictions in court or in policy rooms. This database makes the record easier to find and compare.",
   },
   {
     id: "un-ageism-audit",
@@ -58,9 +58,9 @@ const workItems: WorkItem[] = [
     type: "Institutional Audit",
     status: "Completed",
     summary:
-      "A systematic audit examining how youth are framed across UN agency websites: whether young people appear as subjects of policy (things to be managed) or as agents (participants who shape decisions). We also assessed whether the websites themselves were navigable and accessible for young people seeking to engage with UN processes, including language complexity, navigation structure, and availability of entry-point information.",
+      "A systematic audit of how UN agency websites frame youth: as policy subjects or participants in decisions. We also assessed whether young people can navigate the sites and find a way into UN processes, including language complexity, navigation, and entry-point information.",
     whyItMatters:
-      "Institutions that claim to include youth but design their public-facing presence to exclude them are performing participation, not practicing it. This audit produced a concrete, citable record of that gap, and a baseline against which future improvements can be measured.",
+      "An institution can claim to include youth while making participation hard to find. This audit provides a citable record of that gap and a baseline for measuring improvement.",
   },
   {
     id: "opportunity-mapping",
@@ -70,9 +70,9 @@ const workItems: WorkItem[] = [
     type: "Opportunity-Mapping Database",
     status: "Active · Phase 2 in progress",
     summary:
-      "A database mapping the structural barriers youth face when attempting to participate in major international governance processes: the UN system, the ITU, the WTO, regional bodies, and others. We document accreditation requirements, age restrictions, language barriers, financial barriers (travel costs, registration fees), and the structural design choices that effectively exclude young people from the rooms where decisions get made.",
+      "A database mapping the barriers young people face when trying to participate in major international governance processes, including the UN system, ITU, WTO, and regional bodies. We document accreditation requirements, age restrictions, language barriers, travel costs, registration fees, and other design choices that keep young people out of decision-making rooms.",
     whyItMatters:
-      "Youth participation is only as real as the actual mechanisms that enable it. This database turns vague claims about 'youth inclusion' into auditable, specific claims about access, and identifies which processes have the lowest and highest barriers to meaningful engagement.",
+      "Participation depends on the mechanisms that make it possible. This database turns broad claims about youth inclusion into auditable claims about access and shows which processes have the highest and lowest barriers.",
   },
   {
     id: "adci-audit",
@@ -82,9 +82,9 @@ const workItems: WorkItem[] = [
     type: "Community Tool",
     status: "Live · by Aditya",
     summary:
-      "An interactive globe-view tool mapping ADCI restriction data, built by Executive Director Aditya. Provides a visual interface for exploring the restriction landscape, building on DTC's open dataset.",
+      "An interactive globe tool for exploring ADCI restriction data, built by Executive Director Aditya using DTC's open dataset.",
     whyItMatters:
-      "Community tools that build on DTC's data validate the downstream value of systematic, open data collection. The ADCI Audit demonstrates how DTC's restriction dataset enables independent researchers and builders to create new forms of accountability.",
+      "The ADCI Audit shows how DTC's restriction dataset can support independent researchers and builders working on accountability tools.",
     cta: { label: "Open the Audit", href: "https://adciaudit.base44.app/GlobeView" },
   },
   {
@@ -95,9 +95,9 @@ const workItems: WorkItem[] = [
     type: "Hackathon Entry · KMITL",
     status: "Completed · 2026",
     summary:
-      "DTC's entry to the Digital Trade Hack 2026 at King Mongkut's Institute of Technology Ladkrabang (KMITL). A working prototype applying DTC's digital-governance research to a regtech challenge, with a full demo on YouTube and project documentation available.",
+      "DTC's entry to the Digital Trade Hack 2026 at King Mongkut's Institute of Technology Ladkrabang (KMITL): a working prototype that applies DTC's digital-governance research to a regtech challenge, with a YouTube demo and project documentation.",
     whyItMatters:
-      "Competitions like the Digital Trade Hack connect DTC's policy research to engineering and regulatory-technology audiences, demonstrating that youth-led policy work produces functional, deployable outputs — not just position papers.",
+      "The Digital Trade Hack took DTC's policy research to engineering and regulatory-technology audiences through a working prototype.",
     cta: { label: "Watch Demo", href: "https://www.youtube.com/watch?v=7NsyYwT0-E4" },
   },
   {
@@ -109,9 +109,9 @@ const workItems: WorkItem[] = [
     status: "Work in progress",
     workInProgress: true,
     summary:
-      "An op-ed examining Technology-Facilitated Gender-Based Violence (TFGBV) and its policy dimensions. Currently in development.",
+      "An op-ed on Technology-Facilitated Gender-Based Violence (TFGBV) and its policy dimensions. It's in development.",
     whyItMatters:
-      "Platform-enabled gender-based violence is one of the most rapidly escalating harms in digital policy. DTC's article contributes youth-researcher analysis to a field where most published work comes from outside the generation most affected.",
+      "Platform-enabled gender-based violence is a rapidly escalating harm in digital policy. DTC's article brings youth-researcher analysis to a field where most published work comes from outside the generation most affected.",
   },
   {
     id: "tfgbv-4p-commentary",
@@ -121,9 +121,9 @@ const workItems: WorkItem[] = [
     type: "Commentary",
     status: "Completed",
     summary:
-      "A commentary applying the 4P framework to Technology-Facilitated Gender-Based Violence (TFGBV), examining how the framework maps onto platform-mediated harm and where it requires adaptation for the digital context.",
+      "A commentary applying the 4P framework to Technology-Facilitated Gender-Based Violence (TFGBV), asking how it maps to platform-mediated harm and where it needs adapting for the digital context.",
     whyItMatters:
-      "Policy frameworks travel faster than the evidence base. Commentary that maps standard tools onto new harm types helps policymakers apply existing instruments more precisely and flags where structural gaps make new frameworks necessary.",
+      "Policy frameworks often travel faster than the evidence base. This commentary maps a standard tool to a newer harm type and flags structural gaps that may require a new framework.",
     cta: {
       label: "Read the Commentary",
       href: "https://docs.google.com/document/d/1hXdePXGfxR-1x1_eRtlfgBHP_tDF2hA_V2DDEkJ7PJg/edit?usp=sharing",
@@ -137,9 +137,9 @@ const workItems: WorkItem[] = [
     type: "Policy Paper · Preprint",
     status: "Preprint · Under review at Taylor & Francis (Social Sciences)",
     summary:
-      "A 10-page preprint by Hisham Jamali, Hunthavi Vipassana, and Tejas Karusala, posted on SSRN on August 7, 2026 and written July 28, 2026. The paper makes the normative and objective case for statutory regulation as the preferred way to govern social media platforms, arguing that it fits the economic realities of a free market, prevents unlawful censorship, and creates a unified regulatory framework. Keywords: Social Media, Internet Policy, Digital Governance, Statutory Regulation.",
+      "A 10-page preprint by Hisham Jamali, Hunthavi Vipassana, and Tejas Karusala, posted on SSRN on August 7, 2026 and written July 28, 2026. It argues for statutory regulation as the preferred model for governing social-media platforms: one that fits a free market, prevents unlawful censorship, and provides a unified framework. Keywords: Social Media, Internet Policy, Digital Governance, Statutory Regulation.",
     whyItMatters:
-      "The paper recommends strong roles for intergovernmental institutions and international law, an international court of arbitration, and a digital-rights statutory court to resolve disputes among users, platforms, and governments. It condemns blanket social-media bans and extremely strong regulation while proposing principles for better policy design. These recommendations offer policymakers a structured alternative to fragmented platform governance and overbroad restrictions.",
+      "The paper recommends strong roles for intergovernmental institutions and international law, an international court of arbitration, and a digital-rights statutory court for disputes among users, platforms, and governments. It condemns blanket social-media bans and extremely strong regulation while proposing principles for policy design.",
     cta: { label: "Read the Preprint", href: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7198900" },
   },
   {
@@ -150,9 +150,9 @@ const workItems: WorkItem[] = [
     type: "Research Paper",
     status: "Completed · SSRN preprint",
     summary:
-      "A 23-page study by Aditya Majumdar, posted on SSRN on August 15, 2026 and written August 12, 2026. The paper analyzes all 75 defendant-proceedings involving 74 unique individuals indicted by the International Criminal Court between 2005 and 2026, examining geography, trigger mechanisms, alleged crimes, and case outcomes. Using web-scraped data cross-verified with official court records, it investigates the pattern of African cases and accusations of anti-African bias. Keywords: International Law, International Criminal Court, Selective Justice, Geopolitics, African Bias in ICC.",
+      "A 23-page study by Aditya Majumdar, posted on SSRN on August 15, 2026 and written August 12, 2026. It analyses all 75 defendant proceedings involving 74 people indicted by the International Criminal Court between 2005 and 2026, covering geography, trigger mechanisms, alleged crimes, and outcomes. It uses web-scraped data cross-verified with official court records to examine African cases and accusations of anti-African bias. Keywords: International Law, International Criminal Court, Selective Justice, Geopolitics, African Bias in ICC.",
     whyItMatters:
-      "The study finds that 78.7% of proceedings originate from African states, while the largest number of African cases were initiated through state referrals tied with UN Security Council referrals. A chi-square analysis finds a statistically significant relationship between how a case reaches the ICC and its eventual outcome (χ² = 38.42, p < 0.001, Cramer's V = 0.41). It also finds that 40% of defendants remain at large, rising to 87.5% for non-African cases, offering a data-based contribution to debates about ICC selectivity, geopolitics, and accountability.",
+      "The study finds that 78.7% of proceedings originate from African states; the largest number of African cases were initiated through state referrals, tied with UN Security Council referrals. A chi-square analysis finds a statistically significant relationship between how a case reaches the ICC and its outcome (χ² = 38.42, p < 0.001, Cramer's V = 0.41). It also finds that 40% of defendants remain at large, rising to 87.5% for non-African cases.",
     cta: { label: "Read the Paper", href: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7274078" },
   },
 ];

@@ -13,23 +13,23 @@ if (typeof window !== "undefined") {
 const faqs = [
   {
     question: "What is DTC Youth Policy Lab?",
-    answer: "DTC Youth Policy Lab is a youth-led nonprofit think tank. Young people lead research, public-interest projects, and policy work across the issues that shape their lives, from rights and governance to digital systems and public conversation.",
+    answer: "DTC Youth Policy Lab is a youth-led nonprofit think tank. We research public-interest questions, build tools and databases, and take that work into policy conversations about rights, governance, and digital systems.",
   },
   {
     question: "Who can join?",
-    answer: "Any passionate young person interested in research, public-interest work, civic life, or advocacy can apply to join our community. We welcome members from diverse backgrounds and locations globally.",
+    answer: "Any young person interested in research, civic life, advocacy, or public-interest work can apply. We work remotely and welcome people from different places and backgrounds.",
   },
   {
     question: "How does the research process work?",
-    answer: "Our research process is highly collaborative. Young researchers identify pressing issues, conduct qualitative and quantitative studies, investigate existing evidence, and produce work that can inform communities, institutions, and public debate.",
+    answer: "We work together. Young researchers choose questions, review existing evidence, conduct qualitative and quantitative research, and produce work people can cite, question, and use.",
   },
   {
     question: "Do I need prior experience?",
-    answer: "No prior formal research experience is required! We value curiosity, dedication, and a willingness to learn. Experienced members and mentors will guide you through the research methodologies we employ.",
+    answer: "No formal research experience is required. Bring curiosity and a willingness to learn; experienced members and mentors will help you get your bearings.",
   },
   {
     question: "How does DTC influence real policy?",
-    answer: "We share our findings with communities, journalists, researchers, institutions, and policymakers. Our projects turn young people's perspectives and evidence into resources that help others understand problems and act on them.",
+    answer: "We share our findings with communities, journalists, researchers, institutions, and policymakers. The goal is useful evidence: something people can use when they&apos;re deciding what to do.",
   },
 ];
 
@@ -126,9 +126,7 @@ export function FaqDtc() {
           ref={titleRef}
           className="text-4xl lg:text-5xl font-bold tracking-tight text-foreground text-center mb-12 lg:mb-16"
         >
-          Frequently Asked
-          <br />
-          Questions
+          The questions we get
         </h2>
 
         <div className="flex flex-col gap-4">

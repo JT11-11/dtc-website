@@ -46,8 +46,12 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
-  output: "export",
-  
+  ...(isProduction && { output: "export" }),
+
+  images: {
+    unoptimized: isProduction,
+  },
+
   poweredByHeader: false,
 
   basePath: process.env.BASE_PATH || "",

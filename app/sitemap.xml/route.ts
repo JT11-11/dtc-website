@@ -3,7 +3,11 @@ import { readdir } from "node:fs/promises";
 import path from "node:path";
 
 const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com").replace(/\/$/, "");
-const PAGE_FILES = new Set(["page.tsx", "page.ts", "page.jsx", "page.js"]);
+// Include route handlers (e.g. sitemap.xml/route.ts, humans.txt/route.ts) as well as pages.
+const PAGE_FILES = new Set([
+	"page.tsx", "page.ts", "page.jsx", "page.js",
+	"route.tsx", "route.ts", "route.jsx", "route.js",
+]);
 
 async function discoverPages(directory: string, segments: string[] = []): Promise<string[]> {
 	let entries;

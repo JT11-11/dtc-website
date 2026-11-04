@@ -1,3 +1,5 @@
+export const dynamic = "force-static";
+
 import { readFileSync } from "node:fs";
 
 let contribs = readFileSync("contributors.txt", "utf8").split("\n");

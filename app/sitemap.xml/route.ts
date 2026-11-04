@@ -2,7 +2,7 @@ export const dynamic = "force-static";
 import { readdir } from "node:fs/promises";
 import path from "node:path";
 
-const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com").replace(/\/$/, "");
+const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.dynamicteencoalition.org").replace(/\/$/, "");
 // Include route handlers (e.g. sitemap.xml/route.ts, humans.txt/route.ts) as well as pages.
 const PAGE_FILES = new Set([
 	"page.tsx", "page.ts", "page.jsx", "page.js",

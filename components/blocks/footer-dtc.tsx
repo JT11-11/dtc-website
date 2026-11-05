@@ -126,22 +126,11 @@ export function FooterDtc() {
                       className="relative flex items-center justify-center h-10 w-10 rounded-full border border-background/10 bg-transparent text-background hover:border-background/40 hover:scale-110 transition-all duration-200 group"
                       aria-label={link.label}
                     >
-                      {link.type === "font-awesome" ? (
-                        <FontAwesomeIcon 
-                          icon={link.icon} 
-                          style={{ color: "rgb(251, 251, 251)" }} 
-                          className="h-4 w-4"
-                        />
-                      ) : (
-                        <div className="relative h-4 w-4">
-                          <Image
-                            src={link.imageSrc}
-                            alt="Substack logo"
-                            fill
-                            className="object-contain"
-                          />
-                        </div>
-                      )}
+                      <FontAwesomeIcon
+                        icon={link.icon}
+                        style={{ color: "rgb(251, 251, 251)" }}
+                        className="h-4 w-4"
+                      />
                       
                       {/* Tooltip */}
                       <div className="absolute bottom-full mb-2 px-2 py-1 bg-background text-foreground text-[10px] font-semibold rounded shadow-md opacity-0 scale-95 translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 transition-all duration-200 whitespace-nowrap z-50 border border-background/10">

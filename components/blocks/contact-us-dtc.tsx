@@ -12,10 +12,10 @@ export function ContactUsDtc() {
       <section className="bg-background py-12 px-6 sm:px-8 lg:px-12 border-b border-foreground/10">
         <div className="max-w-[1400px] mx-auto">
           <a
-            href="mailto:hello@dynamicteencoalition.com"
+            href="mailto:hello@dynamicteencoalition.org"
             className="block text-[clamp(1.5rem,5vw,4rem)] font-bold tracking-tight text-foreground hover:text-muted-foreground transition-colors break-all sm:break-normal"
           >
-            hello@dynamicteencoalition.com
+            hello@dynamicteencoalition.org
           </a>
         </div>
       </section>

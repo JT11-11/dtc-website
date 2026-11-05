@@ -9,13 +9,13 @@ const audiences = [
     title: "Researcher or journalist",
     desc: "Want to use the restriction database, cite our work, or collaborate on a study? Email us. We'll get back to you within a week.",
     blob: "rgba(56,189,248,0.85)",
-    href: "mailto:hello@dynamicteencoalition.com",
+    href: "mailto:hello@dynamicteencoalition.org",
   },
   {
     title: "Policymaker or institutional partner",
     desc: "We work with community groups, governance bodies, nonprofits, and academic institutions. Email us if you'd like to compare notes, share evidence, or build a project together.",
     blob: "rgba(168,139,250,0.85)",
-    href: "mailto:hello@dynamicteencoalition.com",
+    href: "mailto:hello@dynamicteencoalition.org",
   },
   {
     title: "Teenager who wants to do this work",
@@ -27,7 +27,7 @@ const audiences = [
     title: "Nonprofit or civil society partner",
     desc: "If you work on an issue affecting young people, get in touch. We're interested in partnerships with youth-led evidence and a clear job to do.",
     blob: "rgba(251,191,36,0.85)",
-    href: "mailto:hello@dynamicteencoalition.com",
+    href: "mailto:hello@dynamicteencoalition.org",
   },
 ];
 

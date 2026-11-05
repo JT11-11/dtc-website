@@ -7,7 +7,7 @@ import { Check, Copy } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faLinkedin, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 
-const CONTACT_EMAIL = "hello@dynamicteencoalition.com";
+const CONTACT_EMAIL = "hello@dynamicteencoalition.org";
 
 const byPrefixAndName = {
   fab: {
@@ -19,29 +19,11 @@ const byPrefixAndName = {
 
 const socialLinks = [
   { 
-    label: "Instagram", 
-    href: "https://instagram.com/dtcpolicylab", 
-    icon: byPrefixAndName.fab["instagram"],
-    type: "font-awesome" as const
-  },
-  { 
     label: "LinkedIn", 
-    href: "https://linkedin.com/company/dtcpolicylab", 
+    href: "https://linkedin.com/company/dynamic-teen-coalition-youth-policy-lab", 
     icon: byPrefixAndName.fab["linkedin"],
     type: "font-awesome" as const
-  },
-  { 
-    label: "Twitter/X", 
-    href: "https://twitter.com/dtcpolicylab", 
-    icon: byPrefixAndName.fab["x-twitter"],
-    type: "font-awesome" as const
-  },
-  { 
-    label: "Substack", 
-    href: "https://dtcpolicylab.substack.com", 
-    imageSrc: "/logo/substack.png", 
-    type: "image" as const
-  },
+  }
 ];
 
 const navLinks = [

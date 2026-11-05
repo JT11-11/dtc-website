@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
 import { Home, Users, Briefcase, Handshake, Mail, Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
@@ -21,7 +22,8 @@ export default function Navigation9() {
   const { isOverlayOpen } = useOverlay();
 
   useEffect(() => {
-    setOpen(false);
+    const timeout = window.setTimeout(() => setOpen(false), 0);
+    return () => window.clearTimeout(timeout);
   }, [pathname]);
 
   if (isOverlayOpen) return null;
@@ -37,7 +39,7 @@ export default function Navigation9() {
         >
           <div className="flex items-center justify-between h-14 sm:h-[60px] px-4 sm:px-6 lg:px-8 gap-3">
             {/* Logo & Brand */}
-            <a
+            <Link
               href="/"
               className="flex items-center gap-2.5 shrink-0 hover:opacity-90 transition-opacity min-w-0"
               aria-label="DTC Youth Policy Lab home"
@@ -54,7 +56,7 @@ export default function Navigation9() {
               <span className="font-sans font-bold text-sm sm:text-[15px] tracking-tight text-white truncate hidden sm:block">
                 DTC Youth Policy Lab
               </span>
-            </a>
+            </Link>
 
             {/* Desktop Navigation — icons with hover tooltips */}
             <div className="hidden md:flex items-center gap-1 sm:gap-2">
@@ -62,7 +64,7 @@ export default function Navigation9() {
                 const Icon = link.icon;
                 const isActive = pathname === link.href;
                 return (
-                  <a
+                  <Link
                     key={link.label}
                     href={link.href}
                     aria-label={link.label}
@@ -85,7 +87,7 @@ export default function Navigation9() {
                     <span className="absolute top-full mt-2 px-2.5 py-1.5 bg-white text-black text-[11px] font-semibold rounded-md shadow-lg whitespace-nowrap opacity-0 scale-95 -translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 transition-all duration-200 z-50">
                       {link.label}
                     </span>
-                  </a>
+                  </Link>
                 );
               })}
             </div>

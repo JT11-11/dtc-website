@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 /*
  * One-off media curation script.
  * Reads the raw photos the team dropped into /public/images, auto-rotates them

@@ -38,10 +38,10 @@ All four kept video clips are real UN-corridor outreach footage (DTC members han
 
 ## Key source-of-truth files
 
-- `DTCInformation/Dynamic Teen Coalition Yearly Wrap 2025.pdf` — real team names, roles, contributions
-- `DTC YPL Manifest.docx` — founding history, mission, what the org actually is
-- `DTCInformation/FR08_Twisted_Pair_Legitimacy_Theorem_v2.2.pdf` — the real Twisted Pair paper (3 Primitives, not DTC)
-- `DTCInformation/FR05_Ghost_Authority_Lemma_v2.3.pdf` — the real Ghost Authority Lemma
+`docs/reference/DTCInformation/Dynamic Teen Coalition Yearly Wrap 2025.pdf` — real team names, roles, contributions
+`docs/reference/DTC YPL Manifest.docx` — founding history, mission, what the org actually is
+`docs/reference/DTCInformation/FR08_Twisted_Pair_Legitimacy_Theorem_v2.2.pdf` — the real Twisted Pair paper (3 Primitives, not DTC)
+`docs/reference/DTCInformation/FR05_Ghost_Authority_Lemma_v2.3.pdf` — the real Ghost Authority Lemma
 
 ## Hard rules (do not break these)
 

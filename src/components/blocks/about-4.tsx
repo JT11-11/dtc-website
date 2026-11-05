@@ -157,7 +157,6 @@ export default function About4() {
   };
 
   useEffect(() => {
-    setProgress(0);
     const startTime = Date.now();
 
     const updateProgress = () => {
@@ -166,6 +165,7 @@ export default function About4() {
       setProgress(currentProgress);
 
       if (elapsed >= CYCLE_DURATION) {
+        setProgress(0);
         setActiveIndex((prev) => (prev + 1) % VALUES.length);
       }
     };

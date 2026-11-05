@@ -61,13 +61,16 @@ export function AppOverlays() {
       if (sessionStorage.getItem(ROUTE_LOADING_KEY) === "true") {
         sessionStorage.removeItem(ROUTE_LOADING_KEY);
         showLoading();
-        setIsBooting(false);
+        const bootTimeout = window.setTimeout(() => setIsBooting(false), 0);
         const timeout = window.setTimeout(hideOverlay, 900);
-        return () => window.clearTimeout(timeout);
+        return () => {
+          window.clearTimeout(bootTimeout);
+          window.clearTimeout(timeout);
+        };
       }
 
-      setIsBooting(false);
-      return;
+      const bootTimeout = window.setTimeout(() => setIsBooting(false), 0);
+      return () => window.clearTimeout(bootTimeout);
     }
 
     if (previousPathRef.current === pathname) return;
